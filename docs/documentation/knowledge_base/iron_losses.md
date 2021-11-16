@@ -96,3 +96,17 @@ method, to remove the DC-flux component from either the rotor, stator, or all do
 
 In online computation methods, the hysteretic behaviour of magnetic materials is directly taken into account while running the simulation. More specifically, the BH-behaviour of the material now
 depends on its past behaviour. 
+
+# BH behaviour
+
+How a given BH curve is handled inside EMDtool follows the following process:
+
+1. The given BH-curve is first extended between the given upper limit and 30 T or so, with one of the three approaches (linear, M-constant, Langevin).
+
+2. Reluctivity is computed from the extended BH-curves.
+
+3. Reluctivity, as a function of B, is upsampled, with 10 mT steps (like in your screenshot). This upsampling is performed with makima interpolation.
+
+4. Now, the behaviour of the reluctivity above the original range can differ quite wildly depending on the BH-extrapolation method, unless the original data extends into near-complete saturation.
+As makima interpolation is a type of spline, some of this difference can also propagate below the upper end of the given BH-curve. The upsampled data will still pass through the original points, though.
+
