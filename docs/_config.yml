@@ -18,7 +18,9 @@ repository: Smeklab/emdtool
 title: EMDtool
 
 # Your name to show in the footer
-author: Antti Lehikoinen
+author: Smeklab Ltd
+
+incremental: true
 
 #
 # Site settings

@@ -43,6 +43,8 @@ thinks that the signal given to it is periodic - that after reaching its end, it
 
 **NOTE:** Machines with concentrated windings often have significant subharmonics, meaning that several electrical periods have to be analysed, to simulate an entire electrical period in the rotor frame.
 
+The loss coefficients are by default stored in the array `material_properties.coeffs`, as `[c_\text{hysteresis}, c_\text{eddy}, c_\text{excess}]`
+
 ## Time-domain Steinmetz model
 
 The Steinmetz model propably means different things to different authors. Without further discussion, the approach adopted in `EMDtool` is the following:
@@ -96,17 +98,3 @@ method, to remove the DC-flux component from either the rotor, stator, or all do
 
 In online computation methods, the hysteretic behaviour of magnetic materials is directly taken into account while running the simulation. More specifically, the BH-behaviour of the material now
 depends on its past behaviour. 
-
-# BH behaviour
-
-How a given BH curve is handled inside EMDtool follows the following process:
-
-1. The given BH-curve is first extended between the given upper limit and 30 T or so, with one of the three approaches (linear, M-constant, Langevin).
-
-2. Reluctivity is computed from the extended BH-curves.
-
-3. Reluctivity, as a function of B, is upsampled, with 10 mT steps (like in your screenshot). This upsampling is performed with makima interpolation.
-
-4. Now, the behaviour of the reluctivity above the original range can differ quite wildly depending on the BH-extrapolation method, unless the original data extends into near-complete saturation.
-As makima interpolation is a type of spline, some of this difference can also propagate below the upper end of the given BH-curve. The upsampled data will still pass through the original points, though.
-
