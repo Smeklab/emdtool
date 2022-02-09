@@ -99,6 +99,8 @@ $$ \mathbf{a}^{k+1} = \left( \mathbf{S} + \frac{1}{\Delta t} \mathbf{M} \right)^
 
 Note that in _**this context**_ the superscript _k_ is used to denote the time-step, while $$\Delta t$$ is the length of the step.
 
+For improved accuracy, the trapezoidal method can also be used, at the cost of stability. Hybrid methods are also possible.
+
 ### Circuits
 
 There are a large number of possible circuit types in 2D analysis. Fortunately, they can _all_ be expressed in the same general form.
