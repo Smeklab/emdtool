@@ -11,7 +11,7 @@ math: mathjax2
 This page presents an overview of how `EMDtool` solves electromagnetic problems using finite element analysis. It is good reading for a regular user, and pretty much must-to-read for anybody planning to implement new
 functionality. Basic knowledge of electromagnetic FEA is useful.
 
-# Problem structure
+# Matrix form of the underlying problem
 
 This section describes the matrix equations (e.g. the discretized form of Maxwell's equations to be solved) solved. 
 
@@ -78,9 +78,9 @@ $$\mathbf{r}$$.
 
 The term _'time-dependent'_ is tricky, as different authors may mean different things by it. For instance, it can mean
 
-* The rotor(s) rotating, i.e. their angular position changing with time-dependent
+* The rotor(s) rotating, i.e. their angular position changing with time
 
-* The excitation (e.g. terminal currents) changing with time-dependent
+* The excitation (e.g. terminal currents) changing with time
 
 * _Damping_ due to induced currents/voltages (or rate-dependent hysteresis, or similar).
 
