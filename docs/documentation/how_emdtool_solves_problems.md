@@ -110,16 +110,18 @@ by $$\mathbf{c}$$. The physical meaning of the constraints is often either net c
 
 Regardless of the physical meaning, our vector of unknowns is now replaced by a vector of two distinct parts
 
-$$ \mathbf{a} \rightarrow \begin{bmatrix} \mathbf{a} \\ \mathbf{c} \end{bmatrix} $$.
+$$ \mathbf{a} \rightarrow \begin{bmatrix} \mathbf{a} \\ \mathbf{c} \end{bmatrix} := \mathbf{x} $$.
 
 Correspondingly, the linear system of equations would now re-written as
 
-$$ \begin{bmatrix} \mathbf{S}_\text{aa} & \mathbf{S}_\text{ac} \\ \mathbf{S}_\text{ca} & \mathbf{S}_\text{cc} \end{bmatrix} 
+$$ \begin{bmatrix} \mathbf{S} + \mathbf{S}_\text{aa} & \mathbf{S}_\text{ac} \\ \mathbf{S}_\text{ca} & \mathbf{S}_\text{cc} \end{bmatrix} 
 \begin{bmatrix} \mathbf{a} \\ \mathbf{c} \end{bmatrix} 
 = \begin{bmatrix} \mathbf{f}_\text{a} \\ \mathbf{f}_\text{c} \end{bmatrix} $$.
 
 In other words, the system is split into pure-magnetics part (subscript $$\text{aa}$$), pure-constraint part (subscript $$\text{cc}$$), and their mutual coupling (subscripts $$\text{ac}$$
 and $$\text{ca}$$). Naturally, the same splitting is applied to the mass matrix $$\mathbf{M}$$.
+
+Please note that the upper-left block also contains the pure-magnetics stiffness matrix $$\mathbf{S}$$, in turn consisting of the static and airgap parts.
 
 ### Putting it all together
 
@@ -136,4 +138,110 @@ Thus, the problem is solved via time-stepping, where each step forms a nonlinear
 For the computer doing the crunching, there are of course just _matrices_ involved. But, 
 for us regular humans, it is slightly easier to conceptually split the problem into the magnetic and constraint parts as described above. In a typical case, the circuit connections are linear and time-invariant, 
 in which case the Jacobian matrix is only formed for the upper-left corner block of the system. However, `EMDtool` _does_ support experimental nonlinear circuits, in which case the $$\mathbf{S}_\text{cc}$$ matrix
-is replaced by the corresponding circuit-Jacobian. 
+is replaced by the corresponding circuit-Jacobian.
+
+# How things are organized in EMDtool
+
+This section will go through how all the above aspects are handled in EMDtool, and more. 
+
+You may have already read the [EMDtool briefly](emdtool_briefly.html) page, which covers the user parts of the typical analysis workflow. Now, this section will go more into detail on the implementation side.
+
+## 1. A MagneticsProblem is initialized
+
+A [`MagneticsProblem`](../api/MagneticsProblem.html) (call it `problem`) is initialized, taking as input a _model_ of type [`MotorModelBase`](../api/MotorModelBase.html) (call it `model`).
+
+All _circuits_ - subclasses of the [`CircuitBase`](../api/CircuitBase.html) are initialized for the `problem`. As there can be several `Circuits`, a container object of the [`CircuitBase`](../api/CircuitBase.html)
+class is instantiated to take care of interfacing with the circuits (and can be accessed at `problem.circuits`).
+
+The load vector due to (time-independent, non-demagnetizable) permanent magnets is assembled (`problem.set_load_vector()`). Boundary condition matrix is assembled (`problem.set_boundary_matrix()`).
+
+## 2. Analysis is run
+
+This section describes how analysis is then run inside `EMDtool`. For maximum generality, a time-stepping (transient) model is considered.
+
+The analysis can be split into two parts: initializations and time-stepping.
+
+### 2.1. Initializations
+
+Before the actual stepping, several initialization steps are performed.
+
+#### Solution is initialized
+
+A [`MagneticsSolution`](../api/MagneticsSolution.html) object (call it `solution`) of the correct subclass is initialized. This object will later contain the actual numerical solution array.
+
+Furthermore, the `solution` will know the `problem` it is associated with and thus the `model`, and also know the [`SimulationParameters`](../api/SimulationParameters.html) that are used for this run.
+
+#### Circuits are initialized
+
+The circuits are initialized for this analysis run by calling the `.init_for_simulation` method of `problem.circuits`, using the `solution` as an argument. The `CircuitSet` then calls the `.init_for_simulation` method
+of all the Circuits.
+
+#### Circuit matrices are assembled
+
+The linear and time-invariant part (which is usually all there is) of the circuit matrices are assembled by calling the `.get_matrices()` methof of the `problem.circuits`. The `CircuitSet` then, in turn,
+calls the `.get_matrices` method of all its `Circuits`, and stacks the returned matrices together.
+
+#### Jacobian constructor is initialized
+
+A [`MagneticsJacobian`](../api/MagneticsJacobian.html) object is instantiated to construct the Jacobian matrix for the problem.
+
+The constructor then instantiates a [`MaterialSet`](../api/MaterialSet.html) object to interface with the [`Materials`](../api/MaterialBase.html) in `model.materials`, and also pre-computes the values of FE
+shape and test functions at the Gaussian quadrature points.
+
+Finally, the constructor queries the `MaterialSet` whether or not all the materials are _"symmetric"_, i.e. return a symmetric differential reluctivity tensor. Isotropic anhysteretic materials _are_, while others
+generally aren't. Symmetric materials slightly speed up the assembly time of the Jacobian. If needed, unsymmetric behaviour can be forced via an input flag.
+
+### 2.2 Time-stepping is run
+
+The actual time-stepping can also be divided into further steps. Here, we assume the initial condition has already been computed with `problem.solve_harmonic` or `problem.solve_quasistatic`.
+
+#### Quantities are updates for the time-step
+
+Two basic steps are needed.
+
+**1:** The airgap matrix is updated with `model.get_AGmatrix`.
+
+**2:** Load vector is updated. This consists three parts:
+
+1. Updating the contribution of the previous time-step (the $$\frac{1}{\Delta t} \mathbf{M} \mathbf{x}^{k}$$ part)
+
+1. Adding the constant PM contribution
+
+1. Adding the contribution of the circuits, by calling `this.circuits.set_load`, in turn calling the identically-named method of all `Circuits`. 
+
+Additionally, if there are any time-variant but linear circuits in the model, the corresponding circuit matrices are updated here.
+
+#### The nonlinear problem is solved
+
+Next, the solution vector for the next time-step is solved with the Newton's method. At each iterate, the Jacobian matrix is updated by calling the `eval` method of the constructor.
+
+Additionally, if there are any non-linear circuits in the model, the corresponding circuit matrices are updated at each iteration.
+
+## 3. Solution is returned
+
+After all time-steps, the newly-computed solution array is added to the `solution` (the `solution.raw_solution` property), and the solution object is returned.
+
+
+## 3. Results are post-processed
+
+Finally, interesting outputs are computed from the returned `solution`. Common examples include
+
+* A summary of results by calling `model.results_summary(solution)`
+
+* Flux plot with `model.plot_flux(solution)`
+
+* Torque and net forces on the rotor(s) with `model.compute_torque(solution)`
+
+* Iron losses and their visualization with `MaterialBase.losses(solution)`
+
+* Circuit losses and their visualization with `some_circuit.losses(solution)`
+
+* Several [`PolyphaseCircuit`](../api/PolyphaseCircuit.html) waveforms:
+
+	* `phase_circuit.phase_flux_linkage(solution)`
+	* `phase_circuit.terminal_voltage(solution)`
+	* ...
+
+* ...
+
+Note: apart from the visualizations, all these are generally included in the summary returned by `model.results_summary`.
