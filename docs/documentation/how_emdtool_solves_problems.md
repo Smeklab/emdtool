@@ -183,7 +183,7 @@ calls the `.get_matrices` method of all its `Circuits`, and stacks the returned 
 
 #### Jacobian constructor is initialized
 
-A [`MagneticsJacobian`](../api/MagneticsJacobian.html) object is instantiated to construct the Jacobian matrix for the problem.
+A [`MagneticsJacobian`](../api/MagneticsJacobian.html) object is instantiated to construct the Jacobian matrix for the problem. [Click here to read mode](./knowledge_base/jacobians.html).
 
 The constructor then instantiates a [`MaterialSet`](../api/MaterialSet.html) object to interface with the [`Materials`](../api/MaterialBase.html) in `model.materials`, and also pre-computes the values of FE
 shape and test functions at the Gaussian quadrature points.
