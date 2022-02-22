@@ -45,6 +45,33 @@ Here:
 
 * $$N$$ are the finite-element shape / test / trial functions. Nodal elements/functions are used in 2D, understood as z-directional vectors, while 3D utilizes Nedelec vector elements.
 
-* $$\frac{\partial \mathbf{H}}{\partial \mathbf{B} }$$ is the so-called _differential reluctivity tensor_, in practice a 2x2 matrix (3x3 in 3D).
+* $$ \frac{\partial \mathbf{H} }{\partial \mathbf{B} } $$ is the so-called _differential reluctivity tensor_, in practice a 2x2 matrix (3x3 in 3D).
 
 This, naturally, brings us to how the Jacobians - and large parts of nonlinearity in general - are handled in `EMDtool`.
+
+# Jacobians in `EMDtool`
+
+In `EMDtool`, Jacobian assembly is handled by an [`MagneticsJacobian`](../../api/MagneticsJacobian.html) object `jacobian`. The underlying process can be divided into two parts: initialization and evaluation.
+
+## Initialization
+
+A few steps are performed at the initialization stage:
+
+1. A [`problem`](../../api/MagneticsProblem.html) is given as an input argument.
+
+1. A [`MaterialSet`](../../api/MaterialSet.html) object `materials` is initialized to interface with the Materials in `model.materials`
+
+1. Shape and test function values at [the integration points](https://en.wikipedia.org/wiki/Gaussian_quadrature) are pre-computed and stored. 
+(Integration points and weights are queried from `model.mesh.msh.get_assembly_parameters`.)
+
+## Evaluation
+
+In the evaluation stage, the Jacobian matrix $$\mathbf{J}$$ and the residual vector $$\mathbf{r}$$ are evaluated by calling $$jacobian.eval$$. The input arguments are
+
+* The current iterate for the solution $$\mathbf{a}^k$$.
+
+* The number of the time-step $$n$$
+
+* The time $$t$$, optional
+
+In most cases - namely non-hysteretic materials - only the iterate has any effect. But, for generality, both $$n$$ and $$t$$ (if given) are passed on to `materials.set_step`.

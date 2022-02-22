@@ -217,7 +217,7 @@ Next, the solution vector for the next time-step is solved with the Newton's met
 
 Additionally, if there are any non-linear circuits in the model, the corresponding circuit matrices are updated at each iteration.
 
-## 3. Solution is returned
+### 2.3 Solution is returned
 
 After all time-steps, the newly-computed solution array is added to the `solution` (the `solution.raw_solution` property), and the solution object is returned.
 
