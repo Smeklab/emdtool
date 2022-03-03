@@ -66,7 +66,7 @@ A few steps are performed at the initialization stage:
 
 ## Evaluation
 
-In the evaluation stage, the Jacobian matrix $$\mathbf{J}$$ and the residual vector $$\mathbf{r}$$ are evaluated by calling $$jacobian.eval$$. The input arguments are
+In the evaluation stage, the Jacobian matrix $$\mathbf{J}$$ and the residual vector $$\mathbf{r}$$ are evaluated by calling `jacobian.eval`. The input arguments are
 
 * The current iterate for the solution $$\mathbf{a}^k$$.
 
@@ -74,4 +74,23 @@ In the evaluation stage, the Jacobian matrix $$\mathbf{J}$$ and the residual vec
 
 * The time $$t$$, optional
 
-In most cases - namely non-hysteretic materials - only the iterate has any effect. But, for generality, both $$n$$ and $$t$$ (if given) are passed on to `materials.set_step`.
+In most cases - namely non-hysteretic materials - only the iterate has any effect. But, for generality, namely hysteretic-style materials, both $$n$$ and $$t$$ (if given) are passed on to `materials.set_step`.
+
+The evaluation process then has the following steps:
+
+1. The index of the time-step and the time (if given) are passed to `materials.set_step`. The `MaterialSet` then calls the `.set_step` method of each material. In typical non-hysteretic materials (one would use
+the [`Material`](../../api/Material.html) class 90 % of the time), this does nothing, while hysteretic materials implement their own methods.
+
+1. The flux density vector is computed for each element and quadrature point and stored as a wide array.
+
+1. The differential reluctivity, as well as the field strength $$\mathbf{H}$$ is computed by calling `materials.evaluate_differential_reluctivity`. The `MaterialSet` then calls the identically-named method of 
+each material. As an input argument to each material, it only uses the subset of the flux density array that corresponds to the elements comprising the material in question. Furthermore, it assigns the return values to
+correct positions in the final output of `MaterialSet`, namely a wide array of the field strengths and the differential reluctivity tensors in stacked [column-major format](https://en.wikipedia.org/wiki/Row-_and_column-major_order).
+
+1. The Jacobian $$\mathbf{J}_{ij}$$ and residual $$\mathbf{r}_i$$ entries are computed and stored.
+
+1. The final Jacobian matrix and residual vector are computed and returned.
+
+**NOTE:** The `MagneticsJacobian` only returns the 'material contribution' to the residual vector. In the final nonlinear problem being solved, the right-hand-side also has contributions
+from the loads (circuits and permanent magnets typically), the damping effect from the previous time-step via the mass matrix, and the reluctivity contribution from the airgap matrix. Please again see 
+[this page](../how_emdtool_solves_problems.html).
