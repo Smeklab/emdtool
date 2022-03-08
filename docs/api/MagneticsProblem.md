@@ -3,7 +3,7 @@ title : MagneticsProblem
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for MagneticsProblem
 MagneticsProblem Class for solving magnetics problems.
 
 this = MagneticsProblem( model )
@@ -37,6 +37,8 @@ Main methods:
 * solve_harmonic : solve harmonic problem.
 
 * solve_stepping : solve time-stepping problem.
+Documentation for MagneticsProblem/MagneticsProblem
+doc MagneticsProblem
 
 ### * MagneticsProblem/get_component_property is a function.
 prob = get_component_property(this, component, property, pars)
@@ -65,9 +67,9 @@ rotor saliency.
 NOTE: The real and imaginary fields **are**  coupled in the rotor, which is
 incorrect for synchronous machines (as f_rotor = 0). As a result, the rotor
 reluctivity gets overestimated. This may be fixed in a future release. In
-the meantime, see MagneticsProblen.solve_quasistatic.
+the meantime, see ´MagneticsProblen.solve_quasistatic´.
 
-### * solve_quasistatic Quasi-static a MagneticsProblem.
+### * solve_quasistatic Quasi-static solution a MagneticsProblem.
 
 Almost like solve_harmonic with the 'isDC' parameter set to true; but
 only damping-related coupling between the d- and q-axes.
@@ -86,13 +88,19 @@ solution = solve_static(this, pars), where
 
 ### * solve_stepping Time-stepping solution of a MagneticsProblem.
 
-Solves a time-stepping problem.
+Solves a time-stepping problem with damping (eddy- and voltage-like
+terms) included.
 
 solution = solve_harmonic(this, pars), where
 
 * pars : a SimulationParameters object
 
 * solution : a SteppingSolution object.
+
+Note: Initial conditions have to be computed first, usually by running
+this.solve_harmonic or this.solve_quasistatic. Alternatively, one can set
+a `MagneticsSolution` object to `this.results.initial_solution`, or a
+solution vector to `this.results.Xh`.
 
 ### * MagneticsProblem/sweep_harmonic is a function.
 solutions = sweep_harmonic(this, pars)

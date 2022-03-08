@@ -3,7 +3,7 @@ title : AxialGeometryExtruder
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for AxialGeometryExtruder
 AxialGeometryExtruder methods:
 AxialGeometryExtruder - is a class.
 extrude - AxialGeometryExtruder/extrude is a function.
@@ -18,6 +18,8 @@ transform_initial_points - AxialGeometryExtruder/transform_initial_points is a f
 Class methods are listed below. Inherited methods are not included.
 ### * AxialGeometryExtruder/AxialGeometryExtruder is a constructor.
 this = AxialGeometryExtruder(geometry, r, a)
+Documentation for AxialGeometryExtruder/AxialGeometryExtruder
+doc AxialGeometryExtruder
 
 ### * AxialGeometryExtruder/extrude is a function.
 Vs = extrude(this, domain, level)
@@ -80,6 +82,9 @@ value will be returned.
 
 
 See also SET, RESET, DELETE, GCF, GCA, FIGURE, AXES.
+
+### * AxialGeometryExtruder/get_3D_curve is a function.
+cnew = get_3D_curve(this, l2d)
 
 ### * AxialGeometryExtruder/initialize_3D_points is a function.
 initialize_3D_points(this)

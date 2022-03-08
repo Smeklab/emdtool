@@ -3,7 +3,7 @@ title : NTGridNT
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for NTGridNT
 
 
 
@@ -27,6 +27,8 @@ Class methods are listed below. Inherited methods are not included.
 
 
 FIXME rename P_Cu_DC to P_Cu_total
+Documentation for NTGridNT/NTGridNT
+doc NTGridNT
 
 ### * NTGridNT/get_efficiency_grid is a function.
 [etagrid, electrical_power] = get_efficiency_grid(this, varargin)

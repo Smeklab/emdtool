@@ -3,7 +3,7 @@ title : DistributedWindingSpec
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for DistributedWindingSpec
 DistributedWindingSpec Winding specification class for distributed
 windings.
 
@@ -25,6 +25,8 @@ Class methods are listed below. Inherited methods are not included.
 windings.
 
 See PolyphaseWindingSpec for more details.
+Documentation for DistributedWindingSpec/DistributedWindingSpec
+doc DistributedWindingSpec
 
 ### * end_winding_loop_matrix Loop matrix for end-winding segments.
 
@@ -40,5 +42,5 @@ positive direction:
 
 * W(i, j) = -k : phase k goes through layer i, slot j, to
 negative direction:
-Help for DistributedWindingSpec/set_layout_matrix is inherited from superclass POLYPHASEWINDINGSPEC
+Help for DistributedWindingSpec/set_layout_matrix is inherited from superclass PolyphaseWindingSpec
 

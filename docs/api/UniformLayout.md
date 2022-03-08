@@ -3,7 +3,7 @@ title : UniformLayout
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for UniformLayout
 UniformLayout Layout specification for non-specified layouts:
 
 * Stranded windings are modelled as infinitely stranded, with zero AC
@@ -21,6 +21,8 @@ losses and filling the entire slot surface area. NOTE: filling factor
 IS taken into account inside [PolyphaseCircuit](PolyphaseCircuit.html).
 
 * Solid winding fill the entire slot area.
+Documentation for UniformLayout/UniformLayout
+doc UniformLayout
 
 ### * compute_losses_stranded Estimate AC losses in stranded windings.
 
@@ -39,11 +41,11 @@ winding.
 
 See the code of PolyphaseCircuit.stranded_conductor_losses for
 more details.
-Help for UniformLayout/compute_losses_stranded is inherited from superclass WINDINGLAYOUTBASE
+Help for UniformLayout/compute_losses_stranded is inherited from superclass WindingLayoutBase
 
 ### * create_solid_geometry Create slot geometry for solid winding
 models.
-Help for UniformLayout/create_solid_geometry is inherited from superclass WINDINGLAYOUTBASE
+Help for UniformLayout/create_solid_geometry is inherited from superclass WindingLayoutBase
 
 ### * UniformLayout/number_of_meshed_conductors_per_layer is a function.
 n = number_of_meshed_conductors_per_layer(this, ~)

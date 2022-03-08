@@ -3,7 +3,7 @@ title : SteelLibrary
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SteelLibrary
 SteelLibrary Static class for creating electrical steel Material
 objects.
 
@@ -43,6 +43,8 @@ grades.
 mat = SteelLibrary.create(grade_name, 'plot_fit', true)
 
 to also plot the resulting loss fit
+Documentation for SteelLibrary/SteelLibrary
+doc SteelLibrary
 
 ### * loading data
 
@@ -50,7 +52,7 @@ to also plot the resulting loss fit
 coeffs = fit_losses(this, B, fs, Ws, varargin)
 
 ### * SteelLibrary.get_grades is a function.
-g = get_grades
+g = SteelLibrary.get_grades
 
 ### * SteelLibrary/parse_data_from_Excel is a function.
 [B, H, Ws, fs] = parse_data_from_Excel(this, gradename)

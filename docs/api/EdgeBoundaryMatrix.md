@@ -3,7 +3,7 @@ title : EdgeBoundaryMatrix
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for EdgeBoundaryMatrix
 EdgeBoundaryMatrix methods:
 EdgeBoundaryMatrix - is a class.
 finalize - EdgeBoundaryMatrix/finalize is a function.
@@ -21,6 +21,8 @@ from_mesh - EdgeBoundaryMatrix.from_mesh is a function.
 Class methods are listed below. Inherited methods are not included.
 ### * EdgeBoundaryMatrix/EdgeBoundaryMatrix is a constructor.
 this = EdgeBoundaryMatrix(msh)
+Documentation for EdgeBoundaryMatrix/EdgeBoundaryMatrix
+doc EdgeBoundaryMatrix
 
 ### * EdgeBoundaryMatrix/add_Diriclet_boundary is a function.
 add_Diriclet_boundary(this, bnd)
@@ -35,5 +37,5 @@ add_periodic_boundary(this, bnd, coeff)
 P = finalize(this, varargin)
 
 ### * EdgeBoundaryMatrix.from_mesh is a function.
-P = from_mesh(msh, periodicity_coefficient)
+P = EdgeBoundaryMatrix.from_mesh(msh, periodicity_coefficient)
 

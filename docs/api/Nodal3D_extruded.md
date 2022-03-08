@@ -3,7 +3,7 @@ title : Nodal3D_extruded
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Nodal3D_extruded
 Nodal3D_extruded is a class.
 this = Nodal3D_extruded(varargin)
 ## PROPERTIES
@@ -11,6 +11,8 @@ this = Nodal3D_extruded(varargin)
 Class methods are listed below. Inherited methods are not included.
 ### * Nodal3D_extruded/Nodal3D_extruded is a constructor.
 this = Nodal3D_extruded(varargin)
+Documentation for Nodal3D_extruded/Nodal3D_extruded
+doc Nodal3D_extruded
 
 ### * eval evaluates the global shape function
 call syntax

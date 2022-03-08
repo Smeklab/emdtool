@@ -33,7 +33,7 @@ To do.
 
 ![SPM1](SPM1.png)
 
-A surface-PM rotor template with arc magnets. Supports:
+A [surface-PM rotor}(../../api/SPM1.html) template with arc magnets. Supports:
  * inrunner and outrunner geometries
  * retaining sleeves
  * axially and circumferentially segmented magnets
@@ -44,9 +44,36 @@ A surface-PM rotor template with arc magnets. Supports:
 
 ## BreadloafRotor
 
+![BreadloafRotor](BreadloafRotor.png)
+
+[A surface-PM rotor template](../../api/BreadloafRotor.html) with breadloaf magnets, i.e. arced airgap face and a straight core-facing side. Supports
+
+* Retaining sleeves
+* Axially segmented magnets
+
+## ShieldedSPM
+
+Surface-PM rotor with eddy-current shield.
+
 ## VIPM1
+
+![VIPM1](VIPM1.png)
+
+A basic [traction-style IPM rotor](../../api/VIPM1.html) template.
 
 ## HSIPM1
 
 ## HSIPM2
+
+## FWRotor1
+
+Rotor with field-winding.
+
+## SlottedRotor1
+
+Slotted rotor for induction machines.
+
+## Coated rotor
+
+Coated rotor for high-speed induction machines.
 

@@ -3,7 +3,7 @@ title : SlotShapeBase
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SlotShapeBase
 SlotShapeBase Base class for slot shapes.
 
 Like it's cousin [WindingLayoutBase](WindingLayoutBase.html), a `SlotShapeBase`  class is
@@ -19,6 +19,8 @@ the slot-opening (and wedge if any) and the winding layer(s).
 Furthermore, it creates the [Material](Material.html) and [Domain](Domain.html) objects required
 for the slot opening. All of the above is added to the parent
 geometry (e.g. [Stator](Stator.html)).
+
+All of the above happens in the `create_geometry`  method.
 
 The parent geometry is then only responsible for handling everything
 outside the slot. To handle the airgap-facing part of the slot
@@ -40,6 +42,8 @@ handle everything that goes on inside the winding window(s).
 NOTE: For now, slot shapes generally work for stators only.
 ## PROPERTIES
 * airgap_surface_curves - curves on the airgap surface, oriented ccw
+
+* SlotShapeBase/all_surfaces is a property.
 
 * SlotShapeBase/interlayer_curves is a property.
 
@@ -69,6 +73,8 @@ Furthermore, it creates the [Material](Material.html) and [Domain](Domain.html) 
 for the slot opening. All of the above is added to the parent
 geometry (e.g. [Stator](Stator.html)).
 
+All of the above happens in the `create_geometry`  method.
+
 The parent geometry is then only responsible for handling everything
 outside the slot. To handle the airgap-facing part of the slot
 opening, the class contains the property `airgap_surface_curves`  and
@@ -87,8 +93,11 @@ object would then by passed on to a `WindingLayoutBase`  class, to
 handle everything that goes on inside the winding window(s).
 
 NOTE: For now, slot shapes generally work for stators only.
+Documentation for SlotShapeBase/SlotShapeBase
+doc SlotShapeBase
 
 ### * SlotShapeBase/create_geometry is a function.
+obj = SlotShapeBase
 
 ### * SlotShapeBase/first_airgap_point is a function.
 P = first_airgap_point(this)

@@ -3,7 +3,7 @@ title : Domain
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Domain
 Domain Domain class.
 
 In `EMDtool` , a 'Domain' represents all aspects of some interesting part of an
@@ -57,6 +57,8 @@ this = Domain(domain_name, material_object, surface_1, surface_2,
 ...)
 
 Surfaces can be added with `this.add_surface`
+Documentation for Domain/Domain
+helpwin Domain
 
 ### * add_surface Add one or more Surfaces to this.
 
@@ -110,6 +112,9 @@ See also PLOT, BAR.
 
 ### * Domain/mass is a function.
 m = mass(this)
+
+### * Domain/number_of_copies is a function.
+n = number_of_copies(this)
 
 ### * plot Plot all surfaces in 2D.
 

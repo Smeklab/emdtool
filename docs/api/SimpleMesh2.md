@@ -3,7 +3,7 @@ title : SimpleMesh2
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SimpleMesh2
 SimpleMesh2 is a class.
 this = SimpleMesh2(p, t)
 ## PROPERTIES
@@ -19,6 +19,8 @@ this = SimpleMesh2(p, t)
 Class methods are listed below. Inherited methods are not included.
 ### * SimpleMesh2/SimpleMesh2 is a constructor.
 this = SimpleMesh2(p, t)
+Documentation for SimpleMesh2/SimpleMesh2
+doc SimpleMesh2
 
 ### * SimpleMesh2/getMappingMatrix is a function.
 F = getMappingMatrix(this, els, x)

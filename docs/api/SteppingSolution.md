@@ -3,8 +3,9 @@ title : SteppingSolution
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SteppingSolution
 SteppingSolution is a class.
+obj = SteppingSolution
 ## PROPERTIES
 * SteppingSolution/dt is a property.
 
@@ -13,13 +14,16 @@ SteppingSolution is a class.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * SteppingSolution/SteppingSolution is a constructor.
+obj = SteppingSolution
+Documentation for SteppingSolution/SteppingSolution
+doc SteppingSolution
 
 ### * SteppingSolution/angles is a function.
 a = angles(this)
 
 ### * indices_to_last_period Return indices to solution over the last
 electrical period.
-Help for SteppingSolution/indices_to_last_period is inherited from superclass MAGNETICSSOLUTION
+Help for SteppingSolution/indices_to_last_period is inherited from superclass MagneticsSolution
 
 ### * SteppingSolution/ts is a function.
 t = ts(this)

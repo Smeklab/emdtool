@@ -3,7 +3,7 @@ title : PeriodicBoundary
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for PeriodicBoundary
 PeriodicBoundary methods:
 PeriodicBoundary - is a class.
 parse_from_gmsh_surfaces_and_node_pairs - PeriodicBoundary/parse_from_gmsh_surfaces_and_node_pairs is a function.
@@ -23,9 +23,11 @@ plot - PeriodicBoundary/plot is a function.
 Class methods are listed below. Inherited methods are not included.
 ### * PeriodicBoundary/PeriodicBoundary is a constructor.
 this = PeriodicBoundary(mesh, varargin)
+Documentation for PeriodicBoundary/PeriodicBoundary
+doc PeriodicBoundary
 
 ### * PeriodicBoundary.from_gmsh_surfaces_and_node_pairs is a function.
-this = from_gmsh_surfaces_and_node_pairs(mesh, master_surface, slave_surface, node_pairs)
+this = PeriodicBoundary.from_gmsh_surfaces_and_node_pairs(mesh, master_surface, slave_surface, node_pairs)
 
 ### * PeriodicBoundary/parse_from_gmsh_surfaces_and_node_pairs is a function.
 parse_from_gmsh_surfaces_and_node_pairs(this, master_entity, slave_entity, node_pairs)

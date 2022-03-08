@@ -3,7 +3,7 @@ title : RotatedMeshView
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for RotatedMeshView
 RotatedMeshView is a class.
 this = RotatedMeshView(parent_mesh, rm)
 ## PROPERTIES
@@ -17,4 +17,6 @@ this = RotatedMeshView(parent_mesh, rm)
 Class methods are listed below. Inherited methods are not included.
 ### * RotatedMeshView/RotatedMeshView is a constructor.
 this = RotatedMeshView(parent_mesh, rm)
+Documentation for RotatedMeshView/RotatedMeshView
+doc RotatedMeshView
 

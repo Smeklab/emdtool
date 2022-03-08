@@ -3,7 +3,7 @@ title : GeometryReplicator
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for GeometryReplicator
 GeometryReplicator methods:
 GeometryReplicator - is a class.
 init_periodic_pairs - Setting slave-from-master identity pairs of Points and
@@ -34,6 +34,8 @@ update_periodicity - direct search
 Class methods are listed below. Inherited methods are not included.
 ### * GeometryReplicator/GeometryReplicator is a constructor.
 this = GeometryReplicator(geometry)
+Documentation for GeometryReplicator/GeometryReplicator
+doc GeometryReplicator
 
 ### * init_periodic_pairs Setting slave-from-master identity pairs of Points and
 Lines.

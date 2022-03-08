@@ -3,7 +3,7 @@ title : Nedelec2D
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Nedelec2D
 Nedelec2D class for 2D Nedelec shape functions.
 ## PROPERTIES
 * Nedelec2D/op is a property.
@@ -11,6 +11,8 @@ Nedelec2D class for 2D Nedelec shape functions.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * Nedelec2D class for 2D Nedelec shape functions.
+Documentation for Nedelec2D/Nedelec2D
+doc Nedelec2D
 
 ### * eval Evaluate global shape function.
 

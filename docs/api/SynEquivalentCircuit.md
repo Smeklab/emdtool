@@ -3,7 +3,7 @@ title : SynEquivalentCircuit
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SynEquivalentCircuit
 SynEquivalentCircuit methods:
 SynEquivalentCircuit - is a class.
 from_model - Instantiate equivalent circuit for model.
@@ -11,6 +11,7 @@ get_max_torque - Compute maximum attainable torque.
 get_max_torque_NOT_WORKING - get_max_torque Compute maximum attainable torque.
 get_op_FW - initial guess
 get_op_MTPA - initial guess
+initialize_simplified - SynEquivalentCircuit.initialize_simplified is a function.
 save_to_excel - Save eq. circuit parameters to Excel.
 simulate_SVPWM -
 ## PROPERTIES
@@ -40,6 +41,8 @@ simulate_SVPWM -
 Class methods are listed below. Inherited methods are not included.
 ### * SynEquivalentCircuit/SynEquivalentCircuit is a constructor.
 this = SynEquivalentCircuit(R, Phi, LM, p, varargin)
+Documentation for SynEquivalentCircuit/SynEquivalentCircuit
+doc SynEquivalentCircuit
 
 ### * SynEquivalentCircuit/constant_voltage_vector is a function.
 phi = constant_voltage_vector(this, n)
@@ -61,7 +64,7 @@ Initialize with any of the following key-value pairs:
 Default [0;0].
 
 * 'angles', angles : Vector of electrical angles (rad) to average
-eq. circuit parameters over. Default linspace(0, 2*pi/6, 10).
+eq. circuit parameters over. Default linspace(0, 2*pi/6, 30).
 
 * Any key-value pair of compute_inductances_static_averaging
 (default mode: differential)
@@ -92,6 +95,9 @@ available voltage. Sequential Quadratic Programming approach used.
 
 ### * SynEquivalentCircuit/impedance_matrix is a function.
 Z = impedance_matrix(this, n)
+
+### * SynEquivalentCircuit.initialize_simplified is a function.
+this = SynEquivalentCircuit.initialize_simplified(motor, args)
 
 ### * SynEquivalentCircuit/loss_Hessian_wrt_voltage is a function.
 ddW = loss_Hessian_wrt_voltage(this, n)

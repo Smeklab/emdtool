@@ -3,7 +3,7 @@ title : LinearSlidingAirgap
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for LinearSlidingAirgap
 LinearSlidingAirgap Airgap class for sliced AFM models.
 
 [] FIXME set slice radius at constructor, break dependence on
@@ -17,6 +17,8 @@ Class methods are listed below. Inherited methods are not included.
 
 [] FIXME set slice radius at constructor, break dependence on
 AFmodel2
+Documentation for LinearSlidingAirgap/LinearSlidingAirgap
+doc LinearSlidingAirgap
 
 ### * return
 

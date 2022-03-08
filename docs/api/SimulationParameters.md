@@ -3,7 +3,7 @@ title : SimulationParameters
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SimulationParameters
 SimulationParameters Parameters for MagneticsProblem solutions.
 ## PROPERTIES
 * N_periods - number of electrical periods to simulate
@@ -29,6 +29,8 @@ SimulationParameters Parameters for MagneticsProblem solutions.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * default parameters
+Documentation for SimulationParameters/SimulationParameters
+doc SimulationParameters
 
 ### * SimulationParameters/dispf is a function.
 dispf(this, varargin)

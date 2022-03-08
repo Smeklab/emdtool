@@ -3,7 +3,7 @@ title : VoltageSource
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for VoltageSource
 VoltageSource Voltage source class for MagneticsProblem.
 
 Initialization:
@@ -58,6 +58,8 @@ S = VoltageSource(motor) for sinusoidal voltage supply.
 
 S = VoltageSource(motor, modulator) to use a custom modulator,
 e.g. SVPWM_Modulator.
+Documentation for VoltageSource/VoltageSource
+doc VoltageSource
 
 ### * VoltageSource/recover_voltages is a function.
 U = recover_voltages(this, solution)

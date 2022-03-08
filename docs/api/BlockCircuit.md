@@ -3,12 +3,16 @@ title : BlockCircuit
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for BlockCircuit
 BlockCircuit is a class.
+obj = BlockCircuit
 ## PROPERTIES
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * BlockCircuit/BlockCircuit is a constructor.
+obj = BlockCircuit
+Documentation for BlockCircuit/BlockCircuit
+doc BlockCircuit
 
 ### * losses Circuit losses.
 
@@ -29,7 +33,7 @@ of all poles".
 
 For **losses** in typical 2D solid conductors (e.g. BlockCircuit,
 SheetCircuit, CageCircuit), see compute_SolidConductorLosses.
-Help for BlockCircuit/losses is inherited from superclass CIRCUITBASE
+Help for BlockCircuit/losses is inherited from superclass CircuitBase
 
 ### * BlockCircuit/parse_v11 is a function.
 [conductors, names] = parse_v11(this)

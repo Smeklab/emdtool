@@ -3,7 +3,7 @@ title : PCBStator
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for PCBStator
 PCBStator methods:
 PCBStator - is a class.
 create_geometry - PCBStator/create_geometry is a function.
@@ -18,10 +18,12 @@ Nrep(this)
 
 Usually subclassed, but by default returns
 this.dimensions.Nrep.
-Help for PCBStator/Nrep is inherited from superclass GEOBASE
+Help for PCBStator/Nrep is inherited from superclass GeoBase
 
 ### * PCBStator/PCBStator is a constructor.
 this = PCBStator(dim)
+Documentation for PCBStator/PCBStator
+doc PCBStator
 
 ### * create_geometry Initialize geometry.
 
@@ -30,10 +32,13 @@ this = create_geometry(this, varargin)
 Initializes the geometry.
 
 Must be subclassed.
-Help for PCBStator/create_geometry is inherited from superclass GEOBASE
+Help for PCBStator/create_geometry is inherited from superclass GeoBase
 
-### * PCBStator/sector_shift is a function.
-sa = sector_shift(this)
+### * sector_shift Shift in x-direction for meshing.
+
+How much the elementary geometry should be moved while
+replicating the elementary mesh.
+Help for PCBStator/sector_shift is inherited from superclass AxialGeometry
 
 ### * winding_angle Return winding angle.
 

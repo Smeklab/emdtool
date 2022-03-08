@@ -3,12 +3,16 @@ title : SheetCircuit
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SheetCircuit
 SheetCircuit is a class.
+obj = SheetCircuit
 ## PROPERTIES
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * SheetCircuit/SheetCircuit is a constructor.
+obj = SheetCircuit
+Documentation for SheetCircuit/SheetCircuit
+doc SheetCircuit
 
 ### * init Initialize matrices etc. for circuit.
 
@@ -36,7 +40,7 @@ initializes the problem matrices and arrays in this.matrices:
 * C_uu : voltage-voltage coupling matrix
 
 * L : circuit loop matrix
-Help for SheetCircuit/init is inherited from superclass CIRCUIT
+Help for SheetCircuit/init is inherited from superclass Circuit
 
 ### * losses Circuit losses.
 
@@ -57,7 +61,7 @@ of all poles".
 
 For **losses** in typical 2D solid conductors (e.g. BlockCircuit,
 SheetCircuit, CageCircuit), see compute_SolidConductorLosses.
-Help for SheetCircuit/losses is inherited from superclass CIRCUITBASE
+Help for SheetCircuit/losses is inherited from superclass CircuitBase
 
 ### * SheetCircuit/parse_v11 is a function.
 [conductor, name] = parse_v11(this)

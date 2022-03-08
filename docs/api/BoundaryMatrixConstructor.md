@@ -3,7 +3,7 @@ title : BoundaryMatrixConstructor
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for BoundaryMatrixConstructor
 BoundaryMatrixConstructor is a class.
 this = BoundaryMatrixConstructor(varargin)
 ## PROPERTIES
@@ -11,6 +11,8 @@ this = BoundaryMatrixConstructor(varargin)
 Class methods are listed below. Inherited methods are not included.
 ### * BoundaryMatrixConstructor/BoundaryMatrixConstructor is a constructor.
 this = BoundaryMatrixConstructor(varargin)
+Documentation for BoundaryMatrixConstructor/BoundaryMatrixConstructor
+doc BoundaryMatrixConstructor
 
 ### * BoundaryMatrixConstructor/assemble_flux_matrix is a function.
 this = assemble_flux_matrix(this, varargin)

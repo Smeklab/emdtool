@@ -3,7 +3,7 @@ title : emdtool
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for emdtool
 emdtool Main EMDtool utility class.
 
 Main methods:
@@ -21,7 +21,7 @@ Main methods:
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * emdtool.check_license is a function.
-is_valid = check_license(force_check)
+is_valid = emdtool.check_license(force_check)
 
 ### * emdtool Main EMDtool utility class.
 
@@ -36,6 +36,8 @@ Main methods:
 * set_license : More-manually set license.
 
 * license_information : Show or return license information.
+Documentation for emdtool/emdtool
+doc emdtool
 
 ### * get_gmsh_path Return path to gmsh executable.
 

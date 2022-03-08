@@ -3,8 +3,9 @@ title : Indexable
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Indexable
 Indexable is a class.
+obj = Indexable
 ## PROPERTIES
 * Indexable/dimensions is a property.
 
@@ -15,6 +16,9 @@ Indexable is a class.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * Indexable/Indexable is a constructor.
+obj = Indexable
+Documentation for Indexable/Indexable
+doc Indexable
 
 ### * == (EQ)   Test handle equality.
 Handles are equal if they are handles for the same object.
@@ -31,7 +35,7 @@ TF = EQ(H1, H2) stores the result in a logical array of the same
 dimensions.
 
 See also INDEXABLE, INDEXABLE/GE, INDEXABLE/GT, INDEXABLE/LE, INDEXABLE/LT, INDEXABLE/NE
-Help for Indexable/eq is inherited from superclass HANDLE
+Help for Indexable/eq is inherited from superclass handle
 
 ### * get Find an Indexable object by name.
 
@@ -57,7 +61,7 @@ TF = NE(H1, H2) stores the result in a logical array of the same
 dimensions.
 
 See also INDEXABLE, INDEXABLE/EQ, INDEXABLE/GE, INDEXABLE/GT, INDEXABLE/LE, INDEXABLE/LT
-Help for Indexable/ne is inherited from superclass HANDLE
+Help for Indexable/ne is inherited from superclass handle
 
 ### * root Root parent.
 

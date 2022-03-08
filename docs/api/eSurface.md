@@ -3,7 +3,7 @@ title : eSurface
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for eSurface
 eSurface methods:
 add_curve - eSurface/add_curve is a function.
 create - Get existing surface or create new.
@@ -50,6 +50,8 @@ x = center_of_mass(this)
 
 ### * eSurface/eSurface is a constructor.
 this = eSurface
+Documentation for eSurface/eSurface
+doc eSurface
 
 ### * getting points
 

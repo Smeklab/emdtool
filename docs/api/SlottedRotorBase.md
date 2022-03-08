@@ -3,7 +3,7 @@ title : SlottedRotorBase
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SlottedRotorBase
 SlottedRotorBase Base class for slotted radial-flux rotors.
 
 This class doesn't contain any geometry-creation functionality
@@ -19,7 +19,7 @@ Nrep(this)
 
 Usually subclassed, but by default returns
 this.dimensions.Nrep.
-Help for SlottedRotorBase/Nrep is inherited from superclass GEOBASE
+Help for SlottedRotorBase/Nrep is inherited from superclass GeoBase
 
 ### * SlottedRotorBase Base class for slotted radial-flux rotors.
 
@@ -27,6 +27,8 @@ This class doesn't contain any geometry-creation functionality
 (this.mesh_geometry). Symmetry sector angles etc. are determinated
 from the slot number (dimensions.Qr) and number of symmetry sectors
 (dimensions.symmetry_sectors).
+Documentation for SlottedRotorBase/SlottedRotorBase
+doc SlottedRotorBase
 
 ### * SlottedRotorBase/d_axis_angle is a function.
 a = d_axis_angle(~)
@@ -37,5 +39,5 @@ sector_angle(this)
 
 Usually subclassed, but by default returns
 this.dimensions.sector_angle.
-Help for SlottedRotorBase/sector_angle is inherited from superclass RADIALGEOMETRY
+Help for SlottedRotorBase/sector_angle is inherited from superclass RadialGeometry
 

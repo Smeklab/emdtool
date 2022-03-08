@@ -3,14 +3,10 @@ title : SlidingAirgap
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SlidingAirgap
 SlidingAirgap Sliding airgap model for radial-flux machines.
 ## PROPERTIES
 * SlidingAirgap/displacement_function is a property.
-
-* SlidingAirgap/n_bnd_moving is a property.
-
-* SlidingAirgap/n_bnd_static is a property.
 
 * SlidingAirgap/rotor_angle_now is a property.
 
@@ -21,6 +17,8 @@ SlidingAirgap Sliding airgap model for radial-flux machines.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * SlidingAirgap Sliding airgap model for radial-flux machines.
+Documentation for SlidingAirgap/SlidingAirgap
+doc SlidingAirgap
 
 ### * compute_torque Torque computation method.
 

@@ -3,8 +3,9 @@ title : defs
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for defs
 defs is a class.
+obj = defs
 ## PROPERTIES
 ## Methods
 Class methods are listed below. Inherited methods are not included.
@@ -15,17 +16,20 @@ Class methods are listed below. Inherited methods are not included.
 ### * Cellstr conversion for enumeration classes
 ### * Char conversion for enumeration classes
 ### * defs.current_supply is a function.
-e = current_supply
+e = defs.current_supply
 
 ### * defs.current_supply_dynamic is a function.
-e = current_supply_dynamic
+e = defs.current_supply_dynamic
 
 ### * Conductor belonging to (non-squirrel-cage) **damper** winding.
 
 ### * defs.decomposed is a function.
-e = decomposed
+e = defs.decomposed
 
 ### * defs/defs is a constructor.
+obj = defs
+Documentation for defs/defs
+doc defs
 
 ### * ==  Equal.
 A == B does element by element comparisons between A and B and returns
@@ -37,12 +41,17 @@ every dimension, the dimension sizes of the inputs are either the same
 or one of them is 1.
 
 C = EQ(A,B) is called for the syntax 'A == B' when A or B is an object.
+
+See <a href="matlab:helpview('matlab','MATLAB_OPS')">MATLAB Operators and Special Characters</a> for more details.
 Documentation for eq
 doc eq
 
 ### * Conductor belonging to field-winding
 
 ### * intersect for enumeration classes
+### * isequal for enumerations, including support for string/char vector/cellstr comparisons
+### * isequaln for enumerations, including support for string/char vector/cellstr comparisons
+### * isequalwithequalnans for enumerations, including support for string/char vector/cellstr comparisons
 ### * ismember for enumeration classes
 ### * ~=  Not equal.
 A ~= B does element by element comparisons between A and B and returns
@@ -54,11 +63,13 @@ every dimension, the dimension sizes of the inputs are either the same
 or one of them is 1.
 
 C = NE(A,B) is called for the syntax 'A ~= B' when A or B is an object.
+
+See <a href="matlab:helpview('matlab','MATLAB_OPS')">MATLAB Operators and Special Characters</a> for more details.
 Documentation for ne
 doc ne
 
 ### * defs.none is a function.
-e = none
+e = defs.none
 
 ### * Circuit connected to an external **polyphase** (>=1) circuit
 
@@ -77,5 +88,5 @@ outside the 2D geometry.
 ### * strncmpi for enumeration classes
 ### * union for enumeration classes
 ### * defs.user_defined is a function.
-e = user_defined
+e = defs.user_defined
 

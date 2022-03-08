@@ -3,7 +3,7 @@ title : Conductor
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Conductor
 Conductor Base class for conductors.
 
 Typical subclasses:
@@ -39,11 +39,14 @@ elementary geometry. Can be either solid or stranded.
 
 Each conductor consists of one domain (two domains in the case of
 split conductors).
+Documentation for Conductor/Conductor
+doc Conductor
 
 ### * Conductor/copy is a function.
+obj = Conductor
 
 ### * Conductor.create is a function.
-c = create(domain, varargin)
+c = Conductor.create(domain, varargin)
 
 ### * Conductor/domains is a function.
 d = domains(this)
@@ -52,4 +55,5 @@ d = domains(this)
 els = elements(this)
 
 ### * Conductor/set_matrices is a function.
+obj = Conductor
 

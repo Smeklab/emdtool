@@ -3,27 +3,29 @@ title : Elements
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Elements
 {
 ## PROPERTIES
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * {
+Documentation for Elements/Elements
+doc Elements
 
 ### * Elements.composite is a function.
-e = composite
+e = Elements.composite
 
 ### * Elements.isIsoparametric is a function.
-bl = isIsoparametric(type)
+bl = Elements.isIsoparametric(type)
 
 ### * Elements.isPrism is a function.
-bl = isPrism(type)
+bl = Elements.isPrism(type)
 
 ### * Elements.isTet is a function.
-bl = isTet(type)
+bl = Elements.isTet(type)
 
 ### * Elements.isTriangle is a function.
-bl = isTriangle(type)
+bl = Elements.isTriangle(type)
 
 ### * LINE Create line
 LINE(X,Y) adds the **line** defined in vectors X and Y to the current axes.
@@ -115,20 +117,20 @@ See also INTEGRAL, INTEGRAL2, INTEGRAL3, QUADGK, QUAD2D, TRAPZ,
 FUNCTION_HANDLE.
 
 ### * Elements.refPoints_edges is a function.
-X = refPoints_edges(type, varargin)
+X = Elements.refPoints_edges(type, varargin)
 
 ### * Elements.refPoints_nodes is a function.
-X = refPoints_nodes(type)
+X = Elements.refPoints_nodes(type)
 
 ### * Elements.tet is a function.
-e = tet
+e = Elements.tet
 
 ### * Elements.triangle is a function.
-e = triangle
+e = Elements.triangle
 
 ### * Elements.triangle2 is a function.
-e = triangle2
+e = Elements.triangle2
 
 ### * Elements.triangle2I is a function.
-e = triangle2I
+e = Elements.triangle2I
 

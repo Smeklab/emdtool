@@ -3,7 +3,7 @@ title : dxfreader
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for dxfreader
 dxfreader methods:
 dxfreader - is a class.
 get_entities - getting unique points
@@ -32,10 +32,12 @@ DELETE(H) deletes all handle objects in array H. After the delete
 function call, H is an array of invalid objects.
 
 See also DXFREADER, DXFREADER/ISVALID, CLEAR
-Help for dxfreader/delete is inherited from superclass HANDLE
+Help for dxfreader/delete is inherited from superclass handle
 
 ### * dxfreader/dxfreader is a constructor.
 this = dxfreader(fname)
+Documentation for dxfreader/dxfreader
+doc dxfreader
 
 ### * getting unique points
 

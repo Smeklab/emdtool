@@ -3,7 +3,7 @@ title : RectangularLayout
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for RectangularLayout
 RectangularLayout methods:
 RectangularLayout - is a class.
 compute_losses_stranded - RectangularLayout/compute_losses_stranded is a function.
@@ -16,6 +16,9 @@ create_solid_geometry - RectangularLayout/create_solid_geometry is a function.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * RectangularLayout/RectangularLayout is a constructor.
+obj = RectangularLayout
+Documentation for RectangularLayout/RectangularLayout
+doc RectangularLayout
 
 ### * compute_losses_stranded Estimate AC losses in stranded windings.
 
@@ -34,15 +37,15 @@ winding.
 
 See the code of PolyphaseCircuit.stranded_conductor_losses for
 more details.
-Help for RectangularLayout/compute_losses_stranded is inherited from superclass WINDINGLAYOUTBASE
+Help for RectangularLayout/compute_losses_stranded is inherited from superclass WindingLayoutBase
 
 ### * conductor_area Total conductor area per slot.
 
 Returns nan by default; should be overridden in subclasses if
 needed.
-Help for RectangularLayout/conductor_area is inherited from superclass WINDINGLAYOUTBASE
+Help for RectangularLayout/conductor_area is inherited from superclass WindingLayoutBase
 
 ### * create_solid_geometry Create slot geometry for solid winding
 models.
-Help for RectangularLayout/create_solid_geometry is inherited from superclass WINDINGLAYOUTBASE
+Help for RectangularLayout/create_solid_geometry is inherited from superclass WindingLayoutBase
 

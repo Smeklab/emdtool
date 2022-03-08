@@ -3,7 +3,7 @@ title : OPsimulator
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for OPsimulator
 OPsimulator Class for analysing operating points.
 ## PROPERTIES
 * OPsimulator/N_DETAILED is a property.
@@ -35,6 +35,8 @@ OPsimulator Class for analysing operating points.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * OPsimulator Class for analysing operating points.
+Documentation for OPsimulator/OPsimulator
+doc OPsimulator
 
 ### * OPsimulator/dispf is a function.
 dispf(this, msg)

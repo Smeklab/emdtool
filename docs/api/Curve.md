@@ -3,7 +3,7 @@ title : Curve
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Curve
 CURVE Abstract base class for representing line segments and circle arcs
 ## PROPERTIES
 * Curve/left_surface is a property.
@@ -40,6 +40,8 @@ this = Curve(pstart, pcenter, pend)
 
 Create a circle arc (geo.arc) between pstart and pend, centered at
 pcenter.
+Documentation for Curve/Curve
+doc Curve
 
 ### * add_to_points Add this to defining Points.
 
@@ -77,7 +79,7 @@ TF = EQ(H1, H2) stores the result in a logical array of the same
 dimensions.
 
 See also CURVE, CURVE/GE, CURVE/GT, CURVE/LE, CURVE/LT, CURVE/NE
-Help for Curve/eq is inherited from superclass HANDLE
+Help for Curve/eq is inherited from superclass handle
 
 ### * Direction of this Curve to join with other curve.
 
@@ -111,7 +113,7 @@ TF = NE(H1, H2) stores the result in a logical array of the same
 dimensions.
 
 See also CURVE, CURVE/EQ, CURVE/GE, CURVE/GT, CURVE/LE, CURVE/LT
-Help for Curve/ne is inherited from superclass HANDLE
+Help for Curve/ne is inherited from superclass handle
 
 ### * Curve/next_left is a function.
 l = next_left(this, P)
@@ -130,4 +132,8 @@ new_curve = split_with_point(this, P)
 
 ### * Curve/tangent is a function.
 t = tangent(this, p)
+
+### * start point
+
+### * Curve/update_single_point is an undocumented builtin Line method.
 

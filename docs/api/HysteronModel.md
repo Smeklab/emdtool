@@ -3,7 +3,7 @@ title : HysteronModel
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for HysteronModel
 HysteronModel Base class for vector hysteron models
 
 this = HysteronModel(Bs, M)
@@ -47,6 +47,8 @@ methods must be subclassed.
 
 The model is stateful (p, B); re-initialization is triggered whenever
 k_step_input < this.step in this.evaluate_H.
+Documentation for HysteronModel/HysteronModel
+doc HysteronModel
 
 ### * HysteronModel/PlayModel is a function.
 this = PlayModel(Bs, M)

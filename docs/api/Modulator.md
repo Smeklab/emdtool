@@ -3,12 +3,14 @@ title : Modulator
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Modulator
 Base class for modulators.
 ## PROPERTIES
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * Base class for modulators.
+Documentation for Modulator/Modulator
+doc Modulator
 
 ### * U(this, t) Instantaneous voltage.
 

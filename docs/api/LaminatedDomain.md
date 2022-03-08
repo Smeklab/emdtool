@@ -3,7 +3,7 @@ title : LaminatedDomain
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for LaminatedDomain
 LaminatedDomain Laminated domain.
 
 this = LaminatedDomain(name, stacking_factor, material)
@@ -21,7 +21,9 @@ this = LaminatedDomain(name, stacking_factor, material)
 
 this = LaminatedDomain(name, stacking_factor, material, surface1,
 ...)
+Documentation for LaminatedDomain/LaminatedDomain
+doc LaminatedDomain
 
 ### * copy Deep **copy** of this.
-Help for LaminatedDomain/copy is inherited from superclass DOMAIN
+Help for LaminatedDomain/copy is inherited from superclass Domain
 

@@ -3,7 +3,7 @@ title : Point
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Point
 POINT Class for representing points in a geometry.
 
 Point objects are typically used for defining [Surface](Surface.html) objects, to be
@@ -48,6 +48,8 @@ this = Point([x,y], lcar)
 
 Create a new point at (x,y) with the characteristic
 length lcar.
+Documentation for Point/Point
+doc Point
 
 ### * angle Angular coordinate.
 
@@ -162,7 +164,7 @@ Sets the coordinates of this equal to (Point.x, Point.y)
 
 this = translate_inplace(this, [x, y])
 
-Sets the coordinates of this equal to (x, y)
+Sets the coordinates of this equal to (this.x + x, this.y + y)
 
 ### * xmirror Return a new Point, mirrored around the x-axis.
 

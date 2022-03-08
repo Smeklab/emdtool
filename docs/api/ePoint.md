@@ -3,7 +3,7 @@ title : ePoint
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for ePoint
 ePoint methods:
 ePoint - is a class.
 extrude_axially_to_level - checking if child exists
@@ -27,6 +27,8 @@ add_curve(this, c)
 
 ### * ePoint/ePoint is a constructor.
 this = ePoint(x, y, z, lcar)
+Documentation for ePoint/ePoint
+doc ePoint
 
 ### * checking if child exists
 

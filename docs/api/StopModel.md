@@ -3,12 +3,14 @@ title : StopModel
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for StopModel
 StopModel Hysteresis model based on Stop hysteron.
 ## PROPERTIES
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * StopModel Hysteresis model based on Stop hysteron.
+Documentation for StopModel/StopModel
+doc StopModel
 
 ### * evaluate_vector_hysteron Evaluate vector hysteron value.
 
@@ -21,7 +23,7 @@ hysteron states.
 Pout = evaluate_vector_hysteron(this, B, m, false)
 
 The same as above, but don't update current state.
-Help for StopModel/evaluate_vector_hysteron is inherited from superclass HYSTERONMODEL
+Help for StopModel/evaluate_vector_hysteron is inherited from superclass HysteronModel
 
 ### * from_least_squares_fit Initialize model from measured data.
 
@@ -34,5 +36,5 @@ See HysteronModel.fit_model_with_least_squares
 
 bout = sample_scalar_hysteron(this, Bin, m) evaluates the m:th
 scalar hysteron for the input time-series Bin.
-Help for StopModel/sample_scalar_hysteron is inherited from superclass HYSTERONMODEL
+Help for StopModel/sample_scalar_hysteron is inherited from superclass HysteronModel
 

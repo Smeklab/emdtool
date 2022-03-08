@@ -3,7 +3,7 @@ title : LinearAVSolver
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for LinearAVSolver
 LinearAVSolver methods:
 LinearAVSolver - is a class.
 compute_preconditioner - LinearAVSolver/compute_preconditioner is a function.
@@ -57,6 +57,8 @@ solve - LinearAVSolver/solve is a function.
 Class methods are listed below. Inherited methods are not included.
 ### * LinearAVSolver/LinearAVSolver is a constructor.
 this = LinearAVSolver(varargin)
+Documentation for LinearAVSolver/LinearAVSolver
+doc LinearAVSolver
 
 ### * LinearAVSolver/compute_preconditioner is a function.
 compute_preconditioner(this)

@@ -3,7 +3,7 @@ title : PMlibrary
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for PMlibrary
 PMlibrary Static class for creating permanent-magnet Material objects.
 
 Data referenced from Arnold Magnetic Technologies' website at some
@@ -31,10 +31,12 @@ mat = PMlibrary.create( pm_grade )
 
 where pm_grade = string or char. See PMlibrary.grades for available
 grades.
+Documentation for PMlibrary/PMlibrary
+doc PMlibrary
 
 ### * PMlibrary.create is a function.
-mat = create(matId)
+mat = PMlibrary.create(matId)
 
 ### * PMlibrary.grades is a function.
-g = grades
+g = PMlibrary.grades
 

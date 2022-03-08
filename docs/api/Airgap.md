@@ -3,7 +3,7 @@ title : Airgap
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Airgap
 Airgap Base class for airgap geometries.
 ## PROPERTIES
 * Airgap.default_number_of_layers is a property.
@@ -11,6 +11,8 @@ Airgap Base class for airgap geometries.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * Airgap Base class for airgap geometries.
+Documentation for Airgap/Airgap
+doc Airgap
 
 ### * characteristic_length Recommended characteristic length of airgap-facing
 surface.

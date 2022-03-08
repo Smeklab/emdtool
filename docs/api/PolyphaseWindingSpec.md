@@ -3,7 +3,7 @@ title : PolyphaseWindingSpec
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for PolyphaseWindingSpec
 PolyphaseWindingSpec Winding specification class.
 
 Instantiation:
@@ -46,6 +46,8 @@ Equal to this.filling_factor for stranded models.
 
 * connection - connection
 
+* end_winding_length_per_conductor
+
 * extra_phase_inductance - extra per-phase inductance
 
 * filling_factor Conductor area PER meshed conductor area.
@@ -83,6 +85,8 @@ modelled.
 
 * lew_given - given end-winding inductance per turn and per slot-segment
 
+* PolyphaseWindingSpec.modelled_parallel_paths is a property.
+
 * PolyphaseWindingSpec/number_of_dq_components is a property.
 
 * number_of_meshed_conductors_per_layer As the name suggests.
@@ -90,8 +94,6 @@ modelled.
 * p - number of pole-pairs
 
 * phases - number of phases
-
-* property_warning_given - set to true to disable warnings about default properties used
 
 * series_conductor_length_per_phase - series-conductor length per-phase
 
@@ -132,9 +134,17 @@ Responsibilities:
 
 NOTE: End-winding inductance calculation only works for radial-flux
 machines for now.
+Documentation for PolyphaseWindingSpec/PolyphaseWindingSpec
+doc PolyphaseWindingSpec
 
-### * PolyphaseWindingSpec/average_phase_quantity_matrix is a function.
-L = average_phase_quantity_matrix(this)
+### * average_phase_quantity_matrix Matrix for computing average
+phase quantities.
+
+Mave = average_phase_quantity_matrix(this)
+
+This matrix is used to for problems where
+`this.meshed_wires_in_hand`  > 1, and e.g. the phase flux
+linkages of the parallel wires/paths may differ.
 
 ### * bias_angle Bias angle for winding.
 
@@ -154,11 +164,34 @@ Access method to WindingLayoutBase.create_slot_geometry
 
 y = dq(this, xy, angles)
 
-### * end_winding_inductance_matrix Compute EW inductance matrix.
+### * end_winding_inductance_matrix Compute the EW inductance matrix.
+
+Computes the end-winding inductance matrix.
+
+WARNING: For analysis/implementation reasons, the matrix is computed
+**assuming no parallel paths**  = this.a = 1. The effect of parallel paths
+is considered elsewhere.
+
+The matrix is computed as
+
+`Lew = end_winding_inductance_matrix(this)`
+
+where
+
+`Lew = 2 ** L_<segment' **  l_segment * L_segment` , where
+
+* `L_segment`  : loop matrix for end-winding segments = segment between
+two successive slots. Computed with `this.end_winding_loop_matrix`
+
+* `l_segment`  : inductance of one end-winding segment. Computed with
+`this.end_winding_segment_inductance` .
+
+If non-zero, `this.this.extra_phase_inductance`  is added to the diagonal
+of `Lew` , or block-diagonal in case `this.meshed_wires_in_hand`  > 1.
 
 Only works for radial flux machines.
 
-### * end_winding_loop_matrix End-winding loop matrix, slot-segment.
+### * end_winding_loop_matrix End-winding loop matrix, per slot-segment.
 
 L = end_winding_loop_matrix(this)
 
@@ -169,6 +202,13 @@ piece between two successive slots.
 Only computed for one end of a radial-flux machine.
 
 ### * end_winding_segment_inductance Inductance of one end-winding segment.
+
+A 'segment' is understood as the part of end-winding between
+two-successive slot pitches. Whenever there are several phases and/or
+parallel paths running in the same segment, their self- and mutual
+inductances are assumed equal in absolute value. (Signs may differ
+depending on the coil/path/phase direction; this is considered by
+`this.end_winding_segment_inductance` .
 
 Calculation somewhat follows the approach given by Lipo, T.A. (*) for a random-wound
 winding. Iron modelled as perfect conductor, to accound for eddy damping.
@@ -235,8 +275,19 @@ values).
 ### * PolyphaseWindingSpec/symmetry_period is a function.
 n = symmetry_period(this)
 
-### * PolyphaseWindingSpec/total_phase_quantity_matrix is a function.
-L = total_phase_quantity_matrix(this)
+### * total_phase_quantity_matrix Sum of quantities in parallel
+paths.
+
+Mtot = total_phase_quantity_matrix(this)
+
+This matrix is used to for problems where
+`this.meshed_wires_in_hand`  > 1, to e.g. compute the total
+current in a phase:
+
+Iphase = Mtot * I_parallel_paths
+
+### * PolyphaseWindingSpec/visualize is a function.
+visualize(this, varargin)
 
 ### * winding_angle Compute winding angle.
 

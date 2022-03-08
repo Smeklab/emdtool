@@ -3,7 +3,7 @@ title : MagneticsJacobian
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for MagneticsJacobian
 MagneticsJacobian methods:
 MagneticsJacobian - is a class.
 eval - Evaluate Jacobian.
@@ -34,7 +34,7 @@ TF = NE(H1, H2) stores the result in a logical array of the same
 dimensions.
 
 See also MAGNETICSJACOBIAN, MAGNETICSJACOBIAN/EQ, MAGNETICSJACOBIAN/GE, MAGNETICSJACOBIAN/GT, MAGNETICSJACOBIAN/LE, MAGNETICSJACOBIAN/LT
-Help for MagneticsJacobian/Ne is inherited from superclass HANDLE
+Help for MagneticsJacobian/Ne is inherited from superclass handle
 
 * MagneticsJacobian/dof_shape is a property.
 
@@ -52,6 +52,8 @@ Help for MagneticsJacobian/Ne is inherited from superclass HANDLE
 Class methods are listed below. Inherited methods are not included.
 ### * MagneticsJacobian/MagneticsJacobian is a constructor.
 this = MagneticsJacobian(problem, symmetric, test_fun, shape_fun)
+Documentation for MagneticsJacobian/MagneticsJacobian
+doc MagneticsJacobian
 
 ### * eval Evaluate Jacobian.
 

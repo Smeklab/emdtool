@@ -3,7 +3,7 @@ title : TetMesh
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for TetMesh
 TetMesh minimal mesh of 3D tetrahedrons.
 
 (c) 2018 Antti Lehikoinen / Aalto University
@@ -54,6 +54,8 @@ Bvec = J(this, N, els, varargin)
 
 Call syntax
 msh = SimpleTetMesh(p, t)
+Documentation for TetMesh/TetMesh
+doc TetMesh
 
 ### * TetMesh/closest_local is a function.
 [x_closest, ind] = closest_local(this, X, els)

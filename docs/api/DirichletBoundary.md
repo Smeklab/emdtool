@@ -3,7 +3,7 @@ title : DirichletBoundary
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for DirichletBoundary
 DirichletBoundary methods:
 DirichletBoundary - is a class.
 parse_from_gmsh_surface - DirichletBoundary/parse_from_gmsh_surface is a function.
@@ -12,9 +12,12 @@ plot - DirichletBoundary/plot is a function.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * DirichletBoundary/DirichletBoundary is a constructor.
+obj = DirichletBoundary
+Documentation for DirichletBoundary/DirichletBoundary
+doc DirichletBoundary
 
 ### * DirichletBoundary.from_gmsh_surface is a function.
-this = from_gmsh_surface(mesh, surface)
+this = DirichletBoundary.from_gmsh_surface(mesh, surface)
 
 ### * DirichletBoundary/parse_from_gmsh_surface is a function.
 parse_from_gmsh_surface(this, surface)

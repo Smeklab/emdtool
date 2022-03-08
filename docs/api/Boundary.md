@@ -3,7 +3,7 @@ title : Boundary
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Boundary
 Boundary Base class for boundaries.
 
 Construction:
@@ -27,9 +27,11 @@ Construction:
 bnd = Boundary(mesh)
 
 bnd = Boundary(mesh, nodes)
+Documentation for Boundary/Boundary
+helpwin Boundary
 
 ### * Boundary.from_gmsh_surface is a function.
-this = from_gmsh_surface(mesh, surface)
+this = Boundary.from_gmsh_surface(mesh, surface)
 
 ### * Boundary/parse_from_gmsh_surface is a function.
 parse_from_gmsh_surface(this, surface)

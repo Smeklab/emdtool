@@ -3,7 +3,7 @@ title : SVPWM_Modulator
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SVPWM_Modulator
 SVPWM_Modulator Basic Modulator.
 
 
@@ -71,6 +71,8 @@ this = SVPWM_Modulator(UDC, fs), where
 * UDC = DC-link voltage
 
 * fs = switching frequency
+Documentation for SVPWM_Modulator/SVPWM_Modulator
+doc SVPWM_Modulator
 
 ### * U(this, t) Instantaneous voltage.
 
@@ -79,7 +81,7 @@ against an arbitraty reference point. For instance, for the
 typical 3-phase inverter bridge, the output would be a 3x1 vector
 of the output voltages of each half-bridge, measured agains the
 "ground".
-Help for SVPWM_Modulator/U is inherited from superclass MODULATOR
+Help for SVPWM_Modulator/U is inherited from superclass Modulator
 
 ### * getting reference voltage vector
 
@@ -98,10 +100,10 @@ See also CLA, CLF, GCA, GCF, HOLD.
 ### * set_Udq Set supply voltage components
 
 set_Udq(this, Udq)
-Help for SVPWM_Modulator/set_Udq is inherited from superclass MODULATOR
+Help for SVPWM_Modulator/set_Udq is inherited from superclass Modulator
 
 ### * set_f Set fundamental supply frequency.
 
 set_f(this, f)
-Help for SVPWM_Modulator/set_f is inherited from superclass MODULATOR
+Help for SVPWM_Modulator/set_f is inherited from superclass Modulator
 

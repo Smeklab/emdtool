@@ -3,7 +3,7 @@ title : Standard
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Standard
 Standard methods:
 Standard - is a class.
 create_geometry - Standard/create_geometry is a function.
@@ -14,6 +14,8 @@ create_geometry - Standard/create_geometry is a function.
 Class methods are listed below. Inherited methods are not included.
 ### * Standard/Standard is a constructor.
 this = Standard(dim)
+Documentation for Standard/Standard
+doc Standard
 
 ### * create_geometry Initialize geometry.
 
@@ -22,5 +24,5 @@ this = create_geometry(this, varargin)
 Initializes the geometry.
 
 Must be subclassed.
-Help for Standard/create_geometry is inherited from superclass GEOBASE
+Help for Standard/create_geometry is inherited from superclass GeoBase
 

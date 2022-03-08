@@ -3,12 +3,13 @@ title : Arc
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Arc
 Arc methods:
 Arc - is a class.
 center_from_segment_points - Arc center from three segment points.
 from_points - Create an Arc from Points.
 from_segment_points - Create an Arc from three points on it.
+update_points - start and end points
 ## PROPERTIES
 * Arc/angle_end is a property.
 
@@ -19,7 +20,7 @@ from_segment_points - Create an Arc from three points on it.
 * Arc/radius is a property.
 
 * type - Type (geo.line or geo.arc)
-Help for Arc.type is inherited from superclass CURVE
+Help for Arc.type is inherited from superclass Curve
 
 * Arc/xcenter is a property.
 
@@ -27,6 +28,8 @@ Help for Arc.type is inherited from superclass CURVE
 Class methods are listed below. Inherited methods are not included.
 ### * Arc/Arc is a constructor.
 this = Arc(pstart, pcenter, pend)
+Documentation for Arc/Arc
+doc Arc
 
 ### * center_from_segment_points Arc center from three segment points.
 
@@ -63,4 +66,6 @@ Consider creating two Arcs, between Pstart-Pmid and Pmid-Pend if this is
 necessary.
 
 ### * uminus Reverse direction, return a new Curve.
+
+### * start and end points
 

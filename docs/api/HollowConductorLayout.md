@@ -3,7 +3,7 @@ title : HollowConductorLayout
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for HollowConductorLayout
 HollowConductorLayout methods:
 HollowConductorLayout - is a class.
 compute_losses_stranded - HollowConductorLayout/compute_losses_stranded is a function.
@@ -26,6 +26,9 @@ create_solid_geometry - HollowConductorLayout/create_solid_geometry is a functio
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * HollowConductorLayout/HollowConductorLayout is a constructor.
+obj = HollowConductorLayout
+Documentation for HollowConductorLayout/HollowConductorLayout
+doc HollowConductorLayout
 
 ### * compute_losses_stranded Estimate AC losses in stranded windings.
 
@@ -44,15 +47,15 @@ winding.
 
 See the code of PolyphaseCircuit.stranded_conductor_losses for
 more details.
-Help for HollowConductorLayout/compute_losses_stranded is inherited from superclass WINDINGLAYOUTBASE
+Help for HollowConductorLayout/compute_losses_stranded is inherited from superclass WindingLayoutBase
 
 ### * conductor_area Total conductor area per slot.
 
 Returns nan by default; should be overridden in subclasses if
 needed.
-Help for HollowConductorLayout/conductor_area is inherited from superclass WINDINGLAYOUTBASE
+Help for HollowConductorLayout/conductor_area is inherited from superclass WindingLayoutBase
 
 ### * create_solid_geometry Create slot geometry for solid winding
 models.
-Help for HollowConductorLayout/create_solid_geometry is inherited from superclass WINDINGLAYOUTBASE
+Help for HollowConductorLayout/create_solid_geometry is inherited from superclass WindingLayoutBase
 

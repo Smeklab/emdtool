@@ -36,4 +36,4 @@ stator.visualize();
 rotor.visualize();
 
 %saving visualization
-emdtool_export_example_fig(rotor);
+%emdtool_export_example_fig(rotor);

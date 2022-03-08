@@ -3,7 +3,7 @@ title : SlottedRotor1
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SlottedRotor1
 SlottedRotor1 methods:
 SlottedRotor1 - is a class.
 create_geometry - SlottedRotor1/create_geometry is a function.
@@ -11,6 +11,9 @@ create_geometry - SlottedRotor1/create_geometry is a function.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * SlottedRotor1/SlottedRotor1 is a constructor.
+obj = SlottedRotor1
+Documentation for SlottedRotor1/SlottedRotor1
+doc SlottedRotor1
 
 ### * create_geometry Initialize geometry.
 
@@ -19,5 +22,5 @@ this = create_geometry(this, varargin)
 Initializes the geometry.
 
 Must be subclassed.
-Help for SlottedRotor1/create_geometry is inherited from superclass GEOBASE
+Help for SlottedRotor1/create_geometry is inherited from superclass GeoBase
 

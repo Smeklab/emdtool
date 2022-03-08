@@ -3,7 +3,7 @@ title : gw3D
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for gw3D
 gw3D methods:
 generate_mesh - gw3D/generate_mesh is a function.
 gw3D - is a class.
@@ -45,6 +45,8 @@ generate_mesh(this)
 
 ### * gw3D/gw3D is a constructor.
 this = gw3D(varargin)
+Documentation for gw3D/gw3D
+doc gw3D
 
 ### * numbering volumes
 

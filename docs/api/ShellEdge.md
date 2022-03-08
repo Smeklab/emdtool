@@ -3,7 +3,7 @@ title : ShellEdge
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for ShellEdge
 ShellEdge methods:
 ShellEdge - is a class.
 shellify - ShellEdge/shellify is a function.
@@ -20,6 +20,8 @@ shellify - ShellEdge/shellify is a function.
 Class methods are listed below. Inherited methods are not included.
 ### * ShellEdge/ShellEdge is a constructor.
 this = ShellEdge(msh, nodes)
+Documentation for ShellEdge/ShellEdge
+doc ShellEdge
 
 ### * PLOT   Linear plot.
 PLOT(X,Y) plots vector Y versus vector X. If X or Y is a matrix,

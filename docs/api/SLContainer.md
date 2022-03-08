@@ -3,7 +3,7 @@ title : SLContainer
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SLContainer
 SLContainer A SMEKlib container class for key-value pairs.
 
 Has the following methods:
@@ -39,6 +39,8 @@ keys() returns the keys.
 copy() returns a deep copy.
 
 (c) 2017 Antti Lehikoinen / Aalto University
+Documentation for SLContainer/SLContainer
+doc SLContainer
 
 ### * SLContainer/add is a function.
 c = add(c, name, d)

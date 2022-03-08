@@ -3,7 +3,7 @@ title : MotorModelBase
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for MotorModelBase
 MotorModelBase Base class for magnetics models.
 
 Default construction:
@@ -41,6 +41,22 @@ motor.finalize();
 * airgap - **airgap** container
 
 * MotorModelBase/boundaries is a property.
+
+* build_factor_for_iron_losses Iron loss build factor
+
+Correction coefficient for iron losses. Only used (by default)
+inside this.results_summary, multiplying
+`summary.total_iron_losses`.
+
+DEFAULT: 1
+
+* build_factor_for_winding_losses Phase winding loss build factor
+
+Correction coefficient for winding losses. Only used (by default)
+inside this.results_summary, multiplying
+`summary.total_(phase_circuit_name)_losses`.
+
+DEFAULT: 1
 
 * circuits - circuits
 
@@ -89,6 +105,8 @@ motor.add_airgap(static_part, moving_part);
 motor.set_outer_boundary(bnd);
 
 motor.finalize();
+Documentation for MotorModelBase/MotorModelBase
+doc MotorModelBase
 
 ### * MotorModelBase/add_component is a function.
 add_component(this, name, component, varargin)
@@ -127,7 +145,16 @@ initialize_airgap(this)
 
 plot_flux(this, solution)
 
+plot_flux(this, solution, args)
+
 plot_flux(this, solution, steps_to_plot)
+
+plot_flux(this, solution, steps_to_plot, args), where
+
+args:
+
+* 'plot_airgap' : plot airgap flux density (if this.airgap has a method
+*fluxplot* ). true/ false (Default: true).
 
 ### * results_summary Summary of analysis results.
 

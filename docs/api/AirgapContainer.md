@@ -3,7 +3,7 @@ title : AirgapContainer
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for AirgapContainer
 AirgapContainer Container class for one or more airgap models.
 
 this = AirgapContainer( model )
@@ -17,6 +17,8 @@ Class methods are listed below. Inherited methods are not included.
 ### * AirgapContainer Container class for one or more airgap models.
 
 this = AirgapContainer( model )
+Documentation for AirgapContainer/AirgapContainer
+doc AirgapContainer
 
 ### * add_gap Add an airgap.
 

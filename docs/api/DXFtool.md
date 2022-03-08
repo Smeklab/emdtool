@@ -3,7 +3,7 @@ title : DXFtool
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for DXFtool
 DXFtool v1.0 for reading and plotting DXF files in Matlab figures.
 by M.M. Pedersen, Aarhus University, March 2018.
 
@@ -67,13 +67,13 @@ TF = NE(H1, H2) stores the result in a logical array of the same
 dimensions.
 
 See also DXFTOOL, DXFTOOL/EQ, DXFTOOL/GE, DXFTOOL/GT, DXFTOOL/LE, DXFTOOL/LT
-Help for DXFtool/ne is inherited from superclass HANDLE
-Documentation for DXFtool/ne
-doc handle.ne
+Help for DXFtool/ne is inherited from superclass handle
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * construct dxf object
+Documentation for DXFtool/DXFtool
+doc DXFtool
 
 ### * DXFtool/list is a function.
 list(dxf)

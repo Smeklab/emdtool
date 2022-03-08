@@ -3,7 +3,7 @@ title : OctTree
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for OctTree
 OctTree methods:
 OctTree - is a class.
 from_mesh - OctTree.from_mesh is a function.
@@ -66,35 +66,51 @@ from_parent - OctTree.from_parent is a function.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * COUNT Returns the number of occurrences of a pattern in text.
-C = COUNT(STR,PATTERN) returns the number of occurrences of PATTERN in
+C = COUNT(STR,PAT) returns the number of occurrences of PAT in
 STR.
 
-STR can be a string array, a character vector, or a cell array of
-character vectors. So can PATTERN. PATTERN and STR need not be the same
-size. If PATTERN is a string array or a cell array, then COUNT returns
-the total number of occurrences of all elements of PATTERN in STR.
+STR must be text, which means it can be a string array, a character
+vector, or a cell array of character vectors. PAT can be text or a
+pattern array. PAT and STR need not have the same size. COUNT returns
+the number of occurrences of all elements of PAT in STR. If STR is a
+string array or cell array, then C is a double array that is the same
+size.
 
-C = COUNT(STR,PATTERN,'IgnoreCase',IGNORE) ignores case when searching
-for PATTERN in STR if IGNORE is true. The default value of IGNORE is false.
+C = COUNT(STR,PAT,'IgnoreCase',IGNORE) ignores case when searching
+for PAT in STR if IGNORE is true. The default value of IGNORE is false.
 
-Examples
+Examples:
 STR = "data.tar.gz";
-P = "tar";
-COUNT(STR,P)                   returns  1
+PAT = "tar";
+COUNT(STR,PAT)
+
+% returns  1
 
 STR = ["abstracts.docx","data.tar.gz"];
-P = 'tar';
-COUNT(STR,P)                   returns  [0 1]
+PAT = 'tar';
+COUNT(STR,PAT)
+
+% returns  [0 1]
+
+STR = "music.mp3";
+PAT = lettersPattern(1);
+COUNT(STR,PAT)
+
+% returns  7
 
 STR = "data.tar.gz";
-P = {'docx','tar'};
-COUNT(STR,P)                   returns  1
+PAT = {'docx','tar'};
+COUNT(STR,PAT)
+
+% returns  1
 
 STR = {'DATA.TAR.GZ','SUMMARY.PPT'};
-P = "tar";
-COUNT(STR,P,'IgnoreCase',true) returns  [1 0]
+PAT = "tar";
+COUNT(STR,PAT,'IgnoreCase',true)
 
-See also endsWith, startsWith, contains.
+% returns  [1 0]
+
+See also endsWith, startsWith, contains, pattern, lettersPattern.
 
 ### * find Find OctTreeNode containing given point.
 
@@ -102,10 +118,10 @@ See also endsWith, startsWith, contains.
 [x_local, elements] = find_closest_local(this, X)
 
 ### * OctTree.from_mesh is a function.
-this = from_mesh(m3d, varargin)
+this = OctTree.from_mesh(m3d, varargin)
 
 ### * OctTree.from_parent is a function.
-this = from_parent(parent, elements, xmin, xmax, ymin, ymax, zmin, zmax)
+this = OctTree.from_parent(parent, elements, xmin, xmax, ymin, ymax, zmin, zmax)
 
 ### * OctTree/get_root is a function.
 p = get_root(this)

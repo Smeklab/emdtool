@@ -3,7 +3,7 @@ title : HSIPM1
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for HSIPM1
 HSIPM1 methods:
 HSIPM1 - is a class.
 create_geometry - import geometry.*
@@ -12,6 +12,8 @@ create_geometry - import geometry.*
 Class methods are listed below. Inherited methods are not included.
 ### * HSIPM1/HSIPM1 is a constructor.
 this = HSIPM1(dim)
+Documentation for HSIPM1/HSIPM1
+doc HSIPM1
 
 ### * import geometry.*
 

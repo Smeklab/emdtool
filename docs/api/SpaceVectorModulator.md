@@ -3,7 +3,7 @@ title : SpaceVectorModulator
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SpaceVectorModulator
 SpaceVectorModulator Prototype multiphase space vector modulator.
 ## PROPERTIES
 * SpaceVectorModulator/UDC is a property.
@@ -25,6 +25,8 @@ SpaceVectorModulator Prototype multiphase space vector modulator.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * SpaceVectorModulator Prototype multiphase space vector modulator.
+Documentation for SpaceVectorModulator/SpaceVectorModulator
+doc SpaceVectorModulator
 
 ### * SpaceVectorModulator/U is a function.
 Uout = U(this, t, varargin)

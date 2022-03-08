@@ -3,7 +3,7 @@ title : MassivePM
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for MassivePM
 MassivePM methods:
 MassivePM - is a class.
 create_geometry - MassivePM/create_geometry is a function.
@@ -13,6 +13,8 @@ save_to_excel - MassivePM/save_to_excel is a function.
 Class methods are listed below. Inherited methods are not included.
 ### * MassivePM/MassivePM is a constructor.
 this = MassivePM(dim)
+Documentation for MassivePM/MassivePM
+doc MassivePM
 
 ### * copy_domain Copy domain and apply necessary rotations or
 translations.
@@ -29,10 +31,10 @@ this = create_geometry(this, varargin)
 Initializes the geometry.
 
 Must be subclassed.
-Help for MassivePM/create_geometry is inherited from superclass GEOBASE
+Help for MassivePM/create_geometry is inherited from superclass GeoBase
 
 ### * save_to_excel Save specifications to Excel sheet.
 
 save_to_excel(this, fname, varargin)
-Help for MassivePM/save_to_excel is inherited from superclass GEOBASE
+Help for MassivePM/save_to_excel is inherited from superclass GeoBase
 

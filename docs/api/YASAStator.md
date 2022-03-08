@@ -3,7 +3,7 @@ title : YASAStator
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for YASAStator
 YASAStator Axial yokeless stator.
 
 Can be modelled as half or full.
@@ -20,11 +20,13 @@ Nrep(this)
 
 Usually subclassed, but by default returns
 this.dimensions.Nrep.
-Help for YASAStator/Nrep is inherited from superclass GEOBASE
+Help for YASAStator/Nrep is inherited from superclass GeoBase
 
 ### * YASAStator Axial yokeless stator.
 
 Can be modelled as half or full.
+Documentation for YASAStator/YASAStator
+doc YASAStator
 
 ### * create_geometry Initialize geometry.
 
@@ -33,10 +35,13 @@ this = create_geometry(this, varargin)
 Initializes the geometry.
 
 Must be subclassed.
-Help for YASAStator/create_geometry is inherited from superclass GEOBASE
+Help for YASAStator/create_geometry is inherited from superclass GeoBase
 
-### * YASAStator/sector_shift is a function.
-s = sector_shift(this)
+### * sector_shift Shift in x-direction for meshing.
+
+How much the elementary geometry should be moved while
+replicating the elementary mesh.
+Help for YASAStator/sector_shift is inherited from superclass AxialGeometry
 
 ### * winding_angle Return winding angle.
 

@@ -3,7 +3,7 @@ title : SynRotorBase
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SynRotorBase
 SynRotorBase Base class for synchronous machine rotors.
 
 This class doesn't contain any geometry-creation functionality
@@ -22,7 +22,7 @@ Nrep(this)
 
 Usually subclassed, but by default returns
 this.dimensions.Nrep.
-Help for SynRotorBase/Nrep is inherited from superclass GEOBASE
+Help for SynRotorBase/Nrep is inherited from superclass GeoBase
 
 ### * SynRotorBase/SynRotor is a function.
 this = SynRotor(dim)
@@ -36,6 +36,8 @@ from the number of pole pairs (dimensions.p) and number of symmetry sectors
 
 Permanent magnet orientation is reversed for each successive pole,
 along with rotation according to this.sector_angle.
+Documentation for SynRotorBase/SynRotorBase
+doc SynRotorBase
 
 ### * SynRotorBase/d_axis_angle is a function.
 y = d_axis_angle(this)
@@ -46,7 +48,7 @@ sector_angle(this)
 
 Usually subclassed, but by default returns
 this.dimensions.sector_angle.
-Help for SynRotorBase/sector_angle is inherited from superclass RADIALGEOMETRY
+Help for SynRotorBase/sector_angle is inherited from superclass RadialGeometry
 
 ### * symmetry_period Symmetry period of the geometry.
 
@@ -54,5 +56,5 @@ symmetry_period(this)
 
 Usually subclassed, but by default returns
 this.dimensions.symmetry_period.
-Help for SynRotorBase/symmetry_period is inherited from superclass GEOBASE
+Help for SynRotorBase/symmetry_period is inherited from superclass GeoBase
 

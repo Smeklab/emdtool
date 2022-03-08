@@ -3,7 +3,7 @@ title : Mesh
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Mesh
 Mesh Class for mesh objects.
 
 Has the following properties:
@@ -37,6 +37,15 @@ t2e = 3xNe incidence array: listing the 3 edges belonging to each element
 e2t = 2xNedges incidence array: from edges to elements. Second is zero for boundary edges
 
 (c) 2017 Antti Lehikoinen / Aalto University
+Documentation for Mesh/Mesh
+helpwin Mesh
 
 ### * finalize Set edge incidence, infer element type.
+
+### * get_outer_edges Get edges surrounding elements.
+
+edge_indices = get_outer_edges(this, elements)
+
+Given a list (1xN) of `elements`, the function returns the indices to
+edges `edge_indices` surrounding the elements (outer boundary only)
 

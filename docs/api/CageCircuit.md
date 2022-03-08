@@ -3,16 +3,25 @@ title : CageCircuit
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for CageCircuit
 CageCircuit methods:
 CageCircuit - is a class.
-get_loop_matrix - TODO generalize dimensions
+finalize_matrices - Set matrices, etc.
+merge_circuit_from_another_slice - CageCircuit/merge_circuit_from_another_slice is a function.
 ## PROPERTIES
 * CageCircuit/broken_bars is a property.
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * CageCircuit/CageCircuit is a constructor.
+obj = CageCircuit
+Documentation for CageCircuit/CageCircuit
+doc CageCircuit
+
+### * CageCircuit/bar_currents is a function.
+I = bar_currents(this, solution)
+
+### * finalize_matrices Set matrices, etc.
 
 ### * CageCircuit/get_EW_impedance_matrix is a function.
 Z = get_EW_impedance_matrix(this)
@@ -21,9 +30,38 @@ Z = get_EW_impedance_matrix(this)
 X = get_EW_inductance_matrix(this)
 
 ### * get_loop_matrix EW resistance matrix.
-Help for CageCircuit/get_EW_resistance_matrix is inherited from superclass CIRCUIT
+Help for CageCircuit/get_EW_resistance_matrix is inherited from superclass Circuit
 
-### * TODO generalize dimensions
+### * init Initialize matrices etc. for circuit.
+
+init(this, problem) ties this to the given [MagneticsProblem](MagneticsProblem.html) and
+initializes the problem matrices and arrays in this.matrices:
+
+* inds_solid : which of the Conductors in this are solid
+
+* inds_stranded : likewise for stranded
+
+* R : per-conductor resistances, active length
+
+* R_EW : per-conductor resistances, end-winding length
+
+* area : conductor areas
+
+* sigma : conductor conductivities. Assumed uniform.
+
+* M : mass/damping matrix
+
+* C_Ai : current source matrix
+
+* C_Au : voltage source matrix
+
+* C_uu : voltage-voltage coupling matrix
+
+* L : circuit loop matrix
+Help for CageCircuit/init is inherited from superclass Circuit
+
+### * CageCircuit/loop_currents is a function.
+I = loop_currents(this, solution)
 
 ### * losses Circuit losses.
 
@@ -44,5 +82,8 @@ of all poles".
 
 For **losses** in typical 2D solid conductors (e.g. BlockCircuit,
 SheetCircuit, CageCircuit), see compute_SolidConductorLosses.
-Help for CageCircuit/losses is inherited from superclass CIRCUITBASE
+Help for CageCircuit/losses is inherited from superclass CircuitBase
+
+### * CageCircuit/merge_circuit_from_another_slice is a function.
+merge_circuit_from_another_slice(this, another_circuit)
 

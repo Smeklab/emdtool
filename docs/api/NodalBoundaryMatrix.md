@@ -3,7 +3,7 @@ title : NodalBoundaryMatrix
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for NodalBoundaryMatrix
 NodalBoundaryMatrix methods:
 NodalBoundaryMatrix - is a class.
 finalize - getting free nodes
@@ -29,6 +29,8 @@ from_mesh - NodalBoundaryMatrix.from_mesh is a function.
 Class methods are listed below. Inherited methods are not included.
 ### * NodalBoundaryMatrix/NodalBoundaryMatrix is a constructor.
 this = NodalBoundaryMatrix(msh)
+Documentation for NodalBoundaryMatrix/NodalBoundaryMatrix
+doc NodalBoundaryMatrix
 
 ### * NodalBoundaryMatrix/add_Diriclet_boundary is a function.
 add_Diriclet_boundary(this, bnd)
@@ -45,5 +47,5 @@ add_periodic_boundary(this, bnd, coeff)
 ### * getting free nodes
 
 ### * NodalBoundaryMatrix.from_mesh is a function.
-P = from_mesh(msh, periodicity_coefficient)
+P = NodalBoundaryMatrix.from_mesh(msh, periodicity_coefficient)
 

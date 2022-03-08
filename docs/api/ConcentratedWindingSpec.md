@@ -3,17 +3,17 @@ title : ConcentratedWindingSpec
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for ConcentratedWindingSpec
 ConcentratedWindingSpec methods:
 ConcentratedWindingSpec - is a class.
 end_winding_loop_matrix - ConcentratedWindingSpec/end_winding_loop_matrix is a function.
-get_half_of_turn_length - ConcentratedWindingSpec/get_half_of_turn_length is a function.
+get_end_winding_length_per_conductor - ConcentratedWindingSpec/get_end_winding_length_per_conductor is a function.
 get_overhang_length - ConcentratedWindingSpec/get_overhang_length is a function.
 ## PROPERTIES
 * ConcentratedWindingSpec/layer_direction is a property.
 
 * overhang_length - winding overhang length
-Help for ConcentratedWindingSpec/overhang_length is inherited from superclass POLYPHASEWINDINGSPEC
+Help for ConcentratedWindingSpec/overhang_length is inherited from superclass PolyphaseWindingSpec
 
 * ConcentratedWindingSpec/q is a property.
 
@@ -23,8 +23,10 @@ Help for ConcentratedWindingSpec/overhang_length is inherited from superclass PO
 Class methods are listed below. Inherited methods are not included.
 ### * ConcentratedWindingSpec/ConcentratedWindingSpec is a constructor.
 this = ConcentratedWindingSpec(varargin)
+Documentation for ConcentratedWindingSpec/ConcentratedWindingSpec
+doc ConcentratedWindingSpec
 
-### * end_winding_loop_matrix End-winding loop matrix, slot-segment.
+### * end_winding_loop_matrix End-winding loop matrix, per slot-segment.
 
 L = end_winding_loop_matrix(this)
 
@@ -33,7 +35,7 @@ times each phase traverses each 'slot segment' = end-winding
 piece between two successive slots.
 
 Only computed for one end of a radial-flux machine.
-Help for ConcentratedWindingSpec/end_winding_loop_matrix is inherited from superclass POLYPHASEWINDINGSPEC
+Help for ConcentratedWindingSpec/end_winding_loop_matrix is inherited from superclass PolyphaseWindingSpec
 
 ### * set_layout_matrix Initialize winding layout matrix.
 
@@ -47,5 +49,5 @@ positive direction:
 
 * W(i, j) = -k : phase k goes through layer i, slot j, to
 negative direction:
-Help for ConcentratedWindingSpec/set_layout_matrix is inherited from superclass POLYPHASEWINDINGSPEC
+Help for ConcentratedWindingSpec/set_layout_matrix is inherited from superclass PolyphaseWindingSpec
 

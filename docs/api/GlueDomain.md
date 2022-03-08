@@ -3,7 +3,7 @@ title : GlueDomain
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for GlueDomain
 GlueDomain methods:
 GlueDomain - is a class.
 axial_append - GlueDomain/axial_append is a function.
@@ -16,9 +16,14 @@ create_radial_twosided - GlueDomain/create_radial_twosided is a function.
 
 * GlueDomain/lcar is a property.
 
+* GlueDomain/scale is a property.
+
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * GlueDomain/GlueDomain is a constructor.
+obj = GlueDomain
+Documentation for GlueDomain/GlueDomain
+doc GlueDomain
 
 ### * GlueDomain/axial_append is a function.
 axial_append(this, parent_entity, name, L)
@@ -33,5 +38,5 @@ create_axial_twosided(this, rotor, stator)
 create_radial(this, parent_entity)
 
 ### * GlueDomain/create_radial_twosided is a function.
-create_radial_twosided(this, rotor, stator)
+new_domain = create_radial_twosided(this, rotor, stator, twosided)
 

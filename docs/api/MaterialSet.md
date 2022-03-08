@@ -3,7 +3,7 @@ title : MaterialSet
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for MaterialSet
 MaterialSet Container class.
 
 This class is used inside [MagneticsProblem](MagneticsProblem.html) analysis functions
@@ -19,6 +19,8 @@ Class methods are listed below. Inherited methods are not included.
 
 This class is used inside [MagneticsProblem](MagneticsProblem.html) analysis functions
 for evaluating the reluctivities of a bunch of materials.
+Documentation for MaterialSet/MaterialSet
+doc MaterialSet
 
 ### * evaluate_differential_reluctivity Differential reluctivity
 evaluation.

@@ -3,7 +3,7 @@ title : Nodal2D
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Nodal2D
 Nodal2D Lagrange (nodal) shape function in 2D.
 
 Class for representing and evaluating shape functions and their partial derivatives.
@@ -52,6 +52,8 @@ this = Nodal( Operators.grad )
 this = Nodal( Operators.curl )
 
 For evaluating grad N or curl N, respectively.
+Documentation for Nodal2D/Nodal2D
+doc Nodal2D
 
 ### * eval Global evaluation.
 

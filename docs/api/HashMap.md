@@ -3,8 +3,9 @@ title : HashMap
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for HashMap
 HashMap is a class.
+obj = HashMap
 ## PROPERTIES
 * HashMap/keys_array is a property.
 
@@ -15,6 +16,9 @@ HashMap is a class.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * HashMap/HashMap is a constructor.
+obj = HashMap
+Documentation for HashMap/HashMap
+doc HashMap
 
 ### * get Value corresponding to the key.
 

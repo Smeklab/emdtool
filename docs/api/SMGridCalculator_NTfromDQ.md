@@ -3,7 +3,7 @@ title : SMGridCalculator_NTfromDQ
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SMGridCalculator_NTfromDQ
 SMGridCalculator_NTfromDQ methods:
 SMGridCalculator_NTfromDQ - is a class.
 compute_all - SMGridCalculator_NTfromDQ/compute_all is a function.
@@ -31,6 +31,8 @@ setup_point - SMGridCalculator_NTfromDQ/setup_point is a function.
 Class methods are listed below. Inherited methods are not included.
 ### * SMGridCalculator_NTfromDQ/SMGridCalculator_NTfromDQ is a constructor.
 this = SMGridCalculator_NTfromDQ(dq_grid, motor, varargin)
+Documentation for SMGridCalculator_NTfromDQ/SMGridCalculator_NTfromDQ
+doc SMGridCalculator_NTfromDQ
 
 ### * SMGridCalculator_NTfromDQ/compute_all is a function.
 this = compute_all(this)

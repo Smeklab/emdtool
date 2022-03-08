@@ -3,14 +3,72 @@ title : BreadloafRotor
 parent: API
 grand_parent : Documentation
 ---
-## Summary
-BreadloafRotor methods:
-BreadloafRotor - is a class.
-create_geometry - BreadloafRotor/create_geometry is a function.
+## Summary for BreadloafRotor
+BreadloafRotor Template for rotors with breadloaf PMs.
+
+DIMENSIONS:
+
+Main dimensions:
+* leff : stack length
+* symmetry_sectors : number of symmetry sectots
+* Rout : airgap-side radius.
+* Rin : inner radius
+
+Magnet dimensions:
+* h_pm : magnet thickness at thickest point (center)
+* w_pm : magnet width
+
+Optional retaining sleeve:
+* h_sleeve : (OPTIONAL) sleeve thickness.
+
+Magnet loss model:
+* magnet_circuit_type : (OPTIONAL). "block" (default) or
+"extruded", to use axially-segmented magnet model.
+* magnet_height : magnet segment height, if axially segmented
+model.
+
+Materials:
+* rotor_core_material : rotor core material.
+* rotor_stacking_factor : stacking factor for rotor core
+* magnet_material : magnet material.
+* polegap_material : (OPTIONAL) Material of polegaps. Defaults to
+air.
+* sleeve_material : retaining sleeve material
 ## PROPERTIES
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * BreadloafRotor/BreadloafRotor is a constructor.
+### * BreadloafRotor Template for rotors with breadloaf PMs.
+
+DIMENSIONS:
+
+Main dimensions:
+* leff : stack length
+* symmetry_sectors : number of symmetry sectots
+* Rout : airgap-side radius.
+* Rin : inner radius
+
+Magnet dimensions:
+* h_pm : magnet thickness at thickest point (center)
+* w_pm : magnet width
+
+Optional retaining sleeve:
+* h_sleeve : (OPTIONAL) sleeve thickness.
+
+Magnet loss model:
+* magnet_circuit_type : (OPTIONAL). "block" (default) or
+"extruded", to use axially-segmented magnet model.
+* magnet_height : magnet segment height, if axially segmented
+model.
+
+Materials:
+* rotor_core_material : rotor core material.
+* rotor_stacking_factor : stacking factor for rotor core
+* magnet_material : magnet material.
+* polegap_material : (OPTIONAL) Material of polegaps. Defaults to
+air.
+* sleeve_material : retaining sleeve material
+Documentation for BreadloafRotor/BreadloafRotor
+doc BreadloafRotor
 
 ### * create_geometry Initialize geometry.
 
@@ -19,5 +77,5 @@ this = create_geometry(this, varargin)
 Initializes the geometry.
 
 Must be subclassed.
-Help for BreadloafRotor/create_geometry is inherited from superclass GEOBASE
+Help for BreadloafRotor/create_geometry is inherited from superclass GeoBase
 

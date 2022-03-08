@@ -3,7 +3,7 @@ title : Circuit
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Circuit
 Circuit Simple base class for circuits modelled with the AVI
 formulation.
 ## PROPERTIES
@@ -12,6 +12,8 @@ formulation.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * Circuit Constructor.
+Documentation for Circuit/Circuit
+doc Circuit
 
 ### * Circuit/compute_conductor_areas is a function.
 compute_conductor_areas(this)
@@ -33,7 +35,7 @@ Nui = get_ndof(this, problem, type, pars), where
 * problem = [MagneticsProblem](MagneticsProblem.html) or similar
 
 * type = string, usually "static" / "harmonic" / "stepping"
-Help for Circuit/get_ndof is inherited from superclass CIRCUITBASE
+Help for Circuit/get_ndof is inherited from superclass CircuitBase
 
 ### * init Initialize matrices etc. for circuit.
 
@@ -65,7 +67,7 @@ initializes the problem matrices and arrays in this.matrices:
 ### * init_for_simulation Init Circuit for simulation.
 
 init_for_simulation(this, problem, type, pars)
-Help for Circuit/init_for_simulation is inherited from superclass CIRCUITBASE
+Help for Circuit/init_for_simulation is inherited from superclass CircuitBase
 
 ### * losses Circuit losses.
 
@@ -86,7 +88,7 @@ of all poles".
 
 For **losses** in typical 2D solid conductors (e.g. BlockCircuit,
 SheetCircuit, CageCircuit), see compute_SolidConductorLosses.
-Help for Circuit/losses is inherited from superclass CIRCUITBASE
+Help for Circuit/losses is inherited from superclass CircuitBase
 
 ### * set_load1 Set load vector.
 

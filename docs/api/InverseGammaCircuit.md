@@ -3,7 +3,7 @@ title : InverseGammaCircuit
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for InverseGammaCircuit
 InverseGammaCircuit methods:
 InverseGammaCircuit - is a class.
 from_harmonic_solution - Initialize eq. circuit from solution.
@@ -23,6 +23,9 @@ from_harmonic_solution - Initialize eq. circuit from solution.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * InverseGammaCircuit/InverseGammaCircuit is a constructor.
+obj = InverseGammaCircuit
+Documentation for InverseGammaCircuit/InverseGammaCircuit
+doc InverseGammaCircuit
 
 ### * from_harmonic_solution Initialize eq. circuit from solution.
 

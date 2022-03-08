@@ -3,7 +3,7 @@ title : PolyphaseCircuit
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for PolyphaseCircuit
 PolyphaseCircuit Class for finite-element representation of polyphase
 circuits.
 
@@ -49,6 +49,8 @@ parallel paths, winding layout matrix, loop matrix, etc.
 The **PolyphaseCircuit** then handles the finite-element representation
 of the winding, as well as the different supply modes. See
 `this.set_load` .
+Documentation for PolyphaseCircuit/PolyphaseCircuit
+doc PolyphaseCircuit
 
 ### * coil_current Coil current from solution.
 
@@ -79,6 +81,8 @@ E = derivate_phase_quantity(this, QoI, solution, varargin)
 ### * PolyphaseCircuit/domains is a function.
 ds = domains(this)
 
+### * ew_length_per_conductor End-winding conductor length.
+
 ### * filling_factor Conductor filling factor.
 
 ### * get_DC_resistance_matrix DC-resistance matrix for the FE
@@ -102,27 +106,28 @@ Nui = get_ndof(this, problem, type, pars), where
 * problem = [MagneticsProblem](MagneticsProblem.html) or similar
 
 * type = string, usually "static" / "harmonic" / "stepping"
-Help for PolyphaseCircuit/get_ndof is inherited from superclass CIRCUITBASE
+Help for PolyphaseCircuit/get_ndof is inherited from superclass CircuitBase
+
+### * PolyphaseCircuit/get_nl_matrix is a function.
+[Scc, rescc] = get_nl_matrix(this, problem, type, t, kstep, Xprev, Xiter)
 
 ### * get_EW_impedance_matrix Complex end-winding impedance matrix.
 
 ### * get_stranded_resistance_matrix Resistance matrix for stranded
 parts of the winding (all EW + stranded active conductors)
 
-### * half_coil_length Half of turn length.
-
 ### * init Initialize circuit matrices.
 
 ### * init_for_simulation Init Circuit for simulation.
 
 init_for_simulation(this, problem, type, pars)
-Help for PolyphaseCircuit/init_for_simulation is inherited from superclass CIRCUITBASE
+Help for PolyphaseCircuit/init_for_simulation is inherited from superclass CircuitBase
 
 ### * PolyphaseCircuit.line_current_matrix is a function.
-M = line_current_matrix
+M = PolyphaseCircuit.line_current_matrix
 
 ### * PolyphaseCircuit.line_to_line_voltage_matrix is a function.
-M = line_to_line_voltage_matrix
+M = PolyphaseCircuit.line_to_line_voltage_matrix
 
 ### * losses Circuit losses.
 
@@ -143,10 +148,13 @@ of all poles".
 
 For **losses** in typical 2D solid conductors (e.g. BlockCircuit,
 SheetCircuit, CageCircuit), see compute_SolidConductorLosses.
-Help for PolyphaseCircuit/losses is inherited from superclass CIRCUITBASE
+Help for PolyphaseCircuit/losses is inherited from superclass CircuitBase
 
 ### * PolyphaseCircuit/mass is a function.
 m = mass(this)
+
+### * PolyphaseCircuit/merge_circuit_from_another_slice is a function.
+merge_circuit_from_another_slice(this, another_circuit)
 
 ### * meshed_conductor_area_per_layer_and_turn Raw surface area.
 
@@ -193,6 +201,9 @@ Phi = phase_flux_linkage(this, solution, varargin), where
 
 solution = a [MagneticsSolution](MagneticsSolution.html) object.
 
+**** Note**: the contribution of end-winding leakage inductance
+term is **** NOT** included.
+
 ### * phase_impedance_voltage_drop Phase voltage drops from
 solution.
 
@@ -205,6 +216,11 @@ the end-winding region in case defs.solid).
 U = phase_impedance_voltage_drop(this, solution, varargin), where
 
 solution = a [MagneticsSolution](MagneticsSolution.html) object.
+
+### * resistance_matrix_seen_from_terminals Phase resistance matrix.
+
+Phase resistance matrix as seen from the phase terminals,
+i.e. considering the effect of parallel paths.
 
 ### * phase_voltage Phase voltages from the solution.
 

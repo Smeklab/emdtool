@@ -3,7 +3,7 @@ title : gw
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for gw
 gw methods:
 gw - is a class.
 initialize - adding surfaces
@@ -29,6 +29,8 @@ generate_mesh(this)
 
 ### * gw/gw is a constructor.
 this = gw(varargin)
+Documentation for gw/gw
+doc gw
 
 ### * adding surfaces
 

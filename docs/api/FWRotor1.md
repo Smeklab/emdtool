@@ -3,7 +3,7 @@ title : FWRotor1
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for FWRotor1
 FWRotor1 methods:
 FWRotor1 - is a class.
 create_geometry - parsing dimensions
@@ -15,6 +15,9 @@ create_geometry - parsing dimensions
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * FWRotor1/FWRotor1 is a constructor.
+obj = FWRotor1
+Documentation for FWRotor1/FWRotor1
+doc FWRotor1
 
 ### * parsing dimensions
 

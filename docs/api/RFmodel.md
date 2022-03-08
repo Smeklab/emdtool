@@ -3,7 +3,7 @@ title : RFmodel
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for RFmodel
 RFmodel Simple class for radial-flux machines.
 
 See [MotorModelBase](MotorModelBase.html).
@@ -13,6 +13,8 @@ Class methods are listed below. Inherited methods are not included.
 ### * RFmodel Simple class for radial-flux machines.
 
 See [MotorModelBase](MotorModelBase.html).
+Documentation for RFmodel/RFmodel
+doc RFmodel
 
 ### * VISUALIZE Visualize geometry.
 

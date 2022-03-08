@@ -3,7 +3,7 @@ title : RadialGeometry
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for RadialGeometry
 RadialGeometry Base class for radial geometries.
 
 This class is the lowest-level fully working class for representing
@@ -39,6 +39,8 @@ recommended):
 * symmetry_period : symmetry period of winding etc.
 
 * sector_angle : angular span of elementary geometry.
+Documentation for RadialGeometry/RadialGeometry
+doc RadialGeometry
 
 ### * copy_domain Copy domain and apply necessary rotations or
 translations.
@@ -78,6 +80,17 @@ Usually subclassed, but by default returns
 this.dimensions.sector_angle.
 
 ### * shift_elementary_nodes Apply symmetry shift.
+
+### * update_remanence_direction_to_new_sector Update domain
+remanence direction.
+
+update_remanence_direction_to_new_sector(this, dnew, k)
+
+Update the remanence direction (if any) of the [Domain](Domain.html) dnew
+into the new symmetry sector k. The default behaviour is to
+rotate the direction by this.sector_angle AND to flip the
+orientation (N-S to S-N) for odd sectors. Please subclass if
+not appropriate.
 
 ### * RadialGeometry/visualize_radial is a function.
 visualize_radial(this, varargin)

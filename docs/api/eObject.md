@@ -3,7 +3,7 @@ title : eObject
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for eObject
 eObject methods:
 eObject - is a class.
 relative_at_level - eObject/relative_at_level is a function.
@@ -23,6 +23,9 @@ add_relative(this, o)
 o = closest_to(this, level)
 
 ### * eObject/eObject is a constructor.
+obj = eObject
+Documentation for eObject/eObject
+doc eObject
 
 ### * eObject/oldest_parent is a function.
 o = oldest_parent(this)

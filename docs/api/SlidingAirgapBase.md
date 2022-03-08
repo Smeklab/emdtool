@@ -3,7 +3,7 @@ title : SlidingAirgapBase
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SlidingAirgapBase
 SlidingAirgapBase methods:
 SlidingAirgapBase - is a class.
 compute_torque - Torque computation method.
@@ -32,6 +32,10 @@ triplot - SlidingAirgapBase/triplot is a function.
 
 * SlidingAirgapBase/moving_component is a property.
 
+* SlidingAirgapBase/n_bnd_moving is a property.
+
+* SlidingAirgapBase/n_bnd_static is a property.
+
 * SlidingAirgapBase/n_fixed is a property.
 
 * SlidingAirgapBase/n_int is a property.
@@ -47,6 +51,9 @@ triplot - SlidingAirgapBase/triplot is a function.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * SlidingAirgapBase/SlidingAirgapBase is a constructor.
+obj = SlidingAirgapBase
+Documentation for SlidingAirgapBase/SlidingAirgapBase
+doc SlidingAirgapBase
 
 ### * SlidingAirgapBase/compute_stiffness_matrices is a function.
 compute_stiffness_matrices(this)

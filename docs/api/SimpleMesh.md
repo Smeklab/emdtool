@@ -3,7 +3,7 @@ title : SimpleMesh
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SimpleMesh
 SimpleMesh Basic mesh class.
 ## PROPERTIES
 * SimpleMesh/element_type is a property.
@@ -18,6 +18,8 @@ Class methods are listed below. Inherited methods are not included.
 [Bvec, h] = Bquiver(this, A, els, varargin)
 
 ### * SimpleMesh Basic mesh class.
+Documentation for SimpleMesh/SimpleMesh
+doc SimpleMesh
 
 ### * SimpleMesh/elementCenters is a function.
 x0 = elementCenters(this, inds)
@@ -53,6 +55,9 @@ plot.
 
 ### * SimpleMesh/point2element is a function.
 elements = point2element(this, X)
+
+### * SimpleMesh/to_local_coordinates is a function.
+xloc = to_local_coordinates(this, x, els)
 
 ### * triplot Plot elements
 

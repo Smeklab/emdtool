@@ -3,24 +3,26 @@ title : ExtrudedPrismMesh
 parent: API
 grand_parent : Documentation
 ---
-## Summary
-ExtrudedMachineMesh A base class for a MachineMesh extruded into 3D.
+## Summary for ExtrudedPrismMesh
+ExtrudedPrismMesh Class for extruded prism meshes.
 
-(c) 2017 Antti Lehikoinen / Aalto University
+The class creates an extruded 3D mesh with prismatic elements, from
+a given 2D mesh.
 ## PROPERTIES
-* ExtrudedPrismMesh/Ne2 is a property.
+* Ne2 - number of elements in original 2D mesh
 
-* ExtrudedPrismMesh/Nfaces_square is a property.
+* Nl - number of extruded node layers, equal to numel(this.zs)
 
-* ExtrudedPrismMesh/Nfaces_tri is a property.
+* Np2 - number of nodes in original 2D mesh
 
-* ExtrudedPrismMesh/Nl is a property.
+* isoparametric (boolean) Is the mesh isoparametric.
 
-* ExtrudedPrismMesh/Np2 is a property.
+false by default, corresponding to linearly-extruded non-rotated
+prismatic elements.
 
-* ExtrudedPrismMesh/faces_square is a property.
+true otherwise. Must be set manually when required.
 
-* ExtrudedPrismMesh/faces_tri is a property.
+* zs - z-coordinates of mesh node layers.
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
@@ -32,12 +34,30 @@ Class methods are listed below. Inherited methods are not included.
 Call syntax
 msh3 = extrudedMachineMesh(msh2) to extrude a MachineMesh and
 generate a new ExtrudedMachineMesh object msh3.
+Documentation for ExtrudedPrismMesh/ExtrudedPrismMesh
+doc ExtrudedPrismMesh
 
 ### * ExtrudedPrismMesh/elementCenters is a function.
 x0 = elementCenters(msh3, elem)
 
-### * ExtrudedPrismMesh/extrudeElements is a function.
-els = extrudeElements(msh3, els, varargin)
+### * elements_in_layer Indices to all elements in a given layer.
+
+els = elements_in_layer(this, layer), where
+
+* layer : the number of layer OR "mid" or "top" to plot the
+ceil(number_of_layers/2)th or number_of_layers:th layer,
+respectively.
+
+### * extrude_elements 3D elements corresponding to given 2D
+elements.
+
+elements_3D = extrude_elements(this, elements_2D)
+
+Get all 3D equivalents, in all layers.
+
+elements_3D = extrude_elements(this, elements_2D, layers)
+
+Limit to the given layers only.
 
 ### * extrude_nodes
 
@@ -46,10 +66,18 @@ els = extrude_nodes(msh3, nodes)
 els = extrude_nodes(msh3, nodes, layers)
 
 ### * ExtrudedPrismMesh/getMappingMatrix is a function.
-[F, varargout] = getMappingMatrix(this, elem, varargin)
+[F, varargout] = getMappingMatrix(this, elements, varargin)
+
+### * revert to old reference implementation by default
 
 ### * ExtrudedPrismMesh/grad_quiver is a function.
 [Bvec, h] = grad_quiver(msh3, A, els, varargin)
+
+### * ExtrudedPrismMesh/layer_interpolation_matrix is a function.
+P = layer_interpolation_matrix(this, coordinates, element_layer)
+
+### * ExtrudedPrismMesh/plot_nodes is a function.
+plot_nodes(this, n, varargin)
 
 ### * ExtrudedPrismMesh/t is a function.
 y = t(msh3)

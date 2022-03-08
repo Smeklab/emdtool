@@ -3,7 +3,7 @@ title : SMGridCalculator_NT
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SMGridCalculator_NT
 SMGridCalculator_NT (rpm, T) operating point grid calculator.
 ## PROPERTIES
 * SMGridCalculator_NT/iterator is a property.
@@ -11,6 +11,8 @@ SMGridCalculator_NT (rpm, T) operating point grid calculator.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * SMGridCalculator_NT (rpm, T) operating point grid calculator.
+Documentation for SMGridCalculator_NT/SMGridCalculator_NT
+doc SMGridCalculator_NT
 
 ### * SMGridCalculator_NT/compute_all is a function.
 this = compute_all(this)

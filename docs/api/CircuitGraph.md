@@ -3,7 +3,7 @@ title : CircuitGraph
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for CircuitGraph
 CircuitGraph methods:
 CircuitGraph - is a class.
 create_tree - CircuitGraph/create_tree is a function.
@@ -30,6 +30,8 @@ visualize_tree - CircuitGraph/visualize_tree is a function.
 Class methods are listed below. Inherited methods are not included.
 ### * CircuitGraph/CircuitGraph is a constructor.
 this = CircuitGraph(edges, ew)
+Documentation for CircuitGraph/CircuitGraph
+doc CircuitGraph
 
 ### * CircuitGraph/create_tree is a function.
 create_tree(this)

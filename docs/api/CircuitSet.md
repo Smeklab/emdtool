@@ -3,21 +3,27 @@ title : CircuitSet
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for CircuitSet
 CircuitSet Class for handling operations on several circuits.
 ## PROPERTIES
 * circuits - Array of Circuit objects.
 
 * CircuitSet/current_type is a property.
 
+* CircuitSet/empty_Scc_blocks is a property.
+
 * CircuitSet/problem is a property.
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * CircuitSet Class for handling operations on several circuits.
+Documentation for CircuitSet/CircuitSet
+doc CircuitSet
 
 ### * CircuitSet/finalize_after_simulation is a function.
 finalize_after_simulation(this, solution)
+
+### * get_matrices Return circuit matrices for a problem.
 
 ### * get_matrices Return circuit matrices for a problem.
 

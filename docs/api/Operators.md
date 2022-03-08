@@ -3,15 +3,17 @@ title : Operators
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Operators
 {
 ## PROPERTIES
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * Operators.I is a function.
-e = I
+e = Operators.I
 
 ### * {
+Documentation for Operators/Operators
+doc Operators
 
 ### * CURL  Curl and angular velocity of a vector field.
 [CURLX, CURLY, CURLZ, CAV] = CURL(X,Y,Z,U,V,W) computes the
@@ -55,8 +57,8 @@ hold on; quiver(x,y,u,v)
 See also STREAMRIBBON, DIVERGENCE.
 
 ### * Operators.div is a function.
-e = div
+e = Operators.div
 
 ### * Operators.grad is a function.
-e = grad
+e = Operators.grad
 

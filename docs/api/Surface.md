@@ -3,7 +3,7 @@ title : Surface
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Surface
 SURFACE Class for representing elementary surfaces.
 
 A Surface object represents a single surface with or without holes (i.e.
@@ -18,14 +18,24 @@ two [Point](Point.html) objects.
 See <geometry_creation.html geometry creation> for more details.
 ## PROPERTIES
 * holes - Array of [Surface](Surface.html) objects inside this Surface.
+Documentation for Surface/holes
+doc Surface/holes
 
 * Surface/is_closed is a property.
+Documentation for Surface/is_closed
+doc Surface/is_closed
 
 * line_directions - Direction of each boundary segment (+1 / -1).
+Documentation for Surface/line_directions
+doc Surface/line_directions
 
 * lines - Array of [Curve](Curve.html) objects defining the boundary of the geometry. Ordered.
+Documentation for Surface/lines
+doc Surface/lines
 
 * name - Surface name.
+Documentation for Surface/name
+doc Surface/name
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
@@ -39,6 +49,8 @@ this = Surface(name, (Curve definitions))
 
 Create a surface, and then pass all following arguments
 (Curve definitions) to this.add_curve.
+Documentation for Surface/Surface
+helpwin Surface
 
 ### * add_curve Add a curve to the surface boundary.
 
@@ -73,10 +85,14 @@ surface.
 by simply passing all arguments to the method at once.
 However, the *holes* , if any, must be supplied last and not
 be followed by any Curves.
+Documentation for Surface/add_curve
+doc Surface/add_curve
 
 ### * add_hole Add one or more holes to the surface.
 
 add_hole(this, surface_1, ...)
+Documentation for Surface/add_hole
+doc Surface/add_hole
 
 ### * area Return surface area(2D).
 
@@ -87,24 +103,73 @@ this.points().
 surface may not exactly equal the number returned by
 area(this), especially if the surface contains [Arc](Arc.html)
 boundaries.
+Documentation for Surface/area
+doc Surface/area
+
+### * contract Contract surface.
+
+s2 = contract(this, d) is equivalent to calling
+
+s2 = this.copy();
+s2.contract_inplace(d);
+Documentation for Surface/contract
+doc Surface/contract
+
+### * contract_inplace Contract surface into a marginally smaller surface.
+
+contract_inplace(this, reff) squeezes the surface to a smaller surface,
+by the amount d. Not guaranteed to work; only recommended with d
+significantly smaller than the radius of the smallest arc.
+Documentation for Surface/contract_inplace
+doc Surface/contract_inplace
+
+### * copy Copy surface.
+
+s2 = copy(this) returns a **copy** of this, with all the points and curves
+copied. Should only be called on Surfaces that don't share any Points or
+Curves with other Surfaces. NOTE: this is **NOT**  asserted.
+Documentation for Surface/copy
+doc Surface/copy
 
 ### * fill Fill(-plot) surface
+Documentation for Surface/fill
+doc Surface/fill
 
 ### * Surface.from_line is a function.
-this = from_line(l, direction)
+this = Surface.from_line(l, direction)
+Documentation for Surface.from_line
+doc Surface.from_line
 
 ### * in_surface Point in surface?
 
 bl = in_surface(this, X)
+Documentation for Surface/in_surface
+doc Surface/in_surface
 
 ### * Surface/is_ccw is a function.
 is_ccw = is_ccw(this)
+Documentation for Surface/is_ccw
+doc Surface/is_ccw
+
+### * mirror Mirror surface.
+
+s2 = mirror(this, a) return a new surface, mirrored across the angle *a* .
+See Point.mirror
+Documentation for Surface/mirror
+doc Surface/mirror
+
+### * Surface/mirror_inplace is a function.
+mirror_inplace(this, a)
+Documentation for Surface/mirror_inplace
+doc Surface/mirror_inplace
 
 ### * plot Plot surface.
 
 plot(this, args)
 
 Plot surface with (args).
+Documentation for Surface/plot
+doc Surface/plot
 
 ### * points Surface boundary as an array of doubles.
 
@@ -114,6 +179,8 @@ Returns the x- and y-coordinates of the [Point](Point.html) objects
 defining the boundary of this surface.
 
 X = points(this, dense) use denser **points** for Arcs
+Documentation for Surface/points
+doc Surface/points
 
 ### * reduce Reduce surface to the smallest possible area.
 
@@ -136,11 +203,26 @@ or more Arcs, the Line is selected.
 
 **NOTE**  This method must be called only after *all*  boundary-sharing holes
 have been defined; the method cannot see the future.
+Documentation for Surface/reduce
+doc Surface/reduce
 
 ### * reset_curves Remove all lines.
+Documentation for Surface/reset_curves
+doc Surface/reset_curves
 
 ### * rotate_inplace Rotate surface in-place.
 
 rotate_inplace(this, a) rotates all Points in this around the
 Origin by the angle a.
+Documentation for Surface/rotate_inplace
+doc Surface/rotate_inplace
+
+### * set_maximum_characteristic_length Set maximum characteristic length.
+
+set_maximum_characteristic_length(this, lcar)
+
+The function goes through all [Points](Points.html) `p` in `this` and sets their
+characteristic length to `min(p.lcar, lcar)`.
+Documentation for Surface/set_maximum_characteristic_length
+doc Surface/set_maximum_characteristic_length
 

@@ -3,7 +3,7 @@ title : geo
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for geo
 enumeration
 line
 arc
@@ -18,14 +18,17 @@ P = add_fillet(r, pa1, pa2, pb1, pb2, varargin)
 
 P = add_fillet(r, pa1, pa2, pb1, pb2, direction)
 
+### * geo.add_fillet_between_curves is a function.
+Pcenter = geo.add_fillet_between_curves(r_fillet, ca, cb, direction)
+
 ### * geo.arc is a function.
-e = arc
+e = geo.arc
 
 ### * geo.closest_point is a function.
-pclosest = closest_point(X, points)
+pclosest = geo.closest_point(X, points)
 
 ### * geo.find_arc is a function.
-[l, direction] = find_arc(p1, pc, p2)
+[l, direction] = geo.find_arc(p1, pc, p2)
 
 ### * find_line Find line between two points.
 
@@ -36,9 +39,11 @@ line
 arc
 hole
 end
+Documentation for geo/geo
+doc geo
 
 ### * geo.hole is a function.
-e = hole
+e = geo.hole
 
 ### * LINE Create line
 LINE(X,Y) adds the **line** defined in vectors X and Y to the current axes.
@@ -68,8 +73,11 @@ property values.
 
 See also PATCH, TEXT, PLOT, PLOT3.
 
+### * geo.move_to_intersect is a function.
+geo.move_to_intersect(pa1, pa2, pb1, pb2, pextra)
+
 ### * geo.parse_named is a function.
-C = parse_named(entities)
+C = geo.parse_named(entities)
 
 ### * parsing start line
 

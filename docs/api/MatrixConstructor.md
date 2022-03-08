@@ -3,7 +3,7 @@ title : MatrixConstructor
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for MatrixConstructor
 MatrixConstructor Constructor for FE matrices.
 ## PROPERTIES
 ## Methods
@@ -17,6 +17,8 @@ Initialize empty constructor.
 this = MatrixConstruct(varargin)
 
 Initialize AND then call this.assemble_matrix(varargin)
+Documentation for MatrixConstructor/MatrixConstructor
+doc MatrixConstructor
 
 ### * assemble_matrix Increment matrix.
 

@@ -3,7 +3,7 @@ title : LaminatedCircuit
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for LaminatedCircuit
 LaminatedCircuit Class for modelling classical eddy currents in
 laminated [Domain](Domain.html)s.
 
@@ -25,6 +25,8 @@ and Calorimetric Measurement of Core Losses in Frequency-Converter-Supplied
 Synchronous Machines'.
 
 https://aaltodoc.aalto.fi/bitstream/handle/123456789/7292/isbn9789526048864.pdf?sequence=4&isAllowed=y
+Documentation for LaminatedCircuit/LaminatedCircuit
+doc LaminatedCircuit
 
 ### * init Initialize matrices etc. for circuit.
 
@@ -52,7 +54,7 @@ initializes the problem matrices and arrays in this.matrices:
 * C_uu : voltage-voltage coupling matrix
 
 * L : circuit loop matrix
-Help for LaminatedCircuit/init is inherited from superclass CIRCUIT
+Help for LaminatedCircuit/init is inherited from superclass Circuit
 
 ### * TODO fix plotting etc
 

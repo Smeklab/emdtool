@@ -3,7 +3,7 @@ title : Nedelec3DPrism
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Nedelec3DPrism
 Nedelec3D class for 3D Nedelec shape functions.
 
 Only supports tets, so far.
@@ -19,6 +19,8 @@ Class methods are listed below. Inherited methods are not included.
 Only supports tets, so far.
 
 (c) 2018 Antti Lehikoinen / Aalto University
+Documentation for Nedelec3DPrism/Nedelec3DPrism
+doc Nedelec3DPrism
 
 ### * eval Evaluate global shape function.
 

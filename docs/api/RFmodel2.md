@@ -3,7 +3,7 @@ title : RFmodel2
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for RFmodel2
 RFmodel2 methods:
 RFmodel2 - is a class.
 add_component - Add component to RFmodel2
@@ -36,6 +36,8 @@ visualize - Visualize geometry.
 Class methods are listed below. Inherited methods are not included.
 ### * RFmodel2/RFmodel2 is a constructor.
 this = RFmodel2(dim)
+Documentation for RFmodel2/RFmodel2
+doc RFmodel2
 
 ### * add_component Add component to RFmodel2
 

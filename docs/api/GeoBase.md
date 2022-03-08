@@ -3,7 +3,7 @@ title : GeoBase
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for GeoBase
 GeoBase Base class for geometries.
 
 Basic usage:
@@ -67,6 +67,8 @@ See [RadialGeometry](RadialGeometry.html), [StatorBase](StatorBase.html), [Slott
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * GeoBase Constructor
+Documentation for GeoBase/GeoBase
+doc GeoBase
 
 ### * Nrep Number of times to replicate elementary mesh.
 
@@ -81,8 +83,29 @@ this.dimensions.Nrep.
 
 ### * add_material Add [Material](Material.html) to this.
 
-### * GeoBase/check_feasibility is a function.
-bl = check_feasibility(this, varargin)
+Adding a new
+
+### * check_feasibility Perform partial feasibility check on the geometry.
+
+bl = check_feasibility(this) checks if any of the `Lines` or `Surfaces` in `this`
+intersect, using `this.check_line_intersect` and
+`this.check_surface_intersect`.
+
+If nothing intersects, the method returns `true`, otherwise `false`.
+
+### * check_line_intersect Check if any lines intersect.
+
+check_line_intersect(this)
+
+check_line_intersect(this, 'plot', true) to plot some results.
+
+**WARNING**  Only checks `Lines`, ignoring `Arcs`.
+
+### * check_surface_intersect Check if any surfaces intersect.
+
+bl = check_surface_intersect(this)
+
+bl = check_surface_intersect(this, 'plot', true) to plot some results.
 
 ### * copy_domain Copy domain and apply necessary rotations or
 translations to the domain and remanence orientation, if any.
@@ -165,6 +188,9 @@ mesh_elementary_geometry(this)
 Meshes the *elementary*  geometry, e.g. the raw geometry before possible
 replication.
 
+mesh_elementary_geometry(this, 'delete_files', false) to keep the .geo
+and .msh files.
+
 Note that the methods `this.shift_elementary_nodes` ,
 `this.copy_domain` , and `this.parse_nodes`  have to be implemented.
 
@@ -191,11 +217,27 @@ Equivalent to calling msh_plot(this, varargin{:})
 
 ### * plot_edges Plot edges
 
+plot_edges(this, edge_definitions), where
+* edge_definitions : 2 x number of edges array; indices to
+nodes in this.root_mesh.
+
+plot_edges(this, edge_name) to fetch definitions from
+this.edges
+
+plot_edges(this, name_or_def, plot_args) to pass on plot_args
+to *plot* .
+
 ### * plot_geometry Plots the geometry.
 
 [] = plot_geometry(this, varargin)
 
 Plots the geometry using *plot*  with *varargin* {:}
+
+### * remove_unused Remove unused / unset domains and materials.
+
+First removes Domains that do not have any surfaces, and then Materials
+that either don't belong to any Domain, or only belong to a Domain that
+was removed during the first step.
 
 ### * replicate_elementary_mesh Replicate elementary mesh.
 

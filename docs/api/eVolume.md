@@ -3,7 +3,7 @@ title : eVolume
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for eVolume
 eVolume methods:
 eVolume - is a class.
 plot - eVolume/plot is a function.
@@ -20,6 +20,9 @@ Class methods are listed below. Inherited methods are not included.
 add_surface(this, s)
 
 ### * eVolume/eVolume is a constructor.
+obj = eVolume
+Documentation for eVolume/eVolume
+doc eVolume
 
 ### * PLOT   Linear plot.
 PLOT(X,Y) plots vector Y versus vector X. If X or Y is a matrix,

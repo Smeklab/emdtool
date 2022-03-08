@@ -3,7 +3,7 @@ title : eCurve
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for eCurve
 eCurve methods:
 eCurve - is a class.
 extrude_to_level - eCurve/extrude_to_level is a function.
@@ -27,6 +27,8 @@ add_surface(this, s)
 
 ### * eCurve/eCurve is a constructor.
 this = eCurve(varargin)
+Documentation for eCurve/eCurve
+doc eCurve
 
 ### * Direction of this Curve to join with other curve.
 
@@ -40,7 +42,7 @@ bl = extends(this, other_curve, other_curve_direction)
 lnew = extrude_to_level(this, level)
 
 ### * eCurve.find_curve is a function.
-c = find_curve(varargin)
+c = eCurve.find_curve(varargin)
 
 ### * joinable_with Check if this Curve joins with other Curve.
 

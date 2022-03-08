@@ -3,18 +3,14 @@ title : MeshBase3D
 parent: API
 grand_parent : Documentation
 ---
-## Summary
-MeshBase3D a base class for a 3D mesh.
-
-Subject to changes.
-
-(c) 2017 Antti Lehikoinen / Aalto University
+## Summary for MeshBase3D
+MeshBase3D a base class for some 3D meshes
 ## PROPERTIES
-* MeshBase3D/edges is a property.
+* edges - edge definitions
 
 * MeshBase3D/elementType is a property.
 
-* MeshBase3D/elements is a property.
+* elements - element definitions
 
 * MeshBase3D/elements2edges is a property.
 
@@ -32,13 +28,11 @@ Subject to changes.
 
 * MeshBase3D/namedNodes is a property.
 
-* MeshBase3D/nodes is a property.
+* nodes - nodal coordinates, 3xNp
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * MeshBase3D a base class for a 3D mesh.
-
-Subject to changes.
-
-(c) 2017 Antti Lehikoinen / Aalto University
+### * MeshBase3D a base class for some 3D meshes
+Documentation for MeshBase3D/MeshBase3D
+doc MeshBase3D
 

@@ -3,7 +3,7 @@ title : Nodal3D
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Nodal3D
 Nodal3D is a class.
 this = Nodal3D(varargin)
 ## PROPERTIES
@@ -13,6 +13,8 @@ this = Nodal3D(varargin)
 Class methods are listed below. Inherited methods are not included.
 ### * Nodal3D/Nodal3D is a constructor.
 this = Nodal3D(varargin)
+Documentation for Nodal3D/Nodal3D
+doc Nodal3D
 
 ### * eval evaluates the global shape function
 call syntax

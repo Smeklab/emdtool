@@ -47,15 +47,15 @@ has_toc : false
 * *class* : [Airgap](Airgap.html)  **Airgap** Base class for airgap geometries.
 * *class* : [MeshBase](MeshBase.html) **MeshBase** is a class.
 * *class* : [MeshView](MeshView.html) **MeshView** is a class.
+* *class* : [/Mesh/Meshes_3D/ExtrudedPrismMesh](ExtrudedPrismMesh.html)  **ExtrudedPrismMesh** Class for extruded prism meshes.
 * *class* : [/Mesh/Meshes_3D/TetMesh](TetMesh.html)  **TetMesh** minimal mesh of 3D tetrahedrons.
-* *class* : [ExtrudedPrismMesh](ExtrudedPrismMesh.html)  ExtrudedMachineMesh A base class for a MachineMesh extruded into 3D.
-* *class* : [MeshBase3D](MeshBase3D.html)  **MeshBase3D** a base class for a 3D mesh.
+* *class* : [MeshBase3D](MeshBase3D.html)  **MeshBase3D** a base class for some 3D meshes
 * *class* : [Nodal3D](Nodal3D.html) **Nodal3D** is a class.
 * *class* : [Nodal3D_UpExtruded](Nodal3D_UpExtruded.html) **Nodal3D_UpExtruded** is a class.
 * *class* : [Nodal3D_extruded](Nodal3D_extruded.html) **Nodal3D_extruded** is a class.
 * *class* : [PrismMeshBase3D](PrismMeshBase3D.html)  **PrismMeshBase3D** A base class for a 3D mesh with prismatic elements.
+* *class* : [/Mesh/Other meshes/Mesh](Mesh.html)  **Mesh** Class for mesh objects.
 * *class* : [/Mesh/Other meshes/SimpleMesh](SimpleMesh.html)  **SimpleMesh** Basic mesh class.
-* *class* : [Mesh](Mesh.html)  **Mesh** Class for mesh objects.
 * *class* : [RotatedMeshView](RotatedMeshView.html) **RotatedMeshView** is a class.
 ## Geometry
  Folder with the following files / classes / subfolders:
@@ -68,10 +68,10 @@ has_toc : false
 * *class* : [/ representation/Arc](Arc.html) **Arc** methods:
 * *class* : [/ representation/Curve](Curve.html)  CURVE Abstract base class for representing line segments and circle arcs
 * *class* : [/ representation/Line](Line.html) **Line** methods:
+* *class* : [/ representation/Point](Point.html)  POINT Class for representing points in a geometry.
 * *class* : [/ representation/geo](geo.html)  enumeration
 * *class* : [/ representation/gw](gw.html) **gw** methods:
-* *class* : [Point](Point.html)  POINT Class for representing points in a geometry.
-* *class* : [/Motor geometries/AxialGeometry](AxialGeometry.html) **AxialGeometry** methods:
+* *class* : [/Motor geometries/AxialGeometry](AxialGeometry.html)  **AxialGeometry** Base class for 2D axial / linear geometries.
 * *class* : [/Motor geometries/RadialGeometry](RadialGeometry.html)  **RadialGeometry** Base class for radial geometries.
 ## Materials
  Folder with the following files / classes / subfolders:
@@ -103,7 +103,7 @@ has_toc : false
 * *class* : [Templates/AFmodel](AFmodel.html)  only types given?
 * *class* : [LinearGeoBase](LinearGeoBase.html) **LinearGeoBase** methods:
 * *class* : [RFmodel](RFmodel.html)  **RFmodel** Simple class for radial-flux machines.
-* *class* : [/Rotors/BreadloafRotor](BreadloafRotor.html) **BreadloafRotor** methods:
+* *class* : [/Rotors/BreadloafRotor](BreadloafRotor.html)  **BreadloafRotor** Template for rotors with breadloaf PMs.
 * *class* : [/Rotors/CoatedRotor](CoatedRotor.html) **CoatedRotor** methods:
 * *class* : [/Rotors/FWRotor1](FWRotor1.html) **FWRotor1** methods:
 * *class* : [/Rotors/HSIPM1](HSIPM1.html) **HSIPM1** methods:
@@ -117,6 +117,7 @@ has_toc : false
 * *class* : [/Rotors/ShieldedSPM](ShieldedSPM.html) **ShieldedSPM** methods:
 * *class* : [/Rotors/SlottedRotor1](SlottedRotor1.html) **SlottedRotor1** methods:
 * *class* : [/Rotors/SpokeRotor1](SpokeRotor1.html)  default dimensions
+* *class* : [/Rotors/SynRMrotor1](SynRMrotor1.html) **SynRMrotor1** methods:
 * *class* : [/Rotors/VIPM1](VIPM1.html)  **VIPM1** V-shape IPM rotor.
 * *class* : [SlottedRotorBase](SlottedRotorBase.html)  **SlottedRotorBase** Base class for slotted radial-flux rotors.
 * *class* : [SynRotorBase](SynRotorBase.html)  **SynRotorBase** Base class for synchronous machine rotors.
@@ -146,18 +147,20 @@ has_toc : false
 * *class* : [ParkClarke](ParkClarke.html)  **ParkClarke** Legacy compatibility class.
 * *class* : [/FE Circuits/CageCircuit](CageCircuit.html) **CageCircuit** methods:
 * *class* : [/FE Circuits/Circuit](Circuit.html)  **Circuit** Simple base class for circuits modelled with the AVI
-* *class* : [/FE Circuits/ExtrudedBlockCircuit](ExtrudedBlockCircuit.html) **ExtrudedBlockCircuit** methods:
+* *class* : [/FE Circuits/ExtrudedBlockCircuit](ExtrudedBlockCircuit.html)  **ExtrudedBlockCircuit** Circuit for massive conductor blocks.
 * *class* : [/FE Circuits/LaminatedCircuit](LaminatedCircuit.html)  **LaminatedCircuit** Class for modelling classical eddy currents in
 * *class* : [/FE Circuits/PolyphaseCircuit](PolyphaseCircuit.html)  **PolyphaseCircuit** Class for finite-element representation of polyphase
 * *class* : [BlockCircuit](BlockCircuit.html) **BlockCircuit** is a class.
 * *class* : [CircuitBase](CircuitBase.html)  **CircuitBase** Abstract base class for finite-element Circuits.
 * *class* : [CircuitSet](CircuitSet.html)  **CircuitSet** Class for handling operations on several circuits.
 * *class* : [Circuits](Circuits.html) **Circuits** is a class.
+* *class* : [/FE Circuits/Conductors/PointConductor](PointConductor.html) **PointConductor** methods:
 * *class* : [/FE Circuits/Conductors/SolidConductor](SolidConductor.html) **SolidConductor** methods:
 * *class* : [/FE Circuits/Conductors/SplitConductor](SplitConductor.html) **SplitConductor** methods:
 * *class* : [/FE Circuits/Conductors/StrandedConductor](StrandedConductor.html) **StrandedConductor** methods:
 * *class* : [Conductor](Conductor.html)  **Conductor** Base class for conductors.
 * *class* : [SheetCircuit](SheetCircuit.html) **SheetCircuit** is a class.
+* *class* : [SliceableCircuit](SliceableCircuit.html)  **SliceableCircuit** Base class for Circuits suitable for slicing.
 * *class* : [/FE Circuits/Sources/VoltageSource](VoltageSource.html)  **VoltageSource** Voltage source class for MagneticsProblem.
 * *class* : [/Modulators/SVPWM_Modulator](SVPWM_Modulator.html)  **SVPWM_Modulator** Basic Modulator.
 * *class* : [/Modulators/SinusoidalModulator](SinusoidalModulator.html)  **SinusoidalModulator** Sinusoidal voltage modulator.
@@ -206,11 +209,12 @@ has_toc : false
 * *class* : [/Mechanical analysis/ShellEdge](ShellEdge.html) **ShellEdge** methods:
 * *class* : [Nodal2D_Quad](Nodal2D_Quad.html) **Nodal2D_Quad** is a class.
 * *class* : [NodalBase](NodalBase.html) **NodalBase** is a class.
-* *class* : [Quad](Quad.html) **Quad** - (Not recommended) Numerically evaluate integral, adaptive Simpson quadrature
+* *class* : [Quad](Quad.html) **Quad** is a class.
 * *class* : [SimpleMesh2](SimpleMesh2.html) **SimpleMesh2** is a class.
 ## utilities
  Miscellaneous utilities classes and functions.
 
+* *class* : [GIFFile](GIFFile.html) **GIFFile** is a class.
 * *class* : [HashMap](HashMap.html) **HashMap** is a class.
 * *class* : [Indexable](Indexable.html) **Indexable** is a class.
 * *class* : [SLContainer](SLContainer.html)  **SLContainer** A SMEKlib container class for key-value pairs.

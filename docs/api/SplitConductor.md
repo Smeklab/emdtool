@@ -3,7 +3,7 @@ title : SplitConductor
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for SplitConductor
 SplitConductor methods:
 SplitConductor - is a class.
 set_matrices - SplitConductor/set_matrices is a function.
@@ -14,6 +14,8 @@ set_matrices - SplitConductor/set_matrices is a function.
 Class methods are listed below. Inherited methods are not included.
 ### * SplitConductor/SplitConductor is a constructor.
 this = SplitConductor(type, domain, domain_over_split)
+Documentation for SplitConductor/SplitConductor
+doc SplitConductor
 
 ### * SplitConductor/copy is a function.
 c = copy(this)

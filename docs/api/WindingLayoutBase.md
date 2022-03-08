@@ -3,7 +3,7 @@ title : WindingLayoutBase
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for WindingLayoutBase
 WindingLayoutBase Base class for winding layouts.
 
 The WindingLayoutBase class exists to simplify the workflow of
@@ -82,11 +82,15 @@ rather, winding) [Surfaces](Surfaces.html), and pass them as an array.
 
 If not specified, slot liner thickness x 2 is returned.
 
+* mesh_liner - Mesh slot liner or not?
+
 * slot - a [SlotShapeBase](SlotShapeBase.html) object associated with this
 
 * slot_liner_length - linear slot liner length
 
 * slot_liner_thickness - slot liner thickness (m)
+
+* winding_spec - a [PolyphaseWindingSpec](PolyphaseWindingSpec.html) object of the parent circuit
 
 * winding_window_area - winding window area, gross
 
@@ -163,6 +167,8 @@ USAGE: The intended usage is as follows.
 use a [SlotShapeBase](SlotShapeBase.html) object and pass it on to the
 `create_slot_geometry`  method, or you manually create the slot (or
 rather, winding) [Surfaces](Surfaces.html), and pass them as an array.
+Documentation for WindingLayoutBase/WindingLayoutBase
+doc WindingLayoutBase
 
 ### * compute_losses_stranded Estimate AC losses in stranded windings.
 
@@ -186,6 +192,9 @@ more details.
 
 Returns nan by default; should be overridden in subclasses if
 needed.
+
+### * WindingLayoutBase/create_custom_geometry is a function.
+create_custom_geometry(this, parent_geometry, winding_spec, surfaces)
 
 ### * create_slot_geometry Create the winding geometry.
 

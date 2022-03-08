@@ -3,7 +3,7 @@ title : Material
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for Material
 Material Basic isotropic material class.
 
 Materials are normally instantiated with the static methods
@@ -24,7 +24,7 @@ computation method. Indeed, the `loss_density`  method of the
 property.
 
 However, subclasses may have a different `loss_density`  method.
-Help for Material/iron_loss_computation_method is inherited from superclass MATERIALBASE
+Help for Material/iron_loss_computation_method is inherited from superclass MaterialBase
 
 * stacking_factors - list of stacking factors per each element
 
@@ -225,12 +225,12 @@ Return values:
 
 * Elementwise hysteresis, eddy, and exces loss densities,
 expressed in W/m^3.
-Help for Material/loss_density is inherited from superclass MATERIALBASE
+Help for Material/loss_density is inherited from superclass MaterialBase
 
 ### * plot_BH Plot BH curves etc.
 
 ### * Material.process_BH is a function.
-[Bnu, Bdnu] = process_BH(BH, varargin)
+[Bnu, Bdnu] = Material.process_BH(BH, varargin)
 
 ### * raw_reluctivity Evaluate (non-differential) reluctivity.
 
@@ -247,6 +247,8 @@ Does nothing by default
 ### * Material/shift_elements is a function.
 this = shift_elements(this, Ne)
 
-### * Material/thermal_conductivity is a function.
-l = thermal_conductivity(this)
+### * thermal_conductivity Thermal conductivity in SI units.
+
+Fetched from this.material_properties.thermal_conductivity
+Help for Material/thermal_conductivity is inherited from superclass MaterialBase
 

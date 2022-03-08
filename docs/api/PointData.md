@@ -3,7 +3,7 @@ title : PointData
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for PointData
 PointData methods:
 PointData - is a class.
 ## PROPERTIES
@@ -17,4 +17,6 @@ PointData - is a class.
 Class methods are listed below. Inherited methods are not included.
 ### * PointData/PointData is a constructor.
 this = PointData(p, pp)
+Documentation for PointData/PointData
+doc PointData
 

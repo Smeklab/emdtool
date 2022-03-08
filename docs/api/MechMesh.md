@@ -3,7 +3,7 @@ title : MechMesh
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for MechMesh
 MechMesh methods:
 MechMesh - is a class.
 ## PROPERTIES
@@ -23,4 +23,6 @@ MechMesh - is a class.
 Class methods are listed below. Inherited methods are not included.
 ### * MechMesh/MechMesh is a constructor.
 this = MechMesh(p, t)
+Documentation for MechMesh/MechMesh
+doc MechMesh
 

@@ -3,7 +3,7 @@ title : MagneticsSolution
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for MagneticsSolution
 MagneticsSolution Class for representing the solution to MagneticsProblem.
 
 
@@ -43,6 +43,8 @@ sol_2 = problem.solve_xx();
 results = do_something(sol_1)
 
 may cause unexpected results. Please use solutions right away.
+Documentation for MagneticsSolution/MagneticsSolution
+doc MagneticsSolution
 
 ### * MagneticsSolution/get_dof is a function.
 val = get_dof(this, key)

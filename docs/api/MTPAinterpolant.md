@@ -3,7 +3,7 @@ title : MTPAinterpolant
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for MTPAinterpolant
 MTPAinterpolant Interpolant for post-processing field-weakening
 behaviour
 ## PROPERTIES
@@ -58,7 +58,7 @@ i = findI(~, Ttarget, Icontour, Tcontour)
 t = findT(this, Tlevels, E)
 
 ### * MTPAinterpolant.from_grid is a function.
-this = from_grid(grid, varargin)
+this = MTPAinterpolant.from_grid(grid, varargin)
 
 ### * MTPAinterpolant/init is a function.
 init(this, Tn, nn, nrange, varargin)

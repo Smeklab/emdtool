@@ -3,7 +3,7 @@ title : AFmodel
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for AFmodel
 only types given?
 ## PROPERTIES
 * AFmodel/airgap is a property.
@@ -21,6 +21,8 @@ only types given?
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * only types given?
+Documentation for AFmodel/AFmodel
+doc AFmodel
 
 ### * AFmodel/compute_torque is a function.
 [T, T1, T2] = compute_torque(this, solution)

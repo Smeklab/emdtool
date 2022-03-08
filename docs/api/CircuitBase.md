@@ -3,7 +3,7 @@ title : CircuitBase
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for CircuitBase
 CircuitBase Abstract base class for finite-element Circuits.
 
 Use one of the subclasses to instantiate an object. Common examples
@@ -24,6 +24,8 @@ Use the `add_conductor`  method to add conductors to this.
 * CircuitBase/data is a property.
 
 * enabled - FIXME persistence / consistence issues
+
+* CircuitBase/is_linear is a property.
 
 * CircuitBase/is_time_invariant is a property.
 
@@ -47,6 +49,8 @@ include
 * [ExtrudedBlockCircuit](ExtrudedBlockCircuit.html)
 
 Use the `add_conductor`  method to add conductors to this.
+Documentation for CircuitBase/CircuitBase
+doc CircuitBase
 
 ### * add_conductor Add conductor to circuit.
 
@@ -59,7 +63,17 @@ is created.
 Type is an optional arguments, either def.solid for a solid
 conductor (default) or defs.stranded for stranded.
 
+### * conductor_active_length Active length of each conductor.
+
+l = conductor_active_length(this) returns 1 x
+number_of_conductors array of active lengths.
+
 ### * half_of_turn_length Return effective length.
+
+### * ew_length_per_conductor Return EW length.
+
+Usually equal to 0, unless an
+end-winding is modelled.
 
 ### * filling_factor Conductor filling factor.
 
@@ -98,11 +112,6 @@ Nui = get_ndof(this, problem, type, pars), where
 * problem = [MagneticsProblem](MagneticsProblem.html) or similar
 
 * type = string, usually "static" / "harmonic" / "stepping"
-
-### * half_of_turn_length Return half of turn length.
-
-Usually equal to `this.effective_length` , unless an
-end-winding is modelled.
 
 ### * handle_latest_copies Object array method.
 

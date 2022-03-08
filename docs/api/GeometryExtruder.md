@@ -3,7 +3,7 @@ title : GeometryExtruder
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for GeometryExtruder
 GeometryExtruder methods:
 GeometryExtruder - is a class.
 init - GeometryExtruder/init is a function.
@@ -27,6 +27,9 @@ init - GeometryExtruder/init is a function.
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * GeometryExtruder/GeometryExtruder is a constructor.
+obj = GeometryExtruder
+Documentation for GeometryExtruder/GeometryExtruder
+doc GeometryExtruder
 
 ### * GeometryExtruder/finalize_initial_surface is a function.
 finalize_initial_surface(this, snew)
@@ -79,10 +82,14 @@ value will be returned.
 
 See also SET, RESET, DELETE, GCF, GCA, FIGURE, AXES.
 
+### * GeometryExtruder/get_3D_curve is a function.
+cnew = get_3D_curve(this, l2d)
+
 ### * GeometryExtruder/init is a function.
 init(this)
 
 ### * GeometryExtruder/initialize_3D_points is a function.
+obj = GeometryExtruder
 
 ### * GeometryExtruder/plot_curves is a function.
 plot_curves(this, varargin)

@@ -3,7 +3,7 @@ title : StatorBase
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for StatorBase
 StatorBase Base class for radial-flux stators.
 
 This class doesn't contain any geometry-creation functionality
@@ -13,9 +13,9 @@ from the slot number (dimensions.Qs) and number of symmetry sectors
 
 For a fully-functioning class, see [Stator](Stator.html).
 ## PROPERTIES
-* StatorBase/winding is a property.
+* winding - phase **winding** circuit, a [PolyphaseWinding](PolyphaseWinding.html) object
 
-* winding_spec - winding specs
+* winding_spec - winding specification, a [PolyphaseWindingSpec](PolyphaseWindingSpec.html) object
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
@@ -25,7 +25,7 @@ Nrep(this)
 
 Usually subclassed, but by default returns
 this.dimensions.Nrep.
-Help for StatorBase/Nrep is inherited from superclass GEOBASE
+Help for StatorBase/Nrep is inherited from superclass GeoBase
 
 ### * StatorBase Base class for radial-flux stators.
 
@@ -35,6 +35,8 @@ from the slot number (dimensions.Qs) and number of symmetry sectors
 (dimensions.symmetry_sectors).
 
 For a fully-functioning class, see [Stator](Stator.html).
+Documentation for StatorBase/StatorBase
+doc StatorBase
 
 ### * mean_distance_between_slots Mean distance from slot-to-slot.
 

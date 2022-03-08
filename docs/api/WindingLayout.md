@@ -3,12 +3,14 @@ title : WindingLayout
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for WindingLayout
 WindingLayout Factory class for winding layout matrices.
 ## PROPERTIES
 ## Methods
 Class methods are listed below. Inherited methods are not included.
 ### * WindingLayout Factory class for winding layout matrices.
+Documentation for WindingLayout/WindingLayout
+doc WindingLayout
 
 ### * concentrated Concentrated winding synthesis function.
 

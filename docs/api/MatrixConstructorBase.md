@@ -3,7 +3,7 @@ title : MatrixConstructorBase
 parent: API
 grand_parent : Documentation
 ---
-## Summary
+## Summary for MatrixConstructorBase
 MatrixConstructorBase is a class.
 this = MatrixConstructorBase(varargin)
 ## PROPERTIES
@@ -25,6 +25,8 @@ this = MatrixConstructorBase(varargin)
 Class methods are listed below. Inherited methods are not included.
 ### * MatrixConstructorBase/MatrixConstructorBase is a constructor.
 this = MatrixConstructorBase(varargin)
+Documentation for MatrixConstructorBase/MatrixConstructorBase
+doc MatrixConstructorBase
 
 ### * MatrixConstructorBase/addCoordinates is a function.
 this = addCoordinates(this, I, J)
