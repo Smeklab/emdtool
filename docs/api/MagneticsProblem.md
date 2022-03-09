@@ -23,23 +23,6 @@ Main methods:
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * MagneticsProblem Class for solving magnetics problems.
-
-this = MagneticsProblem( model )
-
-Construct problem, where *model*  is an instance of RFmodel or
-MotorModelBase class.
-
-Main methods:
-
-* solve_static : solve static problem with no damping effects.
-
-* solve_harmonic : solve harmonic problem.
-
-* solve_stepping : solve time-stepping problem.
-Documentation for MagneticsProblem/MagneticsProblem
-doc MagneticsProblem
-
 ### * MagneticsProblem/get_component_property is a function.
 prob = get_component_property(this, component, property, pars)
 

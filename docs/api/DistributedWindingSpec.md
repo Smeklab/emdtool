@@ -30,17 +30,3 @@ doc DistributedWindingSpec
 
 ### * end_winding_loop_matrix Loop matrix for end-winding segments.
 
-### * set_layout_matrix Initialize winding layout matrix.
-
-A layout matrix is a number_of_layers x number_of_slots matrix of
-integers, with values in range -phases...phases.
-
-The entries of the layout matrix W are:
-
-*  W(i, j) = +k : phase k goes through layer i, slot j, to
-positive direction:
-
-* W(i, j) = -k : phase k goes through layer i, slot j, to
-negative direction:
-Help for DistributedWindingSpec/set_layout_matrix is inherited from superclass PolyphaseWindingSpec
-

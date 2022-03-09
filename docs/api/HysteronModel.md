@@ -38,18 +38,6 @@ k_step_input < this.step in this.evaluate_H.
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * HysteronModel Base class for vector hysteron models
-
-this = HysteronModel(Bs, M)
-
-Piecewise linear shape functions are used. Hysteron evaluation
-methods must be subclassed.
-
-The model is stateful (p, B); re-initialization is triggered whenever
-k_step_input < this.step in this.evaluate_H.
-Documentation for HysteronModel/HysteronModel
-doc HysteronModel
-
 ### * HysteronModel/PlayModel is a function.
 this = PlayModel(Bs, M)
 

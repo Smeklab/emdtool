@@ -74,15 +74,6 @@ this = SVPWM_Modulator(UDC, fs), where
 Documentation for SVPWM_Modulator/SVPWM_Modulator
 doc SVPWM_Modulator
 
-### * U(this, t) Instantaneous voltage.
-
-Uterminal = U(this, t, varargin) returns the terminal *potentials*  measured
-against an arbitraty reference point. For instance, for the
-typical 3-phase inverter bridge, the output would be a 3x1 vector
-of the output voltages of each half-bridge, measured agains the
-"ground".
-Help for SVPWM_Modulator/U is inherited from superclass Modulator
-
 ### * getting reference voltage vector
 
 ### * RESET  Reset graphics object properties to their defaults.
@@ -96,14 +87,4 @@ RESET(GCA) resets the properties of the current axis.
 RESET(GCF) resets the properties of the current figure.
 
 See also CLA, CLF, GCA, GCF, HOLD.
-
-### * set_Udq Set supply voltage components
-
-set_Udq(this, Udq)
-Help for SVPWM_Modulator/set_Udq is inherited from superclass Modulator
-
-### * set_f Set fundamental supply frequency.
-
-set_f(this, f)
-Help for SVPWM_Modulator/set_f is inherited from superclass Modulator
 

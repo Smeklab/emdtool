@@ -64,23 +64,6 @@ detach(this)
 ### * Curve/distance_from_point is a function.
 [d, Pclosest] = distance_from_point(this, P)
 
-### * == (EQ)   Test handle equality.
-Handles are equal if they are handles for the same object.
-
-H1 == H2 performs element-wise comparisons between handle arrays H1 and
-H2.  H1 and H2 must be of the same dimensions unless one is a scalar.
-The result is a logical array of the same dimensions, where each
-element is an element-wise equality result.
-
-If one of H1 or H2 is scalar, scalar expansion is performed and the
-result will match the dimensions of the array that is not scalar.
-
-TF = EQ(H1, H2) stores the result in a logical array of the same
-dimensions.
-
-See also CURVE, CURVE/GE, CURVE/GT, CURVE/LE, CURVE/LT, CURVE/NE
-Help for Curve/eq is inherited from superclass handle
-
 ### * Direction of this Curve to join with other curve.
 
 ldir = extend_direction(this, other_curve)
@@ -96,24 +79,6 @@ bl = extends(this, other_curve, other_curve_direction)
 bl = joinable_with(this, other_line)
 
 bl = true if this shares a point with other_line
-
-### * ~= (NE)   Not equal relation for handles.
-Handles are equal if they are handles for the same object and are
-unequal otherwise.
-
-H1 ~= H2 performs element-wise comparisons between handle arrays H1
-and H2.  H1 and H2 must be of the same dimensions unless one is a
-scalar.  The result is a logical array of the same dimensions, where
-each element is an element-wise equality result.
-
-If one of H1 or H2 is scalar, scalar expansion is performed and the
-result will match the dimensions of the array that is not scalar.
-
-TF = NE(H1, H2) stores the result in a logical array of the same
-dimensions.
-
-See also CURVE, CURVE/EQ, CURVE/GE, CURVE/GT, CURVE/LE, CURVE/LT
-Help for Curve/ne is inherited from superclass handle
 
 ### * Curve/next_left is a function.
 l = next_left(this, P)
@@ -135,5 +100,5 @@ t = tangent(this, p)
 
 ### * start point
 
-### * Curve/update_single_point is an undocumented builtin Line method.
+### * Curve/update_single_point is an undocumented builtin Arc method.
 

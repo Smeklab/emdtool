@@ -27,13 +27,6 @@ add_arc(this, xstart, ystart, xcenter, ycenter, xend, yend)
 ### * dxfreader/add_line is a function.
 add_line(this, xstart, ystart, xend, yend)
 
-### * DELETE   Delete a handle object.
-DELETE(H) deletes all handle objects in array H. After the delete
-function call, H is an array of invalid objects.
-
-See also DXFREADER, DXFREADER/ISVALID, CLEAR
-Help for dxfreader/delete is inherited from superclass handle
-
 ### * dxfreader/dxfreader is a constructor.
 this = dxfreader(fname)
 Documentation for dxfreader/dxfreader

@@ -21,7 +21,7 @@ First of all, you'll be using *geometry templates* the majority of the time. A g
 is a rather general-purpose template of a slotted stator. And, the [SPM1](../api/SPM1.html) template represents a surface-PM rotor with or without a rotor retaining sleeve, eddy-current shield, regular or Halbach
 array magnets, segmented magnets, arced or regular magnet faces, and so forth.
 
-In other words, there's no beating a good template in terms of ease of use, or code reusability for that matter. `EMDtool` already offers a quite decent selection of templates, and creating your own
+In other words, there's no beating a good template in terms of ease of use, or code reusability for that matter. `EMDtool` already offers [a quite decent selection of templates](templates.html), and creating your own
 is not such a formidable task once you get the hang of it ([please see here](..//documentation/knowledge_base/geometry_creation) and follow the breadcrumbs to get started). 
 Besides, the initial investment of time here quickly pays itself back.
 

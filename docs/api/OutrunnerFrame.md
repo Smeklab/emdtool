@@ -15,12 +15,3 @@ this = OutrunnerFrame(dim)
 Documentation for OutrunnerFrame/OutrunnerFrame
 doc OutrunnerFrame
 
-### * create_geometry Initialize geometry.
-
-this = create_geometry(this, varargin)
-
-Initializes the geometry.
-
-Must be subclassed.
-Help for OutrunnerFrame/create_geometry is inherited from superclass GeoBase
-

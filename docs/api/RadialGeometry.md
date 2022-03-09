@@ -23,25 +23,6 @@ recommended):
 ## PROPERTIES
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * RadialGeometry Base class for radial geometries.
-
-This class is the lowest-level fully working class for representing
-radial-flux geometries. It can handle radial replication of geometry
-segments. If remanence_direction is specified for any domain, its
-sign is flipped with each replication.
-
-The following properties must be defined in this.dimensions (not
-recommended), or as methods of subclasses of **RadialGeometry** (highly
-recommended):
-
-* Nrep : number of mesh replications
-
-* symmetry_period : symmetry period of winding etc.
-
-* sector_angle : angular span of elementary geometry.
-Documentation for RadialGeometry/RadialGeometry
-doc RadialGeometry
-
 ### * copy_domain Copy domain and apply necessary rotations or
 translations.
 

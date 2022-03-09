@@ -26,13 +26,3 @@ doc CooledSlot1
 ### * CooledSlot1/create_geometry is a function.
 create_geometry(this)
 
-### * orientation_angle Angle of principal-like axis of this.surfaces.
-
-Typically: angular coordinate of first slot of parent geometry.
-Help for CooledSlot1/orientation_angle is inherited from superclass SlotShapeBase
-
-### * free_height_of_surface Free height of surface.
-
-h = free_height_of_surface(this, k_surface)
-Help for CooledSlot1/surface_dimensions is inherited from superclass SlotShapeBase
-

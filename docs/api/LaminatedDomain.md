@@ -24,6 +24,3 @@ this = LaminatedDomain(name, stacking_factor, material, surface1,
 Documentation for LaminatedDomain/LaminatedDomain
 doc LaminatedDomain
 
-### * copy Deep **copy** of this.
-Help for LaminatedDomain/copy is inherited from superclass Domain
-

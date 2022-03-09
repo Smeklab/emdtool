@@ -19,23 +19,6 @@ this = LinearStator(dim)
 Documentation for LinearStator/LinearStator
 doc LinearStator
 
-### * Nrep Number of times to replicate elementary mesh.
-
-Nrep(this)
-
-Usually subclassed, but by default returns
-this.dimensions.Nrep.
-Help for LinearStator/Nrep is inherited from superclass GeoBase
-
-### * create_geometry Initialize geometry.
-
-this = create_geometry(this, varargin)
-
-Initializes the geometry.
-
-Must be subclassed.
-Help for LinearStator/create_geometry is inherited from superclass GeoBase
-
 ### * s = min(this.p(1,:));
 
 ### * winding_angle Return winding angle.

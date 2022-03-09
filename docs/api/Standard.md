@@ -17,12 +17,3 @@ this = Standard(dim)
 Documentation for Standard/Standard
 doc Standard
 
-### * create_geometry Initialize geometry.
-
-this = create_geometry(this, varargin)
-
-Initializes the geometry.
-
-Must be subclassed.
-Help for Standard/create_geometry is inherited from superclass GeoBase
-

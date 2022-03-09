@@ -27,16 +27,6 @@ compute_conductor_areas(this)
 
 ### * get_matrices Get circuit matrices for a particular problem
 
-### * get_ndof Number of dofs associated with the circuit, for the given
-problem and type.
-
-Nui = get_ndof(this, problem, type, pars), where
-
-* problem = [MagneticsProblem](MagneticsProblem.html) or similar
-
-* type = string, usually "static" / "harmonic" / "stepping"
-Help for Circuit/get_ndof is inherited from superclass CircuitBase
-
 ### * init Initialize matrices etc. for circuit.
 
 init(this, problem) ties this to the given [MagneticsProblem](MagneticsProblem.html) and
@@ -63,32 +53,6 @@ initializes the problem matrices and arrays in this.matrices:
 * C_uu : voltage-voltage coupling matrix
 
 * L : circuit loop matrix
-
-### * init_for_simulation Init Circuit for simulation.
-
-init_for_simulation(this, problem, type, pars)
-Help for Circuit/init_for_simulation is inherited from superclass CircuitBase
-
-### * losses Circuit losses.
-
-[W_mean, loss_data] = losses(this, solution)
-
-[W_mean, loss_data] = losses(this, solution, varargin), where
-
-* W_mean : average total **losses** (W).
-
-* loss_data : loss breakdowns and other data, depending on
-CircuitBase subclass type. Structure.
-
-By default, all loss information is computed for the entire
-geometry, not just symmetry-section. This also applies to
-per-conductor losses, so e.g. the **losses** in the "first damper
-bar" actually mean "the sum of the **losses** in the first damper bar
-of all poles".
-
-For **losses** in typical 2D solid conductors (e.g. BlockCircuit,
-SheetCircuit, CageCircuit), see compute_SolidConductorLosses.
-Help for Circuit/losses is inherited from superclass CircuitBase
 
 ### * set_load1 Set load vector.
 

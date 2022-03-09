@@ -46,38 +46,7 @@ due to symmetry.
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * ExtrudedBlockCircuit Circuit for massive conductor blocks.
-
-The **ExtrudedBlockCircuit** class is used for modelling eddies in
-permanent magnets and other massive conductors. The eddy-current
-density and losses are computed with a hybrid 2D-3D model, making it
-possible to model the effects of axial segmentation.
-
-The class extrudes the mesh of each Conductor in it into the
-z-direction, and discretizes the electric scalar potential on the
-extruded mesh. Only one axial segment is modelled, and the computed
-losses are then multiplied by this.volume_multiplier.
-
-* 9 layers are used by default. Specify dimensions.number_of_extruded_layers
-to adjust.
-
-The resulting eddy-current density is (close to) z-directional in the
-first layer of the extruded mesh, and close to xy-directional in the
-top layer.
-Documentation for ExtrudedBlockCircuit/ExtrudedBlockCircuit
-doc ExtrudedBlockCircuit
-
 ### * get_matrices Get circuit matrices for a particular problem
-
-### * get_ndof Number of dofs associated with the circuit, for the given
-problem and type.
-
-Nui = get_ndof(this, problem, type, pars), where
-
-* problem = [MagneticsProblem](MagneticsProblem.html) or similar
-
-* type = string, usually "static" / "harmonic" / "stepping"
-Help for ExtrudedBlockCircuit/get_ndof is inherited from superclass CircuitBase
 
 ### * init Initialize matrices etc. for circuit.
 

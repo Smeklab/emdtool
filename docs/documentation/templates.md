@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Templates overview
-parent: Knowledge Base
-grand_parent : Documentation
+parent: Documentation
 math: mathjax2
 ---
 
@@ -13,7 +12,7 @@ math: mathjax2
 
 ## Stator
 
-![Stator](Stator.png)
+![Stator](./knowledge_base/Stator.png)
 
 The one stator template to rule them all, the [`Stator`](../../api/Stator.html) is the main template for typical radial-flux machine stator geometries. It supports, among other things
 
@@ -31,9 +30,9 @@ To do.
 
 ## SPM1
 
-![SPM1](SPM1.png)
+![SPM1](./knowledge_base/SPM1.png)
 
-A [surface-PM rotor}(../../api/SPM1.html) template with arc magnets. Supports:
+A [surface-PM rotor](../../api/SPM1.html) template with arc magnets. Supports:
  * inrunner and outrunner geometries
  * retaining sleeves
  * axially and circumferentially segmented magnets
@@ -44,7 +43,7 @@ A [surface-PM rotor}(../../api/SPM1.html) template with arc magnets. Supports:
 
 ## BreadloafRotor
 
-![BreadloafRotor](BreadloafRotor.png)
+![BreadloafRotor](./knowledge_base/BreadloafRotor.png)
 
 [A surface-PM rotor template](../../api/BreadloafRotor.html) with breadloaf magnets, i.e. arced airgap face and a straight core-facing side. Supports
 
@@ -57,9 +56,9 @@ Surface-PM rotor with eddy-current shield.
 
 ## VIPM1
 
-![VIPM1](VIPM1.png)
+![VIPM1](./knowledge_base/VIPM1.png)
 
-A basic [traction-style IPM rotor](../../api/VIPM1.html) template.
+A basic [traction-style IPM rotor](../../api/VIPM1.html) template. Supports axial slicing of magnets.
 
 ## HSIPM1
 
@@ -67,7 +66,9 @@ A basic [traction-style IPM rotor](../../api/VIPM1.html) template.
 
 ## FWRotor1
 
-Rotor with field-winding.
+![FWRotor1](./knowledge_base/FWRotor1.png)
+
+Template for [a rotor with field winding](../../api/FWRotor1.html).
 
 ## SlottedRotor1
 

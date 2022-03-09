@@ -12,12 +12,3 @@ Class methods are listed below. Inherited methods are not included.
 Documentation for SlotlessStator/SlotlessStator
 doc SlotlessStator
 
-### * create_geometry Initialize geometry.
-
-this = create_geometry(this, varargin)
-
-Initializes the geometry.
-
-Must be subclassed.
-Help for SlotlessStator/create_geometry is inherited from superclass GeoBase
-

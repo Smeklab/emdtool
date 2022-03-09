@@ -19,25 +19,6 @@ For a fully-functioning class, see [Stator](Stator.html).
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * Nrep Number of times to replicate elementary mesh.
-
-Nrep(this)
-
-Usually subclassed, but by default returns
-this.dimensions.Nrep.
-Help for StatorBase/Nrep is inherited from superclass GeoBase
-
-### * StatorBase Base class for radial-flux stators.
-
-This class doesn't contain any geometry-creation functionality
-(this.mesh_geometry). Symmetry sector angles etc. are determinated
-from the slot number (dimensions.Qs) and number of symmetry sectors
-(dimensions.symmetry_sectors).
-
-For a fully-functioning class, see [Stator](Stator.html).
-Documentation for StatorBase/StatorBase
-doc StatorBase
-
 ### * mean_distance_between_slots Mean distance from slot-to-slot.
 
 Mainly used for end-winding volume calculation.

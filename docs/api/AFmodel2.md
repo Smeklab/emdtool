@@ -16,16 +16,6 @@ obj = AFmodel2
 Documentation for AFmodel2/AFmodel2
 doc AFmodel2
 
-### * compute_torque Computes torque
-
-T = compute_torque(this, solution)
-
-Computes torque associated with the MagneticsSolution
-solution.
-
-T is of size number_of_airgaps x number_of_steps
-Help for AFmodel2/compute_torque is inherited from superclass MotorModelBase
-
 ### * AFmodel2/get_rotated_nodes is a function.
 p = get_rotated_nodes(this, rotorAngle)
 

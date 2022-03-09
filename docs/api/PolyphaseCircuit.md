@@ -32,26 +32,6 @@ of the winding, as well as the different supply modes. See
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * PolyphaseCircuit Class for finite-element representation of polyphase
-circuits.
-
-this = PolyphaseCircuit(name, winding_spec)
-
-Returns a new **PolyphaseCircuit** object with the given name
-and associated with the [PolyphaseWindingSpec](PolyphaseWindingSpec.html) winding
-specification.
-
-A **PolyphaseCircuit** is largely characterized by its `winding_spec`
-property = a [PolyphaseWindingSpec](PolyphaseWindingSpec.html) object. This winding
-specification object contains information such as number of turns and
-parallel paths, winding layout matrix, loop matrix, etc.
-
-The **PolyphaseCircuit** then handles the finite-element representation
-of the winding, as well as the different supply modes. See
-`this.set_load` .
-Documentation for PolyphaseCircuit/PolyphaseCircuit
-doc PolyphaseCircuit
-
 ### * coil_current Coil current from solution.
 
 I = coil_current(this, solution), where
@@ -98,16 +78,6 @@ problem.
 ### * PolyphaseCircuit/get_lt_matrix is a function.
 Scc = get_lt_matrix(this, problem, type, t, kstep, Xprev)
 
-### * get_ndof Number of dofs associated with the circuit, for the given
-problem and type.
-
-Nui = get_ndof(this, problem, type, pars), where
-
-* problem = [MagneticsProblem](MagneticsProblem.html) or similar
-
-* type = string, usually "static" / "harmonic" / "stepping"
-Help for PolyphaseCircuit/get_ndof is inherited from superclass CircuitBase
-
 ### * PolyphaseCircuit/get_nl_matrix is a function.
 [Scc, rescc] = get_nl_matrix(this, problem, type, t, kstep, Xprev, Xiter)
 
@@ -118,37 +88,11 @@ parts of the winding (all EW + stranded active conductors)
 
 ### * init Initialize circuit matrices.
 
-### * init_for_simulation Init Circuit for simulation.
-
-init_for_simulation(this, problem, type, pars)
-Help for PolyphaseCircuit/init_for_simulation is inherited from superclass CircuitBase
-
 ### * PolyphaseCircuit.line_current_matrix is a function.
 M = PolyphaseCircuit.line_current_matrix
 
 ### * PolyphaseCircuit.line_to_line_voltage_matrix is a function.
 M = PolyphaseCircuit.line_to_line_voltage_matrix
-
-### * losses Circuit losses.
-
-[W_mean, loss_data] = losses(this, solution)
-
-[W_mean, loss_data] = losses(this, solution, varargin), where
-
-* W_mean : average total **losses** (W).
-
-* loss_data : loss breakdowns and other data, depending on
-CircuitBase subclass type. Structure.
-
-By default, all loss information is computed for the entire
-geometry, not just symmetry-section. This also applies to
-per-conductor losses, so e.g. the **losses** in the "first damper
-bar" actually mean "the sum of the **losses** in the first damper bar
-of all poles".
-
-For **losses** in typical 2D solid conductors (e.g. BlockCircuit,
-SheetCircuit, CageCircuit), see compute_SolidConductorLosses.
-Help for PolyphaseCircuit/losses is inherited from superclass CircuitBase
 
 ### * PolyphaseCircuit/mass is a function.
 m = mass(this)

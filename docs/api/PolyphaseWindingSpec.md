@@ -111,32 +111,6 @@ modelled.
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * PolyphaseWindingSpec Winding specification class.
-
-Instantiation:
-
-this = PolyphaseWindingSpec()
-
-this = PolyphaseWindingSpec(dimensions)
-
-Loads the number of slots from dimensions.Qs and pole-pair
-count from dimensions.p
-
-Responsibilities:
-
-* contains winding-specifying parameters (turns, layers, etc)
-
-* assembles winding loop matrix for finite-element analysis
-
-* calculates total (half-)turn length and winding overhang
-
-* handles end-winding indcutance calculation
-
-NOTE: End-winding inductance calculation only works for radial-flux
-machines for now.
-Documentation for PolyphaseWindingSpec/PolyphaseWindingSpec
-doc PolyphaseWindingSpec
-
 ### * average_phase_quantity_matrix Matrix for computing average
 phase quantities.
 

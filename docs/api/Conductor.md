@@ -26,22 +26,6 @@ split conductors).
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * Conductor Base class for conductors.
-
-Typical subclasses:
-
-* [StrandedConductor](StrandedConductor.html) : for infinite stranded conductors
-
-* [SolidConductor](SolidConductor.html) : solid material
-
-* [SplitConductor](SplitConductor.html) : for conductors that cross the boundary of the
-elementary geometry. Can be either solid or stranded.
-
-Each conductor consists of one domain (two domains in the case of
-split conductors).
-Documentation for Conductor/Conductor
-doc Conductor
-
 ### * Conductor/copy is a function.
 obj = Conductor
 

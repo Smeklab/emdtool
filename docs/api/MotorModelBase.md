@@ -78,36 +78,6 @@ DEFAULT: 1
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * MotorModelBase Base class for magnetics models.
-
-Default construction:
-
-motor = MotorModelBase(dimensions, stator, rotor), with
-
-* dimensions : struct
-
-* stator : a [StatorBase](StatorBase.html) object
-
-* rotor : a rotor / [GeoBase](GeoBase.html) object
-
-Detailed construction:
-
-motor = MotorModelBase(dimensions);
-
-motor.add_component(c1, component_name);
-
-motor.add_component(c2, component_name);
-
-motor.add_component(c3, component_name);
-
-motor.add_airgap(static_part, moving_part);
-
-motor.set_outer_boundary(bnd);
-
-motor.finalize();
-Documentation for MotorModelBase/MotorModelBase
-doc MotorModelBase
-
 ### * MotorModelBase/add_component is a function.
 add_component(this, name, component, varargin)
 

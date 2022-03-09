@@ -18,6 +18,3 @@ doc HSIPM2
 
 ### * import geometry.*
 
-### * list_dimensions Display dimensions info on command window
-Help for HSIPM2.list_dimensions is inherited from superclass GeoBase
-

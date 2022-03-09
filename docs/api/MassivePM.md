@@ -24,17 +24,3 @@ new = copy_domain(this, old_domain, sector_shift)
 DEFAULT behaviour: rotate domain remanence and orientation
 directions, if any, by sector_shift.
 
-### * create_geometry Initialize geometry.
-
-this = create_geometry(this, varargin)
-
-Initializes the geometry.
-
-Must be subclassed.
-Help for MassivePM/create_geometry is inherited from superclass GeoBase
-
-### * save_to_excel Save specifications to Excel sheet.
-
-save_to_excel(this, fname, varargin)
-Help for MassivePM/save_to_excel is inherited from superclass GeoBase
-

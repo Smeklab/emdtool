@@ -105,7 +105,7 @@ has_toc : false
 * *class* : [RFmodel](RFmodel.html)  **RFmodel** Simple class for radial-flux machines.
 * *class* : [/Rotors/BreadloafRotor](BreadloafRotor.html)  **BreadloafRotor** Template for rotors with breadloaf PMs.
 * *class* : [/Rotors/CoatedRotor](CoatedRotor.html) **CoatedRotor** methods:
-* *class* : [/Rotors/FWRotor1](FWRotor1.html) **FWRotor1** methods:
+* *class* : [/Rotors/FWRotor1](FWRotor1.html)  **FWRotor1** Template for a rotor with field-winding.
 * *class* : [/Rotors/HSIPM1](HSIPM1.html) **HSIPM1** methods:
 * *class* : [/Rotors/HSIPM2](HSIPM2.html) **HSIPM2** methods:
 * *class* : [/Rotors/LinearSPM](LinearSPM.html) **LinearSPM** methods:

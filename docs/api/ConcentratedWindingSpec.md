@@ -26,28 +26,3 @@ this = ConcentratedWindingSpec(varargin)
 Documentation for ConcentratedWindingSpec/ConcentratedWindingSpec
 doc ConcentratedWindingSpec
 
-### * end_winding_loop_matrix End-winding loop matrix, per slot-segment.
-
-L = end_winding_loop_matrix(this)
-
-Returns a number_of_slots x phases matrix, representing how many
-times each phase traverses each 'slot segment' = end-winding
-piece between two successive slots.
-
-Only computed for one end of a radial-flux machine.
-Help for ConcentratedWindingSpec/end_winding_loop_matrix is inherited from superclass PolyphaseWindingSpec
-
-### * set_layout_matrix Initialize winding layout matrix.
-
-A layout matrix is a number_of_layers x number_of_slots matrix of
-integers, with values in range -phases...phases.
-
-The entries of the layout matrix W are:
-
-*  W(i, j) = +k : phase k goes through layer i, slot j, to
-positive direction:
-
-* W(i, j) = -k : phase k goes through layer i, slot j, to
-negative direction:
-Help for ConcentratedWindingSpec/set_layout_matrix is inherited from superclass PolyphaseWindingSpec
-

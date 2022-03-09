@@ -24,24 +24,6 @@ copy() returns a deep copy.
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * SLContainer A SMEKlib container class for key-value pairs.
-
-Has the following methods:
-
-value = get(key); returns [] if not found.
-
-set(key, value) (overwrites existing).
-
-add(key, value) (append to existing; only for arrays).
-
-keys() returns the keys.
-
-copy() returns a deep copy.
-
-(c) 2017 Antti Lehikoinen / Aalto University
-Documentation for SLContainer/SLContainer
-doc SLContainer
-
 ### * SLContainer/add is a function.
 c = add(c, name, d)
 

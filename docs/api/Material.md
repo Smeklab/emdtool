@@ -215,18 +215,6 @@ input arguments (this, timestamps, Bx, By). This syntax is used by the
 [time_domain_Steinmetz](time_domain_Steinmetz.html) function. In this case, the returned loss densities are in
 W/kg.
 
-### * loss_density Iron/material loss density method.
-
-[p_hysteresis, p_eddy, p_excess] = loss_density(this, Bdata), where
-
-* Bdata : flux density waveform data returned by `get_B_data` .
-
-Return values:
-
-* Elementwise hysteresis, eddy, and exces loss densities,
-expressed in W/m^3.
-Help for Material/loss_density is inherited from superclass MaterialBase
-
 ### * plot_BH Plot BH curves etc.
 
 ### * Material.process_BH is a function.
@@ -246,9 +234,4 @@ Does nothing by default
 
 ### * Material/shift_elements is a function.
 this = shift_elements(this, Ne)
-
-### * thermal_conductivity Thermal conductivity in SI units.
-
-Fetched from this.material_properties.thermal_conductivity
-Help for Material/thermal_conductivity is inherited from superclass MaterialBase
 

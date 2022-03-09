@@ -27,25 +27,6 @@ to also plot the resulting loss fit
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * SteelLibrary Static class for creating electrical steel Material
-objects.
-
-Data referenced from Tata Steel website at some
-point, see https://www.tatasteeleurope.com/ts/engineering/products/electrical-steel
-
-Usage:
-
-mat = SteelLibrary.create( grade_name )
-
-where grade_name = string or char. See SteelLibrary.grades for available
-grades.
-
-mat = SteelLibrary.create(grade_name, 'plot_fit', true)
-
-to also plot the resulting loss fit
-Documentation for SteelLibrary/SteelLibrary
-doc SteelLibrary
-
 ### * loading data
 
 ### * SteelLibrary/fit_losses is a function.

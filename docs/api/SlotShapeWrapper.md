@@ -17,8 +17,3 @@ doc SlotShapeWrapper
 ### * SlotShapeWrapper/create_geometry is a function.
 create_geometry(~)
 
-### * orientation_angle Angle of principal-like axis of this.surfaces.
-
-Typically: angular coordinate of first slot of parent geometry.
-Help for SlotShapeWrapper/orientation_angle is inherited from superclass SlotShapeBase
-

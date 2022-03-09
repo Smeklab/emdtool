@@ -15,12 +15,3 @@ obj = CoatedRotor
 Documentation for CoatedRotor/CoatedRotor
 doc CoatedRotor
 
-### * create_geometry Initialize geometry.
-
-this = create_geometry(this, varargin)
-
-Initializes the geometry.
-
-Must be subclassed.
-Help for CoatedRotor/create_geometry is inherited from superclass GeoBase
-

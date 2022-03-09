@@ -16,15 +16,6 @@ Class methods are listed below. Inherited methods are not included.
 Documentation for SinusoidalModulator/SinusoidalModulator
 doc SinusoidalModulator
 
-### * U(this, t) Instantaneous voltage.
-
-Uterminal = U(this, t, varargin) returns the terminal *potentials*  measured
-against an arbitraty reference point. For instance, for the
-typical 3-phase inverter bridge, the output would be a 3x1 vector
-of the output voltages of each half-bridge, measured agains the
-"ground".
-Help for SinusoidalModulator/U is inherited from superclass Modulator
-
 ### * RESET  Reset graphics object properties to their defaults.
 RESET(H) resets all properties having factory defaults on the object
 identified by handle H to their default values. If h is a figure, MATLAB
@@ -36,14 +27,4 @@ RESET(GCA) resets the properties of the current axis.
 RESET(GCF) resets the properties of the current figure.
 
 See also CLA, CLF, GCA, GCF, HOLD.
-
-### * set_Udq Set supply voltage components
-
-set_Udq(this, Udq)
-Help for SinusoidalModulator/set_Udq is inherited from superclass Modulator
-
-### * set_f Set fundamental supply frequency.
-
-set_f(this, f)
-Help for SinusoidalModulator/set_f is inherited from superclass Modulator
 

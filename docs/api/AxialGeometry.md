@@ -13,15 +13,6 @@ are shifted left after meshing to comply.
 ## PROPERTIES
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * AxialGeometry Base class for 2D axial / linear geometries.
-
-Note: Geometries are assumed oriented so that motion is in the
-negative x-direction, and that the meshed geometry begins at x=0 and
-extends left (towards negative infinite). Right-extending geometries
-are shifted left after meshing to comply.
-Documentation for AxialGeometry/AxialGeometry
-doc AxialGeometry
-
 ### * copy_domain Copy domain and apply necessary rotations or
 translations.
 

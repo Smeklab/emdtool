@@ -65,12 +65,3 @@ the struct *dim* .
 Documentation for SPM1/SPM1
 doc SPM1
 
-### * create_geometry Initialize geometry.
-
-this = create_geometry(this, varargin)
-
-Initializes the geometry.
-
-Must be subclassed.
-Help for SPM1/create_geometry is inherited from superclass GeoBase
-

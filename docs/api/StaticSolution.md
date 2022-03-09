@@ -21,10 +21,6 @@ doc StaticSolution
 ### * StaticSolution/angles is a function.
 a = angles(this)
 
-### * indices_to_last_period Return indices to solution over the last
-electrical period.
-Help for StaticSolution/indices_to_last_period is inherited from superclass MagneticsSolution
-
 ### * StaticSolution/ts is a function.
 t = ts(this)
 

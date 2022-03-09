@@ -15,15 +15,6 @@ obj = SRMRotor1
 Documentation for SRMRotor1/SRMRotor1
 doc SRMRotor1
 
-### * create_geometry Initialize geometry.
-
-this = create_geometry(this, varargin)
-
-Initializes the geometry.
-
-Must be subclassed.
-Help for SRMRotor1/create_geometry is inherited from superclass GeoBase
-
 ### * SRMRotor1/d_axis_angle is a function.
 a = d_axis_angle(this)
 

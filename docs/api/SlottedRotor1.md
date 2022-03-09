@@ -15,12 +15,3 @@ obj = SlottedRotor1
 Documentation for SlottedRotor1/SlottedRotor1
 doc SlottedRotor1
 
-### * create_geometry Initialize geometry.
-
-this = create_geometry(this, varargin)
-
-Initializes the geometry.
-
-Must be subclassed.
-Help for SlottedRotor1/create_geometry is inherited from superclass GeoBase
-

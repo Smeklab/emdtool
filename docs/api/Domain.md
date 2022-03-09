@@ -40,26 +40,6 @@ Surfaces can be added with `this.add_surface`
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * Domain **Domain** class.
-
-In `EMDtool` , a 'Domain' represents all aspects of some interesting part of an
-electric machine or electromagnetic problem. Thus, a domain has
-
-* A [Material](Material.html) that it consists of
-
-* One or more <Surface.html Surfaces>
-
-Instantiation:
-
-this = Domain(domain_name, material_object)
-
-this = Domain(domain_name, material_object, surface_1, surface_2,
-...)
-
-Surfaces can be added with `this.add_surface`
-Documentation for Domain/Domain
-helpwin Domain
-
 ### * add_surface Add one or more Surfaces to this.
 
 ### * add_volume Add one or more volumes to this.

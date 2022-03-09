@@ -42,40 +42,6 @@ FIXME: SMGridCalculator superclass, grid as class to harmonize naming
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * SMGridCalculator_DQ DQ-grid calculator for synchronous machines.
-
-Computes a grid of (id, iq) pairs, using static analysis and ignoring
-damping effects.
-
-calculator = SMGridCalculator_DQ(motor, key, val, ...) with any of the following:
-
-* Jmax_axis : maximum current density per axis. Default 15
-Arms/mm^2.
-
-* nbase : speed (rpm) to compute results on. Default 3000.
-
-* Nsamples : number of steps to use. Default 33.
-
-* periodicity : a fraction of full period to analyse. E.g. 6 =
-step from 0 to 60 el. degrees. Default 6.
-
-* ids_pu : per-unit current values on d-axis. See below. Default
--1:(1/4):(1/4).
-
-* iqs_pu : per-unit current values on q-axis. The actual currents
-for the grid are [id, iq] = meshgrid(ids_pu, iqs_pu) * Imax, where
-Imax = Jmax_axis * conductor_area_per_turn_and_coil. Default linspace(0, 1, 5)
-
-Important methods:
-
-* this.compute_all : compute grid.
-
-* grid = this.get_results(args) : get NTGridDQ
-
-FIXME: SMGridCalculator superclass, grid as class to harmonize naming
-Documentation for SMGridCalculator_DQ/SMGridCalculator_DQ
-doc SMGridCalculator_DQ
-
 ### * SMGridCalculator_DQ/compute_all is a function.
 this = compute_all(this)
 

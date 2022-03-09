@@ -26,13 +26,6 @@ last component is the zero-sequence component.
 ### * SpaceVectors.Pmatrix is a function.
 P = SpaceVectors.Pmatrix(varargin)
 
-### * SpaceVectors Class for handling generalized Park-Clarke and inverse
-transformations, almost following the methodology in
-'A generalized transformation methodology for polyphase electric
-machines and networks',  10.1109/IEMDC.2015.7409032.
-Documentation for SpaceVectors/SpaceVectors
-doc SpaceVectors
-
 ### * SpaceVectors.derivate_phase_values is a function.
 dv = SpaceVectors.derivate_phase_values(x, angles, ts, varargin)
 

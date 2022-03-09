@@ -21,10 +21,6 @@ doc SteppingSolution
 ### * SteppingSolution/angles is a function.
 a = angles(this)
 
-### * indices_to_last_period Return indices to solution over the last
-electrical period.
-Help for SteppingSolution/indices_to_last_period is inherited from superclass MagneticsSolution
-
 ### * SteppingSolution/ts is a function.
 t = ts(this)
 

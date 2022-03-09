@@ -30,32 +30,3 @@ obj = HollowConductorLayout
 Documentation for HollowConductorLayout/HollowConductorLayout
 doc HollowConductorLayout
 
-### * compute_losses_stranded Estimate AC losses in stranded windings.
-
-Estimate AC loss distribution for stranded (= non-solid)
-conductor models.
-
-[p_el, data] = compute_losses_stranded(this, winding_spec, dBx,
-dBy, conductivity), where
-
-* winding_spec : [PolyphaseWindingSpec](PolyphaseWindingSpec.html) object for specifying the
-winding.
-
-* dBx, dBy : time-derivative of flux density
-
-* conductivity : electrical conductivity, assumed uniform.
-
-See the code of PolyphaseCircuit.stranded_conductor_losses for
-more details.
-Help for HollowConductorLayout/compute_losses_stranded is inherited from superclass WindingLayoutBase
-
-### * conductor_area Total conductor area per slot.
-
-Returns nan by default; should be overridden in subclasses if
-needed.
-Help for HollowConductorLayout/conductor_area is inherited from superclass WindingLayoutBase
-
-### * create_solid_geometry Create slot geometry for solid winding
-models.
-Help for HollowConductorLayout/create_solid_geometry is inherited from superclass WindingLayoutBase
-

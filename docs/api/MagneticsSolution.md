@@ -31,21 +31,6 @@ may cause unexpected results. Please use solutions right away.
 
 ## Methods
 Class methods are listed below. Inherited methods are not included.
-### * MagneticsSolution Class for representing the solution to MagneticsProblem.
-
-
-WARNING: Doing
-
-sol_1 = problem.solve_xx();
-
-sol_2 = problem.solve_xx();
-
-results = do_something(sol_1)
-
-may cause unexpected results. Please use solutions right away.
-Documentation for MagneticsSolution/MagneticsSolution
-doc MagneticsSolution
-
 ### * MagneticsSolution/get_dof is a function.
 val = get_dof(this, key)
 
