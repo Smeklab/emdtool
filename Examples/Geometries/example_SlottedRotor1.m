@@ -1,7 +1,7 @@
 %example_SlottedRotor1 Example of the SlottedRotor1 template.
 
 %getting stator dimensions
-%example_Stator_4P;
+example_Stator_4P;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % rotor dimensions
