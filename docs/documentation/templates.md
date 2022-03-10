@@ -72,7 +72,9 @@ Template for [a rotor with field winding](../../api/FWRotor1.html).
 
 ## SlottedRotor1
 
-Slotted rotor for induction machines.
+![SlottedRotor1](./knowledge_base/SlottedRotor1.png)
+
+[Slotted rotor template](../../api/SlottedRotor1.html) for induction machines.
 
 ## Coated rotor
 
