@@ -6,4 +6,4 @@ addpath(genpath(emdtool_path));
 addpath(genpath('Analysis scripts'));
 addpath(genpath('Geometries'));
 
-error('slot dispatcher method to slottedrotor')
+error('Stator-style Slot object for Rotor')

@@ -63,10 +63,16 @@ figure(1); clf; hold on; box on; grid on; axis equal;
 stator.plot_geometry();
 rotor.plot_geometry();
 
-%return
 motor = RFmodel(dim, stator, rotor);
+return
 figure(3); clf; hold on; box on; axis equal tight;
 motor.visualize();
+
+figure(3); clf; 
+subplot(2, 1, 1); hold on; box on; axis equal tight;
+motor1.visualize();
+subplot(2, 1, 2); hold on; box on; axis equal tight;
+motor2.visualize();
 
 %saving visualization
 %emdtool_export_example_fig(rotor);
