@@ -100,5 +100,5 @@ t = tangent(this, p)
 
 ### * start point
 
-### * Curve/update_single_point is an undocumented builtin Arc method.
+### * Curve/update_single_point is an undocumented builtin Line method.
 

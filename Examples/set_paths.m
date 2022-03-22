@@ -7,3 +7,4 @@ addpath(genpath('Analysis scripts'));
 addpath(genpath('Geometries'));
 
 error('Stator-style Slot object for Rotor')
+%todo SlotShape hierarchy

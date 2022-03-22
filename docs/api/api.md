@@ -115,15 +115,18 @@ has_toc : false
 * *class* : [SPM1](SPM1.html)  **SPM1** Template for a surface-PM rotor.
 * *class* : [/Rotors/SRMRotor1](SRMRotor1.html) **SRMRotor1** methods:
 * *class* : [/Rotors/ShieldedSPM](ShieldedSPM.html) **ShieldedSPM** methods:
-* *class* : [/Rotors/SlottedRotor1](SlottedRotor1.html) **SlottedRotor1** methods:
+* *class* : [/Rotors/SlottedRotor1](SlottedRotor1.html)  **SlottedRotor1** Simple template for a slotted rotor.
 * *class* : [/Rotors/SpokeRotor1](SpokeRotor1.html)  default dimensions
 * *class* : [/Rotors/SynRMrotor1](SynRMrotor1.html) **SynRMrotor1** methods:
 * *class* : [/Rotors/VIPM1](VIPM1.html)  **VIPM1** V-shape IPM rotor.
 * *class* : [SlottedRotorBase](SlottedRotorBase.html)  **SlottedRotorBase** Base class for slotted radial-flux rotors.
 * *class* : [SynRotorBase](SynRotorBase.html)  **SynRotorBase** Base class for synchronous machine rotors.
 * *class* : [/Slots/CooledSlot1](CooledSlot1.html) **CooledSlot1** methods:
+* *class* : [/Slots/RotorSlot1](RotorSlot1.html)  **RotorSlot1** Rotor slot shape 1.
+* *class* : [/Slots/RotorSlot2](RotorSlot2.html)  **RotorSlot2** Rotor slot shape 2.
 * *class* : [/Slots/Slot1](Slot1.html)  **Slot1** Basic stator slot shape.
 * *class* : [/Slots/SlotShapeBase](SlotShapeBase.html)  **SlotShapeBase** Base class for slot shapes.
+* *class* : [RotorSlotShape](RotorSlotShape.html)  **RotorSlotShape** Base class for rotor slots.
 * *class* : [SlotShapeWrapper](SlotShapeWrapper.html) **SlotShapeWrapper** is a class.
 * *class* : [/Stators/FormWound1](FormWound1.html) **FormWound1** methods:
 * *class* : [/Stators/LinearStator](LinearStator.html) **LinearStator** methods:
@@ -214,7 +217,9 @@ has_toc : false
 ## utilities
  Miscellaneous utilities classes and functions.
 
+* *class* : [Counter](Counter.html)  **Counter** **Counter** object for getting unique IDs etc.
 * *class* : [GIFFile](GIFFile.html) **GIFFile** is a class.
 * *class* : [HashMap](HashMap.html) **HashMap** is a class.
 * *class* : [Indexable](Indexable.html) **Indexable** is a class.
+* *class* : [ProxyObject](ProxyObject.html) **ProxyObject** is a class.
 * *class* : [SLContainer](SLContainer.html)  **SLContainer** A SMEKlib container class for key-value pairs.

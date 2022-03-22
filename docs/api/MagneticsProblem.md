@@ -74,7 +74,7 @@ solution = solve_static(this, pars), where
 Solves a time-stepping problem with damping (eddy- and voltage-like
 terms) included.
 
-solution = solve_stepping(this, pars), where
+solution = solve_harmonic(this, pars), where
 
 * pars : a SimulationParameters object
 

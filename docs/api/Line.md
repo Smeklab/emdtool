@@ -21,6 +21,11 @@ this = Line(pstart, pend)
 Documentation for Line/Line
 helpwin Line
 
+### * Line/check_proxying is a function.
+bl = check_proxying(this, c2)
+Documentation for Line/check_proxying
+doc Line/check_proxying
+
 ### * length Line length.
 Documentation for Line/curve_length
 doc Line/curve_length

@@ -226,3 +226,8 @@ characteristic length to `min(p.lcar, lcar)`.
 Documentation for Surface/set_maximum_characteristic_length
 doc Surface/set_maximum_characteristic_length
 
+### * Surface/ymirror is a function.
+s2 = ymirror(this, varargin)
+Documentation for Surface/ymirror
+doc Surface/ymirror
+

@@ -63,7 +63,7 @@ Initialize with any of the following key-value pairs:
 * 'idq', idq : compute parameters at the specified (id,iq) point.
 Default [0;0].
 
-* 'angles', angles : Vector of electrical angles (rad) to average
+* 'angle', angle : Vector of electrical angles (rad) to average
 eq. circuit parameters over. Default linspace(0, 2*pi/6, 30).
 
 * Any key-value pair of compute_inductances_static_averaging

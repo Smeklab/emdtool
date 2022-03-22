@@ -16,7 +16,7 @@ dim.Rin = 10.00e-3;
 
 % rotor slot specs, slot shape 1
 %{
-dim.shape_r = 1;
+dim.rotor_slot = RotorSlot1();
 
 %virtual slot-opening
 dim.wso_r = 0.8e-3;
@@ -29,7 +29,7 @@ dim.wtooth_r = 2*pi*(dim.Rout - dim.hslot_r)/dim.Qr * 0.8;
 
 % rotor slot specs, slot shape 2
 %%{
-dim.shape_r = 2;
+dim.rotor_slot = RotorSlot2();
 
 %virtual slot-opening
 dim.wso_r = 0.8e-3;

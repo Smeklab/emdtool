@@ -85,7 +85,22 @@ and data, a structure with fields:
 ### * NTGridDQ/plot_map is a function.
 Qint = plot_map(this, contour_name, varargin)
 
-### * setting up grids
+### * plot_phase_current_limit Plots phase current limit.
+
+h = plot_phase_current_limit(this, I, varargin)
+Plots the phase current contour for the rms current I (total phase
+current, parallel paths considered).
+
+Returns the handle `h` to the contour line.
+
+All input arguments are passed on to this.get_speed_and_torque_grid.
+
+Additionally, the following key-value pairs are passed on to plot for
+actually drawing the contour (default values shown):
+* 'color' : 'r'
+* 'linewidth' : 1
+* 'linestyle' : '-'
+* 'marker' : 'none'
 
 ### * setup Initialization function
 

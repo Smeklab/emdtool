@@ -192,3 +192,6 @@ p2 = ymirror(this, y, lcar)
 In addition to the above, sets the characteristic length of
 p2 to lcar.
 
+### * Point/ymirror_inplace is a function.
+ymirror_inplace(this, ym)
+
