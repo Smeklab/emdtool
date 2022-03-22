@@ -19,7 +19,7 @@ Main dimensions:
 Slot dimensions, either:
 * rotor_slot : a [RotorSlotShape](RotorSlotShape.html) object, OR
 * shape_r : (LEGACY) 1 or 2, to automatically dispatch either
-RotorSlot1 or RotorSlot2
+[RotorSlot1](RotorSlot1.html) or [RotorSlot2](RotorSlot2.html)
 
 Materials:
 * rotor_core_material : rotor core material
