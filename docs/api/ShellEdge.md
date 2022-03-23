@@ -3,27 +3,35 @@ title : ShellEdge
 parent: API
 grand_parent : Documentation
 ---
-## Summary for ShellEdge
+# Summary for: **ShellEdge**  < handle
+
+## Class summary
+
 ShellEdge methods:
 ShellEdge - is a class.
 shellify - ShellEdge/shellify is a function.
-## PROPERTIES
-* ShellEdge/domain_to_shellify is a property.
 
-* ShellEdge/msh is a property.
+## Properties
 
-* ShellEdge/nodes is a property.
+### .ShellEdge/**domain_to_shellify** is a property.
 
-* ShellEdge/skip_ends is a property.
+### .ShellEdge/**msh** is a property.
+
+### .ShellEdge/**nodes** is a property.
+
+### .ShellEdge/**skip_ends** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * ShellEdge/ShellEdge is a constructor.
+
+### .**ShellEdge**/ShellEdge is a constructor.
 this = ShellEdge(msh, nodes)
 Documentation for ShellEdge/ShellEdge
 doc ShellEdge
 
-### * PLOT   Linear plot.
+### .PLOT   Linear **plot**.
 PLOT(X,Y) plots vector Y versus vector X. If X or Y is a matrix,
 then the vector is plotted versus the rows or columns of the matrix,
 whichever line up.  If X is a scalar and Y is a vector, disconnected
@@ -97,6 +105,7 @@ plot(x,y,'--rs','LineWidth',2,...
 See also PLOTTOOLS, SEMILOGX, SEMILOGY, LOGLOG, PLOTYY, PLOT3, GRID,
 TITLE, XLABEL, YLABEL, AXIS, AXES, HOLD, LEGEND, SUBPLOT, SCATTER.
 
-### * ShellEdge/shellify is a function.
+### .ShellEdge/**shellify** is a function.
 shellify(this, varargin)
+
 

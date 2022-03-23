@@ -3,19 +3,27 @@ title : Operators
 parent: API
 grand_parent : Documentation
 ---
-## Summary for Operators
+# Summary for: **Operators**  < handle
+
+## Class summary
+
 {
-## PROPERTIES
+
+## Properties
+
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * Operators.I is a function.
+
+### .Operators.**I** is a function.
 e = Operators.I
 
-### * {
+### .{
 Documentation for Operators/Operators
 doc Operators
 
-### * CURL  Curl and angular velocity of a vector field.
+### .CURL  Curl and angular velocity of a vector field.
 [CURLX, CURLY, CURLZ, CAV] = CURL(X,Y,Z,U,V,W) computes the
 curl and angular velocity perpendicular to the flow (in radians
 per time unit) of a 3D vector field U,V,W. The arrays X,Y,Z
@@ -56,9 +64,10 @@ hold on; quiver(x,y,u,v)
 
 See also STREAMRIBBON, DIVERGENCE.
 
-### * Operators.div is a function.
+### .Operators.**div** is a function.
 e = Operators.div
 
-### * Operators.grad is a function.
+### .Operators.**grad** is a function.
 e = Operators.grad
+
 

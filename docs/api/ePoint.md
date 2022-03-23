@@ -3,41 +3,49 @@ title : ePoint
 parent: API
 grand_parent : Documentation
 ---
-## Summary for ePoint
+# Summary for: **ePoint**  < [eObject](eObject.html)
+
+## Class summary
+
 ePoint methods:
 ePoint - is a class.
 extrude_axially_to_level - checking if child exists
 extrude_segmentially_to_level - ePoint/extrude_segmentially_to_level is a function.
 extrude_to_level - checking if child exists
-## PROPERTIES
-* ePoint/curves is a property.
 
-* ePoint/lcar is a property.
+## Properties
 
-* ePoint/x is a property.
+### .ePoint/**curves** is a property.
 
-* ePoint/y is a property.
+### .ePoint/**lcar** is a property.
 
-* ePoint/z is a property.
+### .ePoint/**x** is a property.
+
+### .ePoint/**y** is a property.
+
+### .ePoint/**z** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * ePoint/add_curve is a function.
+
+### .ePoint/**add_curve** is a function.
 add_curve(this, c)
 
-### * ePoint/ePoint is a constructor.
+### .**ePoint**/ePoint is a constructor.
 this = ePoint(x, y, z, lcar)
 Documentation for ePoint/ePoint
 doc ePoint
 
-### * checking if child exists
+### .checking if child exists
 
-### * ePoint/extrude_segmentially_to_level is a function.
+### .ePoint/**extrude_segmentially_to_level** is a function.
 p = extrude_segmentially_to_level(this, segment_angle, level, varargin)
 
-### * checking if child exists
+### .checking if child exists
 
-### * PLOT   Linear plot.
+### .PLOT   Linear **plot**.
 PLOT(X,Y) plots vector Y versus vector X. If X or Y is a matrix,
 then the vector is plotted versus the rows or columns of the matrix,
 whichever line up.  If X is a scalar and Y is a vector, disconnected
@@ -110,4 +118,5 @@ plot(x,y,'--rs','LineWidth',2,...
 
 See also PLOTTOOLS, SEMILOGX, SEMILOGY, LOGLOG, PLOTYY, PLOT3, GRID,
 TITLE, XLABEL, YLABEL, AXIS, AXES, HOLD, LEGEND, SUBPLOT, SCATTER.
+
 

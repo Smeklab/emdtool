@@ -3,7 +3,10 @@ title : GeoBase
 parent: API
 grand_parent : Documentation
 ---
-## Summary for GeoBase
+# Summary for: **GeoBase**  < [Indexable](Indexable.html)
+
+## Class summary
+
 GeoBase Base class for geometries.
 
 Basic usage:
@@ -33,59 +36,64 @@ subclasses:
 
 See [RadialGeometry](RadialGeometry.html), [StatorBase](StatorBase.html), [SlottedRotorBase](SlottedRotorBase.html),
 [SynRotorBase](SynRotorBase.html)
-## PROPERTIES
-* PMs -  Permanent magnet [Domain](Domain.html) objects
 
-* GeoBase/boundaries is a property.
+## Properties
 
-* circuits -  [Circuit](Circuit.html) objects defined for this
+### .**PMs** -  Permanent magnet [Domain](Domain.html) objects
 
-* data - miscellaneous data
+### .GeoBase/**boundaries** is a property.
 
-* domains -  [Domain](Domain.html) objects making up this
+### .**circuits** -  [Circuit](Circuit.html) objects defined for this
 
-* nodes = struct() %other nodes
+### .**data** - miscellaneous data
 
-* GeoBase/is_meshed is a property.
+### .**domains** -  [Domain](Domain.html) objects making up this
 
-* materials -  [Material](Material.html) objects
+### .nodes = struct() %other nodes
 
-* mesh - **mesh** object, WPI
+### .GeoBase/**is_meshed** is a property.
 
-* n_ag - Airgap boundary nodes
+### .**materials** -  [Material](Material.html) objects
 
-* n_ccw - Counter-clockwise periodic boundary nodes
+### .**mesh** - mesh object, WPI
 
-* n_cw - Clock-wise periodic boundary nodes
+### .**n_ag** - Airgap boundary nodes
 
-* n_dir - Dirichlet (flux insulation) boundary nodes
+### .**n_ccw** - Counter-clockwise periodic boundary nodes
 
-* p - Coordinates of nodes, 2xN array
+### .**n_cw** - Clock-wise periodic boundary nodes
 
-* t - Element indices to this.nodes, nxN array
+### .**n_dir** - Dirichlet (flux insulation) boundary nodes
+
+### .**p** - Coordinates of nodes, 2xN array
+
+### .**t** - Element indices to this.nodes, nxN array
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * GeoBase Constructor
+
+### .**GeoBase** Constructor
 Documentation for GeoBase/GeoBase
 doc GeoBase
 
-### * Nrep Number of times to replicate elementary mesh.
+### .**Nrep** Number of times to replicate elementary mesh.
 
 Nrep(this)
 
 Usually subclassed, but by default returns
 this.dimensions.Nrep.
 
-### * add_circuit Add [Circuit](Circuit.html) to this.
+### .**add_circuit** Add [Circuit](Circuit.html) to this.
 
-### * add_domain Add [Domain](Domain.html) to this.
+### .**add_domain** Add [Domain](Domain.html) to this.
 
-### * add_material Add [Material](Material.html) to this.
+### .**add_material** Add [Material](Material.html) to this.
 
 Adding a new
 
-### * check_feasibility Perform partial feasibility check on the geometry.
+### .**check_feasibility** Perform partial feasibility check on the geometry.
 
 bl = check_feasibility(this) checks if any of the `Lines` or `Surfaces` in `this`
 intersect, using `this.check_line_intersect` and
@@ -93,7 +101,7 @@ intersect, using `this.check_line_intersect` and
 
 If nothing intersects, the method returns `true`, otherwise `false`.
 
-### * check_line_intersect Check if any lines intersect.
+### .**check_line_intersect** Check if any lines intersect.
 
 check_line_intersect(this)
 
@@ -101,18 +109,18 @@ check_line_intersect(this, 'plot', true) to plot some results.
 
 **WARNING**  Only checks `Lines`, ignoring `Arcs`.
 
-### * check_surface_intersect Check if any surfaces intersect.
+### .**check_surface_intersect** Check if any surfaces intersect.
 
 bl = check_surface_intersect(this)
 
 bl = check_surface_intersect(this, 'plot', true) to plot some results.
 
-### * copy_domain Copy domain and apply necessary rotations or
+### .**copy_domain** Copy domain and apply necessary rotations or
 translations to the domain and remanence orientation, if any.
 
 new = copy_domain(this, old_domain, sector_index)
 
-### * create_or_get_material Create or get material.
+### .create_or_get_material Create or get material.
 
 mout = create_and_add_material(this, m) either
 
@@ -120,7 +128,7 @@ mout = create_and_add_material(this, m) either
 
 * returns m, if none found above, and adds it to this.materials
 
-### * create_geometry Initialize geometry.
+### .**create_geometry** Initialize geometry.
 
 this = create_geometry(this, varargin)
 
@@ -128,10 +136,10 @@ Initializes the geometry.
 
 Must be subclassed.
 
-### * GeoBase/dim is a function.
+### .GeoBase/**dim** is a function.
 d = dim(this)
 
-### * export_dxf Export geometry as rudimentary dxf file.
+### .**export_dxf** Export geometry as rudimentary dxf file.
 
 export_dxf(this, fname)
 
@@ -151,7 +159,7 @@ export_dxf(this, fname_or_drawing, key, val, ...) with
 * use_python : use Python's dxfwrite (true) or Matlab's dxflib with
 experimental ARC and LINE features (DEFAULT).
 
-### * fill Fill mesh
+### .**fill** Fill mesh
 
 fill(this, name, varargin)
 
@@ -166,7 +174,7 @@ fill(this, varargin)
 Plots the entire mesh using varargin{:} as
 arguments.
 
-### * get_domain Get domain(s) by name.
+### .**get_domain** Get domain(s) by name.
 
 get_domain(this, name)
 
@@ -176,12 +184,12 @@ The wildcard syntax name_* can be used to find all
 replicated domains corresponding to the original domain
 with *name* .
 
-### * list_dimensions Display dimensions info on command window
+### .**list_dimensions** Display dimensions info on command window
 
-### * GeoBase/mass is a function.
+### .GeoBase/**mass** is a function.
 [m, m_domain, m_mat] = mass(this)
 
-### * mesh_elementary_geometry Create mesh for the elementary geometry.
+### .**mesh_elementary_geometry** Create mesh for the elementary geometry.
 
 mesh_elementary_geometry(this)
 
@@ -194,28 +202,28 @@ and .msh files.
 Note that the methods `this.shift_elementary_nodes` ,
 `this.copy_domain` , and `this.parse_nodes`  have to be implemented.
 
-### * GeoBase/mesh_elementary_geometry_3D is a function.
+### .GeoBase/**mesh_elementary_geometry_3D** is a function.
 mesh_elementary_geometry_3D(this, varargin)
 
-### * mesh_geometry Mesh geometry.
+### .**mesh_geometry** Mesh geometry.
 
 Equivalent to calling `this.mesh_elementary_geometry`  and
 `this.replicate_elementary_mesh`
 
-### * parse_nodes Parse special nodes.
+### .**parse_nodes** Parse special nodes.
 
 parse_nodes(this, Surfaces)
 
 Parses special nodes from meshed Surfaces. Usually airgap
 and periodic boundary nodes.
 
-### * plot Plot nodes on the meshed geometry.
+### .**plot** Plot nodes on the meshed geometry.
 
 plot(this, varargin)
 
 Equivalent to calling msh_plot(this, varargin{:})
 
-### * plot_edges Plot edges
+### .**plot_edges** Plot edges
 
 plot_edges(this, edge_definitions), where
 * edge_definitions : 2 x number of edges array; indices to
@@ -227,19 +235,19 @@ this.edges
 plot_edges(this, name_or_def, plot_args) to pass on plot_args
 to *plot* .
 
-### * plot_geometry Plots the geometry.
+### .**plot_geometry** Plots the geometry.
 
 [] = plot_geometry(this, varargin)
 
 Plots the geometry using *plot*  with *varargin* {:}
 
-### * remove_unused Remove unused / unset domains and materials.
+### .**remove_unused** Remove unused / unset domains and materials.
 
 First removes Domains that do not have any surfaces, and then Materials
 that either don't belong to any Domain, or only belong to a Domain that
 was removed during the first step.
 
-### * replicate_elementary_mesh Replicate elementary mesh.
+### .**replicate_elementary_mesh** Replicate elementary mesh.
 
 replicate_elementary_mesh(this, sector_shift, Nrep)
 
@@ -250,28 +258,28 @@ Replicates the elementary geometry *Nrep*  times. This is performed by
 * eliminating the duplicate nodes on the inter-sector boundaries, with
 the nodes corresponding to this.n_cw replaced by this.n_ccw.
 
-### * GeoBase/replicate_elementary_mesh_3D is a function.
+### .GeoBase/**replicate_elementary_mesh_3D** is a function.
 replicate_elementary_mesh_3D(this)
 
-### * save_to_excel Save specifications to Excel sheet.
+### .**save_to_excel** Save specifications to Excel sheet.
 
 save_to_excel(this, fname, varargin)
 
-### * shift_elementary_nodes Replicate nodes to a new sector.
+### .**shift_elementary_nodes** Replicate nodes to a new sector.
 
 pnew = shift_elementary_nodes(this, p, k)
 
 Replicated the nodes p of the elementary symmetry sector into
 the sector k.
 
-### * symmetry_period Symmetry period of the geometry.
+### .**symmetry_period** Symmetry period of the geometry.
 
 symmetry_period(this)
 
 Usually subclassed, but by default returns
 this.dimensions.symmetry_period.
 
-### * triplot Triangle plot of this.
+### .**triplot** Triangle plot of this.
 
 triplot(this, name, varargin)
 
@@ -283,7 +291,7 @@ triplot(this, varargin)
 Plots the entire mesh using varargin{:} as
 arguments.
 
-### * visualize **visualize** geometry.
+### .**visualize** **visualize** geometry.
 
 visualize(this)
 
@@ -293,4 +301,5 @@ Visualizes geometry, using msh_fill with 'linestyle',
 visualize(this, args)
 
 Visualize, passing args to patch.
+
 

@@ -3,38 +3,43 @@ title : MaterialBase
 parent: API
 grand_parent : Documentation
 ---
-## Summary for MaterialBase
+# Summary for: **MaterialBase**  < [Indexable](Indexable.html)
+
+## Class summary
+
 MaterialBase Base class for materials.
 
 Not really used right now, see [Material](Material.html).
-## PROPERTIES
-* B - given B-curve (T)
 
-* H - given H-curve (A/m)
+## Properties
 
-* Poissons_ratio Poisson's ratio.
+### .**B** - given B-curve (T)
+
+### .**H** - given H-curve (A/m)
+
+### .**Poissons_ratio** Poisson's ratio.
 
 Fetched from this.material_properties.Poissons_ratio.
 
-* Youngs_modulus Young's modulus in SI units.
+### .**Youngs_modulus** Young's modulus in SI units.
 
 Fetched from this.material_properties.Youngs_modulus
 
-* density Density in SI units.
+### .**density** Density in SI units.
 
 Fetched from this.material_properties.rho
 
-* domains - list of **domains** that are made of this material
+### .**domains** - list of domains that are made of this material
 
-* electrical conductivity in SI units.
+### .electrical conductivity in SI units.
 
 Fetched from this.material_properties.sigma
 
 At 20 C by default.
 
-* elements - indices to finite elements
+### .**elements** - indices to finite elements
 
-* intrinsic_coercivity Intrinsic coercivity.
+### .**intrinsic_coercivity** Intrinsic coercivity.
 
 The intrinsic coercivity, often (a bit naiively) used as a
 demagnetization limit. (A/m). Fetched from
@@ -42,12 +47,12 @@ this.material_properties.HcJ
 
 At 20C by default.
 
-* intrinsic_coercivity_temperature_coefficient Temperature
+### .**intrinsic_coercivity_temperature_coefficient** Temperature
 coefficient for intrinsic coercivity.
 
 Fetched from this.material_properties.intrinsic_coercivity_temperature_coefficient
 
-* iron_loss_computation_method Iron loss computation method.
+### .**iron_loss_computation_method** Iron loss computation method.
 
 This property allows an option to toggle the iron loss
 computation method. Indeed, the `loss_density`  method of the
@@ -56,63 +61,66 @@ property.
 
 However, subclasses may have a different `loss_density`  method.
 
-* is_symmetric - Is the differential reluctivity symmetric?
+### .**is_symmetric** - Is the differential reluctivity symmetric?
 
-* MaterialBase/material_properties is a property.
+### .MaterialBase/**material_properties** is a property.
 
-* plot_args - plotting instructions for this
+### .**plot_args** - plotting instructions for this
 
-* relative_permeability Relative permeability.
+### .**relative_permeability** Relative permeability.
 
 Only used for PMs by default. Fetched from
 this.material_properties.mur.
 
-* remanence_flux_density Remanence flux density in T.
+### .**remanence_flux_density** Remanence flux density in T.
 
 Fetched from this.material_properties.Br
 
 At 20C by default.
 
-* remanence_temperature_coefficient Remanence flux density temp.
+### .**remanence_temperature_coefficient** Remanence flux density temp.
 coeff. in 1/C.
 
 Fetched from this.material_properties.alpha_Br
 
-* specific_heat_capacity Specific heat capacity in SI units.
+### .**specific_heat_capacity** Specific heat capacity in SI units.
 
 Fetched from this.material_properties.specific_heat_capacity
 
-* temperature_coefficient_of_resistivity Resistivity temp. coeff. in
+### .**temperature_coefficient_of_resistivity** Resistivity temp. coeff. in
 SI units.
 
 Fetched from this.material_properties.alpha_sigma
 
-* thermal_conductivity Thermal conductivity in SI units.
+### .**thermal_conductivity** Thermal conductivity in SI units.
 
 Fetched from this.material_properties.thermal_conductivity
 
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * MaterialBase Base class for materials.
+
+### .**MaterialBase** Base class for materials.
 
 Not really used right now, see [Material](Material.html).
 Documentation for MaterialBase/MaterialBase
 doc MaterialBase
 
-### * MaterialBase/detach is a function.
+### .MaterialBase/**detach** is a function.
 obj = MaterialBase
 
-### * MaterialBase/differential_reluctivity is a function.
+### .MaterialBase/**differential_reluctivity** is a function.
 obj = MaterialBase
 
-### * electrical_conductivity_at_temperature Electrical conductivity
+### .**electrical_conductivity_at_temperature** Electrical conductivity
 at given temperature.
 
 sigma = electrical_conductivity_at_temperature(this, T)
 returns the electrical conductivity `sigma`  (S/m) at the
 given temperature `T`  (C)
 
-### * get_B_data Compute flux density waveforms and other data.
+### .**get_B_data** Compute flux density waveforms and other data.
 
 Bdata = get_B_data(solution, args)
 
@@ -131,17 +139,17 @@ point)
 
 * By : waveform of y-component of flux density at quad point
 
-### * MaterialBase/init_for_problem is a function.
+### .MaterialBase/**init_for_problem** is a function.
 obj = MaterialBase
 
-### * intrinsic_coercivity_at_temperature Intrinsic coercivity at
+### .**intrinsic_coercivity_at_temperature** Intrinsic coercivity at
 given temperature.
 
 HcJ = intrinsic_coercivity_at_temperature(this, T) returns
 the intrinsic coercivity `HcJ` (A/m) at the given temperature
 `T` (C).
 
-### * loss_density Iron/material loss density method.
+### .**loss_density** Iron/material loss density method.
 
 [p_hysteresis, p_eddy, p_excess] = loss_density(this, Bdata), where
 
@@ -152,7 +160,7 @@ Return values:
 * Elementwise hysteresis, eddy, and exces loss densities,
 expressed in W/m^3.
 
-### * losses Material-level loss computation.
+### .**losses** Material-level loss computation.
 
 [Ptot, Pdata] = losses(solution) or
 
@@ -217,19 +225,20 @@ Default: false: only last full electrical period is used.
 "iron_loss_density_frequency_domain_Bertotti". Subclasses may ignore
 this. Default : [] --> don't change the property value.
 
-### * MaterialBase/plot_BH is a function.
+### .MaterialBase/**plot_BH** is a function.
 obj = MaterialBase
 
-### * MaterialBase.plot_losses is a function.
+### .MaterialBase.**plot_losses** is a function.
 MaterialBase.plot_losses(solution, Pdata, varargin)
 
-### * MaterialBase/raw_reluctivity is a function.
+### .MaterialBase/**raw_reluctivity** is a function.
 obj = MaterialBase
 
-### * remanence_flux_density_at_temperature Remanence flux density
+### .**remanence_flux_density_at_temperature** Remanence flux density
 at given temperature.
 
 Br = remanence_flux_density_at_temperature(this, T) returns
 the remanence flux density (T) at a the given temperature
 `T` (C).
+
 

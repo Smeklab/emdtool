@@ -3,7 +3,10 @@ title : PolyphaseWindingSpec
 parent: API
 grand_parent : Documentation
 ---
-## Summary for PolyphaseWindingSpec
+# Summary for: **PolyphaseWindingSpec**  < [Indexable](Indexable.html)
+
+## Class summary
+
 PolyphaseWindingSpec Winding specification class.
 
 Instantiation:
@@ -27,51 +30,53 @@ Responsibilities:
 
 NOTE: End-winding inductance calculation only works for radial-flux
 machines for now.
-## PROPERTIES
-* FE_filling_factor Conductor filling factor for finite-element
+
+## Properties
+
+### .**FE_filling_factor** Conductor filling factor for finite-element
 analysis.
 
 Equal to 1 for solid-conductor models.
 Equal to this.filling_factor for stranded models.
 
-* N_layers - number of winding layers
+### .**N_layers** - number of winding layers
 
-* N_series - number of turns per coil (slot and layer)
+### .**N_series** - number of turns per coil (slot and layer)
 
-* a - number of parallel paths
+### .**a** - number of parallel paths
 
-* circuit - the [CircuitBase](CircuitBase.html) object associated with this
+### .**circuit** - the [CircuitBase](CircuitBase.html) object associated with this
 
-* PolyphaseWindingSpec/conductor_material is a property.
+### .PolyphaseWindingSpec/**conductor_material** is a property.
 
-* connection - connection
+### .**connection** - connection
 
-* end_winding_length_per_conductor
+### .**end_winding_length_per_conductor**
 
-* extra_phase_inductance - extra per-phase inductance
+### .**extra_phase_inductance** - extra per-phase inductance
 
-* filling_factor Conductor area PER meshed conductor area.
+### .**filling_factor** Conductor area PER meshed conductor area.
 
 Computed automatically from layout_spec.conductor_area if layout_spec.conductor area
 returns a real value. If it returns nan, fill factor has to be
 specified.
 
-Note: for solid winding models, **filling_factor** will be ~equal to
+Note: for solid winding models, filling_factor will be ~equal to
 1.
 
-* geometry - [GeoBase](GeoBase.html) object that this.circuit belongs to.
+### .**geometry** - [GeoBase](GeoBase.html) object that this.circuit belongs to.
 
-* gross_filling_factor Gross filling factor
+### .**gross_filling_factor** Gross filling factor
 
 Gross conductor area (conductor + insulation) divided by the
 uninsulated winding area (winding window area - liners and layer
 insulations) .
 
-* half_of_turn_length - half of turn length
+### .**half_of_turn_length** - half of turn length
 
-* layout_matrix - winding layout matrix. See `this.set_layout_matrix`
+### .**layout_matrix** - winding layout matrix. See `this.set_layout_matrix`
 
-* layout_spec A WindingLayoutBase object specifying slot conductor
+### .**layout_spec** A WindingLayoutBase object specifying slot conductor
 layout.
 
 Default: UniformLayout.
@@ -83,35 +88,38 @@ Note that some Layouts only support stranded winding models,
 while others also enable solid models with each conductor
 modelled.
 
-* lew_given - given end-winding inductance per turn and per slot-segment
+### .**lew_given** - given end-winding inductance per turn and per slot-segment
 
-* PolyphaseWindingSpec.modelled_parallel_paths is a property.
+### .PolyphaseWindingSpec.**modelled_parallel_paths** is a property.
 
-* PolyphaseWindingSpec/number_of_dq_components is a property.
+### .PolyphaseWindingSpec/**number_of_dq_components** is a property.
 
-* number_of_meshed_conductors_per_layer As the name suggests.
+### .**number_of_meshed_conductors_per_layer** As the name suggests.
 
-* p - number of pole-pairs
+### .**p** - number of pole-pairs
 
-* phases - number of phases
+### .**phases** - number of phases
 
-* series_conductor_length_per_phase - series-conductor length per-phase
+### .**series_conductor_length_per_phase** - series-conductor length per-phase
 
-* series_turns_per_phase - number of series-turns per phase
+### .**series_turns_per_phase** - number of series-turns per phase
 
-* slot_filling_factor Conductor area to winding area.
+### .**slot_filling_factor** Conductor area to winding area.
 
-* span - coil span
+### .**span** - coil span
 
-* PolyphaseWindingSpec/strand_transposition_type is a property.
+### .PolyphaseWindingSpec/**strand_transposition_type** is a property.
 
-* winding_model_type - modelling style, solid or stranded
+### .**winding_model_type** - modelling style, solid or stranded
 
-* wires_in_hand - number of wires in hand. Must be 1 for infinite stranded windings.
+### .**wires_in_hand** - number of wires in hand. Must be 1 for infinite stranded windings.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * average_phase_quantity_matrix Matrix for computing average
+
+### .**average_phase_quantity_matrix** Matrix for computing average
 phase quantities.
 
 Mave = average_phase_quantity_matrix(this)
@@ -120,7 +128,7 @@ This matrix is used to for problems where
 `this.meshed_wires_in_hand`  > 1, and e.g. the phase flux
 linkages of the parallel wires/paths may differ.
 
-### * bias_angle Bias angle for winding.
+### .**bias_angle** Bias angle for winding.
 
 a = bias_angle(this)
 
@@ -128,17 +136,17 @@ Returns a rotation angle for the direct-quadrature
 transformation so that injecting d-axis current into the
 winding generates flux on the rotor d-axis.
 
-### * bind_to_model Bind to CircuitBase object.
+### .**bind_to_model** Bind to [CircuitBase](CircuitBase.html) object.
 
-### * create_slot_geometry Create slot geometry.
+### .**create_slot_geometry** Create slot geometry.
 
 Access method to WindingLayoutBase.create_slot_geometry
 
-### * dq Transformation to **dq** frame
+### .**dq** Transformation to **dq** frame
 
 y = dq(this, xy, angles)
 
-### * end_winding_inductance_matrix Compute the EW inductance matrix.
+### .**end_winding_inductance_matrix** Compute the EW inductance matrix.
 
 Computes the end-winding inductance matrix.
 
@@ -165,7 +173,7 @@ of `Lew` , or block-diagonal in case `this.meshed_wires_in_hand`  > 1.
 
 Only works for radial flux machines.
 
-### * end_winding_loop_matrix End-winding loop matrix, per slot-segment.
+### .**end_winding_loop_matrix** End-winding loop matrix, per slot-segment.
 
 L = end_winding_loop_matrix(this)
 
@@ -175,7 +183,7 @@ piece between two successive slots.
 
 Only computed for one end of a radial-flux machine.
 
-### * end_winding_segment_inductance Inductance of one end-winding segment.
+### .**end_winding_segment_inductance** Inductance of one end-winding segment.
 
 A 'segment' is understood as the part of end-winding between
 two-successive slot pitches. Whenever there are several phases and/or
@@ -191,16 +199,16 @@ winding. Iron modelled as perfect conductor, to accound for eddy damping.
 
 Only works for radial-flux machines.
 
-### * independent_current_loop_matrix Current loop matrix for
+### .**independent_current_loop_matrix** Current loop matrix for
 independent coil currents.
 
-### * PolyphaseWindingSpec/line_current_matrix is a function.
+### .PolyphaseWindingSpec/**line_current_matrix** is a function.
 M = line_current_matrix(this)
 
-### * PolyphaseWindingSpec/line_to_line_voltage_matrix is a function.
+### .PolyphaseWindingSpec/**line_to_line_voltage_matrix** is a function.
 M = line_to_line_voltage_matrix(this)
 
-### * loop_matrix Loop matrix associated with this.
+### .**loop_matrix** Loop matrix associated with this.
 
 L = loop_matrix(this)
 
@@ -223,14 +231,14 @@ this.number_of_meshed_conductors_per_layer x this.number_of_slots
 solid-conductor models, typically equal to this.N_series for stranded
 models.
 
-### * property_modified Adds the modified property to the list of modified
+### .**property_modified** Adds the modified property to the list of modified
 properties.
 
-### * save_to_excel Export winding specs.
+### .**save_to_excel** Export winding specs.
 
 save_to_excel(this, filename, varargin)
 
-### * set_layout_matrix Initialize winding layout matrix.
+### .**set_layout_matrix** Initialize winding layout matrix.
 
 A layout matrix is a number_of_layers x number_of_slots matrix of
 integers, with values in range -phases...phases.
@@ -243,13 +251,13 @@ positive direction:
 * W(i, j) = -k : phase k goes through layer i, slot j, to
 negative direction:
 
-### * show_unset_properties Show warning about unset properties (default
+### .**show_unset_properties** Show warning about unset properties (default
 values).
 
-### * PolyphaseWindingSpec/symmetry_period is a function.
+### .PolyphaseWindingSpec/**symmetry_period** is a function.
 n = symmetry_period(this)
 
-### * total_phase_quantity_matrix Sum of quantities in parallel
+### .**total_phase_quantity_matrix** Sum of quantities in parallel
 paths.
 
 Mtot = total_phase_quantity_matrix(this)
@@ -260,10 +268,10 @@ current in a phase:
 
 Iphase = Mtot * I_parallel_paths
 
-### * PolyphaseWindingSpec/visualize is a function.
+### .PolyphaseWindingSpec/**visualize** is a function.
 visualize(this, varargin)
 
-### * winding_angle Compute winding angle.
+### .**winding_angle** Compute winding angle.
 
 a = winding_angle(this)
 
@@ -274,11 +282,12 @@ generates a cosinusoidal airgap flux
 density waveform (first peak of fundamental at y = 0, assuming
 non-salient rotor).
 
-### * xy Transform to phase quantities
+### .**xy** Transform to phase quantities
 
 y = xy(this, dq, angles), where
 
 * angles : (rotor) angles in electrical degrees.
 
 y = xy(this, dq)
+
 

@@ -3,54 +3,62 @@ title : eCurve
 parent: API
 grand_parent : Documentation
 ---
-## Summary for eCurve
+# Summary for: **eCurve**  < [eObject](eObject.html)
+
+## Class summary
+
 eCurve methods:
 eCurve - is a class.
 extrude_to_level - eCurve/extrude_to_level is a function.
-## PROPERTIES
-* eCurve/pcenter is a property.
 
-* eCurve/pend is a property.
+## Properties
 
-* eCurve/periodic_with is a property.
+### .eCurve/**pcenter** is a property.
 
-* eCurve/pstart is a property.
+### .eCurve/**pend** is a property.
 
-* eCurve/surfaces is a property.
+### .eCurve/**periodic_with** is a property.
 
-* eCurve/type is a property.
+### .eCurve/**pstart** is a property.
+
+### .eCurve/**surfaces** is a property.
+
+### .eCurve/**type** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * eCurve/add_surface is a function.
+
+### .eCurve/**add_surface** is a function.
 add_surface(this, s)
 
-### * eCurve/eCurve is a constructor.
+### .**eCurve**/eCurve is a constructor.
 this = eCurve(varargin)
 Documentation for eCurve/eCurve
 doc eCurve
 
-### * Direction of this Curve to join with other curve.
+### .Direction of this Curve to join with other curve.
 
 ldir = extend_direction(this, other_curve)
 
-### * extends Check if this Curve **extends** other curve.
+### .**extends** Check if this Curve **extends** other curve.
 
 bl = extends(this, other_curve, other_curve_direction)
 
-### * eCurve/extrude_to_level is a function.
+### .eCurve/**extrude_to_level** is a function.
 lnew = extrude_to_level(this, level)
 
-### * eCurve.find_curve is a function.
+### .eCurve.**find_curve** is a function.
 c = eCurve.find_curve(varargin)
 
-### * joinable_with Check if this Curve joins with other Curve.
+### .**joinable_with** Check if this Curve joins with other Curve.
 
 bl = joinable_with(this, other_line)
 
 bl = true if this shares a point with other_line
 
-### * PLOT   Linear plot.
+### .PLOT   Linear **plot**.
 PLOT(X,Y) plots vector Y versus vector X. If X or Y is a matrix,
 then the vector is plotted versus the rows or columns of the matrix,
 whichever line up.  If X is a scalar and Y is a vector, disconnected
@@ -124,6 +132,7 @@ plot(x,y,'--rs','LineWidth',2,...
 See also PLOTTOOLS, SEMILOGX, SEMILOGY, LOGLOG, PLOTYY, PLOT3, GRID,
 TITLE, XLABEL, YLABEL, AXIS, AXES, HOLD, LEGEND, SUBPLOT, SCATTER.
 
-### * eCurve/points is a function.
+### .eCurve/**points** is a function.
 xs = points(this)
+
 

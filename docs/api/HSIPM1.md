@@ -3,17 +3,26 @@ title : HSIPM1
 parent: API
 grand_parent : Documentation
 ---
-## Summary for HSIPM1
+# Summary for: **HSIPM1**  < [SynRotorBase](SynRotorBase.html)
+
+## Class summary
+
 HSIPM1 methods:
 HSIPM1 - is a class.
 create_geometry - import geometry.*
-## PROPERTIES
+
+## Properties
+
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * HSIPM1/HSIPM1 is a constructor.
+
+### .**HSIPM1**/HSIPM1 is a constructor.
 this = HSIPM1(dim)
 Documentation for HSIPM1/HSIPM1
 doc HSIPM1
 
-### * import geometry.*
+### .import geometry.*
+
 

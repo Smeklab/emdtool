@@ -3,40 +3,48 @@ title : gw
 parent: API
 grand_parent : Documentation
 ---
-## Summary for gw
+# Summary for: **gw**  < handle
+
+## Class summary
+
 gw methods:
 gw - is a class.
 initialize - adding surfaces
 loadmesh - opening file
 write_file - gw/write_file is a function.
-## PROPERTIES
-* gw/fname is a property.
 
-* gw/lcar is a property.
+## Properties
 
-* gw/lineloops is a property.
+### .gw/**fname** is a property.
 
-* gw/lines is a property.
+### .gw/**lcar** is a property.
 
-* gw/points is a property.
+### .gw/**lineloops** is a property.
 
-* gw/surfaces is a property.
+### .gw/**lines** is a property.
+
+### .gw/**points** is a property.
+
+### .gw/**surfaces** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * gw/generate_mesh is a function.
+
+### .gw/**generate_mesh** is a function.
 generate_mesh(this)
 
-### * gw/gw is a constructor.
+### .**gw**/gw is a constructor.
 this = gw(varargin)
 Documentation for gw/gw
 doc gw
 
-### * adding surfaces
+### .adding surfaces
 
-### * opening file
+### .opening file
 
-### * MESH   3-D **mesh** surface.
+### .MESH   3-D ****mesh**** surface.
 MESH(X,Y,Z,C) plots the colored parametric **mesh** defined by
 four matrix arguments.  The view point is specified by VIEW.
 The axis labels are determined by the range of X, Y and Z,
@@ -70,6 +78,7 @@ axes, and surface properties which affect the display of the mesh.
 
 See also SURF, MESHC, MESHZ, WATERFALL.
 
-### * gw/write_file is a function.
+### .gw/**write_file** is a function.
 this = write_file(this, varargin)
+
 

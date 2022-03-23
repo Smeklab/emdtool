@@ -3,7 +3,10 @@ title : eSurface
 parent: API
 grand_parent : Documentation
 ---
-## Summary for eSurface
+# Summary for: **eSurface**  < [eObject](eObject.html)
+
+## Class summary
+
 eSurface methods:
 add_curve - eSurface/add_curve is a function.
 create - Get existing surface or create new.
@@ -17,54 +20,59 @@ raise_radially - getting all points
 raise_radially_along_sector - getting all points
 raise_radially_curves_and_surfaces - eSurface/raise_radially_curves_and_surfaces is a function.
 set_characteristic_length - eSurface/set_characteristic_length is a function.
-## PROPERTIES
-* eSurface/bottom_volume is a property.
 
-* eSurface/curve_directions is a property.
+## Properties
 
-* eSurface/curves is a property.
+### .eSurface/**bottom_volume** is a property.
 
-* eSurface/is_closed is a property.
+### .eSurface/**curve_directions** is a property.
 
-* eSurface/is_flat is a property.
+### .eSurface/**curves** is a property.
 
-* eSurface/periodic_with is a property.
+### .eSurface/**is_closed** is a property.
 
-* eSurface/sector_angle is a property.
+### .eSurface/**is_flat** is a property.
 
-* eSurface/top_volume is a property.
+### .eSurface/**periodic_with** is a property.
 
-* eSurface/type is a property.
+### .eSurface/**sector_angle** is a property.
+
+### .eSurface/**top_volume** is a property.
+
+### .eSurface/**type** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * eSurface/add_curve is a function.
+
+### .eSurface/**add_curve** is a function.
 add_curve(this, curve)
 
-### * eSurface/center_of_mass is a function.
+### .eSurface/**center_of_mass** is a function.
 x = center_of_mass(this)
 
-### * eSurface/close_surface is an undocumented builtin eSurface method.
+### .eSurface/**close_surface** is an undocumented builtin eSurface method.
 
-### * create Get existing surface or **create** new.
+### .**create** Get existing surface or **create** new.
 
-### * eSurface/eSurface is a constructor.
+### .**eSurface**/eSurface is a constructor.
 this = eSurface
 Documentation for eSurface/eSurface
 doc eSurface
 
-### * getting points
+### .getting points
 
-### * eSurface/get_all_points is a function.
+### .eSurface/**get_all_points** is a function.
 ps = get_all_points(this)
 
-### * eSurface/normal is a function.
+### .eSurface/**normal** is a function.
 n = normal(this)
 
-### * eSurface/periodic_pair is a function.
+### .eSurface/**periodic_pair** is a function.
 sout = periodic_pair(this)
 
-### * PLOT   Linear plot.
+### .PLOT   Linear **plot**.
 PLOT(X,Y) plots vector Y versus vector X. If X or Y is a matrix,
 then the vector is plotted versus the rows or columns of the matrix,
 whichever line up.  If X is a scalar and Y is a vector, disconnected
@@ -138,22 +146,23 @@ plot(x,y,'--rs','LineWidth',2,...
 See also PLOTTOOLS, SEMILOGX, SEMILOGY, LOGLOG, PLOTYY, PLOT3, GRID,
 TITLE, XLABEL, YLABEL, AXIS, AXES, HOLD, LEGEND, SUBPLOT, SCATTER.
 
-### * eSurface/plot_normal is a function.
+### .eSurface/**plot_normal** is a function.
 plot_normal(this, varargin)
 
-### * eSurface/points is a function.
+### .eSurface/**points** is a function.
 xs = points(this)
 
-### * eSurface/raise_axially is a function.
+### .eSurface/**raise_axially** is a function.
 V = raise_axially(this, level, varargin)
 
-### * eSurface/raise_axially_curves_and_surfaces is a function.
+### .eSurface/**raise_axially_curves_and_surfaces** is a function.
 V = raise_axially_curves_and_surfaces(this, level)
 
-### * getting all points
+### .getting all points
 
-### * getting all points
+### .getting all points
 
-### * eSurface/set_characteristic_length is a function.
+### .eSurface/**set_characteristic_length** is a function.
 set_characteristic_length(this, lcar)
+
 

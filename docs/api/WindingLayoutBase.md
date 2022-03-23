@@ -3,7 +3,10 @@ title : WindingLayoutBase
 parent: API
 grand_parent : Documentation
 ---
-## Summary for WindingLayoutBase
+# Summary for: **WindingLayoutBase**  < handle
+
+## Class summary
+
 WindingLayoutBase Base class for winding layouts.
 
 The WindingLayoutBase class exists to simplify the workflow of
@@ -75,28 +78,33 @@ USAGE: The intended usage is as follows.
 use a [SlotShapeBase](SlotShapeBase.html) object and pass it on to the
 `create_slot_geometry`  method, or you manually create the slot (or
 rather, winding) [Surfaces](Surfaces.html), and pass them as an array.
-## PROPERTIES
-* interlayer_insulation_length - linear interlayer insulation length
 
-* interlayer_insulation_thickness Interlayer insulation thickness.
+## Properties
+
+### .**interlayer_insulation_length** - linear interlayer insulation length
+
+### .**interlayer_insulation_thickness** Interlayer insulation thickness.
 
 If not specified, slot liner thickness x 2 is returned.
 
-* mesh_liner - Mesh slot liner or not?
+### .**mesh_liner** - Mesh slot liner or not?
 
-* slot - a [SlotShapeBase](SlotShapeBase.html) object associated with this
+### .**slot** - a [SlotShapeBase](SlotShapeBase.html) object associated with this
 
-* slot_liner_length - linear slot liner length
+### .**slot_liner_length** - linear slot liner length
 
-* slot_liner_thickness - slot liner thickness (m)
+### .**slot_liner_thickness** - slot liner thickness (m)
 
-* winding_spec - a [PolyphaseWindingSpec](PolyphaseWindingSpec.html) object of the parent circuit
+### .**winding_spec** - a [PolyphaseWindingSpec](PolyphaseWindingSpec.html) object of the parent circuit
 
-* winding_window_area - winding window area, gross
+### .**winding_window_area** - winding window area, gross
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * compute_losses_stranded Estimate AC losses in stranded windings.
+
+### .**compute_losses_stranded** Estimate AC losses in stranded windings.
 
 Estimate AC loss distribution for stranded (= non-solid)
 conductor models.
@@ -114,15 +122,15 @@ winding.
 See the code of PolyphaseCircuit.stranded_conductor_losses for
 more details.
 
-### * conductor_area Total conductor area per slot.
+### .**conductor_area** Total conductor area per slot.
 
 Returns nan by default; should be overridden in subclasses if
 needed.
 
-### * WindingLayoutBase/create_custom_geometry is a function.
+### .WindingLayoutBase/**create_custom_geometry** is a function.
 create_custom_geometry(this, parent_geometry, winding_spec, surfaces)
 
-### * create_slot_geometry Create the winding geometry.
+### .**create_slot_geometry** Create the winding geometry.
 
 This method creates the winding geometry, creating the necessary
 [Material](Material.html) and [Domain](Domain.html) objects and adding them to the `parent_geometry` .
@@ -146,18 +154,19 @@ Depending on the winding model, this method calls
 either the create_stranded_geometry or create_solid_geometry
 methods. Custom cases must be subclassed.
 
-### * create_solid_geometry Create slot geometry for solid winding
+### .**create_solid_geometry** Create slot geometry for solid winding
 models.
 
-### * create_stranded_geometry Finalize slot geometry of stranded windings.
+### .**create_stranded_geometry** Finalize slot geometry of stranded windings.
 
-### * gross_conductor_area Conductor area WITH insulation.
+### .**gross_conductor_area** Conductor area WITH insulation.
 
 Returns the gross conductor area: useful area plus
 insulation, per single conductor. Returns nan by default,
 should be subclassed.
 
-### * parse_slot_data Parse slot area, liner/insulation lengths.
+### .**parse_slot_data** Parse slot area, liner/insulation lengths.
 
-### * uninsulated_winding_area Winding window area minus liners.
+### .**uninsulated_winding_area** Winding window area minus liners.
+
 

@@ -3,7 +3,10 @@ title : SlottedRotor1
 parent: API
 grand_parent : Documentation
 ---
-## Summary for SlottedRotor1
+# Summary for: **SlottedRotor1**  < [SlottedRotorBase](SlottedRotorBase.html)
+
+## Class summary
+
 SlottedRotor1 Simple template for a slotted rotor.
 
 Mainly intended for induction machines with a squirrel-cage winding.
@@ -32,8 +35,14 @@ End-ring dimensions:
 * H_ring : end-ring height (radial length)
 * W_ring : end-ring width (axial length)
 * D_ring : average end-ring diameter
-## PROPERTIES
-* winding - circuit object for the rotor cage, a [CageCircuit](CageCircuit.html)
+
+## Properties
+
+### .**winding** - circuit object for the rotor cage, a [CageCircuit](CageCircuit.html)
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
+
+

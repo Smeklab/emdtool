@@ -3,7 +3,10 @@ title : BreadloafRotor
 parent: API
 grand_parent : Documentation
 ---
-## Summary for BreadloafRotor
+# Summary for: **BreadloafRotor**  < [SynRotorBase](SynRotorBase.html)
+
+## Class summary
+
 BreadloafRotor Template for rotors with breadloaf PMs.
 
 DIMENSIONS:
@@ -34,6 +37,12 @@ Materials:
 * polegap_material : (OPTIONAL) Material of polegaps. Defaults to
 air.
 * sleeve_material : retaining sleeve material
-## PROPERTIES
+
+## Properties
+
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
+
+

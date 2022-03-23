@@ -3,24 +3,33 @@ title : SteppingSolution
 parent: API
 grand_parent : Documentation
 ---
-## Summary for SteppingSolution
+# Summary for: **SteppingSolution**  < [MagneticsSolution](MagneticsSolution.html)
+
+## Class summary
+
 SteppingSolution is a class.
 obj = SteppingSolution
-## PROPERTIES
-* SteppingSolution/dt is a property.
 
-* SteppingSolution.type is a property.
+## Properties
+
+### .SteppingSolution/**dt** is a property.
+
+### .SteppingSolution.**type** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * SteppingSolution/SteppingSolution is a constructor.
+
+### .**SteppingSolution**/SteppingSolution is a constructor.
 obj = SteppingSolution
 Documentation for SteppingSolution/SteppingSolution
 doc SteppingSolution
 
-### * SteppingSolution/angles is a function.
+### .SteppingSolution/**angles** is a function.
 a = angles(this)
 
-### * SteppingSolution/ts is a function.
+### .SteppingSolution/**ts** is a function.
 t = ts(this)
+
 

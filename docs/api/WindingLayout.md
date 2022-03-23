@@ -3,16 +3,24 @@ title : WindingLayout
 parent: API
 grand_parent : Documentation
 ---
-## Summary for WindingLayout
+# Summary for: **WindingLayout**
+
+## Class summary
+
 WindingLayout Factory class for winding layout matrices.
-## PROPERTIES
+
+## Properties
+
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * WindingLayout Factory class for winding layout matrices.
+
+### .**WindingLayout** Factory class for winding layout matrices.
 Documentation for WindingLayout/WindingLayout
 doc WindingLayout
 
-### * concentrated Concentrated winding synthesis function.
+### .**concentrated** Concentrated winding synthesis function.
 
 W = synthetize_winding(Q, p, m, nlayers) synthesizes a winding
 configuration matrix for a tooth-wound winding.
@@ -31,5 +39,6 @@ Concentrated Windings'.
 
 (c) Antti Lehikoinen / Smeklab Ltd. All rights reserved.
 
-### * from_Emetor Parse layout matrix from Emetor string.
+### .**from_Emetor** Parse layout matrix from Emetor string.
+
 

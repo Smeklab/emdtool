@@ -3,7 +3,10 @@ title : SLContainer
 parent: API
 grand_parent : Documentation
 ---
-## Summary for SLContainer
+# Summary for: **SLContainer**  < handle
+
+## Class summary
+
 SLContainer A SMEKlib container class for key-value pairs.
 
 Has the following methods:
@@ -19,18 +22,23 @@ keys() returns the keys.
 copy() returns a deep copy.
 
 (c) 2017 Antti Lehikoinen / Aalto University
-## PROPERTIES
-* SLContainer/data is a property.
+
+## Properties
+
+### .SLContainer/**data** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * SLContainer/add is a function.
+
+### .SLContainer/**add** is a function.
 c = add(c, name, d)
 
-### * SLContainer/copy is a function.
+### .SLContainer/**copy** is a function.
 c2 = copy(c)
 
-### * GET    Get object properties.
+### .GET    Get object properties.
 V = GET(H,'PropertyName') returns the value of the specified property
 for the graphics object with handle H.  If H is a vector of handles,
 then **get** will return an M-by-1 cell array of values where M is equal
@@ -78,10 +86,10 @@ value will be returned.
 
 See also SET, RESET, DELETE, GCF, GCA, FIGURE, AXES.
 
-### * SLContainer/keys is a function.
+### .SLContainer/**keys** is a function.
 names = keys(c)
 
-### * SET    Set object properties.
+### .SET    Set object properties.
 SET(H,'PropertyName',PropertyValue) sets the value of the specified
 property for the graphics object with handle H.  H can be a vector of
 handles, in which case SET sets the properties' values for all objects
@@ -137,4 +145,5 @@ Three strings have special meaning for PropertyValues:
 'remove'  - remove default value.
 
 See also GET, RESET, DELETE, GCF, GCA, FIGURE, AXES.
+
 

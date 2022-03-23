@@ -3,69 +3,77 @@ title : OctTree
 parent: API
 grand_parent : Documentation
 ---
-## Summary for OctTree
+# Summary for: **OctTree**  < handle
+
+## Class summary
+
 OctTree methods:
 OctTree - is a class.
 from_mesh - OctTree.from_mesh is a function.
 from_parent - OctTree.from_parent is a function.
-## PROPERTIES
-* OctTree/MAX_DEPTH is a property.
 
-* OctTree/MIN_ELEMENTS is a property.
+## Properties
 
-* OctTree/c_lll is a property.
+### .OctTree/**MAX_DEPTH** is a property.
 
-* OctTree/c_lls is a property.
+### .OctTree/**MIN_ELEMENTS** is a property.
 
-* OctTree/c_lsl is a property.
+### .OctTree/**c_lll** is a property.
 
-* OctTree/c_lss is a property.
+### .OctTree/**c_lls** is a property.
 
-* OctTree/c_sll is a property.
+### .OctTree/**c_lsl** is a property.
 
-* OctTree/c_sls is a property.
+### .OctTree/**c_lss** is a property.
 
-* OctTree/c_ssl is a property.
+### .OctTree/**c_sll** is a property.
 
-* OctTree/c_sss is a property.
+### .OctTree/**c_sls** is a property.
 
-* child nodes
+### .OctTree/**c_ssl** is a property.
 
-* OctTree/depth is a property.
+### .OctTree/**c_sss** is a property.
 
-* OctTree/elements is a property.
+### .child nodes
 
-* mesh limits
+### .OctTree/**depth** is a property.
 
-* OctTree/mxmax is a property.
+### .OctTree/**elements** is a property.
 
-* OctTree/mxmin is a property.
+### .mesh limits
 
-* OctTree/mymax is a property.
+### .OctTree/**mxmax** is a property.
 
-* OctTree/mymin is a property.
+### .OctTree/**mxmin** is a property.
 
-* OctTree/mzmax is a property.
+### .OctTree/**mymax** is a property.
 
-* OctTree/mzmin is a property.
+### .OctTree/**mymin** is a property.
 
-* OctTree/parent is a property.
+### .OctTree/**mzmax** is a property.
 
-* OctTree/xmax is a property.
+### .OctTree/**mzmin** is a property.
 
-* OctTree/xmin is a property.
+### .OctTree/**parent** is a property.
 
-* OctTree/ymax is a property.
+### .OctTree/**xmax** is a property.
 
-* OctTree/ymin is a property.
+### .OctTree/**xmin** is a property.
 
-* OctTree/zmax is a property.
+### .OctTree/**ymax** is a property.
 
-* OctTree/zmin is a property.
+### .OctTree/**ymin** is a property.
+
+### .OctTree/**zmax** is a property.
+
+### .OctTree/**zmin** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * COUNT Returns the number of occurrences of a pattern in text.
+
+### .COUNT Returns the number of occurrences of a pattern in text.
 C = COUNT(STR,PAT) returns the number of occurrences of PAT in
 STR.
 
@@ -112,21 +120,21 @@ COUNT(STR,PAT,'IgnoreCase',true)
 
 See also endsWith, startsWith, contains, pattern, lettersPattern.
 
-### * find Find OctTreeNode containing given point.
+### .**find** Find OctTreeNode containing given point.
 
-### * OctTree/find_closest_local is a function.
+### .OctTree/**find_closest_local** is a function.
 [x_local, elements] = find_closest_local(this, X)
 
-### * OctTree.from_mesh is a function.
+### .OctTree.**from_mesh** is a function.
 this = OctTree.from_mesh(m3d, varargin)
 
-### * OctTree.from_parent is a function.
+### .OctTree.**from_parent** is a function.
 this = OctTree.from_parent(parent, elements, xmin, xmax, ymin, ymax, zmin, zmax)
 
-### * OctTree/get_root is a function.
+### .OctTree/**get_root** is a function.
 p = get_root(this)
 
-### * PLOT   Linear plot.
+### .PLOT   Linear **plot**.
 PLOT(X,Y) plots vector Y versus vector X. If X or Y is a matrix,
 then the vector is plotted versus the rows or columns of the matrix,
 whichever line up.  If X is a scalar and Y is a vector, disconnected
@@ -200,5 +208,6 @@ plot(x,y,'--rs','LineWidth',2,...
 See also PLOTTOOLS, SEMILOGX, SEMILOGY, LOGLOG, PLOTYY, PLOT3, GRID,
 TITLE, XLABEL, YLABEL, AXIS, AXES, HOLD, LEGEND, SUBPLOT, SCATTER.
 
-### * center points
+### .center points
+
 

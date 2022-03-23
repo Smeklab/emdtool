@@ -3,7 +3,10 @@ title : MagneticsSolution
 parent: API
 grand_parent : Documentation
 ---
-## Summary for MagneticsSolution
+# Summary for: **MagneticsSolution**  < handle
+
+## Class summary
+
 MagneticsSolution Class for representing the solution to MagneticsProblem.
 
 
@@ -16,27 +19,33 @@ sol_2 = problem.solve_xx();
 results = do_something(sol_1)
 
 may cause unexpected results. Please use solutions right away.
-## PROPERTIES
-* data - any other data, struct
 
-* dof_map - mapping for indices etc.
+## Properties
 
-* parameters -  [SimulationParameters](SimulationParameters.html) associated with the solution
+### .**data** - any other data, struct
 
-* problem -  [MagneticsProblem](MagneticsProblem.html) associated with the solution
+### .**dof_map** - mapping for indices etc.
 
-* raw_solution - raw solution array
+### .**parameters** -  [SimulationParameters](SimulationParameters.html) associated with the solution
 
-* MagneticsSolution.type is a property.
+### .**problem** -  [MagneticsProblem](MagneticsProblem.html) associated with the solution
+
+### .**raw_solution** - raw solution array
+
+### .MagneticsSolution.**type** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * MagneticsSolution/get_dof is a function.
+
+### .MagneticsSolution/**get_dof** is a function.
 val = get_dof(this, key)
 
-### * indices_to_last_period Return indices to solution over the last
+### .**indices_to_last_period** Return indices to solution over the last
 electrical period.
 
-### * MagneticsSolution/set_dof is a function.
+### .MagneticsSolution/**set_dof** is a function.
 set_dof(this, key, val)
+
 

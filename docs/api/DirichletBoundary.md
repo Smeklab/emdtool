@@ -3,26 +3,34 @@ title : DirichletBoundary
 parent: API
 grand_parent : Documentation
 ---
-## Summary for DirichletBoundary
+# Summary for: **DirichletBoundary**  < [Boundary](Boundary.html)
+
+## Class summary
+
 DirichletBoundary methods:
 DirichletBoundary - is a class.
 parse_from_gmsh_surface - DirichletBoundary/parse_from_gmsh_surface is a function.
 plot - DirichletBoundary/plot is a function.
-## PROPERTIES
+
+## Properties
+
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * DirichletBoundary/DirichletBoundary is a constructor.
+
+### .**DirichletBoundary**/DirichletBoundary is a constructor.
 obj = DirichletBoundary
 Documentation for DirichletBoundary/DirichletBoundary
 doc DirichletBoundary
 
-### * DirichletBoundary.from_gmsh_surface is a function.
+### .DirichletBoundary.**from_gmsh_surface** is a function.
 this = DirichletBoundary.from_gmsh_surface(mesh, surface)
 
-### * DirichletBoundary/parse_from_gmsh_surface is a function.
+### .DirichletBoundary/**parse_from_gmsh_surface** is a function.
 parse_from_gmsh_surface(this, surface)
 
-### * PLOT   Linear plot.
+### .PLOT   Linear **plot**.
 PLOT(X,Y) plots vector Y versus vector X. If X or Y is a matrix,
 then the vector is plotted versus the rows or columns of the matrix,
 whichever line up.  If X is a scalar and Y is a vector, disconnected
@@ -95,4 +103,5 @@ plot(x,y,'--rs','LineWidth',2,...
 
 See also PLOTTOOLS, SEMILOGX, SEMILOGY, LOGLOG, PLOTYY, PLOT3, GRID,
 TITLE, XLABEL, YLABEL, AXIS, AXES, HOLD, LEGEND, SUBPLOT, SCATTER.
+
 

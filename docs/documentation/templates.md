@@ -74,7 +74,7 @@ Template for [a rotor with field winding](../../api/FWRotor1.html).
 
 ![SlottedRotor1](./knowledge_base/SlottedRotor1.png)
 
-[Slotted rotor template](../../api/SlottedRotor1.html) for induction machines.
+[Slotted rotor template](../../api/SlottedRotor1.html) for induction machines. Supports arbitrary slot shapes by giving a [`RotorSlotBase`](../../api/RotorSlotBase.html) object as an input argument.
 
 ## Coated rotor
 

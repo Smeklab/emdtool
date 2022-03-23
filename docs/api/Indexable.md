@@ -3,33 +3,42 @@ title : Indexable
 parent: API
 grand_parent : Documentation
 ---
-## Summary for Indexable
+# Summary for: **Indexable**  < handle & matlab.mixin.Heterogeneous
+
+## Class summary
+
 Indexable is a class.
 obj = Indexable
-## PROPERTIES
-* Indexable/dimensions is a property.
 
-* Indexable/name is a property.
+## Properties
 
-* Indexable/parent is a property.
+### .Indexable/**dimensions** is a property.
+
+### .Indexable/**name** is a property.
+
+### .Indexable/**parent** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * Indexable/Indexable is a constructor.
+
+### .**Indexable**/Indexable is a constructor.
 obj = Indexable
 Documentation for Indexable/Indexable
 doc Indexable
 
-### * get Find an Indexable object by name.
+### .**get** Find an Indexable object by name.
 
 obj = get(this, name)
 
-### * get_dimension Get dimensions by name.
+### .**get_dimension** Get dimensions by name.
 
-### * is_dimension Check if dimension exists.
+### .**is_dimension** Check if dimension exists.
 
-### * root Root parent.
+### .**root** Root parent.
 
-### * Indexable/root_mesh is a function.
+### .Indexable/**root_mesh** is a function.
 msh = root_mesh(this)
+
 

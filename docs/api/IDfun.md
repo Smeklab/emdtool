@@ -3,20 +3,28 @@ title : IDfun
 parent: API
 grand_parent : Documentation
 ---
-## Summary for IDfun
+# Summary for: **IDfun**  < handle
+
+## Class summary
+
 IDfun is a class.
 this = IDfun(varargin)
-## PROPERTIES
-* IDfun/k is a property.
+
+## Properties
+
+### .IDfun/**k** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * IDfun/IDfun is a constructor.
+
+### .**IDfun**/IDfun is a constructor.
 this = IDfun(varargin)
 Documentation for IDfun/IDfun
 doc IDfun
 
-### * EVAL Execute MATLAB expression in text.
+### .EVAL Execute MATLAB expression in text.
 EVAL(EXPRESSION) evaluates the MATLAB code in EXPRESSION. Specify
 EXPRESSION as a character vector or string scalar.
 
@@ -35,9 +43,10 @@ end
 
 See also FEVAL, EVALIN, ASSIGNIN, EVALC.
 
-### * IDfun/getData is a function.
+### .IDfun/**getData** is a function.
 [Nf, order, Nvars] = getData(~, ~)
 
-### * IDfun/getIndices is a function.
+### .IDfun/**getIndices** is a function.
 inds = getIndices(this, ~, ~, ~)
+
 

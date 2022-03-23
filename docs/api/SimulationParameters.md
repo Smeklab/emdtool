@@ -3,38 +3,47 @@ title : SimulationParameters
 parent: API
 grand_parent : Documentation
 ---
-## Summary for SimulationParameters
+# Summary for: **SimulationParameters**
+
+## Class summary
+
 SimulationParameters Parameters for MagneticsProblem solutions.
-## PROPERTIES
-* N_periods - number of electrical periods to simulate
 
-* N_stepsPerPeriod - number of time-steps per electrical period
+## Properties
 
-* alpha2 - time-stepping weight factor (2=implicit Euler, 1=trapezoidal, ]1,2[ = hybrid)
+### .**N_periods** - number of electrical periods to simulate
 
-* f - supply frequency
+### .**N_stepsPerPeriod** - number of time-steps per electrical period
 
-* maxIter - maximum number of Newton iterations
+### .**alpha2** - time-stepping weight factor (2=implicit Euler, 1=trapezoidal, ]1,2[ = hybrid)
 
-* rel - relaxation factor for iterations, default = 1 (no relaxation)
+### .**f** - supply frequency
 
-* rotorAngle - rotor angle (bias for stepping analysis, set of angles for static)
+### .**maxIter** - maximum number of Newton iterations
 
-* silent - display progress in command line, true/false
+### .**rel** - relaxation factor for iterations, default = 1 (no relaxation)
 
-* slip - slip
+### .**rotorAngle** - rotor angle (bias for stepping analysis, set of angles for static)
 
-* ts - time-step time-stamps
+### .**silent** - display progress in command line, true/false
+
+### .**slip** - slip
+
+### .**ts** - time-step time-stamps
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * default parameters
+
+### .default parameters
 Documentation for SimulationParameters/SimulationParameters
 doc SimulationParameters
 
-### * SimulationParameters/dispf is a function.
+### .SimulationParameters/**dispf** is a function.
 dispf(this, varargin)
 
-### * SimulationParameters/miscpar is a function.
+### .SimulationParameters/**miscpar** is a function.
 p = miscpar(this, name)
+
 

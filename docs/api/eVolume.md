@@ -3,28 +3,36 @@ title : eVolume
 parent: API
 grand_parent : Documentation
 ---
-## Summary for eVolume
+# Summary for: **eVolume**  < [eObject](eObject.html)
+
+## Class summary
+
 eVolume methods:
 eVolume - is a class.
 plot - eVolume/plot is a function.
-## PROPERTIES
-* eVolume/bottom_surface is a property.
 
-* eVolume/surfaces is a property.
+## Properties
 
-* eVolume/top_surface is a property.
+### .eVolume/**bottom_surface** is a property.
+
+### .eVolume/**surfaces** is a property.
+
+### .eVolume/**top_surface** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * eVolume/add_surface is a function.
+
+### .eVolume/**add_surface** is a function.
 add_surface(this, s)
 
-### * eVolume/eVolume is a constructor.
+### .**eVolume**/eVolume is a constructor.
 obj = eVolume
 Documentation for eVolume/eVolume
 doc eVolume
 
-### * PLOT   Linear plot.
+### .PLOT   Linear **plot**.
 PLOT(X,Y) plots vector Y versus vector X. If X or Y is a matrix,
 then the vector is plotted versus the rows or columns of the matrix,
 whichever line up.  If X is a scalar and Y is a vector, disconnected
@@ -97,4 +105,5 @@ plot(x,y,'--rs','LineWidth',2,...
 
 See also PLOTTOOLS, SEMILOGX, SEMILOGY, LOGLOG, PLOTYY, PLOT3, GRID,
 TITLE, XLABEL, YLABEL, AXIS, AXES, HOLD, LEGEND, SUBPLOT, SCATTER.
+
 

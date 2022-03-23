@@ -3,18 +3,26 @@ title : HysteresisModel
 parent: API
 grand_parent : Documentation
 ---
-## Summary for HysteresisModel
+# Summary for: **HysteresisModel**  < handle
+
+## Class summary
+
 HysteresisModel Base class for hysteresis models.
-## PROPERTIES
+
+## Properties
+
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * HysteresisModel Base class for hysteresis models.
+
+### .**HysteresisModel** Base class for hysteresis models.
 Documentation for HysteresisModel/HysteresisModel
 doc HysteresisModel
 
-### * clear_copy Returns a new instance with default state.
+### .**clear_copy** Returns a new instance with default state.
 
-### * evaluate_H Evaluate H for given input.
+### .**evaluate_H** Evaluate H for given input.
 
 H = evaluate_H(this, B, step), where
 
@@ -24,9 +32,10 @@ H = evaluate_H(this, B, step), where
 
 H = evaluate_H(this, B, step, varargin)
 
-### * evaluate_differential_reluctivity Evaluate differential
+### .**evaluate_differential_reluctivity** Evaluate differential
 reluctivity.
 
 The same as evaluate_H, but returns the differential reluctivity
 tensor dH/dB instead.
+
 

@@ -3,7 +3,10 @@ title : MagneticsProblem
 parent: API
 grand_parent : Documentation
 ---
-## Summary for MagneticsProblem
+# Summary for: **MagneticsProblem**  < handle
+
+## Class summary
+
 MagneticsProblem Class for solving magnetics problems.
 
 this = MagneticsProblem( model )
@@ -18,20 +21,25 @@ Main methods:
 * solve_harmonic : solve harmonic problem.
 
 * solve_stepping : solve time-stepping problem.
-## PROPERTIES
-* model - The [MotorModelBase](MotorModelBase.html) (or compatible) **model** class associated with the problem
+
+## Properties
+
+### .**model** - The [MotorModelBase](MotorModelBase.html) (or compatible) model class associated with the problem
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * MagneticsProblem/get_component_property is a function.
+
+### .MagneticsProblem/**get_component_property** is a function.
 prob = get_component_property(this, component, property, pars)
 
-### * MagneticsProblem/set_boundary_matrix is a function.
+### .MagneticsProblem/**set_boundary_matrix** is a function.
 this = set_boundary_matrix(this, varargin)
 
-### * setting PM sources, if any
+### .setting PM sources, if any
 
-### * solve_harmonic Harmonic solution of a MagneticsProblem.
+### .**solve_harmonic** Harmonic solution of a MagneticsProblem.
 
 Solves a Harmonic magnetics problem, with sinusoidal time-variations.
 
@@ -52,14 +60,14 @@ incorrect for synchronous machines (as f_rotor = 0). As a result, the rotor
 reluctivity gets overestimated. This may be fixed in a future release. In
 the meantime, see ´MagneticsProblen.solve_quasistatic´.
 
-### * solve_quasistatic Quasi-static solution a MagneticsProblem.
+### .**solve_quasistatic** Quasi-static solution a MagneticsProblem.
 
 Almost like solve_harmonic with the 'isDC' parameter set to true; but
 only damping-related coupling between the d- and q-axes.
 
 NOTE: Will probably be merged into solve_harmonic in the future.
 
-### * solve_static Static solution of a MagneticsProblem.
+### .**solve_static** Static solution of a MagneticsProblem.
 
 Solves a static magnetics problem, with no damping effects.
 
@@ -69,7 +77,7 @@ solution = solve_static(this, pars), where
 
 * solution : a StaticSolution object.
 
-### * solve_stepping Time-stepping solution of a MagneticsProblem.
+### .**solve_stepping** Time-stepping solution of a MagneticsProblem.
 
 Solves a time-stepping problem with damping (eddy- and voltage-like
 terms) included.
@@ -85,6 +93,7 @@ this.solve_harmonic or this.solve_quasistatic. Alternatively, one can set
 a `MagneticsSolution` object to `this.results.initial_solution`, or a
 solution vector to `this.results.Xh`.
 
-### * MagneticsProblem/sweep_harmonic is a function.
+### .MagneticsProblem/**sweep_harmonic** is a function.
 solutions = sweep_harmonic(this, pars)
+
 

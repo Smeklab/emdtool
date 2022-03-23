@@ -3,7 +3,10 @@ title : emdtool
 parent: API
 grand_parent : Documentation
 ---
-## Summary for emdtool
+# Summary for: **emdtool**  < handle
+
+## Class summary
+
 emdtool Main EMDtool utility class.
 
 Main methods:
@@ -17,15 +20,20 @@ Main methods:
 * set_license : More-manually set license.
 
 * license_information : Show or return license information.
-## PROPERTIES
+
+## Properties
+
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * emdtool.check_license is a function.
+
+### .emdtool.**check_license** is a function.
 is_valid = emdtool.check_license(force_check)
 
-### * get_gmsh_path Return path to gmsh executable.
+### .**get_gmsh_path** Return path to gmsh executable.
 
-### * license_information Show license information.
+### .**license_information** Show license information.
 
 [userid, license_number, valid_until, signature] = emdtool.license_information()
 
@@ -44,7 +52,7 @@ emdtool.license_information()
 
 Show license information in the command window.
 
-### * load_license Load license from file and set as current license.
+### .**load_license** Load license from file and set as current license.
 
 Call syntax:
 
@@ -56,9 +64,9 @@ emdtool.load_license(filename)
 
 Loads license from given filename
 
-### * parse_axis_arguments Parse current-axis arguments.
+### .**parse_axis_arguments** Parse current-axis arguments.
 
-### * set_gmsh_path Set path to gmsh folder.
+### .**set_gmsh_path** Set path to gmsh folder.
 
 Example usage:
 
@@ -67,11 +75,12 @@ emdtool.set_gmsh_path( 'C:/programs/gmsh4.7' )
 The path is saved to the Matlab 'emdtool' preference group, and persists
 between sessions.
 
-### * set_license Set license information.
+### .**set_license** Set license information.
 
 Call syntax:
 
 set_license(userid, valid_until, signature)
 
 See emdtool.license_information() for help.
+
 

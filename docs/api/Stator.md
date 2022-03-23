@@ -3,7 +3,10 @@ title : Stator
 parent: API
 grand_parent : Documentation
 ---
-## Summary for Stator
+# Summary for: **Stator**  < [StatorBase](StatorBase.html)
+
+## Class summary
+
 Stator General-purpose stator class for symmetric slotted stators.
 
 Supports:
@@ -46,8 +49,16 @@ Winding specifications:
 
 (OPTIONAL): Mesh density parameters:
 * lcar_core_s : Characteristic lenght for the core.
-## PROPERTIES
-* slot - SlotShapeBase object
+
+## Properties
+
+### .**slot** - SlotShapeBase object
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
+
+### .Stator/**create_geometry_backup** is an undocumented builtin Standard method.
+
+

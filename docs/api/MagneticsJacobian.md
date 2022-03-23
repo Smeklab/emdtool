@@ -3,22 +3,27 @@ title : MagneticsJacobian
 parent: API
 grand_parent : Documentation
 ---
-## Summary for MagneticsJacobian
+# Summary for: **MagneticsJacobian**  < [MatrixConstructorBase](MatrixConstructorBase.html)
+
+## Class summary
+
 MagneticsJacobian methods:
 MagneticsJacobian - is a class.
 eval - Evaluate Jacobian.
 eval_complex - MagneticsJacobian/eval_complex is a function.
 init_assembly - Initialize MagneticsJacobian.
-## PROPERTIES
-* MagneticsJacobian/DETF is a property.
 
-* MagneticsJacobian/Fvals_shape is a property.
+## Properties
 
-* MagneticsJacobian/Fvals_test is a property.
+### .MagneticsJacobian/**DETF** is a property.
 
-* MagneticsJacobian/Ires is a property.
+### .MagneticsJacobian/**Fvals_shape** is a property.
 
-* ~= (NE)   Not equal relation for handles.
+### .MagneticsJacobian/**Fvals_test** is a property.
+
+### .MagneticsJacobian/**Ires** is a property.
+
+### .~= (NE)   Not equal relation for handles.
 Handles are equal if they are handles for the same object and are
 unequal otherwise.
 
@@ -36,26 +41,29 @@ dimensions.
 See also MAGNETICSJACOBIAN, MAGNETICSJACOBIAN/EQ, MAGNETICSJACOBIAN/GE, MAGNETICSJACOBIAN/GT, MAGNETICSJACOBIAN/LE, MAGNETICSJACOBIAN/LT
 Help for MagneticsJacobian/Ne is inherited from superclass handle
 
-* MagneticsJacobian/dof_shape is a property.
+### .MagneticsJacobian/**dof_shape** is a property.
 
-* MagneticsJacobian/materials is a property.
+### .MagneticsJacobian/**materials** is a property.
 
-* MagneticsJacobian/msh is a property.
+### .MagneticsJacobian/**msh** is a property.
 
-* MagneticsJacobian/symmetric is a property.
+### .MagneticsJacobian/**symmetric** is a property.
 
-* MagneticsJacobian/w is a property.
+### .MagneticsJacobian/**w** is a property.
 
-* MagneticsJacobian/x_quad is a property.
+### .MagneticsJacobian/**x_quad** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * MagneticsJacobian/MagneticsJacobian is a constructor.
+
+### .**MagneticsJacobian**/MagneticsJacobian is a constructor.
 this = MagneticsJacobian(problem, symmetric, test_fun, shape_fun)
 Documentation for MagneticsJacobian/MagneticsJacobian
 doc MagneticsJacobian
 
-### * eval Evaluate Jacobian.
+### .**eval** Evaluate Jacobian.
 
 [J, res] = eval(this, X), where
 
@@ -67,10 +75,11 @@ J = Jacobian matrix
 
 res = residual vector
 
-### * MagneticsJacobian/eval_complex is a function.
+### .MagneticsJacobian/**eval_complex** is a function.
 [Jrr, Jri, Jir, Jii, resr, resi] = eval_complex(this, X)
 
-### * init_assembly Initialize MagneticsJacobian.
+### .**init_assembly** Initialize MagneticsJacobian.
 
 this = init_assembly(this, model, fun_test, fun_shape, symmetric )
+
 

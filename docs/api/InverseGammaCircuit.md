@@ -3,31 +3,39 @@ title : InverseGammaCircuit
 parent: API
 grand_parent : Documentation
 ---
-## Summary for InverseGammaCircuit
+# Summary for: **InverseGammaCircuit**  < [IMEquivalentCircuit](IMEquivalentCircuit.html)
+
+## Class summary
+
 InverseGammaCircuit methods:
 InverseGammaCircuit - is a class.
 from_harmonic_solution - Initialize eq. circuit from solution.
-## PROPERTIES
-* InverseGammaCircuit/Lm is a property.
 
-* InverseGammaCircuit/Ls is a property.
+## Properties
 
-* InverseGammaCircuit/Rr is a property.
+### .InverseGammaCircuit/**Lm** is a property.
 
-* InverseGammaCircuit/Rs is a property.
+### .InverseGammaCircuit/**Ls** is a property.
 
-* InverseGammaCircuit/f is a property.
+### .InverseGammaCircuit/**Rr** is a property.
 
-* InverseGammaCircuit/p is a property.
+### .InverseGammaCircuit/**Rs** is a property.
+
+### .InverseGammaCircuit/**f** is a property.
+
+### .InverseGammaCircuit/**p** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * InverseGammaCircuit/InverseGammaCircuit is a constructor.
+
+### .**InverseGammaCircuit**/InverseGammaCircuit is a constructor.
 obj = InverseGammaCircuit
 Documentation for InverseGammaCircuit/InverseGammaCircuit
 doc InverseGammaCircuit
 
-### * from_harmonic_solution Initialize eq. circuit from solution.
+### .**from_harmonic_solution** Initialize eq. circuit from solution.
 
 this = from_harmonic_solution(solution)
 
@@ -48,6 +56,7 @@ magnetizing branch voltage. This value should of course be real; the
 numerical error factor imag(Rr)/real(Rr) is displayed in the command
 prompt to spot failed computations.
 
-### * InverseGammaCircuit/torque_from_current is a function.
+### .InverseGammaCircuit/**torque_from_current** is a function.
 T = torque_from_current(this, I, slip)
+
 

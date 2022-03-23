@@ -3,38 +3,46 @@ title : geo
 parent: API
 grand_parent : Documentation
 ---
-## Summary for geo
+# Summary for: **geo**
+
+## Class summary
+
 enumeration
 line
 arc
 hole
 end
-## PROPERTIES
+
+## Properties
+
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * add_fillet Fillet intersection of two lines
+
+### .**add_fillet** Fillet intersection of two lines
 
 P = add_fillet(r, pa1, pa2, pb1, pb2, varargin)
 
 P = add_fillet(r, pa1, pa2, pb1, pb2, direction)
 
-### * geo.add_fillet_between_curves is a function.
+### .geo.**add_fillet_between_curves** is a function.
 Pcenter = geo.add_fillet_between_curves(r_fillet, ca, cb, direction)
 
-### * geo.arc is a function.
+### .geo.**arc** is a function.
 e = geo.arc
 
-### * geo.closest_point is a function.
+### .geo.**closest_point** is a function.
 pclosest = geo.closest_point(X, points)
 
-### * geo.find_arc is a function.
+### .geo.**find_arc** is a function.
 [l, direction] = geo.find_arc(p1, pc, p2)
 
-### * find_line Find line between two points.
+### .**find_line** Find line between two points.
 
 [l, direction] = find_line(p1, p2)
 
-### * enumeration
+### .enumeration
 line
 arc
 hole
@@ -42,10 +50,10 @@ end
 Documentation for geo/geo
 doc geo
 
-### * geo.hole is a function.
+### .geo.**hole** is a function.
 e = geo.hole
 
-### * LINE Create line
+### .LINE Create **line**
 LINE(X,Y) adds the **line** defined in vectors X and Y to the current axes.
 If X and Y are matrices of the same size, **line** draws one **line** per
 column.
@@ -73,15 +81,15 @@ property values.
 
 See also PATCH, TEXT, PLOT, PLOT3.
 
-### * geo.move_to_intersect is a function.
+### .geo.**move_to_intersect** is a function.
 geo.move_to_intersect(pa1, pa2, pb1, pb2, pextra)
 
-### * geo.parse_named is a function.
+### .geo.**parse_named** is a function.
 C = geo.parse_named(entities)
 
-### * parsing start line
+### .parsing start line
 
-### * set_periodic Set two Lines as periodic.
+### .**set_periodic** Set two Lines as periodic.
 
 The purpose of this method is to specify two Lines as
 periodic, so that they are meshed in conforming fashion. The
@@ -104,4 +112,5 @@ will be named 'n_cw', and Line 2 as 'n_ccw'. To ignore this condition
 and skip renaming use the call syntax:
 
 set_periodic( P_start_1, P_end_1, P_start_2, P_end_2, true)
+
 

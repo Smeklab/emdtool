@@ -3,26 +3,34 @@ title : PointConductor
 parent: API
 grand_parent : Documentation
 ---
-## Summary for PointConductor
+# Summary for: **PointConductor**  < [StrandedConductor](StrandedConductor.html)
+
+## Class summary
+
 PointConductor methods:
 PointConductor - is a class.
 set_element - PointConductor/set_element is a function.
 set_matrices - finding position
-## PROPERTIES
-* PointConductor/element is a property.
 
-* position - **position** in global coordinates
+## Properties
 
-* PointConductor/radius is a property.
+### .PointConductor/**element** is a property.
+
+### .**position** - position in global coordinates
+
+### .PointConductor/**radius** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * PointConductor/PointConductor is a constructor.
+
+### .**PointConductor**/PointConductor is a constructor.
 this = PointConductor(domain, radius, position)
 Documentation for PointConductor/PointConductor
 doc PointConductor
 
-### * AREA  Filled **area** 2-D plot.
+### .AREA  Filled ****area**** 2-D plot.
 AREA(Y) plots the vector Y or plots each column in matrix Y as a
 separate curve and stacks the curves. The x-axis automatically
 scales to 1:size(Y,1). The values in Y can be numeric or duration
@@ -60,17 +68,18 @@ matrix input arguments.
 
 See also PLOT, BAR.
 
-### * PointConductor/copy is a function.
+### .PointConductor/**copy** is a function.
 c2 = copy(this)
 
-### * PointConductor/elements is a function.
+### .PointConductor/**elements** is a function.
 el = elements(this)
 
-### * PointConductor/set_element is a function.
+### .PointConductor/**set_element** is a function.
 set_element(this)
 
-### * finding position
+### .finding position
 
-### * PointConductor/visualize is a function.
+### .PointConductor/**visualize** is a function.
 visualize(this, varargin)
+
 

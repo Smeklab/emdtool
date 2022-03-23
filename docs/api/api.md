@@ -6,9 +6,9 @@ parent: Documentation
 has_children: true
 has_toc : false
 ---
-## API reference
+# API reference
 * *class* : [emdtool](emdtool.html)  **emdtool** Main EMDtool utility class.
-## Analysis utilities
+# Analysis utilities
  Folder with the following files / classes / subfolders:
 
 * *class* : [Analysis utilities/Equivalent Circuits/InverseGammaCircuit](InverseGammaCircuit.html) **InverseGammaCircuit** methods:
@@ -24,7 +24,7 @@ has_toc : false
 * *class* : [/Grids/SMGridCalculator_NTfromDQ](SMGridCalculator_NTfromDQ.html) **SMGridCalculator_NTfromDQ** methods:
 * *class* : [MTPAinterpolant](MTPAinterpolant.html)  **MTPAinterpolant** Interpolant for post-processing field-weakening
 * *class* : [OPiterator](OPiterator.html)  **OPiterator** Backward compatibility proxy class.
-## FE Functionality
+# FE Functionality
  Folder with the following files / classes / subfolders:
 
 * *class* : [Elements](Elements.html)  {
@@ -57,7 +57,7 @@ has_toc : false
 * *class* : [/Mesh/Other meshes/Mesh](Mesh.html)  **Mesh** Class for mesh objects.
 * *class* : [/Mesh/Other meshes/SimpleMesh](SimpleMesh.html)  **SimpleMesh** Basic mesh class.
 * *class* : [RotatedMeshView](RotatedMeshView.html) **RotatedMeshView** is a class.
-## Geometry
+# Geometry
  Folder with the following files / classes / subfolders:
 
 * *class* : [Geometry/Circle](Circle.html)  **Circle** Helper class for circular surfaces.
@@ -73,7 +73,7 @@ has_toc : false
 * *class* : [/ representation/gw](gw.html) **gw** methods:
 * *class* : [/Motor geometries/AxialGeometry](AxialGeometry.html)  **AxialGeometry** Base class for 2D axial / linear geometries.
 * *class* : [/Motor geometries/RadialGeometry](RadialGeometry.html)  **RadialGeometry** Base class for radial geometries.
-## Materials
+# Materials
  Folder with the following files / classes / subfolders:
 
 * *class* : [Materials/Material](Material.html)  **Material** Basic isotropic material class.
@@ -88,7 +88,7 @@ has_toc : false
 * *class* : [Arnon7](Arnon7.html)  **Arnon7** **Arnon7** Material object.
 * *class* : [PMlibrary](PMlibrary.html)  **PMlibrary** Static class for creating permanent-magnet Material objects.
 * *class* : [deprecated_Vacodur49](deprecated_Vacodur49.html)  Vacodur49 Vacodur49 Material object.
-## Problems
+# Problems
  Folder with the following files / classes / subfolders:
 
 * *class* : [Problems/Magnetics/MagneticsProblem](MagneticsProblem.html)  **MagneticsProblem** Class for solving magnetics problems.
@@ -97,7 +97,7 @@ has_toc : false
 * *class* : [SimulationParameters](SimulationParameters.html)  **SimulationParameters** Parameters for MagneticsProblem solutions.
 * *class* : [StaticSolution](StaticSolution.html) **StaticSolution** is a class.
 * *class* : [SteppingSolution](SteppingSolution.html) **SteppingSolution** is a class.
-## Templates
+# Templates
  Folder with the following files / classes / subfolders:
 
 * *class* : [Templates/AFmodel](AFmodel.html)  only types given?
@@ -113,6 +113,7 @@ has_toc : false
 * *class* : [/Rotors/PoledIPM1](PoledIPM1.html) **PoledIPM1** methods:
 * *class* : [/Rotors/SPM1](SPM1.html)  **SPM1** Template for a surface-PM rotor.
 * *class* : [SPM1](SPM1.html)  **SPM1** Template for a surface-PM rotor.
+* *class* : [/Rotors/SPM2](SPM2.html)  **SPM2** Template for a surface-PM rotor.
 * *class* : [/Rotors/SRMRotor1](SRMRotor1.html) **SRMRotor1** methods:
 * *class* : [/Rotors/ShieldedSPM](ShieldedSPM.html) **ShieldedSPM** methods:
 * *class* : [/Rotors/SlottedRotor1](SlottedRotor1.html)  **SlottedRotor1** Simple template for a slotted rotor.
@@ -137,9 +138,9 @@ has_toc : false
 * *class* : [/Stators/Stator](Stator.html)  **Stator** General-purpose stator class for symmetric slotted stators.
 * *class* : [/Stators/StatorBase](StatorBase.html)  **StatorBase** Base class for radial-flux stators.
 * *class* : [/Stators/YASAStator](YASAStator.html)  **YASAStator** Axial yokeless stator.
-## Third-party
+# Third-party
 * *class* : [DXFtool](DXFtool.html)   **DXFtool** v1.0 for reading and plotting DXF files in Matlab figures.
-## Windings and Circuits
+# Windings and Circuits
 * *class* : [/Circuit Analysis/CircuitGraph](CircuitGraph.html) **CircuitGraph** methods:
 * *class* : [/Circuit Analysis/ConcentratedWindingSpec](ConcentratedWindingSpec.html) **ConcentratedWindingSpec** methods:
 * *class* : [/Circuit Analysis/DistributedWindingSpec](DistributedWindingSpec.html)  **DistributedWindingSpec** Winding specification class for distributed
@@ -175,12 +176,12 @@ has_toc : false
 * *class* : [/Winding layouts/RoundWireLayout](RoundWireLayout.html)  **RoundWireLayout** Winding layout class for random-wound coils.
 * *class* : [/Winding layouts/UniformLayout](UniformLayout.html)  **UniformLayout** Layout specification for non-specified layouts:
 * *class* : [/Winding layouts/WindingLayoutBase](WindingLayoutBase.html)  **WindingLayoutBase** Base class for winding layouts.
-## 
+# 
  Folder with the following files / classes / subfolders:
 
 * *class* : [defs](defs.html) **defs** is a class.
 * *class* : [emdconstants](emdconstants.html) **emdconstants** is a class.
-## to_be_relocated
+# to_be_relocated
  Folder with the following files / classes / subfolders:
 
 * *class* : [to_be_relocated/AFmodel2](AFmodel2.html) **AFmodel2** methods:
@@ -214,7 +215,7 @@ has_toc : false
 * *class* : [NodalBase](NodalBase.html) **NodalBase** is a class.
 * *class* : [Quad](Quad.html) **Quad** is a class.
 * *class* : [SimpleMesh2](SimpleMesh2.html) **SimpleMesh2** is a class.
-## utilities
+# utilities
  Miscellaneous utilities classes and functions.
 
 * *class* : [Counter](Counter.html)  **Counter** **Counter** object for getting unique IDs etc.

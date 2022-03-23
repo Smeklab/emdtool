@@ -3,20 +3,28 @@ title : Circle
 parent: API
 grand_parent : Documentation
 ---
-## Summary for Circle
+# Summary for: **Circle**  < [Surface](Surface.html)
+
+## Class summary
+
 Circle Helper class for circular surfaces.
 
 c = Circle.from_coordinates(x, y, r, lcar)
-## PROPERTIES
+
+## Properties
+
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * Circle Helper class for circular surfaces.
+
+### .**Circle** Helper class for circular surfaces.
 
 c = Circle.from_coordinates(x, y, r, lcar)
 Documentation for Circle/Circle
 doc Circle
 
-### * from_coordinates Create Circle from coordinates.
+### .**from_coordinates** Create Circle from coordinates.
 
 s = from_coordinates(x, y, r, lcar), where
 
@@ -29,4 +37,5 @@ s = from_coordinates(x, y, r, lcar), where
 
 s = from_coordinates(x, y, r, lcar, edge_name); name boundary
 edges
+
 

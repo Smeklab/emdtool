@@ -3,7 +3,10 @@ title : MotorModelBase
 parent: API
 grand_parent : Documentation
 ---
-## Summary for MotorModelBase
+# Summary for: **MotorModelBase**  < [Indexable](Indexable.html)
+
+## Class summary
+
 MotorModelBase Base class for magnetics models.
 
 Default construction:
@@ -31,18 +34,20 @@ motor.add_airgap(static_part, moving_part);
 motor.set_outer_boundary(bnd);
 
 motor.finalize();
-## PROPERTIES
-* MotorModelBase/Ne_component is a property.
 
-* MotorModelBase/Np_component is a property.
+## Properties
 
-* PMs - permanent magnets
+### .MotorModelBase/**Ne_component** is a property.
 
-* airgap - **airgap** container
+### .MotorModelBase/**Np_component** is a property.
 
-* MotorModelBase/boundaries is a property.
+### .**PMs** - permanent magnets
 
-* build_factor_for_iron_losses Iron loss build factor
+### .**airgap** - airgap container
+
+### .MotorModelBase/**boundaries** is a property.
+
+### .**build_factor_for_iron_losses** Iron loss build factor
 
 Correction coefficient for iron losses. Only used (by default)
 inside this.results_summary, multiplying
@@ -50,7 +55,7 @@ inside this.results_summary, multiplying
 
 DEFAULT: 1
 
-* build_factor_for_winding_losses Phase winding loss build factor
+### .**build_factor_for_winding_losses** Phase winding loss build factor
 
 Correction coefficient for winding losses. Only used (by default)
 inside this.results_summary, multiplying
@@ -58,34 +63,37 @@ inside this.results_summary, multiplying
 
 DEFAULT: 1
 
-* circuits - circuits
+### .**circuits** - circuits
 
-* components - geometries making up this
+### .**components** - geometries making up this
 
-* materials - materials
+### .**materials** - materials
 
-* MotorModelBase/mesh is a property.
+### .MotorModelBase/**mesh** is a property.
 
-* MotorModelBase/periodicityCoeff is a property.
+### .MotorModelBase/**periodicityCoeff** is a property.
 
-* MotorModelBase/ri_component is a property.
+### .MotorModelBase/**ri_component** is a property.
 
-* rotor - array of moving components
+### .**rotor** - array of moving components
 
-* stator - array of static components
+### .**stator** - array of static components
 
-* MotorModelBase/symmetrySectors is a property.
+### .MotorModelBase/**symmetrySectors** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * MotorModelBase/add_component is a function.
+
+### .MotorModelBase/**add_component** is a function.
 add_component(this, name, component, varargin)
 
-### * add_gap Add airgap.
+### .**add_gap** Add airgap.
 
 See AirgapContainer.add_gap
 
-### * compute_torque Computes torque
+### .**compute_torque** Computes torque
 
 T = compute_torque(this, solution)
 
@@ -94,24 +102,24 @@ solution.
 
 T is of size number_of_airgaps x number_of_steps
 
-### * finalizing mesh part
+### .finalizing mesh part
 
-### * MotorModelBase/get_AGmatrix is a function.
+### .MotorModelBase/**get_AGmatrix** is a function.
 S = get_AGmatrix(this, rotorAngle, varargin)
 
-### * MotorModelBase/global_element_indices is a function.
+### .MotorModelBase/**global_element_indices** is a function.
 is = global_element_indices(this, is, component)
 
-### * MotorModelBase/global_node_indices is a function.
+### .MotorModelBase/**global_node_indices** is a function.
 ns = global_node_indices(this, ns, component)
 
-### * MotorModelBase/initialize_airgap is a function.
+### .MotorModelBase/**initialize_airgap** is a function.
 initialize_airgap(this)
 
-### * MotorModelBase/mass is a function.
+### .MotorModelBase/**mass** is a function.
 [m, m_domain, m_mat] = mass(this)
 
-### * plot_flux Plot flux density.
+### .**plot_flux** Plot flux density.
 
 plot_flux(this, solution)
 
@@ -126,7 +134,7 @@ args:
 * 'plot_airgap' : plot airgap flux density (if this.airgap has a method
 *fluxplot* ). true/ false (Default: true).
 
-### * results_summary Summary of analysis results.
+### .**results_summary** Summary of analysis results.
 
 results = results_summary(this, solution) returns a structure.
 
@@ -155,17 +163,17 @@ Interesting output quantities include:
 * input_power_from_terminal_waveforms : Does not contain post-processed
 loss quantities (typically iron losses, some non-enabled circuits).
 
-### * MotorModelBase/rotel is a function.
+### .MotorModelBase/**rotel** is a function.
 els = rotel(this)
 
-### * set_outer_boundary Set outer boundary.
+### .**set_outer_boundary** Set outer boundary.
 
 set_outer_boundary(this, bnd_1, bnd_2, ...)
 
 Set the given [Boundary](Boundary.html) objects as outer (flux insulation)
 boundaries.
 
-### * VISUALIZE Visualize geometry.
+### .VISUALIZE Visualize geometry.
 
 visualize(this, key, val), with:
 
@@ -177,9 +185,10 @@ visualize(this, key, val), with:
 
 * 'plot_nodes' : plot boundary nodes. Default false.
 
-### * MotorModelBase/visualize_axial is a function.
+### .MotorModelBase/**visualize_axial** is a function.
 visualize_axial(this, varargin)
 
-### * MotorModelBase/visualize_radial is a function.
+### .MotorModelBase/**visualize_radial** is a function.
 visualize_radial(this, varargin)
+
 

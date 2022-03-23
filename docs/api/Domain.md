@@ -3,7 +3,10 @@ title : Domain
 parent: API
 grand_parent : Documentation
 ---
-## Summary for Domain
+# Summary for: **Domain**  < [Indexable](Indexable.html)
+
+## Class summary
+
 Domain Domain class.
 
 In `EMDtool` , a 'Domain' represents all aspects of some interesting part of an
@@ -21,30 +24,35 @@ this = Domain(domain_name, material_object, surface_1, surface_2,
 ...)
 
 Surfaces can be added with `this.add_surface`
-## PROPERTIES
-* copied_from - a Domain that his has been replicated from, if any
 
-* copied_to - a Domain that this has been replicated to, if any
+## Properties
 
-* elements - Indices of the elements, in this.root().mesh
+### .**copied_from** - a Domain that his has been replicated from, if any
 
-* material - The [Material](Material.html) that this domain consists of
+### .**copied_to** - a Domain that this has been replicated to, if any
 
-* orientation - **orientation** (for e.g. anisotropic materials
+### .**elements** - Indices of the elements, in this.root().mesh
 
-* remanence_direction - remanence flux density direction, if any
+### .**material** - The [Material](Material.html) that this domain consists of
 
-* surfaces - 2D **surfaces** in this
+### .**orientation** - orientation (for e.g. anisotropic materials
 
-* volumes - 3D volumes, if any (experimental)
+### .**remanence_direction** - remanence flux density direction, if any
+
+### .**surfaces** - 2D surfaces in this
+
+### .**volumes** - 3D volumes, if any (experimental)
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * add_surface Add one or more Surfaces to this.
 
-### * add_volume Add one or more volumes to this.
+### .**add_surface** Add one or more Surfaces to this.
 
-### * AREA  Filled **area** 2-D plot.
+### .**add_volume** Add one or more volumes to this.
+
+### .AREA  Filled ****area**** 2-D plot.
 AREA(Y) plots the vector Y or plots each column in matrix Y as a
 separate curve and stacks the curves. The x-axis automatically
 scales to 1:size(Y,1). The values in Y can be numeric or duration
@@ -82,31 +90,32 @@ matrix input arguments.
 
 See also PLOT, BAR.
 
-### * parsing center
+### .parsing center
 
-### * copy Deep **copy** of this.
+### .**copy** Deep **copy** of this.
 
-### * copy_root Original ancestor in replication chain
+### .**copy_root** Original ancestor in replication chain
 
-### * last_copy Latest domain in replication chain
+### .**last_copy** Latest domain in replication chain
 
-### * Domain/mass is a function.
+### .Domain/**mass** is a function.
 m = mass(this)
 
-### * Domain/number_of_copies is a function.
+### .Domain/**number_of_copies** is a function.
 n = number_of_copies(this)
 
-### * plot Plot all surfaces in 2D.
+### .**plot** Plot all surfaces in 2D.
 
-### * plot3 Plot all surfaces in 3D.
+### .**plot3** Plot all surfaces in 3D.
 
-### * plot_remanence_direction Plot remanence.
+### .**plot_remanence_direction** Plot remanence.
 
 plot_remanence_direction(this, varargin) plots remanence
 direction using quiver, with varargin.
 
-### * remanence_direction Remanence direction vector.
+### .remanence_direction Remanence direction vector.
 
-### * Domain/visualize is a function.
+### .Domain/**visualize** is a function.
 visualize(this, varargin)
+
 

@@ -3,31 +3,39 @@ title : Elements
 parent: API
 grand_parent : Documentation
 ---
-## Summary for Elements
+# Summary for: **Elements**  < handle
+
+## Class summary
+
 {
-## PROPERTIES
+
+## Properties
+
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * {
+
+### .{
 Documentation for Elements/Elements
 doc Elements
 
-### * Elements.composite is a function.
+### .Elements.**composite** is a function.
 e = Elements.composite
 
-### * Elements.isIsoparametric is a function.
+### .Elements.**isIsoparametric** is a function.
 bl = Elements.isIsoparametric(type)
 
-### * Elements.isPrism is a function.
+### .Elements.**isPrism** is a function.
 bl = Elements.isPrism(type)
 
-### * Elements.isTet is a function.
+### .Elements.**isTet** is a function.
 bl = Elements.isTet(type)
 
-### * Elements.isTriangle is a function.
+### .Elements.**isTriangle** is a function.
 bl = Elements.isTriangle(type)
 
-### * LINE Create line
+### .LINE Create **line**
 LINE(X,Y) adds the **line** defined in vectors X and Y to the current axes.
 If X and Y are matrices of the same size, **line** draws one **line** per
 column.
@@ -55,7 +63,7 @@ property values.
 
 See also PATCH, TEXT, PLOT, PLOT3.
 
-### * PRISM  Prism color map
+### .PRISM  Prism color map
 PRISM(M) returns an M-by-3 matrix containing repeated use
 of six colors: red, orange, yellow, green, blue, violet.
 PRISM, by itself, is the same length as the current figure's
@@ -70,7 +78,7 @@ colors, whereas HSV varies its colors smoothly.
 
 See also HSV, FLAG, HOT, COOL, COLORMAP, RGBPLOT, CONTOUR.
 
-### * QUAD   Numerically evaluate integral, adaptive Simpson quadrature.
+### .QUAD   Numerically evaluate integral, adaptive Simpson **quad**rature.
 Q = QUAD(FUN,A,B) tries to approximate the integral of scalar-valued
 function FUN from A to B to within an error of 1.e-6 using recursive
 adaptive Simpson quadrature. FUN is a function handle. The function
@@ -116,21 +124,22 @@ float: double, single
 See also INTEGRAL, INTEGRAL2, INTEGRAL3, QUADGK, QUAD2D, TRAPZ,
 FUNCTION_HANDLE.
 
-### * Elements.refPoints_edges is a function.
+### .Elements.**refPoints_edges** is a function.
 X = Elements.refPoints_edges(type, varargin)
 
-### * Elements.refPoints_nodes is a function.
+### .Elements.**refPoints_nodes** is a function.
 X = Elements.refPoints_nodes(type)
 
-### * Elements.tet is a function.
+### .Elements.**tet** is a function.
 e = Elements.tet
 
-### * Elements.triangle is a function.
+### .Elements.**triangle** is a function.
 e = Elements.triangle
 
-### * Elements.triangle2 is a function.
+### .Elements.**triangle2** is a function.
 e = Elements.triangle2
 
-### * Elements.triangle2I is a function.
+### .Elements.**triangle2I** is a function.
 e = Elements.triangle2I
+
 

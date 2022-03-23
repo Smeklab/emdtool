@@ -3,7 +3,10 @@ title : Nodal2D
 parent: API
 grand_parent : Documentation
 ---
-## Summary for Nodal2D
+# Summary for: **Nodal2D**
+
+## Class summary
+
 Nodal2D Lagrange (nodal) shape function in 2D.
 
 Class for representing and evaluating shape functions and their partial derivatives.
@@ -36,12 +39,17 @@ center.
 associated with a mesh node, there are 3 shape functions that are
 non-zero over a first-order element. Example: for the element *e* ,
 the shape function *k*  is associated the node mesh.t(k, e).
-## PROPERTIES
-* op - operator
+
+## Properties
+
+### .**op** - operator
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * Nodal2D Constructor
+
+### .**Nodal2D** Constructor
 
 this = Nodal()
 
@@ -55,7 +63,7 @@ For evaluating grad N or curl N, respectively.
 Documentation for Nodal2D/Nodal2D
 doc Nodal2D
 
-### * eval Global evaluation.
+### .**eval** Global evaluation.
 
 vals = eval(this, k, x_local, mesh, elements)
 
@@ -90,13 +98,14 @@ Input arguments:
 
 * mapping_determinant : see MatrixDeterminant
 
-### * evaluates the reference shape function (either identity or
+### .evaluates the reference shape function (either identity or
 gradient)
 
 Nref = eval(ref, this, k, x_local, mesh)
 
-### * getData Data for matrix assembly.
+### .**getData** Data for matrix assembly.
 
-### * Nodal2D/getIndices is a function.
+### .Nodal2D/**getIndices** is a function.
 inds = getIndices(~, k, msh, varargin)
+
 

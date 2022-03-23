@@ -3,7 +3,10 @@ title : Boundary
 parent: API
 grand_parent : Documentation
 ---
-## Summary for Boundary
+# Summary for: **Boundary**  < handle & matlab.mixin.Heterogeneous
+
+## Class summary
+
 Boundary Base class for boundaries.
 
 Construction:
@@ -11,16 +14,21 @@ Construction:
 bnd = Boundary(mesh)
 
 bnd = Boundary(mesh, nodes)
-## PROPERTIES
-* edges - indices to mesh edges
 
-* mesh - **mesh** object associated with this
+## Properties
 
-* nodes - indices to mesh nodes
+### .**edges** - indices to mesh edges
+
+### .**mesh** - mesh object associated with this
+
+### .**nodes** - indices to mesh nodes
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * Boundary Base class for boundaries.
+
+### .**Boundary** Base class for boundaries.
 
 Construction:
 
@@ -30,13 +38,13 @@ bnd = Boundary(mesh, nodes)
 Documentation for Boundary/Boundary
 helpwin Boundary
 
-### * Boundary.from_gmsh_surface is a function.
+### .Boundary.**from_gmsh_surface** is a function.
 this = Boundary.from_gmsh_surface(mesh, surface)
 
-### * Boundary/parse_from_gmsh_surface is a function.
+### .Boundary/**parse_from_gmsh_surface** is a function.
 parse_from_gmsh_surface(this, surface)
 
-### * PLOT   Linear plot.
+### .PLOT   Linear **plot**.
 PLOT(X,Y) plots vector Y versus vector X. If X or Y is a matrix,
 then the vector is plotted versus the rows or columns of the matrix,
 whichever line up.  If X is a scalar and Y is a vector, disconnected
@@ -109,4 +117,5 @@ plot(x,y,'--rs','LineWidth',2,...
 
 See also PLOTTOOLS, SEMILOGX, SEMILOGY, LOGLOG, PLOTYY, PLOT3, GRID,
 TITLE, XLABEL, YLABEL, AXIS, AXES, HOLD, LEGEND, SUBPLOT, SCATTER.
+
 

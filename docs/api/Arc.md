@@ -3,45 +3,53 @@ title : Arc
 parent: API
 grand_parent : Documentation
 ---
-## Summary for Arc
+# Summary for: **Arc**  < [Curve](Curve.html)
+
+## Class summary
+
 Arc methods:
 Arc - is a class.
 center_from_segment_points - Arc center from three segment points.
 from_points - Create an Arc from Points.
 from_segment_points - Create an Arc from three points on it.
 update_points - start and end points
-## PROPERTIES
-* Arc/angle_end is a property.
 
-* Arc/angle_span is a property.
+## Properties
 
-* Arc/angle_start is a property.
+### .Arc/**angle_end** is a property.
 
-* Arc/radius is a property.
+### .Arc/**angle_span** is a property.
 
-* type - Type (geo.line or geo.arc)
+### .Arc/**angle_start** is a property.
+
+### .Arc/**radius** is a property.
+
+### .**type** - Type (geo.line or geo.arc)
 Help for Arc.type is inherited from superclass Curve
 
-* Arc/xcenter is a property.
+### .Arc/**xcenter** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * Arc/Arc is a constructor.
+
+### .**Arc**/Arc is a constructor.
 this = Arc(pstart, pcenter, pend)
 Documentation for Arc/Arc
 doc Arc
 
-### * center_from_segment_points Arc center from three segment points.
+### .**center_from_segment_points** Arc center from three segment points.
 
 P_center = center_from_segment_points(Pstart, Pmid, Pend)
 
-### * Arc/check_proxying is a function.
+### .Arc/**check_proxying** is a function.
 bl = check_proxying(this, c2)
 
-### * Arc/curve_length is a function.
+### .Arc/**curve_length** is a function.
 l = curve_length(this)
 
-### * from_points Create an Arc from Points.
+### .**from_points** Create an Arc from Points.
 
 this = from_points(pstart, pcenter, pend) either creates a new Arc, or
 returns an existing Arc if found.
@@ -55,7 +63,7 @@ connecting points pstart and pend, or throws an error if not found.
 [this, direction] = from_points(...) also returns the direction of the
 Arc: +1 if this.pstart equals the given pstart, -1 otherwise.
 
-### * from_segment_points Create an Arc from three points on it.
+### .**from_segment_points** Create an Arc from three points on it.
 
 this = from_segment_points(Pstart, Pmid, Pend) creates a new Arc between Pstart
 and Pend, so that it goes over Pmid. A new Point is created for the Arc
@@ -68,7 +76,8 @@ therefore must not be used as start- or end-Point in any other Curve.
 Consider creating two Arcs, between Pstart-Pmid and Pmid-Pend if this is
 necessary.
 
-### * uminus Reverse direction, return a new Curve.
+### .**uminus** Reverse direction, return a new Curve.
 
-### * start and end points
+### .start and end points
+
 

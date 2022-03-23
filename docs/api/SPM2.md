@@ -1,13 +1,13 @@
 ---
-title : SPM1
+title : SPM2
 parent: API
 grand_parent : Documentation
 ---
-# Summary for: **SPM1**  < [SynRotorBase](SynRotorBase.html)
+# Summary for: **SPM2**  < [SynRotorBase](SynRotorBase.html)
 
 ## Class summary
 
-SPM1 Template for a surface-PM rotor.
+SPM2 Template for a surface-PM rotor.
 
 Surface-PM rotor geometry with arc magnets.
 
@@ -70,7 +70,5 @@ this = SPM1(dim)
 
 Initializes the geometry with the dimensions specified in
 the struct *dim* .
-Documentation for SPM1/SPM1
-doc SPM1
 
 

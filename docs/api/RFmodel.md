@@ -3,20 +3,28 @@ title : RFmodel
 parent: API
 grand_parent : Documentation
 ---
-## Summary for RFmodel
+# Summary for: **RFmodel**  < [MotorModelBase](MotorModelBase.html)
+
+## Class summary
+
 RFmodel Simple class for radial-flux machines.
 
 See [MotorModelBase](MotorModelBase.html).
-## PROPERTIES
+
+## Properties
+
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * RFmodel Simple class for radial-flux machines.
+
+### .**RFmodel** Simple class for radial-flux machines.
 
 See [MotorModelBase](MotorModelBase.html).
 Documentation for RFmodel/RFmodel
 doc RFmodel
 
-### * VISUALIZE Visualize geometry.
+### .VISUALIZE Visualize geometry.
 
 Key-value arguments:
 
@@ -29,8 +37,9 @@ Default: false.
 
 * 'plot_axial' : plot axial view of motor? Default false.
 
-### * RFmodel/mass is a function.
+### .RFmodel/**mass** is a function.
 [m, m_domain, m_mat] = mass(this)
 
-### * save_to_excel Save main model data to Excel
+### .**save_to_excel** Save main model data to Excel
+
 

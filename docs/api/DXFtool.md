@@ -3,7 +3,10 @@ title : DXFtool
 parent: API
 grand_parent : Documentation
 ---
-## Summary for DXFtool
+# Summary for: **DXFtool**  < handle
+
+## Class summary
+
 DXFtool v1.0 for reading and plotting DXF files in Matlab figures.
 by M.M. Pedersen, Aarhus University, March 2018.
 
@@ -44,14 +47,16 @@ TODO:
 
 
 Some modifications by Antti Lehikoinen / Smeklab Ltd, 2021.
-## PROPERTIES
-* divisions -  points along nonlinear entities (circles, arcs, bulges, ellipses)
 
-* entities -  struct array of entities
+## Properties
 
-* filename -  path/filename of DXF file
+### .**divisions** -  points along nonlinear entities (circles, arcs, bulges, ellipses)
 
-* ~= (NE)   Not equal relation for handles.
+### .**entities** -  struct array of entities
+
+### .**filename** -  path/filename of DXF file
+
+### .~= (NE)   Not equal relation for handles.
 Handles are equal if they are handles for the same object and are
 unequal otherwise.
 
@@ -69,14 +74,18 @@ dimensions.
 See also DXFTOOL, DXFTOOL/EQ, DXFTOOL/GE, DXFTOOL/GT, DXFTOOL/LE, DXFTOOL/LT
 Help for DXFtool/ne is inherited from superclass handle
 
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * construct dxf object
+
+### .construct dxf object
 Documentation for DXFtool/DXFtool
 doc DXFtool
 
-### * DXFtool/list is a function.
+### .DXFtool/**list** is a function.
 list(dxf)
 
-### * getting **plot** started
+### .getting ****plot**** started
+
 

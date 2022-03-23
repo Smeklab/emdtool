@@ -3,7 +3,10 @@ title : AxialGeometryExtruder
 parent: API
 grand_parent : Documentation
 ---
-## Summary for AxialGeometryExtruder
+# Summary for: **AxialGeometryExtruder**  < [GeometryExtruder](GeometryExtruder.html)
+
+## Class summary
+
 AxialGeometryExtruder methods:
 AxialGeometryExtruder - is a class.
 extrude - AxialGeometryExtruder/extrude is a function.
@@ -11,31 +14,36 @@ extrude_flat - AxialGeometryExtruder/extrude_flat is a function.
 extrude_surface_along_symmetry_boundary - AxialGeometryExtruder/extrude_surface_along_symmetry_boundary is a function.
 initialize_3D_points - AxialGeometryExtruder/initialize_3D_points is a function.
 transform_initial_points - AxialGeometryExtruder/transform_initial_points is a function.
-## PROPERTIES
-* AxialGeometryExtruder/sector_angle is a property.
+
+## Properties
+
+### .AxialGeometryExtruder/**sector_angle** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * AxialGeometryExtruder/AxialGeometryExtruder is a constructor.
+
+### .**AxialGeometryExtruder**/AxialGeometryExtruder is a constructor.
 this = AxialGeometryExtruder(geometry, r, a)
 Documentation for AxialGeometryExtruder/AxialGeometryExtruder
 doc AxialGeometryExtruder
 
-### * AxialGeometryExtruder/extrude is a function.
+### .AxialGeometryExtruder/**extrude** is a function.
 Vs = extrude(this, domain, level)
 
-### * AxialGeometryExtruder/extrude_flat is a function.
+### .AxialGeometryExtruder/**extrude_flat** is a function.
 Vs = extrude_flat(this, domain, level, a)
 
-### * AxialGeometryExtruder/extrude_point_along_symmetry_boundary is an undocumented builtin AxialGeometryExtruder method.
+### .AxialGeometryExtruder/**extrude_point_along_symmetry_boundary** is an undocumented builtin AxialGeometryExtruder method.
 
-### * AxialGeometryExtruder/extrude_surface_along_symmetry_boundary is a function.
+### .AxialGeometryExtruder/**extrude_surface_along_symmetry_boundary** is a function.
 extrude_surface_along_symmetry_boundary(this, surface, r)
 
-### * AxialGeometryExtruder/finalize_initial_surface is a function.
+### .AxialGeometryExtruder/**finalize_initial_surface** is a function.
 finalize_initial_surface(this, snew)
 
-### * GET    Get object properties.
+### .GET    Get object properties.
 V = GET(H,'PropertyName') returns the value of the specified property
 for the graphics object with handle H.  If H is a vector of handles,
 then **get** will return an M-by-1 cell array of values where M is equal
@@ -83,18 +91,19 @@ value will be returned.
 
 See also SET, RESET, DELETE, GCF, GCA, FIGURE, AXES.
 
-### * AxialGeometryExtruder/get_3D_curve is a function.
+### .AxialGeometryExtruder/**get_3D_curve** is a function.
 cnew = get_3D_curve(this, l2d)
 
-### * AxialGeometryExtruder/initialize_3D_points is a function.
+### .AxialGeometryExtruder/**initialize_3D_points** is a function.
 initialize_3D_points(this)
 
-### * AxialGeometryExtruder/plot_curves is a function.
+### .AxialGeometryExtruder/**plot_curves** is a function.
 plot_curves(this, varargin)
 
-### * AxialGeometryExtruder/plot_points is a function.
+### .AxialGeometryExtruder/**plot_points** is a function.
 plot_points(this, varargin)
 
-### * AxialGeometryExtruder/transform_initial_points is a function.
+### .AxialGeometryExtruder/**transform_initial_points** is a function.
 transform_initial_points(this, r)
+
 

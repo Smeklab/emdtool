@@ -3,7 +3,10 @@ title : Conductor
 parent: API
 grand_parent : Documentation
 ---
-## Summary for Conductor
+# Summary for: **Conductor**  < [Indexable](Indexable.html)
+
+## Class summary
+
 Conductor Base class for conductors.
 
 Typical subclasses:
@@ -17,27 +20,33 @@ elementary geometry. Can be either solid or stranded.
 
 Each conductor consists of one domain (two domains in the case of
 split conductors).
-## PROPERTIES
-* Conductor/domain is a property.
 
-* Conductor/in_circuit is a property.
+## Properties
 
-* Conductor/type is a property.
+### .Conductor/**domain** is a property.
+
+### .Conductor/**in_circuit** is a property.
+
+### .Conductor/**type** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * Conductor/copy is a function.
+
+### .Conductor/**copy** is a function.
 obj = Conductor
 
-### * Conductor.create is a function.
+### .Conductor.**create** is a function.
 c = Conductor.create(domain, varargin)
 
-### * Conductor/domains is a function.
+### .Conductor/**domains** is a function.
 d = domains(this)
 
-### * Conductor/elements is a function.
+### .Conductor/**elements** is a function.
 els = elements(this)
 
-### * Conductor/set_matrices is a function.
+### .Conductor/**set_matrices** is a function.
 obj = Conductor
+
 

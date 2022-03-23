@@ -3,7 +3,10 @@ title : VIPM1
 parent: API
 grand_parent : Documentation
 ---
-## Summary for VIPM1
+# Summary for: **VIPM1**  < [SynRotorBase](SynRotorBase.html)
+
+## Class summary
+
 VIPM1 V-shape IPM rotor.
 
 Basic traction-style V-type IPM rotor.
@@ -40,6 +43,12 @@ Materials:
 * lcar_shaft : characteristic length for the shaft
 * lcar_bridge_center : characteristic length for center-bridge area
 * lcar_bridge_out : characteristic length for outer air-pocket area
-## PROPERTIES
+
+## Properties
+
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
+
+

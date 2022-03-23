@@ -3,7 +3,10 @@ title : CircuitBase
 parent: API
 grand_parent : Documentation
 ---
-## Summary for CircuitBase
+# Summary for: **CircuitBase**  < [Indexable](Indexable.html)
+
+## Class summary
+
 CircuitBase Abstract base class for finite-element Circuits.
 
 Use one of the subclasses to instantiate an object. Common examples
@@ -18,24 +21,29 @@ include
 * [ExtrudedBlockCircuit](ExtrudedBlockCircuit.html)
 
 Use the `add_conductor`  method to add conductors to this.
-## PROPERTIES
-* CircuitBase/conductors is a property.
 
-* CircuitBase/data is a property.
+## Properties
 
-* enabled - FIXME persistence / consistence issues
+### .CircuitBase/**conductors** is a property.
 
-* CircuitBase/is_linear is a property.
+### .CircuitBase/**data** is a property.
 
-* CircuitBase/is_time_invariant is a property.
+### .**enabled** - FIXME persistence / consistence issues
 
-* matrices - struct for containing circuit matrices
+### .CircuitBase/**is_linear** is a property.
 
-* CircuitBase/source is a property.
+### .CircuitBase/**is_time_invariant** is a property.
+
+### .**matrices** - struct for containing circuit matrices
+
+### .CircuitBase/**source** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * add_conductor Add conductor to circuit.
+
+### .**add_conductor** Add conductor to circuit.
 
 this = add_conductor(this, conductor, (type))
 
@@ -46,25 +54,25 @@ is created.
 Type is an optional arguments, either def.solid for a solid
 conductor (default) or defs.stranded for stranded.
 
-### * conductor_active_length Active length of each conductor.
+### .**conductor_active_length** Active length of each conductor.
 
 l = conductor_active_length(this) returns 1 x
 number_of_conductors array of active lengths.
 
-### * half_of_turn_length Return effective length.
+### .half_of_turn_length Return effective length.
 
-### * ew_length_per_conductor Return EW length.
+### .**ew_length_per_conductor** Return EW length.
 
 Usually equal to 0, unless an
 end-winding is modelled.
 
-### * filling_factor Conductor filling factor.
+### .**filling_factor** Conductor filling factor.
 
-### * finalize_after_simulation Post-simulation callback function.
+### .**finalize_after_simulation** Post-simulation callback function.
 
 finalize_after_simulation(this, solution)
 
-### * get_matrices Return FE-and circuit matrices.
+### .**get_matrices** Return FE-and circuit matrices.
 
 [S, M, Sac, Mac, Sca, Mca, Scc, Mcc] = get_matrices(this,
 problem, type), where
@@ -87,7 +95,7 @@ FE variables.
 
 * Mcc : damping-like circuit-circuit coupling.
 
-### * get_ndof Number of dofs associated with the circuit, for the given
+### .**get_ndof** Number of dofs associated with the circuit, for the given
 problem and type.
 
 Nui = get_ndof(this, problem, type, pars), where
@@ -96,12 +104,12 @@ Nui = get_ndof(this, problem, type, pars), where
 
 * type = string, usually "static" / "harmonic" / "stepping"
 
-### * handle_latest_copies Object array method.
+### .**handle_latest_copies** Object array method.
 
 When called on an array of Circuit objects, this method calls
 the `handle_latest_copies`  method on each individual Circuit.
 
-### * handle_latest_copies1 Method for handling geometry
+### .**handle_latest_copies1** Method for handling geometry
 replication.
 
 This method is called any time the elementary geometry is
@@ -113,7 +121,7 @@ This method works for a single Circuit object only, i.e. it
 cannot be called on an object array. See
 `this.handle_latest_copies`
 
-### * indices_to_average_losses_over Indices for loss averaging.
+### .**indices_to_average_losses_over** Indices for loss averaging.
 
 inds = indices_to_average_losses_over(solution) returns
 
@@ -123,7 +131,7 @@ if strictly more than one period have been analysed.
 
 * indices to the last 90 % of the analysed time, otherwise
 
-### * init Init circuit for problem.
+### .**init** Init circuit for problem.
 
 c = init(this, problem)
 
@@ -131,11 +139,11 @@ Returns:
 c : Circuit-like object initialized for the problem.
 Typically a handle to this.
 
-### * init_for_simulation Init Circuit for simulation.
+### .**init_for_simulation** Init Circuit for simulation.
 
 init_for_simulation(this, problem, type, pars)
 
-### * losses Circuit losses.
+### .**losses** Circuit losses.
 
 [W_mean, loss_data] = losses(this, solution)
 
@@ -155,12 +163,13 @@ of all poles".
 For **losses** in typical 2D solid conductors (e.g. BlockCircuit,
 SheetCircuit, CageCircuit), see compute_SolidConductorLosses.
 
-### * set_load Increment load vector of FE problem.
+### .**set_load** Increment load vector of FE problem.
 
 F = set_load(this, F, type, varargin)
 
 Add to load-contribution from this to F.
 
-### * CircuitBase/set_parent is a function.
+### .CircuitBase/**set_parent** is a function.
 set_parent(this, parent)
+
 

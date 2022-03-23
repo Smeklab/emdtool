@@ -3,7 +3,10 @@ title : Slot1
 parent: API
 grand_parent : Documentation
 ---
-## Summary for Slot1
+# Summary for: **Slot1**  < [SlotShapeBase](SlotShapeBase.html)
+
+## Class summary
+
 Slot1 Basic stator slot shape.
 
 Slot dimensions (fields of the dimensions struct):
@@ -22,28 +25,34 @@ winding window extends towards the slot opening
 (OPTIONAL) Mesh density parameters:
 * lcar_slot : characteristic length for slot top
 * lcar_slot_bottom : ditto for slot bottom
-## PROPERTIES
-* Slot1/N_layers is a property.
 
-* Slot1/layer_orientation is a property.
+## Properties
 
-* Slot1/parent_type is a property.
+### .Slot1/**N_layers** is a property.
 
-* Slot1/slot_bottom_type is a property.
+### .Slot1/**layer_orientation** is a property.
 
-* Slot1/slot_opening_type is a property.
+### .Slot1/**parent_type** is a property.
 
-* Slot1/slot_shape is a property.
+### .Slot1/**slot_bottom_type** is a property.
+
+### .Slot1/**slot_opening_type** is a property.
+
+### .Slot1/**slot_shape** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * Slot1/create_geometry is a function.
+
+### .Slot1/**create_geometry** is a function.
 create_geometry(this)
 
-### * Slot1/create_geometry_old is a function.
+### .Slot1/**create_geometry_old** is a function.
 
-### * Slot1.list_dimensions is an undocumented builtin static method or package function.
+### .Slot1.**list_dimensions** is an undocumented builtin static method or package function.
 
-### * Slot1/set_parent is a function.
+### .Slot1/**set_parent** is a function.
 set_parent(this, parent)
+
 

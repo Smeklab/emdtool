@@ -7,4 +7,9 @@ addpath(genpath('Analysis scripts'));
 addpath(genpath('Geometries'));
 
 error('Stator-style Slot object for Rotor')
-%todo SlotShape hierarchy
+% add (inherits) to documentation
+% todo SlotShape hierarchy
+% todo doc everything accessable from templates page
+% FW rotor properties
+% fwspec
+% cagecircuit

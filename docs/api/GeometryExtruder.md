@@ -3,38 +3,46 @@ title : GeometryExtruder
 parent: API
 grand_parent : Documentation
 ---
-## Summary for GeometryExtruder
+# Summary for: **GeometryExtruder**  < handle
+
+## Class summary
+
 GeometryExtruder methods:
 GeometryExtruder - is a class.
 init - GeometryExtruder/init is a function.
-## PROPERTIES
-* GeometryExtruder/curve_map is a property.
 
-* GeometryExtruder/curves is a property.
+## Properties
 
-* GeometryExtruder/geometry is a property.
+### .GeometryExtruder/**curve_map** is a property.
 
-* GeometryExtruder/initial_extrusion_level is a property.
+### .GeometryExtruder/**curves** is a property.
 
-* GeometryExtruder/point_map is a property.
+### .GeometryExtruder/**geometry** is a property.
 
-* GeometryExtruder/points is a property.
+### .GeometryExtruder/**initial_extrusion_level** is a property.
 
-* GeometryExtruder/surface_map is a property.
+### .GeometryExtruder/**point_map** is a property.
 
-* GeometryExtruder/surfaces is a property.
+### .GeometryExtruder/**points** is a property.
+
+### .GeometryExtruder/**surface_map** is a property.
+
+### .GeometryExtruder/**surfaces** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * GeometryExtruder/GeometryExtruder is a constructor.
+
+### .**GeometryExtruder**/GeometryExtruder is a constructor.
 obj = GeometryExtruder
 Documentation for GeometryExtruder/GeometryExtruder
 doc GeometryExtruder
 
-### * GeometryExtruder/finalize_initial_surface is a function.
+### .GeometryExtruder/**finalize_initial_surface** is a function.
 finalize_initial_surface(this, snew)
 
-### * GET    Get object properties.
+### .GET    Get object properties.
 V = GET(H,'PropertyName') returns the value of the specified property
 for the graphics object with handle H.  If H is a vector of handles,
 then **get** will return an M-by-1 cell array of values where M is equal
@@ -82,18 +90,19 @@ value will be returned.
 
 See also SET, RESET, DELETE, GCF, GCA, FIGURE, AXES.
 
-### * GeometryExtruder/get_3D_curve is a function.
+### .GeometryExtruder/**get_3D_curve** is a function.
 cnew = get_3D_curve(this, l2d)
 
-### * GeometryExtruder/init is a function.
+### .GeometryExtruder/**init** is a function.
 init(this)
 
-### * GeometryExtruder/initialize_3D_points is a function.
+### .GeometryExtruder/**initialize_3D_points** is a function.
 obj = GeometryExtruder
 
-### * GeometryExtruder/plot_curves is a function.
+### .GeometryExtruder/**plot_curves** is a function.
 plot_curves(this, varargin)
 
-### * GeometryExtruder/plot_points is a function.
+### .GeometryExtruder/**plot_points** is a function.
 plot_points(this, varargin)
+
 

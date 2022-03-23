@@ -3,7 +3,10 @@ title : VoltageSource
 parent: API
 grand_parent : Documentation
 ---
-## Summary for VoltageSource
+# Summary for: **VoltageSource**  < handle
+
+## Class summary
+
 VoltageSource Voltage source class for MagneticsProblem.
 
 Initialization:
@@ -12,26 +15,31 @@ S = VoltageSource(motor) for sinusoidal voltage supply.
 
 S = VoltageSource(motor, modulator) to use a custom modulator,
 e.g. SVPWM_Modulator.
-## PROPERTIES
-* VoltageSource/Mout is a property.
 
-* VoltageSource/Uab is a property.
+## Properties
 
-* VoltageSource/Udq is a property.
+### .VoltageSource/**Mout** is a property.
 
-* VoltageSource/average is a property.
+### .VoltageSource/**Uab** is a property.
 
-* modulator - FIXME generalize call syntax
+### .VoltageSource/**Udq** is a property.
 
-* VoltageSource/motor is a property.
+### .VoltageSource/**average** is a property.
 
-* VoltageSource/phases is a property.
+### .**modulator** - FIXME generalize call syntax
 
-* VoltageSource/tprev is a property.
+### .VoltageSource/**motor** is a property.
+
+### .VoltageSource/**phases** is a property.
+
+### .VoltageSource/**tprev** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * U instantaneous voltage.
+
+### .**U** instantaneous voltage.
 
 Uout = U(this, circuit, problem, type, t, k, inds, X), where
 
@@ -50,8 +58,9 @@ to the parent Circuit
 
 * X : raw solution vector of the *previous*  time-step.
 
-### * VoltageSource/recover_voltages is a function.
+### .VoltageSource/**recover_voltages** is a function.
 U = recover_voltages(this, solution)
 
-### * set_Udq Set d- and q-components of phase supply voltages.
+### .**set_Udq** Set d- and q-components of phase supply voltages.
+
 

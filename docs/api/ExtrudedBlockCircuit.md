@@ -3,7 +3,10 @@ title : ExtrudedBlockCircuit
 parent: API
 grand_parent : Documentation
 ---
-## Summary for ExtrudedBlockCircuit
+# Summary for: **ExtrudedBlockCircuit**  < [Circuit](Circuit.html)
+
+## Class summary
+
 ExtrudedBlockCircuit Circuit for massive conductor blocks.
 
 The ExtrudedBlockCircuit class is used for modelling eddies in
@@ -22,35 +25,40 @@ to adjust.
 The resulting eddy-current density is (close to) z-directional in the
 first layer of the extruded mesh, and close to xy-directional in the
 top layer.
-## PROPERTIES
-* block_height The segment height in the axial direction. Input
+
+## Properties
+
+### .**block_height** The segment height in the axial direction. Input
 dimension.
 
 Axial length of a magnet segment, so should be dim.leff /
 some_integer.
 
-* conductor_volume_multiplier Volume multiplication factor.
+### .**conductor_volume_multiplier** Volume multiplication factor.
 
 Multiplication factor between discretized conductor volume and
 total conductor volume in the physical machine. Equal to
 this.effective_length / this.discretized_segment_height * ...
 this.root.symmetrySectors
 
-* discretized_segment_height Height of extruded mesh.
+### .**discretized_segment_height** Height of extruded mesh.
 
 Intended for class-internal use only - think thrice before
 modifying.
 
-In this class, **discretized_segment_height** = 0.5 * block_height,
+In this class, discretized_segment_height = 0.5 * block_height,
 due to symmetry.
 
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * get_matrices Get circuit matrices for a particular problem
 
-### * init Initialize matrices etc. for circuit.
+### .**get_matrices** Get circuit matrices for a particular problem
 
-### * losses Compute losses.
+### .**init** Initialize matrices etc. for circuit.
+
+### .**losses** Compute losses.
 
 [Wmean, loss_data] = losses(this, solution)
 [Wmean, loss_data] = losses(this, solution, plot_results)
@@ -95,4 +103,5 @@ top layer respectively.
 * Jlim : current density limits for the color axis (caxis)
 
 * compute_J : compute and return the current density.
+
 

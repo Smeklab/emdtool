@@ -3,7 +3,10 @@ title : Surface
 parent: API
 grand_parent : Documentation
 ---
-## Summary for Surface
+# Summary for: **Surface**  < handle
+
+## Class summary
+
 SURFACE Class for representing elementary surfaces.
 
 A Surface object represents a single surface with or without holes (i.e.
@@ -16,30 +19,35 @@ two [Point](Point.html) objects.
 * (Optional) Its holes, each a [Surface](Surface.html) themselves.
 
 See <geometry_creation.html geometry creation> for more details.
-## PROPERTIES
-* holes - Array of [Surface](Surface.html) objects inside this Surface.
+
+## Properties
+
+### .**holes** - Array of [Surface](Surface.html) objects inside this Surface.
 Documentation for Surface/holes
 doc Surface/holes
 
-* Surface/is_closed is a property.
+### .Surface/**is_closed** is a property.
 Documentation for Surface/is_closed
 doc Surface/is_closed
 
-* line_directions - Direction of each boundary segment (+1 / -1).
+### .**line_directions** - Direction of each boundary segment (+1 / -1).
 Documentation for Surface/line_directions
 doc Surface/line_directions
 
-* lines - Array of [Curve](Curve.html) objects defining the boundary of the geometry. Ordered.
+### .**lines** - Array of [Curve](Curve.html) objects defining the boundary of the geometry. Ordered.
 Documentation for Surface/lines
 doc Surface/lines
 
-* name - Surface name.
+### .**name** - Surface name.
 Documentation for Surface/name
 doc Surface/name
 
+
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * Surface Constructor.
+
+### .**Surface** Constructor.
 
 this = Surface(name)
 
@@ -52,7 +60,7 @@ Create a surface, and then pass all following arguments
 Documentation for Surface/Surface
 helpwin Surface
 
-### * add_curve Add a curve to the surface boundary.
+### .**add_curve** Add a curve to the surface boundary.
 
 add_curve(this, geo.line, p1, p1)
 
@@ -88,13 +96,13 @@ be followed by any Curves.
 Documentation for Surface/add_curve
 doc Surface/add_curve
 
-### * add_hole Add one or more holes to the surface.
+### .**add_hole** Add one or more holes to the surface.
 
 add_hole(this, surface_1, ...)
 Documentation for Surface/add_hole
 doc Surface/add_hole
 
-### * area Return surface area(2D).
+### .**area** Return surface area(2D).
 
 Calculate the **area** of this surface (polygon). See
 this.points().
@@ -106,7 +114,7 @@ boundaries.
 Documentation for Surface/area
 doc Surface/area
 
-### * contract Contract surface.
+### .**contract** Contract surface.
 
 s2 = contract(this, d) is equivalent to calling
 
@@ -115,7 +123,7 @@ s2.contract_inplace(d);
 Documentation for Surface/contract
 doc Surface/contract
 
-### * contract_inplace Contract surface into a marginally smaller surface.
+### .**contract_inplace** Contract surface into a marginally smaller surface.
 
 contract_inplace(this, reff) squeezes the surface to a smaller surface,
 by the amount d. Not guaranteed to work; only recommended with d
@@ -123,7 +131,7 @@ significantly smaller than the radius of the smallest arc.
 Documentation for Surface/contract_inplace
 doc Surface/contract_inplace
 
-### * copy Copy surface.
+### .**copy** Copy surface.
 
 s2 = copy(this) returns a **copy** of this, with all the points and curves
 copied. Should only be called on Surfaces that don't share any Points or
@@ -131,39 +139,39 @@ Curves with other Surfaces. NOTE: this is **NOT**  asserted.
 Documentation for Surface/copy
 doc Surface/copy
 
-### * fill Fill(-plot) surface
+### .**fill** Fill(-plot) surface
 Documentation for Surface/fill
 doc Surface/fill
 
-### * Surface.from_line is a function.
+### .Surface.**from_line** is a function.
 this = Surface.from_line(l, direction)
 Documentation for Surface.from_line
 doc Surface.from_line
 
-### * in_surface Point in surface?
+### .**in_surface** Point in surface?
 
 bl = in_surface(this, X)
 Documentation for Surface/in_surface
 doc Surface/in_surface
 
-### * Surface/is_ccw is a function.
+### .Surface/**is_ccw** is a function.
 is_ccw = is_ccw(this)
 Documentation for Surface/is_ccw
 doc Surface/is_ccw
 
-### * mirror Mirror surface.
+### .**mirror** Mirror surface.
 
 s2 = mirror(this, a) return a new surface, mirrored across the angle *a* .
 See Point.mirror
 Documentation for Surface/mirror
 doc Surface/mirror
 
-### * Surface/mirror_inplace is a function.
+### .Surface/**mirror_inplace** is a function.
 mirror_inplace(this, a)
 Documentation for Surface/mirror_inplace
 doc Surface/mirror_inplace
 
-### * plot Plot surface.
+### .**plot** Plot surface.
 
 plot(this, args)
 
@@ -171,7 +179,7 @@ Plot surface with (args).
 Documentation for Surface/plot
 doc Surface/plot
 
-### * points Surface boundary as an array of doubles.
+### .**points** Surface boundary as an array of doubles.
 
 X = points(this)
 
@@ -182,7 +190,7 @@ X = points(this, dense) use denser **points** for Arcs
 Documentation for Surface/points
 doc Surface/points
 
-### * reduce Reduce surface to the smallest possible area.
+### .**reduce** Reduce surface to the smallest possible area.
 
 This method removes such holes (geo.hole) that share one or more boundary
 Curves with this surface. For instance, a square surface with a smaller
@@ -206,18 +214,18 @@ have been defined; the method cannot see the future.
 Documentation for Surface/reduce
 doc Surface/reduce
 
-### * reset_curves Remove all lines.
+### .**reset_curves** Remove all lines.
 Documentation for Surface/reset_curves
 doc Surface/reset_curves
 
-### * rotate_inplace Rotate surface in-place.
+### .**rotate_inplace** Rotate surface in-place.
 
 rotate_inplace(this, a) rotates all Points in this around the
 Origin by the angle a.
 Documentation for Surface/rotate_inplace
 doc Surface/rotate_inplace
 
-### * set_maximum_characteristic_length Set maximum characteristic length.
+### .**set_maximum_characteristic_length** Set maximum characteristic length.
 
 set_maximum_characteristic_length(this, lcar)
 
@@ -226,8 +234,9 @@ characteristic length to `min(p.lcar, lcar)`.
 Documentation for Surface/set_maximum_characteristic_length
 doc Surface/set_maximum_characteristic_length
 
-### * Surface/ymirror is a function.
+### .Surface/**ymirror** is a function.
 s2 = ymirror(this, varargin)
 Documentation for Surface/ymirror
 doc Surface/ymirror
+
 

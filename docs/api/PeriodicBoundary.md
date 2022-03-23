@@ -3,36 +3,44 @@ title : PeriodicBoundary
 parent: API
 grand_parent : Documentation
 ---
-## Summary for PeriodicBoundary
+# Summary for: **PeriodicBoundary**  < handle
+
+## Class summary
+
 PeriodicBoundary methods:
 PeriodicBoundary - is a class.
 parse_from_gmsh_surfaces_and_node_pairs - PeriodicBoundary/parse_from_gmsh_surfaces_and_node_pairs is a function.
 plot - PeriodicBoundary/plot is a function.
-## PROPERTIES
-* PeriodicBoundary/master_edges is a property.
 
-* PeriodicBoundary/master_nodes is a property.
+## Properties
 
-* PeriodicBoundary/mesh is a property.
+### .PeriodicBoundary/**master_edges** is a property.
 
-* PeriodicBoundary/slave_edges is a property.
+### .PeriodicBoundary/**master_nodes** is a property.
 
-* PeriodicBoundary/slave_nodes is a property.
+### .PeriodicBoundary/**mesh** is a property.
+
+### .PeriodicBoundary/**slave_edges** is a property.
+
+### .PeriodicBoundary/**slave_nodes** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * PeriodicBoundary/PeriodicBoundary is a constructor.
+
+### .**PeriodicBoundary**/PeriodicBoundary is a constructor.
 this = PeriodicBoundary(mesh, varargin)
 Documentation for PeriodicBoundary/PeriodicBoundary
 doc PeriodicBoundary
 
-### * PeriodicBoundary.from_gmsh_surfaces_and_node_pairs is a function.
+### .PeriodicBoundary.**from_gmsh_surfaces_and_node_pairs** is a function.
 this = PeriodicBoundary.from_gmsh_surfaces_and_node_pairs(mesh, master_surface, slave_surface, node_pairs)
 
-### * PeriodicBoundary/parse_from_gmsh_surfaces_and_node_pairs is a function.
+### .PeriodicBoundary/**parse_from_gmsh_surfaces_and_node_pairs** is a function.
 parse_from_gmsh_surfaces_and_node_pairs(this, master_entity, slave_entity, node_pairs)
 
-### * PLOT   Linear plot.
+### .PLOT   Linear **plot**.
 PLOT(X,Y) plots vector Y versus vector X. If X or Y is a matrix,
 then the vector is plotted versus the rows or columns of the matrix,
 whichever line up.  If X is a scalar and Y is a vector, disconnected
@@ -105,4 +113,5 @@ plot(x,y,'--rs','LineWidth',2,...
 
 See also PLOTTOOLS, SEMILOGX, SEMILOGY, LOGLOG, PLOTYY, PLOT3, GRID,
 TITLE, XLABEL, YLABEL, AXIS, AXES, HOLD, LEGEND, SUBPLOT, SCATTER.
+
 

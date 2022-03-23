@@ -3,7 +3,10 @@ title : FWRotor1
 parent: API
 grand_parent : Documentation
 ---
-## Summary for FWRotor1
+# Summary for: **FWRotor1**  < [SynRotorBase](SynRotorBase.html)
+
+## Class summary
+
 FWRotor1 Template for a rotor with field-winding.
 
 Main dimensions:
@@ -33,12 +36,18 @@ Materials:
 * rotor_core_material : core material
 * rotor_stacking_factor : stacking factor, generally < 1
 * shaft_material : shaft material
-## PROPERTIES
-* FWRotor1/winding is a property.
 
-* FWRotor1/winding_spec is a property.
+## Properties
+
+### .FWRotor1/**winding** is a property.
+
+### .FWRotor1/**winding_spec** is a property.
+
 
 ## Methods
+
 Class methods are listed below. Inherited methods are not included.
-### * parsing dimensions
+
+### .parsing dimensions
+
 
