@@ -33,7 +33,7 @@ has_toc : false
 * *class* : [Nedelec3DPrism](Nedelec3DPrism.html)  Nedelec3D class for 3D Nedelec shape functions.
 * *class* : [/Elements and Shape Functions/Nodal Elements/Nodal2D](Nodal2D.html)   **Nodal2D** Lagrange (nodal) shape function in 2D.
 * *class* : [Operators](Operators.html)  {
-* *class* : [/Matrix Assembly/MagneticsJacobian](MagneticsJacobian.html) **MagneticsJacobian** methods:
+* *class* : [/Matrix Assembly/MagneticsJacobian](MagneticsJacobian.html)  **MagneticsJacobian** Jacobian constructor for magnetic problems.
 * *class* : [/Matrix Assembly/MatrixConstructor](MatrixConstructor.html)  **MatrixConstructor** Constructor for FE matrices.
 * *class* : [BoundaryMatrixConstructor](BoundaryMatrixConstructor.html) **BoundaryMatrixConstructor** is a class.
 * *class* : [MatrixConstructorBase](MatrixConstructorBase.html) **MatrixConstructorBase** is a class.
@@ -126,8 +126,10 @@ has_toc : false
 * *class* : [/Slots/RotorSlot1](RotorSlot1.html)  **RotorSlot1** Rotor slot shape 1.
 * *class* : [/Slots/RotorSlot2](RotorSlot2.html)  **RotorSlot2** Rotor slot shape 2.
 * *class* : [/Slots/Slot1](Slot1.html)  **Slot1** Basic stator slot shape.
-* *class* : [/Slots/SlotShapeBase](SlotShapeBase.html)  **SlotShapeBase** Base class for slot shapes.
+* *class* : [/Slots/StatorSlotShape](StatorSlotShape.html)  SlotShapeBase Base class for slot shapes.
+* *class* : [/Slots/WoundSlot](WoundSlot.html)  **WoundSlot** Base class for slots supporting automatic winding generation.
 * *class* : [RotorSlotShape](RotorSlotShape.html)  **RotorSlotShape** Base class for rotor slots.
+* *class* : [SlotShapeBase](SlotShapeBase.html)  **SlotShapeBase** Base class for slot shapes.
 * *class* : [SlotShapeWrapper](SlotShapeWrapper.html) **SlotShapeWrapper** is a class.
 * *class* : [/Stators/FormWound1](FormWound1.html) **FormWound1** methods:
 * *class* : [/Stators/LinearStator](LinearStator.html) **LinearStator** methods:

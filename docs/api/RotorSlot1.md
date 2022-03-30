@@ -29,4 +29,7 @@ create_geometry(this)
 
 ### .**initialize** Parse and compute dimensions.
 
+### .RotorSlot1/**orientation_angle** is a function.
+a = orientation_angle(this)
+
 

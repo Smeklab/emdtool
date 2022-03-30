@@ -1,18 +1,21 @@
 ---
 layout: default
-title: Templates overview
-parent: Documentation
+title: Popular Templates
+parent: Templates
+nav_order: 1
+grand_parent : Documentation
 math: mathjax2
 ---
 
 # Overview of popular `EMDtool` geometry templates
 
+This page lists some popular stator and rotor templates.
 
 # Stators
 
 ## Stator
 
-![Stator](./knowledge_base/Stator.png)
+![Stator](Stator.png)
 
 The one stator template to rule them all, the [`Stator`](../../api/Stator.html) is the main template for typical radial-flux machine stator geometries. It supports, among other things
 
@@ -30,7 +33,7 @@ To do.
 
 ## SPM1
 
-![SPM1](./knowledge_base/SPM1.png)
+![SPM1](SPM1.png)
 
 A [surface-PM rotor](../../api/SPM1.html) template with arc magnets. Supports:
  * inrunner and outrunner geometries
@@ -43,7 +46,7 @@ A [surface-PM rotor](../../api/SPM1.html) template with arc magnets. Supports:
 
 ## BreadloafRotor
 
-![BreadloafRotor](./knowledge_base/BreadloafRotor.png)
+![BreadloafRotor](BreadloafRotor.png)
 
 [A surface-PM rotor template](../../api/BreadloafRotor.html) with breadloaf magnets, i.e. arced airgap face and a straight core-facing side. Supports
 
@@ -56,7 +59,7 @@ Surface-PM rotor with eddy-current shield.
 
 ## VIPM1
 
-![VIPM1](./knowledge_base/VIPM1.png)
+![VIPM1](VIPM1.png)
 
 A basic [traction-style IPM rotor](../../api/VIPM1.html) template. Supports axial slicing of magnets.
 
@@ -66,13 +69,13 @@ A basic [traction-style IPM rotor](../../api/VIPM1.html) template. Supports axia
 
 ## FWRotor1
 
-![FWRotor1](./knowledge_base/FWRotor1.png)
+![FWRotor1](FWRotor1.png)
 
 Template for [a rotor with field winding](../../api/FWRotor1.html).
 
 ## SlottedRotor1
 
-![SlottedRotor1](./knowledge_base/SlottedRotor1.png)
+![SlottedRotor1](SlottedRotor1.png)
 
 [Slotted rotor template](../../api/SlottedRotor1.html) for induction machines. Supports arbitrary slot shapes by giving a [`RotorSlotBase`](../../api/RotorSlotBase.html) object as an input argument.
 
@@ -80,3 +83,4 @@ Template for [a rotor with field winding](../../api/FWRotor1.html).
 
 Coated rotor for high-speed induction machines.
 
+Supports:

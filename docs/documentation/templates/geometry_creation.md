@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Geometry Creation
-parent: Knowledge Base
+title: Template Creation
+parent: Templates
+nav_order: 3
 grand_parent : Documentation
 math: mathjax2
 ---
 
-# Creating your own geometries
+# Creating your own templates
 
 So, how to create your own geometries? Read here to learn, or at least get started.
 

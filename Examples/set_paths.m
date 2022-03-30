@@ -6,9 +6,12 @@ addpath(genpath(emdtool_path));
 addpath(genpath('Analysis scripts'));
 addpath(genpath('Geometries'));
 
-error('Stator-style Slot object for Rotor')
-% add (inherits) to documentation
-% todo SlotShape hierarchy
+% [x] Stator-style Slot object for Rotor
+% [x] add (inherits) to documentation
+% [x] todo SlotShape hierarchy
+%   [] doc WoundSlot + functionality
+% [] template pages for slots and layouts
+%   [] winding_model_type docstring
 % todo doc everything accessable from templates page
 % FW rotor properties
 % fwspec

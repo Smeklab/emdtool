@@ -3,7 +3,7 @@ title : Slot1
 parent: API
 grand_parent : Documentation
 ---
-# Summary for: **Slot1**  < [SlotShapeBase](SlotShapeBase.html)
+# Summary for: **Slot1**  < [StatorSlotShape](StatorSlotShape.html)
 
 ## Class summary
 
@@ -52,7 +52,7 @@ create_geometry(this)
 
 ### .Slot1.**list_dimensions** is an undocumented builtin static method or package function.
 
-### .Slot1/**set_parent** is a function.
-set_parent(this, parent)
+### .Slot1/**orientation_angle** is a function.
+a = orientation_angle(this)
 
 

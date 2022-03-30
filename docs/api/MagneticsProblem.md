@@ -37,7 +37,11 @@ prob = get_component_property(this, component, property, pars)
 ### .MagneticsProblem/**set_boundary_matrix** is a function.
 this = set_boundary_matrix(this, varargin)
 
-### .setting PM sources, if any
+### .**set_load_vector** Set PM-load vector.
+
+set_load_vector(this) computes the load vector (constant, time- and
+solution independent) due to permanent magnet sources in
+`this.model.PMs`.
 
 ### .**solve_harmonic** Harmonic solution of a MagneticsProblem.
 

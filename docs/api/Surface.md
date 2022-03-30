@@ -234,6 +234,15 @@ characteristic length to `min(p.lcar, lcar)`.
 Documentation for Surface/set_maximum_characteristic_length
 doc Surface/set_maximum_characteristic_length
 
+### .**translate_inplace** Translate surface in-place.
+
+translate_inplace(this, x) calls `p.translate_inplace(x)` for
+all [Points](Points.html) in this.
+
+Does not return a copy.
+Documentation for Surface/translate_inplace
+doc Surface/translate_inplace
+
 ### .Surface/**ymirror** is a function.
 s2 = ymirror(this, varargin)
 Documentation for Surface/ymirror

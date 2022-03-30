@@ -7,11 +7,9 @@ grand_parent : Documentation
 
 ## Class summary
 
-MagneticsJacobian methods:
-MagneticsJacobian - is a class.
-eval - Evaluate Jacobian.
-eval_complex - MagneticsJacobian/eval_complex is a function.
-init_assembly - Initialize MagneticsJacobian.
+MagneticsJacobian Jacobian constructor for magnetic problems.
+
+this = MagneticsJacobian(problem, symmetric, test_fun, shape_fun)
 
 ## Properties
 
@@ -58,7 +56,8 @@ Help for MagneticsJacobian/Ne is inherited from superclass handle
 
 Class methods are listed below. Inherited methods are not included.
 
-### .**MagneticsJacobian**/MagneticsJacobian is a constructor.
+### .**MagneticsJacobian** Jacobian constructor for magnetic problems.
+
 this = MagneticsJacobian(problem, symmetric, test_fun, shape_fun)
 Documentation for MagneticsJacobian/MagneticsJacobian
 doc MagneticsJacobian

@@ -3,7 +3,7 @@ title : SlotShapeWrapper
 parent: API
 grand_parent : Documentation
 ---
-# Summary for: **SlotShapeWrapper**  < [SlotShapeBase](SlotShapeBase.html)
+# Summary for: **SlotShapeWrapper**  < [StatorSlotShape](StatorSlotShape.html)
 
 ## Class summary
 
@@ -24,5 +24,8 @@ doc SlotShapeWrapper
 
 ### .SlotShapeWrapper/**create_geometry** is a function.
 create_geometry(~)
+
+### .SlotShapeWrapper/**orientation_angle** is a function.
+a = orientation_angle(this)
 
 

@@ -34,4 +34,10 @@ doc CooledSlot1
 ### .CooledSlot1/**create_geometry** is a function.
 create_geometry(this)
 
+### .CooledSlot1/**orientation_angle** is a function.
+a = orientation_angle(this)
+
+### .CooledSlot1/**surface_dimensions** is a function.
+[xmin, h] = surface_dimensions(this, k_surface)
+
 

@@ -1,9 +1,9 @@
 ---
-title : SlotShapeBase
+title : StatorSlotShape
 parent: API
 grand_parent : Documentation
 ---
-# Summary for: **SlotShapeBase**  < handle
+# Summary for: **StatorSlotShape**  < [SlotShapeBase](SlotShapeBase.html) & [WoundSlot](WoundSlot.html)
 
 ## Class summary
 
@@ -46,35 +46,11 @@ NOTE: For now, slot shapes generally work for stators only.
 
 ## Properties
 
-### .**airgap_surface_curves** - curves on the airgap surface, oriented ccw
-
-### .SlotShapeBase/**all_surfaces** is a property.
-
-### .SlotShapeBase/**dimensions** is a property.
-
-### .SlotShapeBase/**parent_geometry** is a property.
-
 
 ## Methods
 
 Class methods are listed below. Inherited methods are not included.
 
-### .SlotShapeBase/**create_geometry** is a function.
-obj = SlotShapeBase
-
-### .SlotShapeBase/**first_airgap_point** is a function.
-P = first_airgap_point(this)
-
-### .**initialize** Parse characteristic lengths and initialize
-dimensions.
-
-### .SlotShapeBase/**last_airgap_point** is a function.
-P = last_airgap_point(this)
-
-### .**set_parent** Set parent geometry.
-
-set_parent(this, parent)
-* set this.dimensions to parent.dimensions
-* call this.initialize()
+### .determining lines
 
 
