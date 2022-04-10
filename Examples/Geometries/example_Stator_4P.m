@@ -23,7 +23,7 @@ dim.Qs = 3 * 2*dim.p * SLOTS_PER_POLE_AND_PHASE;
 
 %winding
 winding = DistributedWindingSpec(dim);
-winding.N_layers = 1;
+winding.N_layers = 2;
 winding.N_series = 12;
 dim.stator_winding = winding;
 
@@ -48,7 +48,7 @@ dim.stator_stacking_factor = 1;
 dim.stator_wedge_material = 0;
 
 
-%return
+return
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % creating and plotting geometry
 
