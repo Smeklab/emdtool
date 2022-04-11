@@ -32,6 +32,22 @@ parent template) all the materials and domains, with the following caveats:
 
 ## Benefits of the workflow
 
+Why the multiple layers of confusion, you might be asking? Why not simply create the entire slot and winding geometry inside
+the parent template?
+
+This is certainly possible - everything can be made manually if needed. Furthermore, for weird one-off slot shapes that ~should not exist~
+do not deserve their own template, EMDtool offers the [`SlotShapeWrapper`](../../api/SlotShapeWrapper.html) class. This class acts as a
+_wrapper_ around manually-made slot shapes, allowing one to then populate the slot with a `Layout` class. In other words, it should be
+used with one-off slot shapes that need to be combined with different winding models and types.
+
+The benefits of the full Slot-Layout workflow are all about reusability of code and mix-and-matching different models:
+* Using any slot shape with any parent geometry (rotors, stators, special stators, etc)
+* Using any winding model (infinitely stranded, round wires, rectangular bars, special conductors, either explicitly meshed or 
+with AC losses computed with post-processing approaches...)
+
+Of course, there can be practical limitations to the above - for instance most bar-conductor layouts would probably require a roughly-rectangular
+slot. 
+
 # Example of the workflow
 
 ![](slot_layout_core.png)
