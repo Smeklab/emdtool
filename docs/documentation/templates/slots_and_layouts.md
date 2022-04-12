@@ -50,6 +50,22 @@ slot.
 
 # Example of the workflow
 
+Now, let us use an example to see what happens underneath the workflow, step by step. We'll be using the versatile [`Stator`](../../api/Stator.html) class as the parent geometry, and the 
+[`Slot1`](../../api/Slot1.html) shape. Let's begin.
+
+First, the parent geometry performs the required initializations for the Materials and similar, and also initializes the `Slot` object if needed. Note that the core segment Surface is **not yet created**. Instead,
+the parent geometry next calls the `.create_geometry` of the slot object.
+
+The slot object then creates the slot geometry, as seen below. In this case, the slot geometry consists of two distinctly different parts:
+* The slot opening `Domain`, illustrated with the filled magenta patch. The slot opening has its own `Material`, which is added to the parent geometry using the [`.create_and_add_material`](../../api/GeoBase.html) method
+to avoid creating duplicate materials.
+* The two winding window surfaces, illustrated with the blue line. As the `Slot1` class is a subclass of the [`WoundSlot`](../../api/WoundSlot.html) class and therefore intended for the full Slot-Layout workflow,
+**no domains or materials** are created for the winding windows.
+
+At this point, the execution returns to the parent geometry, and the Surface for the core segment is created.
+
+Now, remember that the Slot joins the airgap, at the Arc highlighted with red below.
+
 ![](slot_layout_core.png)
 
 ![](slot_layout_core_and_slot.png)
