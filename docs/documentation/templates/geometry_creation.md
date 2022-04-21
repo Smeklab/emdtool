@@ -135,7 +135,7 @@ should flow, and other conductive bodies where they should not but still do (edd
 
 An example tells more than a thousand words, so here is one:
 
-````matlab
+```matlab
 core_circuit = SheetCircuit('Rotor_core');
 core_conductor = SolidConductor(core_domain);
 core_circuit.add_conductor(core_conductor);

@@ -56,19 +56,60 @@ Now, let us use an example to see what happens underneath the workflow, step by 
 First, the parent geometry performs the required initializations for the Materials and similar, and also initializes the `Slot` object if needed. Note that the core segment Surface is **not yet created**. Instead,
 the parent geometry next calls the `.create_geometry` of the slot object.
 
+## Slot geometry is created
+
 The slot object then creates the slot geometry, as seen below. In this case, the slot geometry consists of two distinctly different parts:
 * The slot opening `Domain`, illustrated with the filled magenta patch. The slot opening has its own `Material`, which is added to the parent geometry using the [`.create_and_add_material`](../../api/GeoBase.html) method
 to avoid creating duplicate materials.
 * The two winding window surfaces, illustrated with the blue line. As the `Slot1` class is a subclass of the [`WoundSlot`](../../api/WoundSlot.html) class and therefore intended for the full Slot-Layout workflow,
 **no domains or materials** are created for the winding windows.
 
-At this point, the execution returns to the parent geometry, and the Surface for the core segment is created.
+![](slot_layout_slot.png)
 
-Now, remember that the Slot joins the airgap, at the Arc highlighted with red below.
+## Slot is added to the parent geometry
+
+At this point, the execution returns to the parent geometry, and the Surface for the core segment is created. In particular, there are two subcases as for how things can work:
+* The slot is completely closed
+* The slot has an opening, i.e. joins the airgap
+
+### The slot is closed
+
+In the case of a closed slot - meaning none of the Surfaces created by the Slot object touch the airgap - things are extremely simple.
+
+Indeed, the Surface for the stator core (or whatever is created by the parent geometry) is created completely independently of the slot. An example of the core surface is shown below.
+
+![](slot_layout_core_ClosedSlot.png)
+
+Next, the slot surfaces are then added as `holes` to the parent geometry.
+
+```matlab
+core_surface.add_hole(Slot.add_surfaces);
+```
+
+### The slot has an opening
+
+If the slot does have an opening - whether an actual physical opening, or just a virtual 'opening' surface consisting of the same material as the parent core - things are a little more complex. Namely, for now, 
+`EMDtool` cannot handle intersections of Lines and Arcs.
+
+Meaning, part of the airgap-facing Arcs (or Lines) have already been created by the Slot object, and the creation of the parent core Surface must reflect this. Long story short, 
+an example implementation is shown below:
+
+```matlab
+core_surface.add_curve(geo.arc, Xin_ccw, O, Slot.last_airgap_point, 'n_ag');
+core_surface.add_curve(fliplr(Slot.airgap_surface_curves));
+core_surface.add_curve(geo.arc, Slot.first_airgap_point, O, Xin_cw, 'n_ag');
+```
+
+The picture below illustrates this, with:
+* `Slot.first_airgap_point` highlighted with the red circle
+* `Slot.airgap_surface_curves` highlighted with the red arcs
+* `Slot.last_airgap_point` highlighted with the red cross
+
+Finally, in this case the `core_surface` is defined as a counter-clockwise polygon; hence the the last airgap point being added first, and the flipping of the slot airgap curve order.
 
 ![](slot_layout_core.png)
 
-![](slot_layout_core_and_slot.png)
+## Parent geometry is finalized.
 
-![](slot_layout_core_reduced.png)
+
 
