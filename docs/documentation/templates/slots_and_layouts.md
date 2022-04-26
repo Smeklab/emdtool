@@ -109,7 +109,40 @@ Finally, in this case the `core_surface` is defined as a counter-clockwise polyg
 
 ![](slot_layout_core.png)
 
-## Parent geometry is finalized.
+## Winding layout is created
+
+At this point, the Slot object has done its duty, and we move on to the Layout part of the workflow.
+
+As you may remember, the responsibility of the Layout class is to create all the winding-related Surfaces, Domains, and associated Conductors.
+
+In any case, this is triggered by the parent geometry calling the `.create_slot_geometry` method of the [winding specification object](../../PolyphaseWindingSpec.html). The `specification` object
+is originally created by the user, and contains as a property the [`Layout`](../../api/WindingLayoutBase.html) object used, so in practice the `specification` object simply passes on the execution to the
+identically-named method of the Layout object.
+
+Now, what exactly happens next of course depends on the particular layout used, but there are still a few common cases.
+
+### Stranded winding
+
+A common case is modelling the entire winding as _stranded_. To do this, the `winding_model_type` of the winding specification is left to its default value `defs.stranded`.
+
+On the theoretical level, this means that the conductors in the model are assumed to carry an uniform current density. The conductor-associated AC losses may then be postprocessed by the `compute_losses_stranded`
+method of the layout object.
+
+Regarding the geometry creation within the `create_slot_geometry` method, not much happens. Domains are created to house the winding window Surfaces and added to the parent geometry, as is the winding material.
+
+![](slot_layout_stranded.png)
+
+### Solid hairpin winding
+
+![](slot_layout_hairpin.png)
+
+
+### Solid random winding
+
+![](slot_layout_random.png)
+
+
+
 
 
 
