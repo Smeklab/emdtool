@@ -9,6 +9,11 @@ grand_parent : Documentation
 
 BreadloafRotor Template for rotors with breadloaf PMs.
 
+Supports inrunner geometries only, for now.
+
+Supports magnet segmentation both in the axial and circumferential
+directions.
+
 DIMENSIONS:
 
 Main dimensions:
@@ -20,6 +25,8 @@ Main dimensions:
 Magnet dimensions:
 * h_pm : magnet thickness at thickest point (center)
 * w_pm : magnet width
+* circumferential_magnet_segments : (OPTIONAL) number of magnet segments along
+the magnet width. Defaults to 1 = a solid magnet.
 
 Optional retaining sleeve:
 * h_sleeve : (OPTIONAL) sleeve thickness.

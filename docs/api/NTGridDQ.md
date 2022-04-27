@@ -50,6 +50,9 @@ Class methods are listed below. Inherited methods are not included.
 Documentation for NTGridDQ/NTGridDQ
 doc NTGridDQ
 
+### .NTGridDQ/**compute_detailed** is a function.
+data = compute_detailed(this, Icoil, n)
+
 ### .NTGridDQ/**get_efficiency_grid** is a function.
 [etagrid, torque_grid, speed_grid, electrical_power] = get_efficiency_grid(this, varargin)
 
@@ -67,6 +70,9 @@ doc NTGridDQ
 [eta, I, Pcu, Physt, Peddy] = get_op(this, n, T, 'mode', mode)
 
 * mode : operating mode, 'motor' / 'generator'
+
+Keyword arguments:
+* 'compute_detailed' : (EXPERIMENTAL) compute detailed loss breakdown? Default: false.
 
 Outputs:
 

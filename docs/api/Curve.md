@@ -66,6 +66,12 @@ Returns the **angle** a.
 ### .Curve/**center** is a function.
 pc = center(this)
 
+### .**curve_length** Length of curve.
+
+l = curve_length(this) returns the *length*  of the Curve:
+* regular length for Lines
+*
+
 ### .Curve/**detach** is a function.
 detach(this)
 
@@ -79,6 +85,18 @@ ldir = extend_direction(this, other_curve)
 ### .**extends** Check if this Curve **extends** other curve.
 
 bl = extends(this, other_curve, other_curve_direction)
+
+### .flip Flip Curve.
+
+flip_curve(this) flips the Curve, i.e. does the following two tasks:
+* Flip the direction of Points defining this
+* Update the line_direction in `this.left_surface` and
+`this.right_surface`
+
+### .**get_point_ids** Return the ids of Points defining this.
+
+ids = get_point_ids(this) returns a COLUMN vector (size(ids,2) =
+1) of the ids of all Points (Point.id) defining this.
 
 ### .**get_xy** Get xy-coordinates of start- and end-points.
 
@@ -106,8 +124,18 @@ new_curve = split_with_point(this, P)
 ### .Curve/**tangent** is a function.
 t = tangent(this, p)
 
+### .**unique_not_proxy** Return unique Curves, proxy the rest.
+
+c = unique_not_proxy(this) returns the *unique*  Curves in the array
+*this* , with 'unique' understood as a unique combination of `id` values
+of the `Points` defining each curve.
+
+**** WARNING** If there are Curves of identical but opposite definitions in
+terms of the unique Points, the replicate curves are flipped where
+appropriate with Curve.flip()
+
 ### .start point
 
-### .Curve/**update_single_point** is an undocumented builtin Arc method.
+### .Curve/**update_single_point** is an undocumented builtin Line method.
 
 

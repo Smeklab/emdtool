@@ -31,8 +31,6 @@ property.
 However, subclasses may have a different `loss_density`  method.
 Help for Material/iron_loss_computation_method is inherited from superclass MaterialBase
 
-### .**stacking_factors** - list of stacking factors per each element
-
 
 ## Methods
 

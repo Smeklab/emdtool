@@ -3,7 +3,7 @@ title : Stator
 parent: API
 grand_parent : Documentation
 ---
-# Summary for: **Stator**  < [StatorBase](StatorBase.html)
+# Summary for: **Stator**  < [StatorBase](StatorBase.html) & [LayoutCompatible](LayoutCompatible.html)
 
 ## Class summary
 

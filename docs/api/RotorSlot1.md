@@ -16,8 +16,20 @@ Dimensions:
 * htt_r : slot opening height (can be dummy)
 * hslot_r : slot depth, airgap to slot bottom
 * wtooth_r : tooth width
+* rotor_slot_opening_material : slot opening material
 
 ## Properties
+
+### .**has_opening** Does the slot have a slot opening
+
+this.has_opening is `true` if the slot shape as a slot opening
+(either real or all-steel virtual surface), and thus
+`this.airgap_surface_curves` is non-empty. If `this.has_opening`
+is `false`, then the slot does not touch the airgap at all, and
+all its surfaces appear as `holes` in the parent surface.
+Help for RotorSlot1/has_opening is inherited from superclass SlotShapeBase
+
+### .RotorSlot1/**slot_opening_domain** is a property.
 
 
 ## Methods

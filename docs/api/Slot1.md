@@ -30,6 +30,15 @@ winding window extends towards the slot opening
 
 ### .Slot1/**N_layers** is a property.
 
+### .**has_opening** Does the slot have a slot opening
+
+this.has_opening is `true` if the slot shape as a slot opening
+(either real or all-steel virtual surface), and thus
+`this.airgap_surface_curves` is non-empty. If `this.has_opening`
+is `false`, then the slot does not touch the airgap at all, and
+all its surfaces appear as `holes` in the parent surface.
+Help for Slot1/has_opening is inherited from superclass SlotShapeBase
+
 ### .Slot1/**layer_orientation** is a property.
 
 ### .Slot1/**parent_type** is a property.

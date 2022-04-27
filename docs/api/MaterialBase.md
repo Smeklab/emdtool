@@ -87,6 +87,8 @@ Fetched from this.material_properties.alpha_Br
 
 Fetched from this.material_properties.specific_heat_capacity
 
+### .**stacking_factors** - list of stacking factors per each element
+
 ### .**temperature_coefficient_of_resistivity** Resistivity temp. coeff. in
 SI units.
 

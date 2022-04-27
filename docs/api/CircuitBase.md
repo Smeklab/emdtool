@@ -172,4 +172,16 @@ Add to load-contribution from this to F.
 ### .CircuitBase/**set_parent** is a function.
 set_parent(this, parent)
 
+### .**stacking_factor** Stacking factor of circuit conductors.
+
+f = stacking_factor(this) returns the stacking factor
+(usually <= 1) of the conductor materials in this circuit.
+Generally, the stacking factor could be used to consider the
+effect of slightly-shorter-than-core magnets or similar.
+
+The base class implementation parses the stacking factor from
+the Materials belonging to the Domains of the Conductors in
+this circuit. Uniform stacking across the entire circuit is
+assumed, i.e. only a single value is returned.
+
 

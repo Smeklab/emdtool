@@ -27,14 +27,15 @@ Slot dimensions, either:
 Materials:
 * rotor_core_material : rotor core material
 * rotor_stacking_factor : core stacking factor, generally < 1.
-* rotor_bar_material : cage material
-* rotor_slot_opening_material : slot opening material. Can be equal
-to core or bar material, for closed and open slots respectively.
-* shaft_material : shaft material    %
+* shaft_material : shaft material
+
 End-ring dimensions:
 * H_ring : end-ring height (radial length)
 * W_ring : end-ring width (axial length)
 * D_ring : average end-ring diameter
+
+Additional dimensions:
+* any dimensions required by the specified [RotorSlotShape](RotorSlotShape.html)
 
 ## Properties
 

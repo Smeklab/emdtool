@@ -35,7 +35,7 @@ Mainly used for end-winding volume calculation.
 
 ### .**sector_angle** Angle of smallest symmetry sector.
 
-### .**slot_angle** Angular coordinate of the first slot.
+### .**slot_angle** Angular coordinate of the first slot center line.
 
 ### .**slot_area** Cross-sectional area of a single slot.
 

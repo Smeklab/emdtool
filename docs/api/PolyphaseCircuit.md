@@ -222,6 +222,8 @@ type.
 with respect to an arbitrary reference point. For harmonic/stepping
 analysis only.
 
+* 'circuit' :
+
 source : Source values:
 
 * phases x steps array : used directly as such.

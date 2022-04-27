@@ -11,6 +11,7 @@ ConcentratedWindingSpec methods:
 ConcentratedWindingSpec - is a class.
 end_winding_loop_matrix - ConcentratedWindingSpec/end_winding_loop_matrix is a function.
 get_end_winding_length_per_conductor - ConcentratedWindingSpec/get_end_winding_length_per_conductor is a function.
+get_half_of_turn_length - ConcentratedWindingSpec/get_half_of_turn_length is a function.
 get_overhang_length - ConcentratedWindingSpec/get_overhang_length is a function.
 
 ## Properties
@@ -33,5 +34,8 @@ Class methods are listed below. Inherited methods are not included.
 this = ConcentratedWindingSpec(varargin)
 Documentation for ConcentratedWindingSpec/ConcentratedWindingSpec
 doc ConcentratedWindingSpec
+
+### .ConcentratedWindingSpec/**get_half_of_turn_length** is a function.
+l = get_half_of_turn_length(this)
 
 

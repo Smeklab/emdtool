@@ -28,8 +28,16 @@ Responsibilities:
 
 * handles end-winding indcutance calculation
 
-NOTE: End-winding inductance calculation only works for radial-flux
-machines for now.
+The winding specification offers a way to control the winding model
+used (solid or stranded conductors) and the slot layout (e.g. round
+or rectangular wires). This functionality only works if the parent
+geometry is of the [LayoutCompatible](LayoutCompatible.html) class. In this case:
+
+* `this.layout_spec`, a [WindingLayoutBase](WindingLayoutBase.html) object defines the
+layout.
+
+* `this.winding_model_type`, typically `defs.stranded` or  `defs.solid`
+defines the winding model type used.
 
 ## Properties
 
@@ -88,6 +96,9 @@ Note that some Layouts only support stranded winding models,
 while others also enable solid models with each conductor
 modelled.
 
+For layouts to work properly, the parent geometry has to be of
+the [LayoutCompatible](LayoutCompatible.html) class.
+
 ### .**lew_given** - given end-winding inductance per turn and per slot-segment
 
 ### .PolyphaseWindingSpec.**modelled_parallel_paths** is a property.
@@ -110,7 +121,12 @@ modelled.
 
 ### .PolyphaseWindingSpec/**strand_transposition_type** is a property.
 
-### .**winding_model_type** - modelling style, solid or stranded
+### .**winding_model_type** Winding model type.
+
+Type of winding model used, typically defs.solid or
+defs.stranded; defs.custom when supported by this.layout_spec.
+
+The parent geometry must be of the [LayoutCompatible](LayoutCompatible.html) class.
 
 ### .**wires_in_hand** - number of wires in hand. Must be 1 for infinite stranded windings.
 

@@ -153,6 +153,12 @@ p2 = rotate(this, theta)
 Rotate this Point around the origin by theta
 radians.
 
+### .**shortest_attached_curve** Shortest curve attached to this.
+
+l = shortest_attached_curve(this) returns the shortest Curve (excluding
+possible zero-length Curves) attached to this. The Curve length is
+evaluated with c.curve_length().
+
 ### .**translate** Create a new translated point.
 
 pnew = translate(this, s)
@@ -173,6 +179,16 @@ Sets the coordinates of this equal to (Point.x, Point.y)
 this = translate_inplace(this, [x, y])
 
 Sets the coordinates of this equal to (this.x + x, this.y + y)
+
+### .**unique_not_proxy** Get Points with unique coordinates, proxy the rest.
+
+[C,IA,IC] = unique_not_proxy(this) returns the Points in *this*  (Point array)
+whose coordinates are unique according to uniquetol. The tolerance is
+computed from the lengths of all non-zero-length curves attacehd to the
+Points in the array.
+
+Additionally, the all *replicate*  Points are set as proxies to the parent
+Point (i.e. P_another_point_at_same_coordinates.proxy_to = P_main)
 
 ### .**xmirror** Return a new Point, mirrored around the x-axis.
 

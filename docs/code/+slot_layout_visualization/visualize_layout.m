@@ -13,7 +13,7 @@ stator.visualize();
 emdtool_export_example_fig(gca, 'slot_layout_stranded')
 %}
 
-%%{
+%{
 slot_layout_visualization.dims;
 
 winding = dim.stator_winding;
@@ -36,12 +36,12 @@ figure(1); clf; hold on; box on; axis equal;
 stator.visualize();
 
 emdtool_export_example_fig(gca, 'slot_layout_random')
-
-
 %}
 
 
-%{
+%%{
+slot_layout_visualization.dims;
+
 %setting rectangular slots
 dim = rmfield(dim, 'wtooth_s');
 dim.wslot_s = 2*pi*(dim.Sin + dim.htt_s)/dim.Qs * 0.45;

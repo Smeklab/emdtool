@@ -38,4 +38,7 @@ doc DistributedWindingSpec
 
 ### .**end_winding_loop_matrix** Loop matrix for end-winding segments.
 
+### .DistributedWindingSpec/**get_half_of_turn_length** is a function.
+l = get_half_of_turn_length(this)
+
 
