@@ -9,9 +9,10 @@ addpath(genpath('Geometries'));
 % [x] Stator-style Slot object for Rotor
 % [x] add (inherits) to documentation
 % [x] todo SlotShape hierarchy
-%   [] doc WoundSlot + functionality
-% [] template pages for slots and layouts
-%   [] winding_model_type docstring
+%   [x] doc WoundSlot + functionality
+% [x] template pages for slots and layouts
+%   [x] winding_model_type docstring
+% [] Roundwirelayout packing function
 % todo doc everything accessable from templates page
 % FW rotor properties
 % fwspec
