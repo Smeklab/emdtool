@@ -35,7 +35,7 @@ parent template) all the materials and domains, with the following caveats:
 Why the multiple layers of confusion, you might be asking? Why not simply create the entire slot and winding geometry inside
 the parent template?
 
-This is certainly possible - everything can be made manually if needed. Furthermore, for weird one-off slot shapes that ~should not exist~
+This is certainly possible - everything can be made manually if needed. Furthermore, for weird one-off slot shapes that ~~should not exist~~
 do not deserve their own template, EMDtool offers the [`SlotShapeWrapper`](../../api/SlotShapeWrapper.html) class. This class acts as a
 _wrapper_ around manually-made slot shapes, allowing one to then populate the slot with a `Layout` class. In other words, it should be
 used with one-off slot shapes that need to be combined with different winding models and types.
