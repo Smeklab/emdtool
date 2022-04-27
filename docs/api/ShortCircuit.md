@@ -34,19 +34,4 @@ short-circuits.
 Documentation for ShortCircuit/ShortCircuit
 doc ShortCircuit
 
-### .ShortCircuit/**get_jacobian** is a function.
-[S, res] = get_jacobian(this, varargin)
-
-### .ShortCircuit/**get_matrix** is a function.
-S = get_matrix(this, problem, type, t, kstep, inds, Xprev)
-
-### .ShortCircuit/**get_voltage** is a function.
-U = get_voltage(this, circuit, problem, type, t, kstep, inds, Xprev)
-
-### .ShortCircuit/**ndof** is a function.
-n = ndof(this)
-
-### .ShortCircuit/**set_circuit** is a function.
-set_circuit(this, c)
-
 

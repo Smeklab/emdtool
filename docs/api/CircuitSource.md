@@ -49,14 +49,54 @@ unknowns is smaller than *n* .
 
 Class methods are listed below. Inherited methods are not included.
 
-### .CircuitSource/**get_jacobian** is an undocumented builtin function.
+### .**get_jacobian** Return the Jacobian matrix and residuel vector.
 
-### .CircuitSource/**get_matrix** is an undocumented builtin function.
+[J, res]  = get_jacobian(this, problem, type, t, kstep, inds, Xprev, Xiter)
+returns the Jacobian matrix and residual vector of the
+CircuitSource. This method is called inside the Newton iteration.
 
-### .CircuitSource/**get_voltage** is an undocumented builtin function.
+The input arguments include:
+* problem : governing [MagneticsProblem](MagneticsProblem.html)
+* type : type of problem, 'static', 'harmonic', or 'stepping'
+* t : instantenous time
+* kstep : number of time-step
+* inds : indices to phase-current variables in the solution
+* Xprev : solution at the previos time-step.
+* Xiter : current iterate
 
-### .CircuitSource/**ndof** is an undocumented builtin function.
+### .**get_matrix** Return the linear governing matrix.
 
-### .CircuitSource/**set_circuit** is an undocumented builtin function.
+S = get_matrix(this, problem, type, t, kstep, inds, Xprev)
+returns the linear (but generally time-variant) matrix of the
+CircuitSource matrix. This method is called once every time-step,
+but not inside the Newton iteration.
+
+The input arguments include:
+* problem : governing [MagneticsProblem](MagneticsProblem.html)
+* type : type of problem, 'static', 'harmonic', or 'stepping'
+* t : instantenous time
+* kstep : number of time-step
+* inds : indices to phase-current variables in the solution
+* Xprev : solution at the previos time-step.
+
+### .**get_voltage** Return the linear source vector.
+
+U = get_voltage(this, circuit, problem, type, t, kstep, inds, Xprev)
+returns the linear but time-variant source vector associated with
+the Source. This method is called once every time-step, before the
+Newton iteration.
+
+Input arguments as in CircuitSource.get_matrix.
+
+### .**ndof** Number of unknowns associated with this source.
+
+n = ndof(this) returns the number of extra unknowns associated
+with this source.
+
+### .**set_circuit** Set parent circuit.
+
+set_circuit(this, circuit) sets the parent [PolyphaseCircuit](PolyphaseCircuit.html)
+object `circuit`, **and**  optionally sets `circuit.is_linear` to
+`false` if the source is nonlinear.
 
 
