@@ -11,6 +11,8 @@ dim.symmetry_sectors = 2;
 dim.delta = 1e-3;
 dim.leff = 50e-3;
 
+dim.temperature_stator = 100;
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % stator dimensions
 
