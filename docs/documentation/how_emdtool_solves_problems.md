@@ -74,6 +74,8 @@ $$ \mathbf{a}^{k+1} = \mathbf{a}^k - \left(\mathbf{J}^k\right)^{-1} \mathbf{r}^k
 Here, the superscript _k_ is used to denote the number of iteration. The matrix $$\mathbf{J}$$ is the [Jacobian matrix](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant) of the residual vector 
 $$\mathbf{r}$$.
 
+[Click here to read more about how Jacobians are handled in EMDtool](./knowledge_base/jacobians.html).
+
 ### Time-dependence
 
 The term _'time-dependent'_ is tricky, as different authors may mean different things by it. For instance, it can mean
@@ -122,6 +124,8 @@ In other words, the system is split into pure-magnetics part (subscript $$\text{
 and $$\text{ca}$$). Naturally, the same splitting is applied to the mass matrix $$\mathbf{M}$$.
 
 Please note that the upper-left block also contains the pure-magnetics stiffness matrix $$\mathbf{S}$$, in turn consisting of the static and airgap parts.
+
+[Click here to read more about how circuits are handled in EMDtool](./knowledge_base/circuits.html).
 
 ### Putting it all together
 
