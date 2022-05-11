@@ -25,7 +25,7 @@ winding.phases = PHASES;
 winding.a = dim.p*2;
 dim.stator_winding = winding;
 
-%inner and outer diameter
+%inner and outer radius
 dim.Sin = 157e-3/2; %inner radius of stator
 if dim.p == 1
     dim.Sout = dim.Sin / 0.5;
