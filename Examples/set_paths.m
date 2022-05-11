@@ -6,6 +6,7 @@ addpath(genpath(emdtool_path));
 addpath(genpath('Analysis scripts'));
 addpath(genpath('Geometries'));
 
+% [] document Grid output
 % [x] Stator-style Slot object for Rotor
 % [x] add (inherits) to documentation
 % [x] todo SlotShape hierarchy

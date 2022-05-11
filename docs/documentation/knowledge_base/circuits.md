@@ -93,3 +93,58 @@ form of the problem
 
 $$ \mathbf{S}_\text{tot} \mathbf{x} + \mathbf{M}_\text{tot} \frac{\text{d}\mathbf{x}}{\text{d}t} = \mathbf{f}_\text{tot}. $$
 
+# Useful miscellaneous information
+
+Next, several useful bits of miscellaneous circuit-related information is presented.
+
+## AV formulation
+
+Most commonly, the so-called AV mathematical formulation is used for handling circuits in finite-element analysis. It's background is in the 
+[potential formulation of Maxwell's equations](https://en.wikipedia.org/wiki/Mathematical_descriptions_of_the_electromagnetic_field#Potential_field_approach), where the electric field is written as
+
+$$ \mathbf{E} = -\nabla V - \frac{\partial \mathbf{A}}{\partial t} $$,
+
+where $$\mathbf{V}$$ is called the _electric scalar potential_.  
+
+From the electric field, the current density is then known to be $$\mathbf{J} = \sigma \mathbf{E}$$, where
+$$\sigma$$ is the electrical conductivity. As the typically-analysed frequency ranges have no charge concentration to speak of, the governing equation for the newly-introduced thus-far unknown scalar potential
+is the current conservation condition
+
+$$ \nabla \cdot \mathbf{J} = \nabla \cdot \left( -\nabla V - \frac{\partial \mathbf{A}}{\partial t} \right) = 0 $$.
+
+## AVI-formulation
+
+The AV formulation is sufficient for handling massive conductive bodies in 3D analysis. It does work in 2D, too, but does not alone allow relating any _current_ variables to the current density distribution.
+In order to do this, some extra steps are needed.
+
+Before moving on to currents, one detail: In 2D electromagnetics, the electric field typically has a component in the z-direction only. 
+Therefore, it is sometimes expressed with the voltage difference over the ends (in z-direction) of a conducting body
+
+$$\nabla V = - \frac{u}{l} $$.
+
+Here, $$u$$ is the voltage difference, while $$l$$ is the length of the problem in the z-direction (out-of-plane).
+
+Incidentally, this modified AV formulation allows to naturally introduce currents into the problem. In 2D analysis, the net (axial) current in a conducting body is
+
+$$I = \int\limits_{A_\text{conductor}} \mathbf{J} \mathrm{d}S = \sigma \int\limits_{A_\text{conductor}} { \frac{u}{l} - \frac{\partial \mathbf{A}}{\partial t} 
+ } \mathrm{d}S $$.
+ 
+Now, by introducing the cross-sectional area of the conductor $$A$$, the first term of the integral is simplified into
+
+$$ \sigma \int\limits_{A_\text{conductor}} \frac{u}{l} \mathrm{d}S = \frac{\sigma A}{l} u = \frac{1}{R} u $$,
+
+where $R$ is the DC resistance of the conducting body, again in the z-direction. Substituting this back into the net current equation, multiplying it by $$R$$ and re-ordering and simplifying a bit yields
+
+$$ u = RI + \frac{l}{A} \int\limits_{A_\text{conductor}} \frac{\partial \mathbf{A}}{\partial t} \mathrm{d}S $$.
+
+Although somewhat tedious to derive, this equation is very easy to relate to traditional circuit analysis. Indeed, it simply states that the **net axial voltage over the conductor is the sum of the 
+DC-resistance-related voltage drop plus the average induced voltage**.
+ 
+
+## Circuit connections
+
+When electric motors are of interest, simply modelling conductive bodies is rarely enough. Instead, those bodies must be connected to each other in a suitable fashion, to form actual circuits. While there
+are probably several ways to do this, the main approach used in EMDtool is described next.
+
+Let us consider the more-general case of massive solid conductors, such as the cage of an induction motor rotor.
+
