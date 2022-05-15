@@ -133,18 +133,58 @@ Now, by introducing the cross-sectional area of the conductor $$A$$, the first t
 
 $$ \sigma \int\limits_{A_\text{conductor}} \frac{u}{l} \mathrm{d}S = \frac{\sigma A}{l} u = \frac{1}{R} u $$,
 
-where $R$ is the DC resistance of the conducting body, again in the z-direction. Substituting this back into the net current equation, multiplying it by $$R$$ and re-ordering and simplifying a bit yields
+where $R$ is the DC resistance of the conducting body, again in the z-direction. 
+
+Substituting this back into the net current equation, multiplying it by $$R$$ and re-ordering and simplifying a bit yields **an important equation**
 
 $$ u = RI + \frac{l}{A} \int\limits_{A_\text{conductor}} \frac{\partial \mathbf{A}}{\partial t} \mathrm{d}S $$.
 
 Although somewhat tedious to derive, this equation is very easy to relate to traditional circuit analysis. Indeed, it simply states that the **net axial voltage over the conductor is the sum of the 
 DC-resistance-related voltage drop plus the average induced voltage**.
+
+Nowm we still have to define a governing equation for the current $$I$$. A few common cases are briefly described.
+
+### Zero net current
+
+Often, the net current $$I$$ is assumed to be zero in each individual conductor. This is often the case when modelling unwanted eddy currents in individual conductors, such as permanent magnets.
+
+In this case, the vector of circuit variables $$\mathbf{b}$$ only consists of the voltages $$u$$. In `EMDtool`, the [`BlockCircuit`](../../api/BlockCircuit.html) is a perfect choice for this case.
+
+#### Zero net current in sector-crossing conductor
+
+Now, one special case is worth mentioning. Often, only the minimum symmetric sector of an electric machine is modelled - often a pole-pitch or two. However, the problem might also contain solid conductors
+that span the entire physical geometry and thus extend **beyond** the symmetry sector. Solid shafts, rotor cores, and stator housings are all common examples. For the typical end-user, the
+[`SheetCircuit`](../../api/SheetCircuit.html) class is suitable for this case.
+
+Also in this case, a zero-net-current assumption is commonly assumed. However, how the condition is enforced depends on the _periodicity_ of the problem. Indeed, the condition is automatically satisfied for
+anti-periodic (periodicity coefficient equal to -1) problems, in which there are no circuit variables $$\mathbf{c}$$ associated. With periodic problems (periodicity coefficient equal to 1), 
+$$\mathbf{c}$$ consists of a single voltage $$u$$. 
  
+# Full circuit coupling
 
-## Circuit connections
+In many other cases, the per-conductor net current is not known. Thus, it must be solved together along with the other variables, and constrained by their own governing equation.
 
-When electric motors are of interest, simply modelling conductive bodies is rarely enough. Instead, those bodies must be connected to each other in a suitable fashion, to form actual circuits. While there
-are probably several ways to do this, the main approach used in EMDtool is described next.
+A very good example would be a stator winding wound from rectangular conductors, whether of the hairpin or the more traditional form-wound kind. As before, each individual conductor in each slot
+would have a voltage variable $$u$$ associated with it, together forming the vector $$\mathbf{u}$$.
 
-Let us consider the more-general case of massive solid conductors, such as the cage of an induction motor rotor.
+However, the number of independent current variables would normally be significantly smaller. After all, we know that most of the conductors would be in series with each other, carrying the same net current.
+Thus, for clarity's sake, let us get rid of the per-conductor current variable $$I$$ and introduce the vector of all such variables in the entire winding:
+
+$$I \rightarrow \mathbf{i}_\text{conductor}$$.
+
+Furthermore, let $$\mathbf{i}$$ be the vector of independent phase currents. Finally, let us introduce a _**loop matrix**_ $$\mathbf{L}$$ defining the dependency between conductor and independent currents:
+
+$$ \mathbf{L}_{ij} := \begin{cases} +1 & \text{current $j$ traverses conductor $i$ to the positive direction} \\ -1 & \text{current $j$ traverses conductor $i$ to the negative direction} \\
+0 & \text{otherwise} \end{cases} $$.
+
+The matrix $$\mathbf{L}$$ is the so-called _loop matrix_, and can either be formed manually / hard-coded for common cases such as cage or distributed windings, or in general cage formed automatically with the
+fundamental loop method.
+
+Now, the governing equations for the phase currents $$\mathbf{i}$$ are still needed. These are obtained from the Kirchoff's voltage law, stating that the sum of all voltage terms - whether sources or 
+impedance-related voltage drops - must sum up to zero. This can be concisely written as
+
+$$\mathbf{L}^\intercal\mathbf{u} + \left(\mathbf{R}_\text{EW} + \frac{\partial}{\partial t}\mathbf{L}_\text{EW}\right)\mathbf{i}=\mathbf{U}_\text{source}$$.
+
+
+
 
