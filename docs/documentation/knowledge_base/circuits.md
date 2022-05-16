@@ -185,6 +185,12 @@ impedance-related voltage drops - must sum up to zero. This can be concisely wri
 
 $$\mathbf{L}^\intercal\mathbf{u} + \left(\mathbf{R}_\text{EW} + \frac{\partial}{\partial t}\mathbf{L}_\text{EW}\right)\mathbf{i}=\mathbf{U}_\text{source}$$.
 
+Here, the $$\mathbf{L}^\intercal\mathbf{u}$$ term stands for the sum of the conductor voltages from the finite-element problem. 
+The $$\mathbf{R}_\text{EW}$$ and $$\mathbf{L}_\text{EW}$$ matrices are the 'end-winding' resistance and inductance matrices. They don't have
+to be actually associated with a physical end-winding - hence the quotation marks - braking resistors and line chokes would also be considered
+inside these matrices. Rather, the subscript $$\text{EW}$$ can be understood as a general term for circuit components with no corresponding
+equivalent in the FE problem. Finally, $$\mathbf{U}_\text{source}$$ is the vector of source (a priori known) voltages for each current loop.
+
 
 
 
