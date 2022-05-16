@@ -27,7 +27,7 @@ winding.N_layers = 2;
 winding.N_series = 12;
 dim.stator_winding = winding;
 
-%inner and outer diameter
+%inner and outer radius
 dim.Sout = 50e-3;
 dim.Sin = dim.Sout * 0.6;
 

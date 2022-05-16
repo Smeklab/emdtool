@@ -56,9 +56,9 @@ dim.hslot_s = abs(dim.Sout - dim.Sin) - hys;
 dim.wtooth_s = 2*pi*(dim.Sin + dim.htt_s)/dim.Qs * 0.6;
 
 %setting winding model
-%winding_model = 'stranded';
+winding_model = 'stranded';
 %winding_model = "wire";
-winding_model = "hairpin";
+%winding_model = "hairpin";
 if winding_model == "stranded"
     %infinitely stranded-->do nothing
 elseif winding_model == "wire"
@@ -118,6 +118,8 @@ dim.shaft_material = 1;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % assembling geometries and models
+
+return
 
 stator = Stator(dim);
 rotor = VIPM1(dim);

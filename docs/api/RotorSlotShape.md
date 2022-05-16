@@ -3,7 +3,7 @@ title : RotorSlotShape
 parent: API
 grand_parent : Documentation
 ---
-# Summary for: **RotorSlotShape**  < [SlotShapeBase](SlotShapeBase.html)
+# Summary for: **RotorSlotShape**  < [SlotShapeBase](SlotShapeBase.html) & [WoundSlot](WoundSlot.html)
 
 ## Class summary
 

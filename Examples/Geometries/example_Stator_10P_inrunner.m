@@ -11,6 +11,8 @@ dim.symmetry_sectors = 2;
 dim.delta = 1e-3;
 dim.leff = 50e-3;
 
+dim.temperature_stator = 100;
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % stator dimensions
 
@@ -24,7 +26,7 @@ winding.N_layers = 2;
 winding.N_series = 12;
 dim.stator_winding = winding;
 
-%inner and outer diameter
+%inner and outer radius
 dim.Sout = 50e-3;
 dim.Sin = dim.Sout * 0.7;
 

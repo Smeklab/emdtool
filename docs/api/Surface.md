@@ -134,8 +134,12 @@ doc Surface/contract_inplace
 ### .**copy** Copy surface.
 
 s2 = copy(this) returns a **copy** of this, with all the points and curves
-copied. Should only be called on Surfaces that don't share any Points or
-Curves with other Surfaces. NOTE: this is **NOT**  asserted.
+copied. Also works when `this` is an array of Surfaces.
+
+If any of the Surfaces in `this` shares `Points` or `Curves` in `Surfaces`
+outside those listed in `this`, dublicates are created of those
+Points/Curves. If any such Points/Curves are named / special, unexpected
+behaviour can occur.
 Documentation for Surface/copy
 doc Surface/copy
 
@@ -166,8 +170,12 @@ See Point.mirror
 Documentation for Surface/mirror
 doc Surface/mirror
 
-### .Surface/**mirror_inplace** is a function.
-mirror_inplace(this, a)
+### .**mirror_inplace** Mirror surface in-place.
+
+mirror_inplace(this, a) calls `p.mirror_inplace(a)` for all
+[Points](Points.html) in `this.`
+
+Modifies the original surface; does not return a copy.
 Documentation for Surface/mirror_inplace
 doc Surface/mirror_inplace
 
@@ -239,13 +247,24 @@ doc Surface/set_maximum_characteristic_length
 translate_inplace(this, x) calls `p.translate_inplace(x)` for
 all [Points](Points.html) in this.
 
-Does not return a copy.
+Modifies the original surface; does not return a copy.
 Documentation for Surface/translate_inplace
 doc Surface/translate_inplace
 
-### .Surface/**ymirror** is a function.
-s2 = ymirror(this, varargin)
+### .mirror Y-mirror surface.
+
+s2 = ymirror(this, a) return a new surface, mirrored across the x-axis.
+See Point.ymirror
 Documentation for Surface/ymirror
 doc Surface/ymirror
+
+### .**ymirror_inplace** y-mirror surface in-place.
+
+ymirror_inplace(this, a) calls `p.ymirror_inplace(a)` for all
+[Points](Points.html) in `this.`
+
+Modifies the original surface; does not return a copy.
+Documentation for Surface/ymirror_inplace
+doc Surface/ymirror_inplace
 
 

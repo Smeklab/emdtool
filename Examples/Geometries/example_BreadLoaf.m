@@ -3,6 +3,8 @@
 %getting basic dimensions from another example
 example_Stator_10P_inrunner;
 
+dim.temperature_rotor = 80;
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % rotor dimensions
 
@@ -19,6 +21,7 @@ dim.magnet_material = PMlibrary.create('N42SH');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % creating geometry
 
+stator = Stator(dim);
 rotor = BreadloafRotor(dim);
 
 %plotting geometry
@@ -28,6 +31,7 @@ rotor.plot_geometry();
 %return
 
 %meshing
+stator.mesh_geometry();
 rotor.mesh_geometry();
 
 %visualizing
@@ -37,3 +41,5 @@ rotor.visualize();
 
 %saving visualization
 %emdtool_export_example_fig(rotor);
+
+motor = RFmodel(dim, stator, rotor);

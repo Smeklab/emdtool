@@ -46,9 +46,6 @@ P_center = center_from_segment_points(Pstart, Pmid, Pend)
 ### .Arc/**check_proxying** is a function.
 bl = check_proxying(this, c2)
 
-### .Arc/**curve_length** is a function.
-l = curve_length(this)
-
 ### .**from_points** Create an Arc from Points.
 
 this = from_points(pstart, pcenter, pend) either creates a new Arc, or

@@ -35,7 +35,7 @@ parent template) all the materials and domains, with the following caveats:
 Why the multiple layers of confusion, you might be asking? Why not simply create the entire slot and winding geometry inside
 the parent template?
 
-This is certainly possible - everything can be made manually if needed. Furthermore, for weird one-off slot shapes that ~should not exist~
+This is certainly possible - everything can be made manually if needed. Furthermore, for weird one-off slot shapes that ~~should not exist~~
 do not deserve their own template, EMDtool offers the [`SlotShapeWrapper`](../../api/SlotShapeWrapper.html) class. This class acts as a
 _wrapper_ around manually-made slot shapes, allowing one to then populate the slot with a `Layout` class. In other words, it should be
 used with one-off slot shapes that need to be combined with different winding models and types.
@@ -126,5 +126,61 @@ or an outrunner, and the function arguments are flipped accordingly.
 
 ## Parent geometry is finalized.
 
+## Winding layout is created
 
+At this point, the Slot object has done its duty, and we move on to the Layout part of the workflow.
+
+As you may remember, the responsibility of the Layout class is to create all the winding-related Surfaces, Domains, and associated Conductors.
+
+In any case, this is triggered by the parent geometry calling the `.create_slot_geometry` method of the [winding specification object](../../api/PolyphaseWindingSpec.html). The `specification` object
+is originally created by the user, and contains as a property the [`Layout`](../../api/WindingLayoutBase.html) object used, so in practice the `specification` object simply passes on the execution to the
+identically-named method of the Layout object.
+
+Control of the layout and windind model type is provided by the two properties of the `specification`:
+* `specification.layout_spec` defines the winding layout. (This is the `Layout` object.)
+* `specification.winding_model_type` defines whether the winding is modelled as solid, stranded, or something else.
+
+Now, what exactly happens next of course depends on the particular layout used, but there are still a few common cases.
+
+### Stranded winding
+
+The default behaviour is modelling the entire winding as _stranded_. To do this, the `winding_model_type` of the winding specification is left to its default value `defs.stranded`.
+
+On the theoretical level, this means that the conductors in the model are assumed to carry an uniform current density. The conductor-associated AC losses may then be postprocessed by the `compute_losses_stranded`
+method of the layout object. The default `layout_spec` is a the [`UniformLayout`](../../api/UniformLayout.html), which assumes an infinitely stranded winding with no AC losses, but many other Layout templates
+(such as the [`RoundWireLayout`](../../api/RoundWireLayout.html) and [`RectangularLayout`](../../api/RectangularLayout.html)) do offer custom AC loss postprocessing methods.
+
+Regarding the geometry creation within the `create_slot_geometry` method, not much happens. Domains are created to house the winding window Surfaces and added to the parent geometry, as is the winding material.
+
+![](slot_layout_stranded.png)
+
+### Solid hairpin winding
+
+To create a model with solid rectangular conductors, the [`RectangularLayout`](../../api/RectangularLayout.html) class can be used:
+
+```matlab
+winding.winding_model_type = defs.solid;
+
+layout = RectangularLayout();
+layout.conductor_width = dim.wslot_s - 400e-6;
+layout.conductor_height = (dim.hslot_s-dim.htt_s)/4 - 400e-6;
+
+winding.layout_spec = layout;
+````
+
+![](slot_layout_hairpin.png)
+
+### Solid random winding
+
+To create a model with solid round wires, the [`RoundWireLayout`](../../api/RoundWireLayout.html) class can be used:
+
+```matlab
+layout = RoundWireLayout();
+layout.diameter = 0.8e-3;
+winding.wires_in_hand = 10;
+
+winding.layout_spec = layout;
+```
+
+![](slot_layout_random.png)
 

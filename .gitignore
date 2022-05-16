@@ -2,3 +2,5 @@
 Examples/emdtool_path.m
 Examples/emdtool_export_example_fig.m
 runner.bat
+
+*.gif

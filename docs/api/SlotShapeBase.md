@@ -36,14 +36,6 @@ And, as the slot and the core share a part of the airgap boundary,
 the `reduce`  method of the core `Surface`  would then be called to
 remove the slot surfaces of the core.
 
-NOTE: It is assumed that no [Domain](Domain.html)s are created for the winding
-`Surfaces` . By contrast, these are listed in the
-`winding_window_surfaces`  property. Normally, the `SlotShapeBase`
-object would then by passed on to a `WindingLayoutBase`  class, to
-handle everything that goes on inside the winding window(s).
-
-NOTE: For now, slot shapes generally work for stators only.
-
 ## Properties
 
 ### .**airgap_surface_curves** - curves on the airgap surface, oriented ccw
@@ -51,6 +43,8 @@ NOTE: For now, slot shapes generally work for stators only.
 ### .SlotShapeBase/**all_surfaces** is a property.
 
 ### .SlotShapeBase/**dimensions** is a property.
+
+### .SlotShapeBase/**has_opening** is a property.
 
 ### .SlotShapeBase/**parent_geometry** is a property.
 
@@ -71,10 +65,7 @@ dimensions.
 ### .SlotShapeBase/**last_airgap_point** is a function.
 P = last_airgap_point(this)
 
-### .**set_parent** Set parent geometry.
-
+### .SlotShapeBase/**set_parent** is a function.
 set_parent(this, parent)
-* set this.dimensions to parent.dimensions
-* call this.initialize()
 
 

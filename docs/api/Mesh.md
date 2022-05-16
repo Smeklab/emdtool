@@ -37,11 +37,4 @@ Class methods are listed below. Inherited methods are not included.
 
 ### .**finalize** Set edge incidence, infer element type.
 
-### .**get_outer_edges** Get edges surrounding elements.
-
-edge_indices = get_outer_edges(this, elements)
-
-Given a list (1xN) of `elements`, the function returns the indices to
-edges `edge_indices` surrounding the elements (outer boundary only)
-
 

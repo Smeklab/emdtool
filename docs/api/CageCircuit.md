@@ -10,6 +10,8 @@ grand_parent : Documentation
 CageCircuit methods:
 CageCircuit - is a class.
 finalize_matrices - Set matrices, etc.
+get_loop_matrix - TODO generalize dimensions
+list_possible_bar_numbers - maximum
 merge_circuit_from_another_slice - CageCircuit/merge_circuit_from_another_slice is a function.
 
 ## Properties
@@ -36,6 +38,10 @@ Z = get_EW_impedance_matrix(this)
 
 ### .CageCircuit/**get_EW_inductance_matrix** is a function.
 X = get_EW_inductance_matrix(this)
+
+### .TODO generalize dimensions
+
+### .maximum
 
 ### .CageCircuit/**loop_currents** is a function.
 I = loop_currents(this, solution)
