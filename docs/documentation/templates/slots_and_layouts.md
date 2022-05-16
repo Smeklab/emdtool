@@ -83,7 +83,7 @@ Indeed, the Surface for the stator core (or whatever is created by the parent ge
 Next, the slot surfaces are then added as `holes` to the parent geometry.
 
 ```matlab
-core_surface.add_hole(Slot.add_surfaces);
+core_surface.add_hole(Slot.all_surfaces);
 ```
 
 ### The slot has an opening
@@ -105,9 +105,24 @@ The picture below illustrates this, with:
 * `Slot.airgap_surface_curves` highlighted with the red arcs
 * `Slot.last_airgap_point` highlighted with the red cross
 
-Finally, in this case the `core_surface` is defined as a counter-clockwise polygon; hence the the last airgap point being added first, and the flipping of the slot airgap curve order.
+Note that in this case the `core_surface` is defined as a counter-clockwise polygon; hence the the last airgap point being added first, and the flipping of the slot airgap curve order.
 
 ![](slot_layout_core.png)
+
+Finally, as the core Surface does not have a hole per se, but rather indeed a slot cut into it, the surface must be _reduced_ into its simplest form.
+(This is just a limitation on the meshing side.) This is done by calling the `reduce` method of the core surface:
+
+```matlab
+if sgn > 0 
+	score.reduce( [Xin_cw, Xout_cw] );
+else
+	score.reduce( [Xout_cw, Xin_cw] );
+end
+```
+
+As described in the [documentation](../../api/Surface.html), this method works by starting from a given Line segment, turning **left** at each
+`Point`, to 'cut off' any corners or repressions from the surface in question. The variable `sgn` indicates whether we are dealing with an inrunner
+or an outrunner, and the function arguments are flipped accordingly.
 
 ## Parent geometry is finalized.
 
