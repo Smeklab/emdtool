@@ -150,7 +150,7 @@ Often, the net current $$I$$ is assumed to be zero in each individual conductor.
 
 In this case, the vector of circuit variables $$\mathbf{b}$$ only consists of the voltages $$u$$. In `EMDtool`, the [`BlockCircuit`](../../api/BlockCircuit.html) is a perfect choice for this case.
 
-#### Zero net current in sector-crossing conductor
+#### Zero net current in a conductor spanning the entire cross-section
 
 Now, one special case is worth mentioning. Often, only the minimum symmetric sector of an electric machine is modelled - often a pole-pitch or two. However, the problem might also contain solid conductors
 that span the entire physical geometry and thus extend **beyond** the symmetry sector. Solid shafts, rotor cores, and stator housings are all common examples. For the typical end-user, the
@@ -158,7 +158,7 @@ that span the entire physical geometry and thus extend **beyond** the symmetry s
 
 Also in this case, a zero-net-current assumption is commonly assumed. However, how the condition is enforced depends on the _periodicity_ of the problem. Indeed, the condition is automatically satisfied for
 anti-periodic (periodicity coefficient equal to -1) problems, in which there are no circuit variables $$\mathbf{c}$$ associated. With periodic problems (periodicity coefficient equal to 1), 
-$$\mathbf{c}$$ consists of a single voltage $$u$$. 
+$$\mathbf{c}$$ consists of a single voltage $$u$$.
  
 # Full circuit coupling
 
