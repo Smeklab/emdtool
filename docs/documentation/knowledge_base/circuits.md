@@ -191,6 +191,24 @@ to be actually associated with a physical end-winding - hence the quotation mark
 inside these matrices. Rather, the subscript $$\text{EW}$$ can be understood as a general term for circuit components with no corresponding
 equivalent in the FE problem. Finally, $$\mathbf{U}_\text{source}$$ is the vector of source (a priori known) voltages for each current loop.
 
+# Circuits in EMDtool
 
+`EMDtool` handles circuits in a way that reflects the theory presented so far. All circuits are subclasses of the abstract [`CircuitBase`](../../api/CircuitBase.html) class, and thus must implement some abstract
+methods and properties imposed by it. The details are best left to the Matlab environment; however some important high-level details are discussed here.
 
+## `.get_matrices` method
 
+[Like we saw earlier](#splitting-the-system-of-equations), each circuit in a FE problem is governed by its own stiffness- and mass/damping-like matrices (acting on the vector of unknowns $$\mathbf{x}$$ and its
+time-derivative $$\partial / \partial t \mathbf{x}$$ respectively), which in turn can be split into 2x2 block matrices
+
+$$ \mathbf{S}_\text{circuit} = \begin{bmatrix} \mathbf{S}_\text{aa} & \mathbf{S}_\text{ac} \\ \mathbf{S}_\text{ca} & \mathbf{S}_\text{cc} \end{bmatrix} $$
+
+$$ \mathbf{M}_\text{circuit} = \begin{bmatrix} \mathbf{M}_\text{aa} & \mathbf{M}_\text{ac} \\ \mathbf{M}_\text{ca} & \mathbf{M}_\text{cc} \end{bmatrix} $$
+
+reflecting the relationship between the pure-FE vector of unknowns $$\mathbf{a}$$ and the vector of circuit unknowns $$\mathbf{c}$$.
+
+Unsurprisingly, it is the task of the `.get_matrices` method of each `circuit` object to return the corresponding matrix blocks:
+
+```matlab
+[Saa, Maa, Sac, Mac, Sca, Mca, Scc, Mcc] = circuit.get_matrices()
+```
