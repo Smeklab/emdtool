@@ -43,6 +43,21 @@ Use the `add_conductor`  method to add conductors to this.
 
 Class methods are listed below. Inherited methods are not included.
 
+### .**CircuitBase** Abstract base class for finite-element Circuits.
+
+Use one of the subclasses to instantiate an object. Common examples
+include
+
+* [PolyphaseCircuit](PolyphaseCircuit.html)
+
+* [BlockCircuit](BlockCircuit.html)
+
+* [SheetCircuit](SheetCircuit.html)
+
+* [ExtrudedBlockCircuit](ExtrudedBlockCircuit.html)
+
+Use the `add_conductor`  method to add conductors to this.
+
 ### .**add_conductor** Add conductor to circuit.
 
 this = add_conductor(this, conductor, (type))
@@ -162,6 +177,15 @@ of all poles".
 
 For **losses** in typical 2D solid conductors (e.g. BlockCircuit,
 SheetCircuit, CageCircuit), see compute_SolidConductorLosses.
+
+### .**set_dof_bias** Set index of first circuit variable in global
+solution.
+
+set_dof_bias(this, n) sets the relative position of the
+circuit within all circuits in the model. Specifically, given
+a [MagneticsSolution](MagneticsSolution.html) object `solution`, the first circuit
+variable is found at
+`solution.raw_solution(solution.problem.Np + n, :)`
 
 ### .**set_load** Increment load vector of FE problem.
 

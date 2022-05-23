@@ -30,7 +30,7 @@ Thus, our vector of unknowns gets larger and now consists of two distinct parts 
 
 $$ \mathbf{a} \rightarrow \begin{bmatrix} \mathbf{a} \\ \mathbf{c} \end{bmatrix} := \mathbf{x} $$.
 
-Furthermore, circuits typically introduce some first-order time-dependence into the problem, changing the governing equation into
+Furthermore, circuits typically introduce some first-order time-dependency into the problem, changing the governing equation into
 
 $$ \mathbf{S}_\text{tot} \mathbf{x} + \mathbf{M}_\text{tot} \frac{\text{d}\mathbf{x}}{\text{d}t} = \mathbf{f}_\text{tot}. $$
 
@@ -212,3 +212,32 @@ Unsurprisingly, it is the task of the `.get_matrices` method of each `circuit` o
 ```matlab
 [Saa, Maa, Sac, Mac, Sca, Mca, Scc, Mcc] = circuit.get_matrices()
 ```
+
+This method is normally called by a [`CircuitSet`](../../api/CircuitSet.html) object, combining the individual circuit matrices into the final mass and stiffness matrices.
+
+## `.set_load` method
+
+This method adds the contribution of the circuit into the load vector $$\mathbf{f}_\text{tot}$$. For now at least, this method works by incrementing a global vector given as an input argument and returning
+the incremented vector - rather than returning the vector block component. This behaviour may change in the future.
+
+## `.init` method
+
+This method initializes the circuit for a given `MagneticsProblem`. Normally, several matrices are precomputed and stored in `circuit.matrices`.
+
+## `.init_for_simulation` method
+
+This method is called before solving a particular problem - static, harmonic, or time-stepping analysis. Normally, only very light-weight operations are performed here, such as setting the frequency for harmonic 
+(frequency-domain) analysis.
+
+## `.losses` method
+
+Returns the total average circuit losses for a given [`solution`](../../api/MagneticsSolution.html), plus whatever data computed by the particular circuit class.
+
+## `.get_ndof` method
+
+Returns number of circuit variables, i.e. the length of the $$\mathbf{c}$$ vector.
+
+## `.set_dof_bias` method
+
+This method sets the circuit aware of its relative position among all the circuits in the problem. This is mainly useful if the circuit needs to fetch its circuit variables $$\mathbf{c}$$ from the 
+global solution vector $$\mathbf{x}$$.
