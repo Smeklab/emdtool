@@ -13,6 +13,8 @@ Counter Counter object for getting unique IDs etc.
 
 ### .Counter/**count** is a property.
 
+### .Counter.**max_count** is a property.
+
 
 ## Methods
 

@@ -163,6 +163,16 @@ is_ccw = is_ccw(this)
 Documentation for Surface/is_ccw
 doc Surface/is_ccw
 
+### .**join_with_surface** Join two surfaces.
+
+EXPERIMENTAL.
+
+this = join_with_surface(this, another_surface) absorbs another_surface
+into this. The surfaces should share one or more (untested) continuous
+Curves.
+Documentation for Surface/join_with_surface
+doc Surface/join_with_surface
+
 ### .**mirror** Mirror surface.
 
 s2 = mirror(this, a) return a new surface, mirrored across the angle *a* .

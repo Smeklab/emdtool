@@ -43,21 +43,6 @@ Use the `add_conductor`  method to add conductors to this.
 
 Class methods are listed below. Inherited methods are not included.
 
-### .**CircuitBase** Abstract base class for finite-element Circuits.
-
-Use one of the subclasses to instantiate an object. Common examples
-include
-
-* [PolyphaseCircuit](PolyphaseCircuit.html)
-
-* [BlockCircuit](BlockCircuit.html)
-
-* [SheetCircuit](SheetCircuit.html)
-
-* [ExtrudedBlockCircuit](ExtrudedBlockCircuit.html)
-
-Use the `add_conductor`  method to add conductors to this.
-
 ### .**add_conductor** Add conductor to circuit.
 
 this = add_conductor(this, conductor, (type))

@@ -171,7 +171,9 @@ has_toc : false
 * *class* : [Conductor](Conductor.html)  **Conductor** Base class for conductors.
 * *class* : [SheetCircuit](SheetCircuit.html) **SheetCircuit** is a class.
 * *class* : [SliceableCircuit](SliceableCircuit.html)  **SliceableCircuit** Base class for Circuits suitable for slicing.
+* *class* : [/FE Circuits/Sources/ShortCircuit](ShortCircuit.html)  **ShortCircuit** Source for modelling three-phase short-circuits.
 * *class* : [/FE Circuits/Sources/VoltageSource](VoltageSource.html)  **VoltageSource** Voltage source class for MagneticsProblem.
+* *class* : [CircuitSource](CircuitSource.html)  **CircuitSource** Base class for circuit sources.
 * *class* : [/Modulators/PhaseCutModulator](PhaseCutModulator.html)  **PhaseCutModulator** Phase-cut voltage modulator.
 * *class* : [/Modulators/SVPWM_Modulator](SVPWM_Modulator.html)  **SVPWM_Modulator** Basic Modulator.
 * *class* : [/Modulators/SinusoidalModulator](SinusoidalModulator.html)  **SinusoidalModulator** Sinusoidal voltage modulator.
@@ -183,6 +185,7 @@ has_toc : false
 * *class* : [/Winding layouts/RoundWireLayout](RoundWireLayout.html)  **RoundWireLayout** Winding layout class for random-wound coils.
 * *class* : [/Winding layouts/UniformLayout](UniformLayout.html)  **UniformLayout** Layout specification for non-specified layouts:
 * *class* : [/Winding layouts/WindingLayoutBase](WindingLayoutBase.html)  **WindingLayoutBase** Base class for winding layouts.
+* *class* : [MultiSurfaceLayout](MultiSurfaceLayout.html)  **MultiSurfaceLayout** Base class for Layouts supporting multiple
 # 
  Folder with the following files / classes / subfolders:
 

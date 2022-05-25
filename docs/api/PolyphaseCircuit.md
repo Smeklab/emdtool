@@ -222,7 +222,7 @@ type.
 with respect to an arbitrary reference point. For harmonic/stepping
 analysis only.
 
-* 'circuit' :
+* 'circuit' : a [CircuitSource](CircuitSource.html) object.
 
 source : Source values:
 
