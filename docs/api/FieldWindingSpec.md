@@ -7,25 +7,35 @@ grand_parent : Documentation
 
 ## Class summary
 
-FieldWindingSpec methods:
-FieldWindingSpec - is a class.
+FieldWindingSpec Winding specification object for field-windings.
+
+FieldWindingSpec narrows down the [PolyphaseWindingSpec](PolyphaseWindingSpec.html) base class
+to typical field-windings.
+
+For now, two [Conductor](Conductor.html)s per pole are assumed, one for each coil
+side.
 
 ## Properties
 
-### .**c** - FIXME
+### .**overhang_length** Field-winding axial overhang length.
 
-### .**overhang_length** - winding overhang length
-Help for FieldWindingSpec/overhang_length is inherited from superclass PolyphaseWindingSpec
+Either equal to `this.geometry.coil_width()/2` if defined by the
+parent geometry, or 0 otherwise.
 
 
 ## Methods
 
 Class methods are listed below. Inherited methods are not included.
 
-### .**FieldWindingSpec**/FieldWindingSpec is a constructor.
-this = FieldWindingSpec(varargin)
-Documentation for FieldWindingSpec/FieldWindingSpec
-doc FieldWindingSpec
+### .**get_end_winding_length_per_conductor** Field-winding end-turn length.
+
+The value returned is either:
+* the specified `end_winding_length_per_conductor` property
+
+** equal to `1.36** this.geometry.coil_width()` if the parent
+geometry defines a `coil_width` method
+
+* 0 otherwise
 
 ### .FieldWindingSpec/**line_current_matrix** is a function.
 M = line_current_matrix(this)

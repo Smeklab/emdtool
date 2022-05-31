@@ -8,7 +8,7 @@
 field_winding = FieldWindingSpec(dim);
 field_winding.filling_factor = 0.6;
 field_winding.N_series = 60; %number of turns per pole
-field_winding.end_winding_length_per_conductor = pi*70e-3/2; %to be automatic
+%field_winding.end_winding_length_per_conductor = pi*70e-3/2; %to be automatic
 dim.rotor_winding = field_winding;
 
 %rotor main dimensions

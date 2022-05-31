@@ -15,6 +15,6 @@ addpath(genpath('Geometries'));
 %   [x] winding_model_type docstring
 % [] Roundwirelayout packing function
 % todo doc everything accessable from templates page
-% FW rotor properties
-% fwspec
-% cagecircuit
+% [x] FW rotor properties
+% [] fwspec
+% [] cagecircuit
