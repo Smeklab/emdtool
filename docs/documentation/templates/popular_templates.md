@@ -81,6 +81,8 @@ Template for [a rotor with field winding](../../api/FWRotor1.html).
 
 ## Coated rotor
 
-Coated rotor for high-speed induction machines.
+![CoatedRotor](CoatedRotor.png)
 
-Supports:
+[Coated rotor template](../../api/CoatedRotor.html) for high-speed induction machines.
+
+
