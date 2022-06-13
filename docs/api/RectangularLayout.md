@@ -3,7 +3,7 @@ title : RectangularLayout
 parent: API
 grand_parent : Documentation
 ---
-# Summary for: **RectangularLayout**  < [WindingLayoutBase](WindingLayoutBase.html) & [MultiSurfaceLayout](MultiSurfaceLayout.html)
+# Summary for: **RectangularLayout**  < [WindingLayoutBase](WindingLayoutBase.html)
 
 ## Class summary
 
@@ -15,9 +15,6 @@ Only works with slot of constant width (rectangular-like). Rounded
 slot corners and similar often work, but no explicit checking is
 performed for intersections between the conductors and slot
 boundaries.
-
-Supports an integer number of winding window surfaces per winding
-layer. The number must be equal for all layers.
 
 ## Properties
 

@@ -9,6 +9,7 @@ grand_parent : Documentation
 
 GeometryExtruder methods:
 GeometryExtruder - is a class.
+extrude_domains - FIXME handle top/bottom layers
 init - GeometryExtruder/init is a function.
 
 ## Properties
@@ -38,6 +39,8 @@ Class methods are listed below. Inherited methods are not included.
 obj = GeometryExtruder
 Documentation for GeometryExtruder/GeometryExtruder
 doc GeometryExtruder
+
+### .FIXME handle top/bottom layers
 
 ### .GeometryExtruder/**finalize_initial_surface** is a function.
 finalize_initial_surface(this, snew)

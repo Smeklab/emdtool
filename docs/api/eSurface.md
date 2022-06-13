@@ -9,6 +9,7 @@ grand_parent : Documentation
 
 eSurface methods:
 add_curve - eSurface/add_curve is a function.
+copy_axially - already copied?
 create - Get existing surface or create new.
 eSurface - is a class.
 flatten - getting points
@@ -28,6 +29,10 @@ set_characteristic_length - eSurface/set_characteristic_length is a function.
 ### .eSurface/**curve_directions** is a property.
 
 ### .eSurface/**curves** is a property.
+
+### .eSurface/**holes** is a property.
+
+### .eSurface/**idstring** is a property.
 
 ### .eSurface/**is_closed** is a property.
 
@@ -49,10 +54,15 @@ Class methods are listed below. Inherited methods are not included.
 ### .eSurface/**add_curve** is a function.
 add_curve(this, curve)
 
+### .eSurface/**add_hole** is a function.
+add_hole(this, h)
+
 ### .eSurface/**center_of_mass** is a function.
 x = center_of_mass(this)
 
 ### .eSurface/**close_surface** is an undocumented builtin eSurface method.
+
+### .already copied?
 
 ### .**create** Get existing surface or **create** new.
 
@@ -66,8 +76,7 @@ doc eSurface
 ### .eSurface/**get_all_points** is a function.
 ps = get_all_points(this)
 
-### .eSurface/**normal** is a function.
-n = normal(this)
+### .x0 = this.center_of_mass();
 
 ### .eSurface/**periodic_pair** is a function.
 sout = periodic_pair(this)
@@ -156,7 +165,7 @@ xs = points(this)
 V = raise_axially(this, level, varargin)
 
 ### .eSurface/**raise_axially_curves_and_surfaces** is a function.
-V = raise_axially_curves_and_surfaces(this, level)
+[V, stop] = raise_axially_curves_and_surfaces(this, level)
 
 ### .getting all points
 

@@ -64,7 +64,9 @@ has_toc : false
 * *class* : [Geometry/Circle](Circle.html)  **Circle** Helper class for circular surfaces.
 * *class* : [Domain](Domain.html)  **Domain** **Domain** class.
 * *class* : [GeoBase](GeoBase.html)  **GeoBase** Base class for geometries.
+* *class* : [GeoBase3D](GeoBase3D.html)  **GeoBase3D** Abstract base class for 3D-compatible geometries.
 * *class* : [LaminatedDomain](LaminatedDomain.html)  **LaminatedDomain** Laminated domain.
+* *class* : [Rectangle](Rectangle.html)  **Rectangle** Helper class for rectangular surfaces.
 * *class* : [Surface](Surface.html)  SURFACE Class for representing elementary surfaces.
 * *class* : [/ representation/Arc](Arc.html) **Arc** methods:
 * *class* : [/ representation/Curve](Curve.html)  CURVE Abstract base class for representing line segments and circle arcs
@@ -106,10 +108,10 @@ has_toc : false
 * *class* : [RFmodel](RFmodel.html)  **RFmodel** Simple class for radial-flux machines.
 * *class* : [LayoutCompatible](LayoutCompatible.html)  **LayoutCompatible** Base class for templates compatible with the
 * *class* : [/Rotors/BreadloafRotor](BreadloafRotor.html)  **BreadloafRotor** Template for rotors with breadloaf PMs.
+* *class* : [/Rotors/ClassicIPM](ClassicIPM.html)  **ClassicIPM** High-speed / industrial style IPM rotor.
 * *class* : [/Rotors/CoatedRotor](CoatedRotor.html) **CoatedRotor** methods:
 * *class* : [/Rotors/FWRotor1](FWRotor1.html)  **FWRotor1** Template for a rotor with field-winding.
-* *class* : [/Rotors/HSIPM1](HSIPM1.html) **HSIPM1** methods:
-* *class* : [/Rotors/HSIPM2](HSIPM2.html) **HSIPM2** methods:
+* *class* : [/Rotors/HSIPM](HSIPM.html)  **HSIPM** High-speed IPM rotor
 * *class* : [/Rotors/LinearSPM](LinearSPM.html) **LinearSPM** methods:
 * *class* : [/Rotors/MassivePM](MassivePM.html) **MassivePM** methods:
 * *class* : [/Rotors/PoledIPM1](PoledIPM1.html) **PoledIPM1** methods:
@@ -185,12 +187,19 @@ has_toc : false
 * *class* : [/Winding layouts/RoundWireLayout](RoundWireLayout.html)  **RoundWireLayout** Winding layout class for random-wound coils.
 * *class* : [/Winding layouts/UniformLayout](UniformLayout.html)  **UniformLayout** Layout specification for non-specified layouts:
 * *class* : [/Winding layouts/WindingLayoutBase](WindingLayoutBase.html)  **WindingLayoutBase** Base class for winding layouts.
-* *class* : [MultiSurfaceLayout](MultiSurfaceLayout.html)  **MultiSurfaceLayout** Base class for Layouts supporting multiple
 # 
  Folder with the following files / classes / subfolders:
 
 * *class* : [defs](defs.html) **defs** is a class.
 * *class* : [emdconstants](emdconstants.html) **emdconstants** is a class.
+# emdtool_legacy
+ emdtool_legacy Legacy functionality.
+ 
+  Legacy functionality for compatibility. Please consider using the latest
+  functionality
+
+* *class* : [HSIPM1](HSIPM1.html)  **HSIPM1** Legacy support class.
+* *class* : [HSIPM2](HSIPM2.html)  **HSIPM2** Legacy support class.
 # to_be_relocated
  Folder with the following files / classes / subfolders:
 

@@ -9,7 +9,9 @@ grand_parent : Documentation
 
 eCurve methods:
 eCurve - is a class.
+extrude_axially_to_level - eCurve/extrude_axially_to_level is a function.
 extrude_to_level - eCurve/extrude_to_level is a function.
+points - eCurve/points is a function.
 
 ## Properties
 
@@ -46,11 +48,17 @@ ldir = extend_direction(this, other_curve)
 
 bl = extends(this, other_curve, other_curve_direction)
 
+### .eCurve/**extrude_axially_to_level** is a function.
+[snew, cnew] = extrude_axially_to_level(this, level)
+
 ### .eCurve/**extrude_to_level** is a function.
 lnew = extrude_to_level(this, level)
 
 ### .eCurve.**find_curve** is a function.
 c = eCurve.find_curve(varargin)
+
+### .eCurve/**get_all_points** is a function.
+ps = get_all_points(this)
 
 ### .**joinable_with** Check if this Curve joins with other Curve.
 

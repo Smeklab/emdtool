@@ -27,7 +27,7 @@ The one stator template to rule them all, the [`Stator`](../../api/Stator.html) 
 
 ## LinearStator
 
-To do.
+Simple linear-machine style stator template, suitable for 2D sliced models of axial flux machines.
 
 # Rotors
 
@@ -63,9 +63,17 @@ Surface-PM rotor with eddy-current shield.
 
 A basic [traction-style IPM rotor](../../api/VIPM1.html) template. Supports axial slicing of magnets.
 
-## HSIPM1
+## ClassicIPM
 
-## HSIPM2
+![ClassicIPM](ClassicIPM.png)
+
+[Template for a  classic / high-speed IPM rotor](../../api/ClassicIPM.html) with the magnet mounted along a straight line, in each pole.
+
+## HSIPM
+
+![HSIPM](HSIPM.png)
+
+[Template for a high-speed style IPM rotor](../../api/HSIPM.html) with rectangular magnets embedded in a radial pattern.
 
 ## FWRotor1
 

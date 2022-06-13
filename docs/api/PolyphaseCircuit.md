@@ -103,7 +103,7 @@ M = PolyphaseCircuit.line_current_matrix
 M = PolyphaseCircuit.line_to_line_voltage_matrix
 
 ### .PolyphaseCircuit/**mass** is a function.
-m = mass(this)
+[m, data] = mass(this)
 
 ### .PolyphaseCircuit/**merge_circuit_from_another_slice** is a function.
 merge_circuit_from_another_slice(this, another_circuit)

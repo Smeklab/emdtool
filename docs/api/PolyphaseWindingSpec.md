@@ -49,16 +49,7 @@ Equal to this.filling_factor for stranded models.
 
 ### .**N_layers** - number of winding layers
 
-### .**N_series** Turns per modelled coil.
-
-Number of turns per modelled coil (slot and layer). Something of
-a legacy value; please seriously consider using `number_of_turns_per_coil`
-instead. These values are typically the same, apart from axial
-flux machines with mirrored slots.
-
-Setting or getting this property directly sets / gets the
-`number_of_turns_per_coil` property, modified by
-`this.get_dimension('axial_symmetry_sectors')` if set.
+### .**N_series** - number of turns per modelled coil (slot and layer)
 
 ### .**a** - number of parallel paths
 
@@ -115,11 +106,6 @@ the [LayoutCompatible](LayoutCompatible.html) class.
 ### .PolyphaseWindingSpec/**number_of_dq_components** is a property.
 
 ### .**number_of_meshed_conductors_per_layer** As the name suggests.
-
-### .number of turns per coil Number of turns per coil.
-
-The number of coils is assumed to be equal to the number of slots
-multiplied by the number of winding layers.
 
 ### .**p** - number of pole-pairs
 

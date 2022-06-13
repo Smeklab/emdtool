@@ -100,6 +100,11 @@ ids = get_point_ids(this) returns a COLUMN vector (size(ids,2) =
 
 ### .**get_xy** Get xy-coordinates of start- and end-points.
 
+### .**is_boundary** Is Curve a boundary?
+
+Returns false only if `this` borders a `Surface` on both
+sides, true otherwise.
+
 ### .**joinable_with** Check if this Curve joins with other Curve.
 
 bl = joinable_with(this, other_line)
@@ -136,6 +141,6 @@ appropriate with Curve.flip()
 
 ### .start point
 
-### .Curve/**update_single_point** is an undocumented builtin Line method.
+### .Curve/**update_single_point** is an undocumented builtin Arc method.
 
 

@@ -16,5 +16,5 @@ addpath(genpath('Geometries'));
 % [] Roundwirelayout packing function
 % todo doc everything accessable from templates page
 % [x] FW rotor properties
-% [] fwspec
+% [x] fwspec
 % [] cagecircuit

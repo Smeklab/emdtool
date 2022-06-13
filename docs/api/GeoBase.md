@@ -202,9 +202,6 @@ and .msh files.
 Note that the methods `this.shift_elementary_nodes` ,
 `this.copy_domain` , and `this.parse_nodes`  have to be implemented.
 
-### .GeoBase/**mesh_elementary_geometry_3D** is a function.
-mesh_elementary_geometry_3D(this, varargin)
-
 ### .**mesh_geometry** Mesh geometry.
 
 Equivalent to calling `this.mesh_elementary_geometry`  and
@@ -257,9 +254,6 @@ Replicates the elementary geometry *Nrep*  times. This is performed by
 
 * eliminating the duplicate nodes on the inter-sector boundaries, with
 the nodes corresponding to this.n_cw replaced by this.n_ccw.
-
-### .GeoBase/**replicate_elementary_mesh_3D** is a function.
-replicate_elementary_mesh_3D(this)
 
 ### .**save_to_excel** Save specifications to Excel sheet.
 
