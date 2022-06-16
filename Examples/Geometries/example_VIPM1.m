@@ -30,6 +30,9 @@ dim.shaft_material = 1;
 
 rotor = VIPM1(dim);
 
+%export dxf
+%rotor.export_dxf('VIPM1.dxf');
+
 %plotting geometry
 figure(1); clf; hold on; box on; axis equal;
 rotor.plot_geometry();
