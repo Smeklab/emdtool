@@ -59,3 +59,13 @@ stator.y_shift_points(-dim.l_tooth_s/2);
 
 figure(1); clf; hold on; box on;
 stator.plot_geometry();
+
+%meshing
+stator.mesh_geometry();
+
+%visualizing
+figure(2); clf; hold on; box on; axis equal tight;
+stator.visualize();
+
+%saving visualization
+%emdtool_export_example_fig(stator);

@@ -25,9 +25,11 @@ The one stator template to rule them all, the [`Stator`](../../api/Stator.html) 
 
 * Radial and circumferential winding layer directions (i.e. concentrated and distributed-style winding layers)
 
-## LinearStator
+## YASAStator
 
-Simple linear-machine style stator template, suitable for 2D sliced models of axial flux machines.
+![YASAStator](YASAStator.png)
+
+Simple linear-machine style yokeless stator template, suitable for 2D sliced models of axial flux machines.
 
 # Rotors
 
