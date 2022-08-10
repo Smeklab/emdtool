@@ -1,4 +1,4 @@
-%example_LinearStator Example of the LinearStator template.
+%example_YASAStator Example of the YASAStator template.
 
 dim = struct();
 
@@ -53,7 +53,7 @@ dim.stator_stacking_factor = 0.95;
 
 stator = YASAStator(dim);
 
-%this is needed to stop geometries from overlapping:
+%aligning the airgap surface at y = 0
 stator.y_shift_points(-dim.l_tooth_s/2);
 
 

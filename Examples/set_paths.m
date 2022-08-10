@@ -7,6 +7,9 @@ addpath(genpath('Analysis scripts'));
 addpath(genpath('Geometries'));
 
 % [] document Grid output
+% [] YASA
+% [] LinearSPM
+% [] AFModel
 % [x] Stator-style Slot object for Rotor
 % [x] add (inherits) to documentation
 % [x] todo SlotShape hierarchy
