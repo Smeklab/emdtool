@@ -31,6 +31,7 @@ parent: Documentation
 ## Usage instructions
 
 1. Add EMDtool to your Matlab path (see 3. above)
+1. Do check out the `EMDtool` [familiarization exercises](knowledge_base/exercises.html).
 1. Analyze away!
 	- see `Examples/readme.m` + example scripts for more detailed examples
 	- or, see [EMDtool briefly](emdtool_briefly.html) for a brief overview
