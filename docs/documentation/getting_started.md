@@ -50,4 +50,6 @@ Occasionally, `Matlab` can be very obstinate about using old implementations of 
 `open <ClassName>` in the command window, to open the class file (or its docfile, in case of .p-files) in the editor, and then checking if its path is `old_version/EMDtool/ClassName.m` instead
 of `new_version/EMDtool/ClassName.m`. Fear not - this is nothing that a good o' restart (of Matlab) won't fix.
 
+**NOTE:** Loading objects made with different EMDtool versions may lead to unexpected behaviour.
+
 
