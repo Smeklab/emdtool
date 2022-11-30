@@ -11,6 +11,16 @@ math: mathjax2
 
 So, how to create your own geometries? Read here to learn, or at least get started.
 
+## Other reading
+
+Please also check
+
+- [EMDtool familiarization exercises](https://www.emdtool.com/documentation/knowledge_base/exercises.html)
+
+- [Quick notes](https://www.emdtool.com/documentation/knowledge_base/quick_notes_models.html)
+
+- [Common mistakes](https://www.emdtool.com/documentation/knowledge_base/common_mistakes.html)
+
 # Model hierarchy
 
 Before anything else, let's rehash how analysis with `EMDtool` works. Like we saw in the [EMDtool briefly](../emdtool_briefly) page, we obtain results by first solving a [`problem`](../../api/MagneticsProblem.html)
@@ -117,6 +127,8 @@ Domains are also objects, each consisting of a single material (at least for the
 of the geometry. For instance, one bar of an induction motor would normally by a `Domain`, as would the part of the stator core within one slot
 pitch.
 
+* Domains must be uniquely named, with names suitable to used as fields of Matlab structures (no spaces!)
+
 Domains themselves are very easy to define. However, for them to actually mean anything, you will have to add one or more `Surfaces` to each
 of them, to tell `EMDtool` something about the actual geometry. We will take a closer look on this later.
 
@@ -158,6 +170,33 @@ appropriate.
 
 Back to the example: after creating the circuit, we create a `SolidConductor` object to wrap the `Core` `Domain` created earlier. Then,
 this conductor is added to the circuit, and the circuit is added to the geometry template itself.
+
+## Creating Surfaces
+
+The trickiest part of a template creation is usually creating the  actual _geometry_: Points, Curves, and Surfaces. This step is best learned by checking the existing templates and the 
+familiarization exercises. But, the overall process is as follows:
+
+- Creating a set of unique Points
+
+	* Newest versions of EMDtool try to check for dublicate point definitions (two separate `Point` objects at the same coordinates) and update things accordingly. 
+	This seems to work alright and can be handy on many occasions.
+
+- Connecting them with Curves (Lines and Arcs) to create surfaces. Please note that intersections and T-junctions are not allowed, nor checked automatically.
+
+	* - Not each Curve needs to be manually created. Using `some_surface.add_curve(geo.line, Pstart, Pend, <curve_name>)` or `some_surface.add_curve(geo.arc, Pstart, Pcenter, Pend, <curve_name>)` 
+		creates a new `Curve` if  not yet created. You can later fetch the created curve with `Line.from_points(Pstart, Pend)` or `Arc.from_points(Pstart, Pcenter, Pend)` if you want to e.g. rename it.
+
+- Handling concentric surfaces as holes (inner as a hole to the outer one) with `outer_surface.add_hole(inner_surface)`
+
+- Adding the `Surfaces` to `Domains`
+
+- Setting periodic curves by calling `geo.set_periodic`
+
+- Setting dirichlet and airgap boundaries by naming the associated curves as 'n_dir' and 'n_ag' respectively
+
+- Calling `geobase_subclass_name.check_health` checks for intersecting lines and overlapping surfaces. Not 100% tested but seems to work.
+
+- Verifying that the mesh looks good with `stator.mesh.triplot([])`: Seeing that there are no doubly-meshed areas (which happens when you forget to add holes) and that there are no non-matching nodes on the boundaries.
 
 
 # Case Example: Solid Rotor for a High-Speed Induction Motor
