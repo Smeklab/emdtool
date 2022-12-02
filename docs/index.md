@@ -16,20 +16,6 @@ maintaining one.
 
 Please send an email to antti (at) smeklab.com to enquire about a [license](pricing.html).
 
-# Free open trial
-
-Limited-time only
-{: .label .label-yellow }
-
-Are you here because of the `EMDtool` workshop, or just lucky? In any case, you can now download a 'public' EMDtool release (with everything 
-obfuscated into .p-files), with a limited-time trial license. This release has been pre-configured to work without `gmsh` (with coarse
-Matlab-generated meshes) for maximum ease of quick testing.
-
-You can now download it from [https://www.anttilehikoinen.fi/files/3.0.35public.zip](https://www.anttilehikoinen.fi/files/3.0.35public.zip).
-After downloading, please just unzip the toolbox and click on the `example_init_and_readme.m` file under _Examples_. Then, please follow the 
-[EMDtool familiarization exercises](documentation/knowledge_base/exercises.html) for quickly getting started.
-
-
 # How does EMDtool work?
 
 Please check the [getting started guide](documentation/getting_started.html) and the [`EMDtool` overview](documentation/emdtool_briefly.html) to get a quick first impression.
