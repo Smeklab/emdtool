@@ -43,15 +43,29 @@ thinks that the signal given to it is periodic - that after reaching its end, it
 
 **NOTE:** Machines with concentrated windings often have significant subharmonics, meaning that several electrical periods have to be analysed, to simulate an entire electrical period in the rotor frame.
 
-The loss coefficients are by default stored in the array `material_properties.coeffs`, as `[c_\text{hysteresis}, c_\text{eddy}, c_\text{excess}]`
+The loss coefficients are by default stored in the array `material_properties.coeffs`, as $$[c_\text{hysteresis}, c_\text{eddy}, c_\text{excess}]$$
 
 ## Time-domain Steinmetz model
 
 The Steinmetz model propably means different things to different authors. Without further discussion, the approach adopted in `EMDtool` is the following:
 
-$$ p(t) = c_\text{hysteresis} \left| B(t) \right|^a  \left| \frac{\text{d}B(t)}{\text{d}t} \right|^b +  c_\text{eddy} \left( \frac{\text{d}B(t)}{\text{d}t} \right)^2 $$
+$$ p(t) = c_\text{hysteresis} \left| B(t) \right|^a  \left| \frac{\text{d}B(t)}{\text{d}t} \right|^b +  
+c_\text{eddy} \left( \frac{\text{d}B(t)}{\text{d}t} \right)^2 + \left| c_\text{excess} \frac{\text{d}B(t)}{\text{d}t} \right|^{1.5}  $$
 
 By default, the hysteresis loss exponents $$a, b$$ are both equal to 1.
+
+A common question regarding this model is whether or not it **includes minor loops, PWM effects, or DC-bias sensitivity**. The short answer is
+yes. 
+
+The longer answer is related to the hysteresis loss term, which is normally understood as being the most influenced by the aforementioned 
+factors. Specifically, the effect of DB-bias is seen via the $$B(t)$$ term. It's probably not a very accurate model, but the effect _is_ considered.
+
+Likewise, minor loops and other distortions are seen thanks to the $$\left| \frac{\text{d}B(t)}{\text{d}t} \right|^b$$. In fact, in the author's
+experience, the approach adopted here tends to agree rather well with the commonly-seen approach where the hysteresis losses are first computed
+for the fundamental harmonic only, and then multiplied by a distortion factor, be it based on THD or some sum-of-minor-loops approach.
+
+Indeed, it must be stressed that all approaches are phenomenological, and not exactly relying on an underlying physical model.
+
 
 ## `EMDtool` details and notes
 
@@ -98,3 +112,6 @@ method, to remove the DC-flux component from either the rotor, stator, or all do
 
 In online computation methods, the hysteretic behaviour of magnetic materials is directly taken into account while running the simulation. More specifically, the BH-behaviour of the material now
 depends on its past behaviour. 
+
+Thanks to it object-oriented behaviour, `EMDtool` does support drop-in replacement of more advanced material models. Currently (2022/12), an
+online hysteresis model based on the stop hysteron is shipped with EMDtool. As typical, suitable material data is needed for fitting the models.
