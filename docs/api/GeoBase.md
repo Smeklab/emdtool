@@ -89,9 +89,19 @@ this.dimensions.Nrep.
 
 ### .**add_domain** Add [Domain](Domain.html) to this.
 
+In case a Domain with a duplicate name exist, the domain name
+is appended to original_name_n, where n = the lowest integer
+such that no dublicate names exist.
+
 ### .**add_material** Add [Material](Material.html) to this.
 
 Adding a new
+
+### .GeoBase/**add_single_domain** is a function.
+add_single_domain(this, dnew)
+
+### .GeoBase/**add_single_material** is a function.
+add_single_material(this, mnew)
 
 ### .**check_feasibility** Perform partial feasibility check on the geometry.
 
@@ -202,6 +212,9 @@ and .msh files.
 Note that the methods `this.shift_elementary_nodes` ,
 `this.copy_domain` , and `this.parse_nodes`  have to be implemented.
 
+### .GeoBase/**mesh_elementary_geometry_3D** is a function.
+mesh_elementary_geometry_3D(this, varargin)
+
 ### .**mesh_geometry** Mesh geometry.
 
 Equivalent to calling `this.mesh_elementary_geometry`  and
@@ -255,9 +268,15 @@ Replicates the elementary geometry *Nrep*  times. This is performed by
 * eliminating the duplicate nodes on the inter-sector boundaries, with
 the nodes corresponding to this.n_cw replaced by this.n_ccw.
 
+### .GeoBase/**replicate_elementary_mesh_3D** is a function.
+replicate_elementary_mesh_3D(this)
+
 ### .**save_to_excel** Save specifications to Excel sheet.
 
 save_to_excel(this, fname, varargin)
+
+### .GeoBase/**scale_mesh_density** is a function.
+scale_mesh_density(this, scale, varargin)
 
 ### .**shift_elementary_nodes** Replicate nodes to a new sector.
 

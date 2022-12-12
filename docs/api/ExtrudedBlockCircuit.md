@@ -34,6 +34,11 @@ dimension.
 Axial length of a magnet segment, so should be dim.leff /
 some_integer.
 
+**NOTE:**  This property must, in general, by set manually
+(some built-in geometry templates do it for you). If not set, it
+defaults to this.get_dimension('extruded_block_height') **IF**  set,
+and this.get_dimension('leff') as a fallback.
+
 ### .**conductor_volume_multiplier** Volume multiplication factor.
 
 Multiplication factor between discretized conductor volume and
@@ -101,6 +106,8 @@ top layer respectively.
 * axlims : axis limits to use for plotting.
 
 * Jlim : current density limits for the color axis (caxis)
+
+* plot_rms : only plot rms current density. Defaults to false.
 
 * compute_J : compute and return the current density.
 

@@ -42,8 +42,6 @@ NOTE: It is assumed that no [Domain](Domain.html)s are created for the winding
 object would then by passed on to a `WindingLayoutBase`  class, to
 handle everything that goes on inside the winding window(s).
 
-NOTE: For now, slot shapes generally work for stators only.
-
 ## Properties
 
 

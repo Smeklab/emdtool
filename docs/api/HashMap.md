@@ -14,6 +14,8 @@ obj = HashMap
 
 ### .HashMap/**keys_array** is a property.
 
+### .HashMap/**return_empty_for_invalid_key** is a property.
+
 ### .HashMap/**ri** is a property.
 
 ### .HashMap/**vals** is a property.
@@ -27,6 +29,9 @@ Class methods are listed below. Inherited methods are not included.
 obj = HashMap
 Documentation for HashMap/HashMap
 doc HashMap
+
+### .HashMap/**add** is a function.
+add(this, key, val)
 
 ### .DISP Display array.
 DISP(X) displays array X without printing the array name or

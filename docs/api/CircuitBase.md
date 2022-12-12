@@ -163,6 +163,15 @@ of all poles".
 For **losses** in typical 2D solid conductors (e.g. BlockCircuit,
 SheetCircuit, CageCircuit), see compute_SolidConductorLosses.
 
+### .**set_dof_bias** Set index of first circuit variable in global
+solution.
+
+set_dof_bias(this, n) sets the relative position of the
+circuit within all circuits in the model. Specifically, given
+a [MagneticsSolution](MagneticsSolution.html) object `solution`, the first circuit
+variable is found at
+`solution.raw_solution(solution.problem.Np + n, :)`
+
 ### .**set_load** Increment load vector of FE problem.
 
 F = set_load(this, F, type, varargin)

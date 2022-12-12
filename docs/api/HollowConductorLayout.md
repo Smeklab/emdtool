@@ -10,7 +10,7 @@ grand_parent : Documentation
 HollowConductorLayout methods:
 HollowConductorLayout - is a class.
 compute_losses_stranded - HollowConductorLayout/compute_losses_stranded is a function.
-create_solid_geometry - HollowConductorLayout/create_solid_geometry is a function.
+create_solid_geometry - assert( this.shape == "round", 'Not yet implemented' );
 
 ## Properties
 
@@ -37,5 +37,7 @@ Class methods are listed below. Inherited methods are not included.
 obj = HollowConductorLayout
 Documentation for HollowConductorLayout/HollowConductorLayout
 doc HollowConductorLayout
+
+### .assert( this.shape == "round", 'Not yet implemented' );
 
 

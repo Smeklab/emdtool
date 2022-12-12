@@ -16,6 +16,11 @@ See PolyphaseWindingSpec for more details.
 
 ### .**c** - short-pitching; number of slot pitches
 
+### .**end_turn_length_factor** Relative length of end-turn
+
+Length of end-winding per coil side, relative to the ideal length
+span ** 2** pi/number_of_slots * average slot radius
+
 ### .DistributedWindingSpec/**layer_direction** is a property.
 
 ### .half_of_turn_length

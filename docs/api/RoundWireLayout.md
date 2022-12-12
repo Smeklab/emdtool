@@ -20,6 +20,8 @@ and MagnetWire_en.pdf, respectively).
 
 ### .**bundling_algorithm** - how conductors are bundled together
 
+### .RoundWireLayout/**bundling_arguments** is a property.
+
 ### .**diameter** - nominal diameter (m)
 
 ### .**grade** - insulation grade, IEC (= 1, 2, 3) %FIXME setter method

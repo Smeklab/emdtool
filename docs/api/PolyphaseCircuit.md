@@ -31,6 +31,8 @@ of the winding, as well as the different supply modes. See
 
 ### .**include_lew** - include end-winding inductance, boolean
 
+### .PolyphaseCircuit/**slot** is a property.
+
 ### .**supply_mode** - supply mode.
 
 ### .**winding_spec** - winding parameters specification; a [PolyphaseWinding](PolyphaseWinding.html) object
@@ -88,6 +90,9 @@ Scc = get_lt_matrix(this, problem, type, t, kstep, Xprev)
 
 ### .PolyphaseCircuit/**get_nl_matrix** is a function.
 [Scc, rescc] = get_nl_matrix(this, problem, type, t, kstep, Xprev, Xiter)
+
+### .**get_solid_resistance_matrix** Resistance matrix for solid
+parts of the winding (solid active conductors only)
 
 ### .get_EW_impedance_matrix Complex end-winding impedance matrix.
 
@@ -230,8 +235,7 @@ source : Source values:
 
 * function handle : typically to VoltageSource.U method
 
-### .PolyphaseCircuit/**slot_area** is a function.
-A = slot_area(this)
+### .A = this.parent.**slot_area**();
 
 ### .PolyphaseCircuit/**slot_conductor_area** is a function.
 A = slot_conductor_area(this)

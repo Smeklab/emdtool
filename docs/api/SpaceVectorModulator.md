@@ -3,13 +3,15 @@ title : SpaceVectorModulator
 parent: API
 grand_parent : Documentation
 ---
-# Summary for: **SpaceVectorModulator**  < handle
+# Summary for: **SpaceVectorModulator**  < [Modulator](Modulator.html)
 
 ## Class summary
 
 SpaceVectorModulator Prototype multiphase space vector modulator.
 
 ## Properties
+
+### .SpaceVectorModulator/**Mave** is a property.
 
 ### .SpaceVectorModulator/**UDC** is a property.
 
@@ -36,16 +38,7 @@ Class methods are listed below. Inherited methods are not included.
 Documentation for SpaceVectorModulator/SpaceVectorModulator
 doc SpaceVectorModulator
 
-### .SpaceVectorModulator/**U** is a function.
-Uout = U(this, t, varargin)
-
 ### .SpaceVectorModulator/**recompute** is a function.
 recompute(this, t)
-
-### .SpaceVectorModulator/**set_Udq** is a function.
-set_Udq(this, Udq)
-
-### .SpaceVectorModulator/**set_f** is a function.
-set_f(this, f)
 
 

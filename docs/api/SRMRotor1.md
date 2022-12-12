@@ -7,9 +7,24 @@ grand_parent : Documentation
 
 ## Class summary
 
-SRMRotor1 methods:
-SRMRotor1 - is a class.
-create_geometry - SRMRotor1/create_geometry is a function.
+SRMRotor1 Switched-reluctance / FSM type salient rotor
+
+Main dimensions:
+* p : number of poles / the number of rotor teeth.
+* leff : stack length
+* Rout : outer radius
+* Rin : inner radius
+
+Pole shape:
+* pole_width : width (arc length) of pole face, as a ratio to the
+pole pitch
+* pole_width_inner : (OPTIONAL) pole width at the pole-yoke
+intersection (arc length), as a ratio to the pole pitch. Defaults
+to dim.pole_pitch
+* h_tooth_r : tooth height, airgap to yoke-tooth intersection
+distance.
+* rotor_core_material : rotor core material
+* shaft_material : (OPTIONAL) shaft material.
 
 ## Properties
 
@@ -17,11 +32,6 @@ create_geometry - SRMRotor1/create_geometry is a function.
 ## Methods
 
 Class methods are listed below. Inherited methods are not included.
-
-### .**SRMRotor1**/SRMRotor1 is a constructor.
-obj = SRMRotor1
-Documentation for SRMRotor1/SRMRotor1
-doc SRMRotor1
 
 ### .SRMRotor1/**d_axis_angle** is a function.
 a = d_axis_angle(this)

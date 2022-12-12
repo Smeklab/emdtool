@@ -48,6 +48,9 @@ Materials:
 
 Class methods are listed below. Inherited methods are not included.
 
+### .FWRotor1/**coil_width** is a function.
+w = coil_width(this)
+
 ### .parsing dimensions
 
 
