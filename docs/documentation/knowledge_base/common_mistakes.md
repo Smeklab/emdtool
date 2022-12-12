@@ -1,10 +1,22 @@
 ---
 layout: default
-title: Common mistakes
+title: FAQ and Common mistakes
 parent: Knowledge Base
 grand_parent : Documentation
 math: mathjax2
 ---
+
+# Frequently-asked questions
+
+## Creating custom materials
+
+Custom materials can be created using the static method `Material.from_specs`. See e.g. `@SteelLibrary/create.m` for example implementation. Single-use materials can be created inside scripts,
+while for more repeated project-specific work, it is recommended to set up a function returning a custom Material object.
+
+If you find yourself using the same custom materials repeatedly in multiple projects, it is recommended to create a personal library of materials, 
+outside the EMDtool installation location and also outside project-specific work.
+
+**Note:** Modifying the EMDtool material libraries is **not** recommended, as any changes will be lost whenever you switch to a new EMDtool version.
 
 
 # Common mistakes
