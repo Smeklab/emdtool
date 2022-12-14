@@ -18,6 +18,21 @@ outside the EMDtool installation location and also outside project-specific work
 
 **Note:** Modifying the EMDtool material libraries is **not** recommended, as any changes will be lost whenever you switch to a new EMDtool version.
 
+## How do I create geometries?
+
+Please see the [documentation for template creation](../../documentation/templates/geometry_creation.html)
+
+### What if I really, really, REALLY don't want to make a template?
+
+It's also possible to instantiate an empty geometry like this
+
+```matlab
+not_template = RadialGeometry();
+not_template.dimensions = structure_of_some_required_dimensions;
+```
+
+and then add the required Domains, Materials, Circuits, etc. manually or inside a script. Again, please see the template documentation for details.
+
 
 # Common mistakes
 
