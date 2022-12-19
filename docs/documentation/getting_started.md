@@ -34,7 +34,17 @@ parent: Documentation
 1. Do check out the `EMDtool` [familiarization exercises](knowledge_base/exercises.html).
 1. Analyze away!
 	- see `Examples/readme.m` + example scripts for more detailed examples
-	- or, see [EMDtool briefly](emdtool_briefly.html) for a brief overview
+	
+## Where to find information?
+
+Wondering how to do something? Please see if one of the following bullets helps:
+* See the documentation for a specific `EMDtool` class or functionality by either typing
+`help classname` or `help classname.method_name` in the Matlab command prompt, or by checking up the corresponding documentation
+here online.
+	* The search bar on the top of the page is super-helpful.
+* See [EMDtool briefly](emdtool_briefly.html) for a brief overview
+* Again, do check out the `EMDtool` [familiarization exercises](knowledge_base/exercises.html).
+
 
 ## Downloading a new version?
 
