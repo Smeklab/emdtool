@@ -9,20 +9,11 @@ grand_parent : Documentation
 
 eVolume methods:
 eVolume - is a class.
-get_surface_loop_ids - eVolume/get_surface_loop_ids is a function.
-hole_surface_ids - eVolume/hole_surface_ids is a function.
 plot - eVolume/plot is a function.
-write_surface_loops - eVolume/write_surface_loops is a function.
 
 ## Properties
 
 ### .eVolume/**bottom_surface** is a property.
-
-### .eVolume/**holes** is a property.
-
-### .eVolume/**idstring** is a property.
-
-### .eVolume/**sides** is a property.
 
 ### .eVolume/**surfaces** is a property.
 
@@ -33,9 +24,6 @@ write_surface_loops - eVolume/write_surface_loops is a function.
 
 Class methods are listed below. Inherited methods are not included.
 
-### .eVolume/**add_hole** is a function.
-add_hole(this, h)
-
 ### .eVolume/**add_surface** is a function.
 add_surface(this, s)
 
@@ -43,12 +31,6 @@ add_surface(this, s)
 obj = eVolume
 Documentation for eVolume/eVolume
 doc eVolume
-
-### .eVolume/**get_surface_loop_ids** is a function.
-ids = get_surface_loop_ids(this)
-
-### .eVolume/**hole_surface_ids** is a function.
-ids = hole_surface_ids(this)
 
 ### .PLOT   Linear **plot**.
 PLOT(X,Y) plots vector Y versus vector X. If X or Y is a matrix,
@@ -123,14 +105,5 @@ plot(x,y,'--rs','LineWidth',2,...
 
 See also PLOTTOOLS, SEMILOGX, SEMILOGY, LOGLOG, PLOTYY, PLOT3, GRID,
 TITLE, XLABEL, YLABEL, AXIS, AXES, HOLD, LEGEND, SUBPLOT, SCATTER.
-
-### .eVolume/**surfaces_to_write** is a function.
-ss = surfaces_to_write(this)
-
-### .eVolume/**write_surface_loops** is a function.
-write_surface_loops(this, fid)
-
-### .eVolume/**write_volume** is a function.
-write_volume(V, fid)
 
 

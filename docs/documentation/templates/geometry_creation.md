@@ -352,3 +352,15 @@ rotor.visualize('linestyle', '-');
 ![](geo_rotor_plot_geometry.png)
 
 ![](geo_rotor_visualize.png)
+
+# What's the deal with Slots and Layouts
+
+You may have already read of [slot and layout templates](http://localhost:4000/documentation/templates/slots_and_layouts.html) of ´EMDtool´. In case you haven't, the basic idea is to separate the creation 
+of slot shape from the creation of the rest of the stator/rotor template, and also from the creation from the winding model. In other words, the goal is to be able to change the slot shape by simple supplying
+a different slot shape class without changing anything else, and to be able to change from say uniformly stranded winding to solid rectangular conductors without changing anything else.
+
+While this _is_ the recommended way of working and offers the highest flexibility for re-using code, it is understandable to sometimes want to quickly implement something simpler. Luckily, this is indeed possible.
+
+You _can_, for instance, create a custom stator template, in which you also fully create the slot, and then populate it with conductors if that is your desire. This will (should) throw a warning about
+your template not being `LayoutCompatible` - this means that changing the `.winding_model_type` of your [winding specification](../../api/PolyphaseWindingSpec.html) object will not automatically be reflected 
+in the type of winding model created. Indeed, you should set this property to correspond to the type of winding you _have_ created, meaning normally solid or stranded.

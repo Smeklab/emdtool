@@ -86,7 +86,8 @@ returns the linear but time-variant source vector associated with
 the Source. This method is called once every time-step, before the
 Newton iteration.
 
-Input arguments as in CircuitSource.get_matrix.
+Input arguments as in CircuitSource.get_matrix, with the addition
+of the [CircuitBase](CircuitBase.html) object `circuit` as the second argument.
 
 ### .**ndof** Number of unknowns associated with this source.
 

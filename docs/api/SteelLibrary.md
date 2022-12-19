@@ -35,15 +35,60 @@ to also plot the resulting loss fit
 
 Class methods are listed below. Inherited methods are not included.
 
-### .loading data
+### .**create** Create new material from the lib.
 
-### .SteelLibrary/**fit_losses** is a function.
-coeffs = fit_losses(this, B, fs, Ws, varargin)
+material_object = create(grade_name) **create** a [Material](Material.html) object of the
+corresponding grade. See `SteelLibrary.grades` for the available grades.
+
+material_object = create(grade_name, 'optimize_exponents', true) to also
+optimize the time-domain generalized Steinmetz model exponents, used for
+the hysteresis losses.
+
+See also SteelLibrary.parse_data_from_Excel  and fit_losses.fit_losses
+for extra optional arguments.
+
+### .**fit_losses** Fit loss data.
+
+[coeffs, c_opt]  = fit_losses(this, B, fs, Ws, varargin) fits the
+frequency-domain Bertotti model to the given material loss data.
+
+Input arguments:
+* B : a 1 x Nb array of flux density values, assumed to be
+peak-of-sine.
+* fs : a 1 x Nf array of frequencies.
+* Ws : a Nb x Nf array of loss densities, as W/kg.
+
+Returns:
+* coeffs : coefficients for the Bertotti loss model, with the loss
+density expressed as `coeffs(1)*f^a*B^b + coeffs(2)*f^2*B^2 +
+coeffs(3)*f^1.5*B^1.5`
+* copt : optimized hysteresis loss exponents `[a b]`. See below.
+
+Optional key-value arguments:
+* 'plot_fit' : visualize fit. Default false.
+* 'include_excess' : include the excess loss term. Default false.
+* 'normalize_losses' : Perform normalized least-squares when fitting
+the losses. When set to true, better agreement is typically obtained at
+low flux densities (corresponding to better prediction of the
+hysteresis loss coefficient), at the cost of decreased accuracy at high
+loss densities. Default false.
+* 'optimize_exponents' : optimize the hysteresis loss exponents [a,b].
+Defaults to false.
 
 ### .SteelLibrary.**get_grades** is a function.
 g = SteelLibrary.get_grades
 
-### .SteelLibrary/**parse_data_from_Excel** is a function.
-[B, H, Ws, fs] = parse_data_from_Excel(this, gradename)
+### .**parse_data_from_Excel** Load Material data from Excel.
+
+[B, H, Ws, fs, Bint, Hint] = parse_data_from_Excel(this, gradename) where
+B : a 1xNb array of flux density values for tabulated loss data. Assumed
+to be peak-of-sine values.
+H : a 1xNb array of field strength values corresponding to B. Can be
+all-empty, see below.
+Ws : a Nb x Nf array of loss values, expressed as W/kg.
+fs : 1 x Nf array of frequencies for the tabuled loss data.
+Bint : Data for material BH curve interpolation, see next bullet.
+Hint : Data for material BH curve interpolation. If not found in the
+Excel, then Bint = B, Hint = H.
 
 

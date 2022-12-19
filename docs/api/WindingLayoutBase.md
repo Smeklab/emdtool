@@ -104,6 +104,9 @@ If not specified, slot liner thickness x 2 is returned.
 
 Class methods are listed below. Inherited methods are not included.
 
+### .**check_surface_count** Check the number of winding window
+surfaces.
+
 ### .**compute_losses_stranded** Estimate AC losses in stranded windings.
 
 Estimate AC loss distribution for stranded (= non-solid)

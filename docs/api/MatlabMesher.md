@@ -1,54 +1,49 @@
 ---
-title : gw
+title : MatlabMesher
 parent: API
 grand_parent : Documentation
 ---
-# Summary for: **gw**  < handle
+# Summary for: **MatlabMesher**  < handle
 
 ## Class summary
 
-gw methods:
-gw - is a class.
-initialize - adding surfaces
-loadmesh - opening file
-write_file - gw/write_file is a function.
+MatlabMesher methods:
+MatlabMesher - is a class.
+get_surface_points - ksurf = 4;
+mesh - MatlabMesher/mesh is a function.
+mesh_1D - MatlabMesher/mesh_1D is a function.
+mesh_surface - MatlabMesher/mesh_surface is a function.
 
 ## Properties
 
-### .gw/**fname** is a property.
+### .MatlabMesher/**Pe** is a property.
 
-### .gw/**lcar** is a property.
+### .MatlabMesher/**SI_car** is a property.
 
-### .gw/**lineloops** is a property.
+### .MatlabMesher/**bdef** is a property.
 
-### .gw/**lines** is a property.
+### .MatlabMesher/**curves** is a property.
 
-### .gw/**points** is a property.
-
-### .gw/**surfaces** is a property.
+### .MatlabMesher/**geometry** is a property.
 
 
 ## Methods
 
 Class methods are listed below. Inherited methods are not included.
 
-### .gw.**create_from_geometry** is a function.
-this = gw.create_from_geometry(geometry)
+### .**MatlabMesher**/MatlabMesher is a constructor.
+this = MatlabMesher(geometry)
+Documentation for MatlabMesher/MatlabMesher
+doc MatlabMesher
 
-### .gw/**delete_files** is a function.
-delete_files(this)
+### .pass
 
-### .gw/**generate_mesh** is a function.
-generate_mesh(this)
+### .pass
 
-### .**gw**/gw is a constructor.
-this = gw(varargin)
-Documentation for gw/gw
-doc gw
+### .ksurf = 4;
 
-### .adding surfaces
-
-### .opening file
+### .MatlabMesher/**loadmesh** is a function.
+[p, t, Surfaces] = loadmesh(this)
 
 ### .MESH   3-D ****mesh**** surface.
 MESH(X,Y,Z,C) plots the colored parametric **mesh** defined by
@@ -84,7 +79,12 @@ axes, and surface properties which affect the display of the mesh.
 
 See also SURF, MESHC, MESHZ, WATERFALL.
 
-### .gw/**write_file** is a function.
-this = write_file(this, varargin)
+### .MatlabMesher/**mesh_1D** is a function.
+mesh_1D(this)
+
+### .MatlabMesher/**mesh_surface** is a function.
+[T, inds] = mesh_surface(this, surf, F, varargin)
+
+### .pass
 
 

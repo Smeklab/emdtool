@@ -214,7 +214,7 @@ this.material_properties.steinmetz_exponents = 1x2 vector
 
 p_eddy = eddy loss density = ce * ( (dBx/dt)^2 + (dBy/dt)^2 )
 
-p_excess = all-zero.
+p_excess = c_ex * (dBx/dt)^1.5 + (dBy/dt)^1.5
 
 WARNING: For now, the method also supports a legacy syntax, with the
 input arguments (this, timestamps, Bx, By). This syntax is used by the

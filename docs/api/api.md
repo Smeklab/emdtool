@@ -45,6 +45,9 @@ has_toc : false
 * *class* : [/Mesh/Airgap mesh/SlidingAirgap](SlidingAirgap.html)  **SlidingAirgap** Sliding airgap model for radial-flux machines.
 * *class* : [/Mesh/Airgap mesh/SlidingAirgapBase](SlidingAirgapBase.html) **SlidingAirgapBase** methods:
 * *class* : [Airgap](Airgap.html)  **Airgap** Base class for airgap geometries.
+* *class* : [/Mesh/Mesh Generation/MatlabMesher](MatlabMesher.html) **MatlabMesher** methods:
+* *class* : [/Mesh/Mesh Generation/MesherBase](MesherBase.html) **MesherBase** methods:
+* *class* : [/Mesh/Mesh Generation/gw](gw.html) **gw** methods:
 * *class* : [MeshBase](MeshBase.html) **MeshBase** is a class.
 * *class* : [MeshView](MeshView.html) **MeshView** is a class.
 * *class* : [/Mesh/Meshes_3D/ExtrudedPrismMesh](ExtrudedPrismMesh.html)  **ExtrudedPrismMesh** Class for extruded prism meshes.
@@ -64,16 +67,13 @@ has_toc : false
 * *class* : [Geometry/Circle](Circle.html)  **Circle** Helper class for circular surfaces.
 * *class* : [Domain](Domain.html)  **Domain** **Domain** class.
 * *class* : [GeoBase](GeoBase.html)  **GeoBase** Base class for geometries.
-* *class* : [GeoBase3D](GeoBase3D.html)  **GeoBase3D** Abstract base class for 3D-compatible geometries.
 * *class* : [LaminatedDomain](LaminatedDomain.html)  **LaminatedDomain** Laminated domain.
-* *class* : [Rectangle](Rectangle.html)  **Rectangle** Helper class for rectangular surfaces.
 * *class* : [Surface](Surface.html)  SURFACE Class for representing elementary surfaces.
 * *class* : [/ representation/Arc](Arc.html) **Arc** methods:
 * *class* : [/ representation/Curve](Curve.html)  CURVE Abstract base class for representing line segments and circle arcs
 * *class* : [/ representation/Line](Line.html) **Line** methods:
 * *class* : [/ representation/Point](Point.html)  POINT Class for representing points in a geometry.
 * *class* : [/ representation/geo](geo.html)  enumeration
-* *class* : [/ representation/gw](gw.html) **gw** methods:
 * *class* : [/Motor geometries/AxialGeometry](AxialGeometry.html)  **AxialGeometry** Base class for 2D axial / linear geometries.
 * *class* : [/Motor geometries/RadialGeometry](RadialGeometry.html)  **RadialGeometry** Base class for radial geometries.
 # Materials
@@ -108,17 +108,19 @@ has_toc : false
 * *class* : [RFmodel](RFmodel.html)  **RFmodel** Simple class for radial-flux machines.
 * *class* : [LayoutCompatible](LayoutCompatible.html)  **LayoutCompatible** Base class for templates compatible with the
 * *class* : [/Rotors/BreadloafRotor](BreadloafRotor.html)  **BreadloafRotor** Template for rotors with breadloaf PMs.
-* *class* : [/Rotors/ClassicIPM](ClassicIPM.html)  **ClassicIPM** High-speed / industrial style IPM rotor.
-* *class* : [/Rotors/CoatedRotor](CoatedRotor.html) **CoatedRotor** methods:
+* *class* : [/Rotors/CoatedRotor](CoatedRotor.html)  **CoatedRotor** Rotor with a conductive coat/sleeve.
 * *class* : [/Rotors/FWRotor1](FWRotor1.html)  **FWRotor1** Template for a rotor with field-winding.
-* *class* : [/Rotors/HSIPM](HSIPM.html)  **HSIPM** High-speed IPM rotor
+* *class* : [/Rotors/HSIPM1](HSIPM1.html) **HSIPM1** methods:
+* *class* : [/Rotors/HSIPM2](HSIPM2.html) **HSIPM2** methods:
 * *class* : [/Rotors/LinearSPM](LinearSPM.html) **LinearSPM** methods:
+* *class* : [/Rotors/LinearSlottedRotor1](LinearSlottedRotor1.html)  **LinearSlottedRotor1** Super-simple slotted AF rotor.
+* *class* : [/Rotors/LinearSlottedRotorBase](LinearSlottedRotorBase.html) **LinearSlottedRotorBase** methods:
 * *class* : [/Rotors/MassivePM](MassivePM.html) **MassivePM** methods:
 * *class* : [/Rotors/PoledIPM1](PoledIPM1.html) **PoledIPM1** methods:
 * *class* : [/Rotors/SPM1](SPM1.html)  **SPM1** Template for a surface-PM rotor.
 * *class* : [SPM1](SPM1.html)  **SPM1** Template for a surface-PM rotor.
 * *class* : [/Rotors/SPM2](SPM2.html)  **SPM2** Template for a surface-PM rotor.
-* *class* : [/Rotors/SRMRotor1](SRMRotor1.html) **SRMRotor1** methods:
+* *class* : [/Rotors/SRMRotor1](SRMRotor1.html)  **SRMRotor1** Switched-reluctance / FSM type salient rotor
 * *class* : [/Rotors/ShieldedSPM](ShieldedSPM.html) **ShieldedSPM** methods:
 * *class* : [/Rotors/SlottedRotor1](SlottedRotor1.html)  **SlottedRotor1** Simple template for a slotted rotor.
 * *class* : [/Rotors/SpokeRotor1](SpokeRotor1.html)  default dimensions
@@ -127,9 +129,11 @@ has_toc : false
 * *class* : [SlottedRotorBase](SlottedRotorBase.html)  **SlottedRotorBase** Base class for slotted radial-flux rotors.
 * *class* : [SynRotorBase](SynRotorBase.html)  **SynRotorBase** Base class for synchronous machine rotors.
 * *class* : [/Slots/CooledSlot1](CooledSlot1.html) **CooledSlot1** methods:
+* *class* : [/Slots/FloodedSlot1](FloodedSlot1.html) **FloodedSlot1** methods:
 * *class* : [/Slots/RotorSlot1](RotorSlot1.html)  **RotorSlot1** Rotor slot shape 1.
 * *class* : [/Slots/RotorSlot2](RotorSlot2.html)  **RotorSlot2** Rotor slot shape 2.
 * *class* : [/Slots/RotorSlot3](RotorSlot3.html)  **RotorSlot3** Rotor slot shape 3.
+* *class* : [/Slots/RotorSlot4](RotorSlot4.html)  **RotorSlot4** Completely rectangular rotor slot shape.
 * *class* : [/Slots/Slot1](Slot1.html)  **Slot1** Basic stator slot shape.
 * *class* : [/Slots/SlotShapeBase](SlotShapeBase.html)  **SlotShapeBase** Base class for slot shapes.
 * *class* : [/Slots/StatorSlotShape](StatorSlotShape.html)  SlotShapeBase Base class for slot shapes.
@@ -137,6 +141,7 @@ has_toc : false
 * *class* : [RotorSlotShape](RotorSlotShape.html)  **RotorSlotShape** Base class for rotor slots.
 * *class* : [SlotShapeBase](SlotShapeBase.html)  **SlotShapeBase** Base class for slot shapes.
 * *class* : [SlotShapeWrapper](SlotShapeWrapper.html)  **SlotShapeWrapper** A wrapper class for one-off slot geometries.
+* *class* : [/Stators/AFStatorBase](AFStatorBase.html)  **AFStatorBase** Base class for axial-flux stators
 * *class* : [/Stators/FormWound1](FormWound1.html) **FormWound1** methods:
 * *class* : [/Stators/LinearStator](LinearStator.html) **LinearStator** methods:
 * *class* : [/Stators/OutrunnerFrame](OutrunnerFrame.html) **OutrunnerFrame** methods:
@@ -152,7 +157,7 @@ has_toc : false
 * *class* : [/Circuit Analysis/CircuitGraph](CircuitGraph.html) **CircuitGraph** methods:
 * *class* : [/Circuit Analysis/ConcentratedWindingSpec](ConcentratedWindingSpec.html) **ConcentratedWindingSpec** methods:
 * *class* : [/Circuit Analysis/DistributedWindingSpec](DistributedWindingSpec.html)  **DistributedWindingSpec** Winding specification class for distributed
-* *class* : [/Circuit Analysis/FieldWindingSpec](FieldWindingSpec.html) **FieldWindingSpec** methods:
+* *class* : [/Circuit Analysis/FieldWindingSpec](FieldWindingSpec.html)  **FieldWindingSpec** Winding specification object for field-windings.
 * *class* : [/Circuit Analysis/PolyphaseWindingSpec](PolyphaseWindingSpec.html)  **PolyphaseWindingSpec** Winding specification class.
 * *class* : [/Circuit Analysis/SpaceVectors](SpaceVectors.html)  **SpaceVectors** Class for handling generalized Park-Clarke and inverse
 * *class* : [/Circuit Analysis/WindingLayout](WindingLayout.html)  **WindingLayout** Factory class for winding layout matrices.
@@ -162,7 +167,7 @@ has_toc : false
 * *class* : [/FE Circuits/ExtrudedBlockCircuit](ExtrudedBlockCircuit.html)  **ExtrudedBlockCircuit** Circuit for massive conductor blocks.
 * *class* : [/FE Circuits/LaminatedCircuit](LaminatedCircuit.html)  **LaminatedCircuit** Class for modelling classical eddy currents in
 * *class* : [/FE Circuits/PolyphaseCircuit](PolyphaseCircuit.html)  **PolyphaseCircuit** Class for finite-element representation of polyphase
-* *class* : [BlockCircuit](BlockCircuit.html) **BlockCircuit** is a class.
+* *class* : [BlockCircuit](BlockCircuit.html)  **BlockCircuit** Circuit for single massive conductors.
 * *class* : [CircuitBase](CircuitBase.html)  **CircuitBase** Abstract base class for finite-element Circuits.
 * *class* : [CircuitSet](CircuitSet.html)  **CircuitSet** Class for handling operations on several circuits.
 * *class* : [Circuits](Circuits.html) **Circuits** is a class.
@@ -187,19 +192,12 @@ has_toc : false
 * *class* : [/Winding layouts/RoundWireLayout](RoundWireLayout.html)  **RoundWireLayout** Winding layout class for random-wound coils.
 * *class* : [/Winding layouts/UniformLayout](UniformLayout.html)  **UniformLayout** Layout specification for non-specified layouts:
 * *class* : [/Winding layouts/WindingLayoutBase](WindingLayoutBase.html)  **WindingLayoutBase** Base class for winding layouts.
+* *class* : [MultiSurfaceLayout](MultiSurfaceLayout.html)  **MultiSurfaceLayout** Base class for Layouts supporting multiple
 # 
  Folder with the following files / classes / subfolders:
 
 * *class* : [defs](defs.html) **defs** is a class.
 * *class* : [emdconstants](emdconstants.html) **emdconstants** is a class.
-# emdtool_legacy
- emdtool_legacy Legacy functionality.
- 
-  Legacy functionality for compatibility. Please consider using the latest
-  functionality
-
-* *class* : [HSIPM1](HSIPM1.html)  **HSIPM1** Legacy support class.
-* *class* : [HSIPM2](HSIPM2.html)  **HSIPM2** Legacy support class.
 # to_be_relocated
  Folder with the following files / classes / subfolders:
 
@@ -210,7 +208,7 @@ has_toc : false
 * *class* : [GeometryReplicator](GeometryReplicator.html) **GeometryReplicator** methods:
 * *class* : [MotorModelBase](MotorModelBase.html)  **MotorModelBase** Base class for magnetics models.
 * *class* : [RFmodel2](RFmodel2.html) **RFmodel2** methods:
-* *class* : [dxfreader](dxfreader.html) **dxfreader** methods:
+* *class* : [dxfreader](dxfreader.html)  **dxfreader** Low-functionality dxf reader.
 * *class* : [/Geometry3D/EdgeBoundaryMatrix](EdgeBoundaryMatrix.html) **EdgeBoundaryMatrix** methods:
 * *class* : [/Geometry3D/LinearAVSolver](LinearAVSolver.html) **LinearAVSolver** methods:
 * *class* : [/Geometry3D/NodalBoundaryMatrix](NodalBoundaryMatrix.html) **NodalBoundaryMatrix** methods:

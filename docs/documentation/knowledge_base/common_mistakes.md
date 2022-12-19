@@ -1,10 +1,37 @@
 ---
 layout: default
-title: Common mistakes
+title: FAQ and Common mistakes
 parent: Knowledge Base
 grand_parent : Documentation
 math: mathjax2
 ---
+
+# Frequently-asked questions
+
+## Creating custom materials
+
+Custom materials can be created using the static method `Material.from_specs`. See e.g. `@SteelLibrary/create.m` for example implementation. Single-use materials can be created inside scripts,
+while for more repeated project-specific work, it is recommended to set up a function returning a custom Material object.
+
+If you find yourself using the same custom materials repeatedly in multiple projects, it is recommended to create a personal library of materials, 
+outside the EMDtool installation location and also outside project-specific work.
+
+**Note:** Modifying the EMDtool material libraries is **not** recommended, as any changes will be lost whenever you switch to a new EMDtool version.
+
+## How do I create geometries?
+
+Please see the [documentation for template creation](../../documentation/templates/geometry_creation.html)
+
+### What if I really, really, REALLY don't want to make a template?
+
+It's also possible to instantiate an empty geometry like this
+
+```matlab
+not_template = RadialGeometry();
+not_template.dimensions = structure_of_some_required_dimensions;
+```
+
+and then add the required Domains, Materials, Circuits, etc. manually or inside a script. Again, please see the template documentation for details.
 
 
 # Common mistakes

@@ -11,6 +11,7 @@ Line methods:
 Line - is a class.
 from_points - Create an Line from Points.
 intersects_with - Checks if Line intersects with another.
+set_radially_periodic_with - Set periodicity condition for radial lines.
 
 ## Properties
 
@@ -81,6 +82,17 @@ By convention, NaN is returned if X or V contains NaNs.
 See also COND, RCOND, CONDEST, NORMEST, HYPOT, VECNORM, NORMALIZE.
 Documentation for norm
 doc norm
+
+### .**set_radially_periodic_with** Set periodicity condition for radial lines.
+
+set_radially_periodic_with(this, another_line) sets this line to be
+periodic with `another_line`, using `geo.set_periodic` and the `Points`
+of the two lines, oriented radially.
+
+**NOTE**  `this` must lie on the clockwise boundary, and `another_line` on
+the counter-clockwise one.
+Documentation for Line/set_radially_periodic_with
+doc Line/set_radially_periodic_with
 
 ### .**uminus** Reverse direction, return a new Curve.
 Documentation for Line/uminus

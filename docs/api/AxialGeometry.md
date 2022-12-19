@@ -21,6 +21,14 @@ are shifted left after meshing to comply.
 
 Class methods are listed below. Inherited methods are not included.
 
+### .**align_airgap_surface_at** Align airgap surface at given
+y-coordinate.
+
+align_airgap_surface_at(this, y) aligns the airgap surface at
+the given `y`. By default, gets the first [Curve](Curve.html) named
+'n_ag' and aligns its starting point at the given
+y-coordinate.
+
 ### .**copy_domain** Copy domain and apply necessary rotations or
 translations.
 

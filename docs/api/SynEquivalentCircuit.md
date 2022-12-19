@@ -71,6 +71,9 @@ Initialize with any of the following key-value pairs:
 * 'idq', idq : compute parameters at the specified (id,iq) point.
 Default [0;0].
 
+* 'mode' : either modes supported by `compute_inductances_static_averaging`
+OR 'simplified'
+
 * 'angle', angle : Vector of electrical angles (rad) to average
 eq. circuit parameters over. Default linspace(0, 2*pi/6, 30).
 
@@ -136,6 +139,9 @@ save_to_excel(filename, key, val), where
 [T, Td] = torque(this, id, iq)
 
 ### .**torque_Hessian** Numerical Hessian matrix of torque.
+
+### .SynEquivalentCircuit/**torque_from_voltage** is a function.
+T = torque_from_voltage(this, rpm, ed, eq)
 
 ### .SynEquivalentCircuit/**torque_gradient** is a function.
 dT = torque_gradient(this, id, iq)

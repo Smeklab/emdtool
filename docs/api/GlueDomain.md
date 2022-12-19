@@ -17,11 +17,15 @@ create_radial_twosided - GlueDomain/create_radial_twosided is a function.
 
 ## Properties
 
+### .GlueDomain/**curve_name** is a property.
+
 ### .GlueDomain/**delta** is a property.
 
 ### .GlueDomain/**lcar** is a property.
 
 ### .GlueDomain/**scale** is a property.
+
+### .GlueDomain/**surface_name** is a property.
 
 
 ## Methods

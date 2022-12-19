@@ -70,9 +70,15 @@ and then x-shifting (by mean x-coordinate of the winding window) and rotating th
 
 ### .**liner_curves** - curves between the winding window surfaces and rest of the geometry
 
-### .**winding_window_area** - combines area of winding window
+### .**winding_window_area** - combined area of winding window
 
-### .**winding_window_surfaces** - surfaces for the winding window
+### .surfaces for the winding window Surface objects determining the
+winding.
+
+The default assumption is to have one [Surface](Surface.html) per winding
+layer. However, some Layouts do support multiple surfaces per
+layer, which can be useful for some geometries (e.g. axial-flux
+or linear machines with two rotational and axial symmetry).
 
 
 ## Methods

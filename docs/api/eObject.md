@@ -31,7 +31,7 @@ add_relative(this, o)
 o = closest_to(this, level)
 
 ### .**eObject**/eObject is a constructor.
-this = eObject(varargin)
+obj = eObject
 Documentation for eObject/eObject
 doc eObject
 
@@ -40,8 +40,6 @@ o = oldest_parent(this)
 
 ### .eObject/**relative_at_level** is a function.
 o = relative_at_level(this, level)
-
-### .eObject.**reset_counter** is a function.
 
 ### .eObject/**youngest_child** is a function.
 o = youngest_child(this)
