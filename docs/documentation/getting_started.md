@@ -44,6 +44,8 @@ here online.
 	* The search bar on the top of the page is super-helpful.
 * See [EMDtool briefly](emdtool_briefly.html) for a brief overview
 * Again, do check out the `EMDtool` [familiarization exercises](knowledge_base/exercises.html).
+* See the [frequently asked questions page](knowledge_base/common_mistakes.html)
+* Read the [quick notes](knowledge_base/quick_notes_models.html)
 
 
 ## Downloading a new version?
