@@ -10,6 +10,8 @@ math: mathjax2
 
 This page briefly describes the typical `EMDtool` analysis types and cases.
 
+Note: please make sure you have read the [`EMDtool` briefly](../emdtool_briefly.html) about the general analysis workflow.
+
 # Non-stepping analysis
 
 ## No-load flux density
@@ -42,6 +44,24 @@ The Examples folder has a script for visualizing the demagnetizing field strengt
 intrinsic coervivity value only.
 
 # Stepping analysis
+
+## Static stepping
+
+The oxymoronic-sounding 'static stepping' entails the following:
+
+* The effect of time-derivatives is **not** included in the model itself. Therefore, static stepping cannot be used for induction machines or other problems where eddy-currents or other damping effects
+are significant.
+	* Static stepping _can_ yield as a result voltage waveforms, eddy-current losses, and similar - these results are computed in the post-processing stage. Naturally, the results won't be accurate whenever the
+	coupling between the eddies and the field solution is significant. For an example, static stepping wouldn't work at all for induction machines, but often does a good job for PM losses.
+* The rotor(s) can be rotating.
+* The only possible (for now) excitation option is an imposed current density. Fixing the net current or terminal voltage would again require the coupling between time-derivatives and the field solution.
+
+Static can be performed with `.solve_static` method of the [MagneticsProblem](../../api/MagneticsProblem.html).
+
+## Actual stepping
+
+
+	
 
 # Non-magnetics analysis
 
