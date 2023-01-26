@@ -58,7 +58,22 @@ are significant.
 
 Static can be performed with `.solve_static` method of the [MagneticsProblem](../../api/MagneticsProblem.html).
 
-## Actual stepping
+## Transient stepping
+
+In transient stepping, the feedback from the time-derivatives into the field solution _is_ considered. Use cases include:
+
+* Modelling voltage supply.
+* Modelling the distribution of according to the voltage equations, using the `'terminal current source'` supply for `PolyphaseCircuit` objects. Use cases include delta-connected machines, or machines with multiple
+parallel paths explicitly modelled, or machines with multiple wires in hand. 
+	* **Note** In both of the above cases, the individual conductors can still be modelled as infinitely stranded, with uniform current density.
+* Modelling eddy currents in massive solid conductors.
+
+Transient analysis is performed in two steps:
+
+1. Computing the initial conditions with the `.solve_harmonic` or `.solve_quasistatic` method of the `problem` object. The former is recommended for induction machines, 
+while the latter is suitable for synchronous machines.
+
+1. Solving the actual stepping with the `.solve_stepping` method.
 
 
 	
