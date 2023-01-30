@@ -75,6 +75,22 @@ while the latter is suitable for synchronous machines.
 
 1. Solving the actual stepping with the `.solve_stepping` method.
 
+### Supply methods
+
+Transient stepping offers the full choice of possible excitation methods for [`PolyphaseCircuit`](../../api/PolyphaseCircuit.html) objects (typically a stator polyphase winding, or an excitation winding).
+At the time of writing, the options include:
+
+* 'uniform coil current' : uniform fixed current density. Please note that the current is specified **per coil**, i.e. the net terminal current may be a multiple of this due to the parallel paths.
+
+* 'terminal current source' : specifies the net terminal current, letting any zero-sequence or circulating current component within the winding be solved according to the voltage equations. Please
+note that the terminal current source is in virtual star, and thus imposes the specified _phase_ current minus any circulatory components.
+
+* 'terminal voltage' : specifies the terminal voltage. Again, the source is connected in virtual star.
+
+* 'circuit' : a [`CircuitSource`](../../api/CircuitSource.html) object. Arguably the most flexible analysis type. Not many built-in sources are yet included in `EMDtool`, but some options include the 
+supply circuit for switched reluctance machines. One important feature of this supply type is that it allows switching from voltage supply to imposed current supply - usually imposed _zero_ current. This is
+important for modelling e.g. said SRMs or BLDC machines driven with trapezoidal modulation, where 1+ phase is open at a time.
+
 
 	
 
