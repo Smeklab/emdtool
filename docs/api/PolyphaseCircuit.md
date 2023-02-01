@@ -221,7 +221,9 @@ source_type : string specifying source type:
 uniformly over the conductor [Domain](Domain.html) areas. Works for any analysis
 type.
 
-* 'terminal current source' : Specifies the net terminal current.
+* 'terminal current source' : Specifies the net terminal current. Please
+note that the m-phase current source is in virtual star, so for delta-connected machines
+the current source imposes the *phase*  current, minus any circulatory / zero-sequency components.
 
 * 'terminal voltage' : Specifies the potential (V) at each terminal,
 with respect to an arbitrary reference point. For harmonic/stepping

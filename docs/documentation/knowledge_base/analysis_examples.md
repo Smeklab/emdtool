@@ -36,13 +36,6 @@ You will often find that the shape of the torque curve - the slip corresponding 
 refresh their knowledge of the induction motor equivalent circuit to understand why this happens. (Hint: the magnetizing branch current is almost constant with voltage supply, but changes significantly with current
 supply.)
 
-## Demagnetization analysis
-
-The Examples folder has a script for visualizing the demagnetizing field strength, based on an existing `MagneticsSolution` object. In case of stepping analysis, the element-wise worst-case is visualized.
-
-**NOTE:** For now, the script doesn't handle models with different magnet grades too well. The field strength is computed correctly, but the relative values printed into the command line are respect to one 
-intrinsic coervivity value only.
-
 # Stepping analysis
 
 ## Static stepping
@@ -89,11 +82,27 @@ note that the terminal current source is in virtual star, and thus imposes the s
 
 * 'circuit' : a [`CircuitSource`](../../api/CircuitSource.html) object. Arguably the most flexible analysis type. Not many built-in sources are yet included in `EMDtool`, but some options include the 
 supply circuit for switched reluctance machines. One important feature of this supply type is that it allows switching from voltage supply to imposed current supply - usually imposed _zero_ current. This is
-important for modelling e.g. said SRMs or BLDC machines driven with trapezoidal modulation, where 1+ phase is open at a time.
+important for modelling e.g. said SRMs or BLDC machines driven with trapezoidal modulation, where 1 (or more) phase is generally open at a time.
 
+# Post-processing analysis
 
-	
+## Demagnetization analysis
+
+The Examples folder has a script for visualizing the demagnetizing field strength, based on an existing `MagneticsSolution` object. In case of stepping analysis, the element-wise worst-case is visualized.
+
+**NOTE:** For now, the script doesn't handle models with different magnet grades too well. The field strength is computed correctly, but the relative values printed into the command line are respect to one 
+intrinsic coervivity value only.
+
+## Thermal analysis
+
+Thermal analysis is something of a work in progress when it comes to `EMDtool`. While all the basic finite-element building blocks _are_ there, the analysis still remains to be nicely wrapped and formalized.
+
+You can find an example script-based thermal analysis simulation in the built-in `EMDtool` examples, that may or may not work with the latest version. Please contact the author if it doesn't.
 
 # Non-magnetics analysis
+
+## Mechanical analysis
+
+
 
 # Grid analysis

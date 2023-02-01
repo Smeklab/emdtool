@@ -34,6 +34,31 @@ specifying the height of each row of conductors.
 
 ### .**conductor_width** - width of individual conductor
 
+### .**long_axis_bias** Bias in conductor placement along long axis.
+
+Giving a scalar value allocates the given number of extra space
+towards the slot opening, independently on each layer. The
+spacing between conductors is correspondingly reduced.
+
+If a 1x2 vector is given, the first value is used as described
+above. The second value is applied as a uniform shift towards the
+slot opening, with no effect on the interconductor space.
+
+### .**short_axis_bias** Bias in conductor placement along short axis.
+
+Giving a scalar value allocates extra space between conductors
+and layer walls. Interconductor spacing is correspondingly
+reduced. Please note that this has NO EFFECT if the number of
+conductor columns is 1.
+
+If a 1x2 vector is given, the first value is used as described
+above. The second value is applied as a uniform shift to the
+placement of all the conductors, along the short axis of the
+slot.
+
+Giving a 2 x (1/2) array specifies separate shifts for each
+winding layer. Only applicable to 2-layer windings.
+
 
 ## Methods
 

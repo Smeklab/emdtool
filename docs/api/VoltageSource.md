@@ -34,6 +34,8 @@ e.g. SVPWM_Modulator.
 
 ### .VoltageSource/**tprev** is a property.
 
+### .VoltageSource/**winding_spec** is a property.
+
 
 ## Methods
 

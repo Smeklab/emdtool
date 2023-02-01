@@ -8,9 +8,20 @@ has_toc : false
 ---
 # API reference
 * *class* : [emdtool](emdtool.html)  **emdtool** Main EMDtool utility class.
-# Analysis utilities
+## Analysis utilities
  Folder with the following files / classes / subfolders:
 
+* *function* : [Analysis utilities/Grids/old_MTPAinterpolant/compute](compute.html)  **compute** Compute operating-point behaviour
+* *function* : [Analysis utilities/Grids/old_MTPAinterpolant/init](init.html) **init** is a script.
+* *function* : [Analysis utilities/Pre-processing/calculate_EW_length](calculate_EW_length.html)  **calculate_EW_length** Calculate approximate axial length of end-winding.
+* *function* : [Analysis utilities/Pre-processing/calculate_turn_length](calculate_turn_length.html)  **calculate_turn_length** Set turn length for standard distributed winding.
+* *function* : [Analysis utilities/Pre-processing/calculate_turn_length_axial](calculate_turn_length_axial.html)  **calculate_turn_length_axial** Calculate turn length of an axial-flux
+* *function* : [Analysis utilities/Pre-processing/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [Analysis utilities/Pre-processing/get_periodicityFactor](get_periodicityFactor.html)  **get_periodicityFactor** returns the periodicity factor.
+* *function* : [Analysis utilities/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [Analysis utilities/estimate_AC_copper_losses](estimate_AC_copper_losses.html)  **estimate_AC_copper_losses** AC loss calculation using a post-processing
+* *function* : [Analysis utilities/estimate_AC_copper_losses_rectangular](estimate_AC_copper_losses_rectangular.html)  estimate_AC_copper_losses AC loss calculation using a post-processing
+* *function* : [Analysis utilities/maximum_demag_field](maximum_demag_field.html)  **maximum_demag_field** Maximum instantaneous demagnetization field across geometry.
 * *class* : [Analysis utilities/Equivalent Circuits/InverseGammaCircuit](InverseGammaCircuit.html) **InverseGammaCircuit** methods:
 * *class* : [/Equivalent Circuits/SynEquivalentCircuit](SynEquivalentCircuit.html) **SynEquivalentCircuit** methods:
 * *class* : [IMEquivalentCircuit](IMEquivalentCircuit.html) **IMEquivalentCircuit** is a class.
@@ -24,7 +35,7 @@ has_toc : false
 * *class* : [/Grids/SMGridCalculator_NTfromDQ](SMGridCalculator_NTfromDQ.html) **SMGridCalculator_NTfromDQ** methods:
 * *class* : [MTPAinterpolant](MTPAinterpolant.html)  **MTPAinterpolant** Interpolant for post-processing field-weakening
 * *class* : [OPiterator](OPiterator.html)  **OPiterator** Backward compatibility proxy class.
-# FE Functionality
+## FE Functionality
  Folder with the following files / classes / subfolders:
 
 * *class* : [Elements](Elements.html)  {
@@ -61,9 +72,13 @@ has_toc : false
 * *class* : [/Mesh/Other meshes/SimpleMesh](SimpleMesh.html)  **SimpleMesh** Basic mesh class.
 * *class* : [Mesh](Mesh.html)  **Mesh** Class for mesh objects.
 * *class* : [RotatedMeshView](RotatedMeshView.html) **RotatedMeshView** is a class.
-# Geometry
+## Geometry
  Folder with the following files / classes / subfolders:
 
+* *function* : [Geometry/Geometry representation/Origin](Origin.html)  **Origin** Create a <Point> at origin.
+* *function* : [Geometry/Geometry representation/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [Geometry/Motor geometries/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [Geometry/contents](contents.html)  Folder with the following files / classes / subfolders:
 * *class* : [Geometry/Circle](Circle.html)  **Circle** Helper class for circular surfaces.
 * *class* : [Domain](Domain.html)  **Domain** **Domain** class.
 * *class* : [GeoBase](GeoBase.html)  **GeoBase** Base class for geometries.
@@ -76,9 +91,32 @@ has_toc : false
 * *class* : [/ representation/geo](geo.html)  enumeration
 * *class* : [/Motor geometries/AxialGeometry](AxialGeometry.html)  **AxialGeometry** Base class for 2D axial / linear geometries.
 * *class* : [/Motor geometries/RadialGeometry](RadialGeometry.html)  **RadialGeometry** Base class for radial geometries.
-# Materials
+## Materials
  Folder with the following files / classes / subfolders:
 
+* *function* : [Materials/Fitting functions/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [Materials/Fitting functions/derivate_pp](derivate_pp.html)  **derivate_pp** derivates a piecewise-defined polynomial
+* *function* : [Materials/Fitting functions/err_double_langeving](err_double_langeving.html) **err_double_langeving** is a function.
+* *function* : [Materials/Fitting functions/err_steinmetz](err_steinmetz.html) **err_steinmetz** is a function.
+* *function* : [Materials/Fitting functions/err_steinmetz_TD](err_steinmetz_TD.html) **err_steinmetz_TD** is a function.
+* *function* : [Materials/Fitting functions/err_steinmetz_hystonly](err_steinmetz_hystonly.html) **err_steinmetz_hystonly** is a function.
+* *function* : [Materials/Iron losses/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [Materials/Iron losses/frequency_domain_Bertotti](frequency_domain_Bertotti.html)  **frequency_domain_Bertotti** Compute iron losses with freq-domain Bertotti
+* *function* : [Materials/Iron losses/time_domain_Steinmetz](time_domain_Steinmetz.html)  **time_domain_Steinmetz** Iron losses from time-domain Steinmetz model.
+* *function* : [Materials/Materials/Arnon5](Arnon5.html)  **Arnon5** Construct Arnon5 material object
+* *function* : [Materials/Materials/M250_35A](M250_35A.html)  **M250_35A** Construct M250-35A material object
+* *function* : [Materials/Materials/NO12](NO12.html)  **NO12** Construct NO12 material object
+* *function* : [Materials/Materials/NO20](NO20.html)  **NO20** Construct NO20 material object
+* *function* : [Materials/Materials/Permalloy65](Permalloy65.html)  Vacodur49 Create Vacodur49 material object.
+* *function* : [Materials/Materials/S275N](S275N.html)  **S275N** S275N steel from very limited BH-data.
+* *function* : [Materials/Materials/Somaloy_HR700_3p](Somaloy_HR700_3p.html)  **Somaloy_HR700_3p** Somaloy material object.
+* *function* : [Materials/Materials/Vacodur49](Vacodur49.html)  **Vacodur49** Create Vacodur49 material object.
+* *function* : [Materials/Materials/YS550](YS550.html)  **YS550** YS550 steel from very limited BH-data.
+* *function* : [Materials/Materials/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [Materials/Materials/get_defaultMaterials](get_defaultMaterials.html)  **get_defaultMaterials** Returns the BH curve for old built-in materials
+* *function* : [Materials/Materials/get_materialData](get_materialData.html)  **get_materialData** Get material data struct.
+* *function* : [Materials/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [Materials/skindepth](skindepth.html)  **skindepth** Skin depth of material.
 * *class* : [Materials/Material](Material.html)  **Material** Basic isotropic material class.
 * *class* : [MaterialBase](MaterialBase.html)  **MaterialBase** Base class for materials.
 * *class* : [/Hysteretic materials, WIP/HysteresisModel](HysteresisModel.html)  **HysteresisModel** Base class for hysteresis models.
@@ -91,18 +129,26 @@ has_toc : false
 * *class* : [Arnon7](Arnon7.html)  **Arnon7** **Arnon7** Material object.
 * *class* : [PMlibrary](PMlibrary.html)  **PMlibrary** Static class for creating permanent-magnet Material objects.
 * *class* : [deprecated_Vacodur49](deprecated_Vacodur49.html)  Vacodur49 Vacodur49 Material object.
-# Problems
+## Problems
  Folder with the following files / classes / subfolders:
 
+* *function* : [Problems/Magnetics/Post-processing/calculate_B](calculate_B.html)  **calculate_B** calculates flux density.
+* *function* : [Problems/Magnetics/Post-processing/compute_inductances_static_averaging](compute_inductances_static_averaging.html)  **compute_inductances_static_averaging** Inductanc computation.
+* *function* : [Problems/Magnetics/Post-processing/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [Problems/Magnetics/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [Problems/contents](contents.html)  Folder with the following files / classes / subfolders:
 * *class* : [Problems/Magnetics/MagneticsProblem](MagneticsProblem.html)  **MagneticsProblem** Class for solving magnetics problems.
 * *class* : [HarmonicSolution](HarmonicSolution.html) **HarmonicSolution** is a class.
 * *class* : [MagneticsSolution](MagneticsSolution.html)  **MagneticsSolution** Class for representing the solution to MagneticsProblem.
 * *class* : [SimulationParameters](SimulationParameters.html)  **SimulationParameters** Parameters for MagneticsProblem solutions.
 * *class* : [StaticSolution](StaticSolution.html) **StaticSolution** is a class.
 * *class* : [SteppingSolution](SteppingSolution.html) **SteppingSolution** is a class.
-# Templates
+## Templates
  Folder with the following files / classes / subfolders:
 
+* *function* : [Templates/Rotors/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [Templates/Stators/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [Templates/contents](contents.html)  Folder with the following files / classes / subfolders:
 * *class* : [Templates/AFmodel](AFmodel.html)  only types given?
 * *class* : [LinearGeoBase](LinearGeoBase.html) **LinearGeoBase** methods:
 * *class* : [RFmodel](RFmodel.html)  **RFmodel** Simple class for radial-flux machines.
@@ -151,9 +197,9 @@ has_toc : false
 * *class* : [/Stators/Stator](Stator.html)  **Stator** General-purpose stator class for symmetric slotted stators.
 * *class* : [/Stators/StatorBase](StatorBase.html)  **StatorBase** Base class for radial-flux stators.
 * *class* : [/Stators/YASAStator](YASAStator.html)  **YASAStator** Axial yokeless stator.
-# Third-party
+## Third-party
 * *class* : [DXFtool](DXFtool.html)   **DXFtool** v1.0 for reading and plotting DXF files in Matlab figures.
-# Windings and Circuits
+## Windings and Circuits
 * *class* : [/Circuit Analysis/CircuitGraph](CircuitGraph.html) **CircuitGraph** methods:
 * *class* : [/Circuit Analysis/ConcentratedWindingSpec](ConcentratedWindingSpec.html) **ConcentratedWindingSpec** methods:
 * *class* : [/Circuit Analysis/DistributedWindingSpec](DistributedWindingSpec.html)  **DistributedWindingSpec** Winding specification class for distributed
@@ -193,14 +239,23 @@ has_toc : false
 * *class* : [/Winding layouts/UniformLayout](UniformLayout.html)  **UniformLayout** Layout specification for non-specified layouts:
 * *class* : [/Winding layouts/WindingLayoutBase](WindingLayoutBase.html)  **WindingLayoutBase** Base class for winding layouts.
 * *class* : [MultiSurfaceLayout](MultiSurfaceLayout.html)  **MultiSurfaceLayout** Base class for Layouts supporting multiple
-# 
+## 
  Folder with the following files / classes / subfolders:
 
 * *class* : [defs](defs.html) **defs** is a class.
 * *class* : [emdconstants](emdconstants.html) **emdconstants** is a class.
-# to_be_relocated
+## to_be_relocated
  Folder with the following files / classes / subfolders:
 
+* *function* : [to_be_relocated/Geometry3D/assemble_current_source_vector_3D](assemble_current_source_vector_3D.html)  parsing
+* *function* : [to_be_relocated/Geometry3D/element_centers](element_centers.html)  **element_centers** Mass centers of given elements.
+* *function* : [to_be_relocated/Geometry3D/get_3DtetIntegrationPoints](get_3DtetIntegrationPoints.html)  **get_3DtetIntegrationPoints** Quadrature data for tetrahedron
+* *function* : [to_be_relocated/Mechanical analysis/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [to_be_relocated/Windings/cageMatrix_1](cageMatrix_1.html)   Cr = **cageMatrix_1** Returns the loop matrix for a rotor cage with Qr
+* *function* : [to_be_relocated/Windings/rotorConnectionMatrix](rotorConnectionMatrix.html)  **rotorConnectionMatrix** returns the loop matrices for the rotor cage.
+* *function* : [to_be_relocated/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [to_be_relocated/ichol_automatic](ichol_automatic.html) **ichol_automatic** is a function.
+* *function* : [to_be_relocated/order_edges](order_edges.html)  **order_edges** orders edges.
 * *class* : [to_be_relocated/AFmodel2](AFmodel2.html) **AFmodel2** methods:
 * *class* : [AirgapContainer](AirgapContainer.html)  **AirgapContainer** Container class for one or more airgap models.
 * *class* : [GeoHelper](GeoHelper.html) **GeoHelper** methods:
@@ -232,7 +287,7 @@ has_toc : false
 * *class* : [NodalBase](NodalBase.html) **NodalBase** is a class.
 * *class* : [Quad](Quad.html) **Quad** is a class.
 * *class* : [SimpleMesh2](SimpleMesh2.html) **SimpleMesh2** is a class.
-# utilities
+## utilities
  Miscellaneous utilities classes and functions.
 
 * *class* : [Counter](Counter.html)  **Counter** **Counter** object for getting unique IDs etc.
