@@ -18,6 +18,8 @@ outside the EMDtool installation location and also outside project-specific work
 
 **Note:** Modifying the EMDtool material libraries is **not** recommended, as any changes will be lost whenever you switch to a new EMDtool version.
 
+For fitting the [typical core loss coefficients](iron_losses.html), you can use the 
+
 ## How do I create geometries?
 
 Please see the [documentation for template creation](../../documentation/templates/geometry_creation.html)
