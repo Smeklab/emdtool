@@ -10,7 +10,7 @@ math: mathjax2
 
 ## Creating custom materials
 
-Custom materials can be created using the static method `Material.from_specs`. See e.g. `@SteelLibrary/create.m` for example implementation. Single-use materials can be created inside scripts,
+Custom materials can be created using the static method `Material.from_specs`. See e.g. [`@SteelLibrary/create.m`](../../api/SteelLibrary.html) for example implementation. Single-use materials can be created inside scripts,
 while for more repeated project-specific work, it is recommended to set up a function returning a custom Material object.
 
 If you find yourself using the same custom materials repeatedly in multiple projects, it is recommended to create a personal library of materials, 
@@ -18,7 +18,7 @@ outside the EMDtool installation location and also outside project-specific work
 
 **Note:** Modifying the EMDtool material libraries is **not** recommended, as any changes will be lost whenever you switch to a new EMDtool version.
 
-For fitting the [typical core loss coefficients](iron_losses.html), you can use the 
+For fitting the [typical core loss coefficients](iron_losses.html), you can use the [fit_losses method of the `SteelLibrary'](../../api/SteelLibrary.html) class.
 
 ## How do I create geometries?
 

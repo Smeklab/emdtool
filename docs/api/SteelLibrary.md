@@ -13,6 +13,11 @@ objects.
 Data referenced from Tata Steel website at some
 point, see https://www.tatasteeleurope.com/ts/engineering/products/electrical-steel
 
+The underlying data is stored in an Excel file, under the 'Materials'
+folder. Modifying this data file is not recommended, as changes will
+be lost with any EMDtool update, unless special care is taken not to
+overwrite the modified fiel.
+
 Usage:
 
 mat = SteelLibrary.create( grade_name )
@@ -75,8 +80,7 @@ loss densities. Default false.
 * 'optimize_exponents' : optimize the hysteresis loss exponents [a,b].
 Defaults to false.
 
-### .SteelLibrary.**get_grades** is a function.
-g = SteelLibrary.get_grades
+### .**get_grades** List available steel grades.
 
 ### .**parse_data_from_Excel** Load Material data from Excel.
 
