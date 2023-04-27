@@ -47,6 +47,8 @@ in consistent order (clockwise or counterclockwise) (per surface - defining one 
 
 # Meshing fails
 
+* Try the experimental `.check_feasibility` method of your geometry component (a `GeoBase` subclass). This method checks for intersecting Lines (not Arcs, so far) and Surfaces.
+
 * If you have concentric surfaces, verify that the innermost ones have
 been added as holes (`s_outer.add_hole(s_inner)`) to the outermost ones.
 
