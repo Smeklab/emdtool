@@ -20,6 +20,13 @@ Please send an email to antti (at) smeklab.com to enquire about a [license](pric
 
 Please check the [getting started guide](documentation/getting_started.html) and the [`EMDtool` overview](documentation/emdtool_briefly.html) to get a quick first impression.
 
+# How accurate is EMDtool compared to XX?
+
+Short answer: yes.
+
+For a longer answer, [please see this page](documentation/emdtool_accurate.html).
+
+
 # History
 
 EMDtool is loosely based on the open-source [SMEKlib library](https://github.com/AnttiLehikoinen/SMEKlib) developed at Aalto University, Finland, between 2013 and 2018 or so. This library was initially built out of
