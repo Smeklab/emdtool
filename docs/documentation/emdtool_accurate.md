@@ -83,7 +83,9 @@ Now, this is where the ways to improve get numerous. A non-exhaustive list inclu
 	* Remember: torque or power are **outputs** - what goes into the simulation is some specification of the supply (typically either in the dq-frame, or a combination of amplitude and an angle of some kind)
 * Computing a larger number of operating points when generating efficiency maps
 * Getting a better estimate of the winding and magnet temperatures
-* Moving to more high-fidelity eddy-current loss models: for instance moving from no eddies in magnets to conductive magnets to the 
+* Moving to more high-fidelity eddy-current loss models: for instance moving from no eddies in magnets to conductive magnets (2D only) to the 
  [EMDtool-exclusive hybrid 3D-2D method](../api/ExtrudedBlockCircuit.html) accounting for axial segmentation.
+ * Using _better_ iron loss models.
+	* This is rather obviously an everlasting problem on the field. Users are invited to implement their own models by subclassing the `Material` or `MaterialBase` classes.
 
 
