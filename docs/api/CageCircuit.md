@@ -11,7 +11,7 @@ CageCircuit methods:
 CageCircuit - is a class.
 finalize_matrices - Set matrices, etc.
 get_loop_matrix - TODO generalize dimensions
-list_possible_bar_numbers - maximum
+list_possible_bar_numbers - List possible bar numbers.
 merge_circuit_from_another_slice - CageCircuit/merge_circuit_from_another_slice is a function.
 
 ## Properties
@@ -41,7 +41,13 @@ X = get_EW_inductance_matrix(this)
 
 ### .TODO generalize dimensions
 
-### .maximum
+### .**list_possible_bar_numbers** List possible bar numbers.
+
+Qr = list_possible_bar_numbers(p, Qs) returns a list of possible bar
+counts for a given number of pole-pairs `p` and the number of stator
+slots `Qs`. The list is computed according to the conditions in the book
+'Design of Rotating Electrical Machines' by Pyrhönen et al., and may not
+reflect the current best-practices for inverter-fed machines.
 
 ### .CageCircuit/**loop_currents** is a function.
 I = loop_currents(this, solution)

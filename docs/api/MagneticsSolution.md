@@ -39,6 +39,9 @@ may cause unexpected results. Please use solutions right away.
 
 Class methods are listed below. Inherited methods are not included.
 
+### .MagneticsSolution/**angles** is a function.
+a = angles(this)
+
 ### .MagneticsSolution/**get_dof** is a function.
 val = get_dof(this, key)
 

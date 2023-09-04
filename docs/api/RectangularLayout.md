@@ -19,6 +19,9 @@ boundaries.
 Supports an integer number of winding window surfaces per winding
 layer. The number must be equal for all layers.
 
+The slot insulation material can be given in
+`dim.slot_insulation_material`.
+
 ## Properties
 
 ### .**conductor_columns** Number of conductor columns.

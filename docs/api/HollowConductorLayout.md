@@ -7,10 +7,10 @@ grand_parent : Documentation
 
 ## Class summary
 
-HollowConductorLayout methods:
-HollowConductorLayout - is a class.
-compute_losses_stranded - HollowConductorLayout/compute_losses_stranded is a function.
-create_solid_geometry - assert( this.shape == "round", 'Not yet implemented' );
+HollowConductorLayout  Layout for hollow conductors.
+
+The slot insulation material can be given in
+`dim.slot_insulation_material`.
 
 ## Properties
 
@@ -33,8 +33,10 @@ create_solid_geometry - assert( this.shape == "round", 'Not yet implemented' );
 
 Class methods are listed below. Inherited methods are not included.
 
-### .**HollowConductorLayout**/HollowConductorLayout is a constructor.
-obj = HollowConductorLayout
+### .**HollowConductorLayout**  Layout for hollow conductors.
+
+The slot insulation material can be given in
+`dim.slot_insulation_material`.
 Documentation for HollowConductorLayout/HollowConductorLayout
 doc HollowConductorLayout
 

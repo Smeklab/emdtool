@@ -41,6 +41,8 @@ Help for MagneticsJacobian/Ne is inherited from superclass handle
 
 ### .MagneticsJacobian/**dof_shape** is a property.
 
+### .MagneticsJacobian/**force_linear** is a property.
+
 ### .MagneticsJacobian/**materials** is a property.
 
 ### .MagneticsJacobian/**msh** is a property.
@@ -76,6 +78,12 @@ res = residual vector
 
 ### .MagneticsJacobian/**eval_complex** is a function.
 [Jrr, Jri, Jir, Jii, resr, resi] = eval_complex(this, X)
+
+### .MagneticsJacobian/**evaluate_matrix** is a function.
+J = evaluate_matrix(this)
+
+### .MagneticsJacobian/**evaluate_residual** is a function.
+res = evaluate_residual(this, X, k, varargin)
 
 ### .**init_assembly** Initialize MagneticsJacobian.
 

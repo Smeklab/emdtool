@@ -159,7 +159,8 @@ Phi = phase_flux_linkage(this, solution, varargin), where
 solution = a [MagneticsSolution](MagneticsSolution.html) object.
 
 **** Note**: the contribution of end-winding leakage inductance
-term is **** NOT** included.
+term is **** NOT** included by default. To **do**  include it,
+please specify 'include_ew', true in the key-value arguments.
 
 ### .**phase_impedance_voltage_drop** Phase voltage drops from
 solution.

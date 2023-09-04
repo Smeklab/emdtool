@@ -3,7 +3,7 @@ title : VoltageSource
 parent: API
 grand_parent : Documentation
 ---
-# Summary for: **VoltageSource**  < handle
+# Summary for: **VoltageSource**  < [VoltageSourceBase](VoltageSourceBase.html)
 
 ## Class summary
 

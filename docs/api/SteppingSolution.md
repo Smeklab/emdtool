@@ -29,6 +29,9 @@ doc SteppingSolution
 ### .SteppingSolution/**angles** is a function.
 a = angles(this)
 
+### .SteppingSolution/**rotor_angles** is a function.
+a = rotor_angles(this)
+
 ### .SteppingSolution/**ts** is a function.
 t = ts(this)
 

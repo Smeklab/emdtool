@@ -10,6 +10,8 @@ grand_parent : Documentation
 MTPAinterpolant Interpolant for post-processing field-weakening
 behaviour
 
+Does not handle generators, really.
+
 ## Properties
 
 ### .MTPAinterpolant/**AC_loss_interpolant** is a property.
@@ -79,7 +81,7 @@ init(this, Tn, nn, nrange, varargin)
 [P, p_dc, p_hyst, p_eddy] = losses(this, id, iq, n)
 
 ### .MTPAinterpolant/**rated_voltage_contour_at_speed** is a function.
-c = rated_voltage_contour_at_speed(this, n)
+c = rated_voltage_contour_at_speed(this, n, chop)
 
 ### .MTPAinterpolant/**voltage** is a function.
 E = voltage(this, id, iq, n)

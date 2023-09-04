@@ -14,6 +14,9 @@ loaded from the Excel sheet WireSizes.xlsx, in turn parsed from
 Elektrisola and Hitachi datasheets (enamelled_copper_wire_english.pdf
 and MagnetWire_en.pdf, respectively).
 
+The slot insulation material can be given in
+`dim.slot_insulation_material`.
+
 ## Properties
 
 ### .**breakdown_voltage** - minimum breakdown voltage

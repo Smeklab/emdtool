@@ -45,6 +45,7 @@ Materials:
 *  23 = Aluminum, linear air
 *  24 = Ti6Al4V (Grade 5)
 *  25 = Stainless steel, linear
+*  26 = generic impregnation resin, magnetically linear
 
 (c) 2017 Antti Lehikoinen / Aalto University
 

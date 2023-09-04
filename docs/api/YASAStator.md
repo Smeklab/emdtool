@@ -29,10 +29,14 @@ Slot dimensions:
 (closest to the airgap). Note: must be strictly less than htt_s.
 * hys : (OPTIONAL) Yoke thickness. The back of the yoke will be
 modelled as flux insulation (no flux crossing it).
+
+Control parameters:
 * two_sided: (OPTIONAL) is the design two-sided in reality, default
 true. For two-sided designs, only one axial half of the geometry is
-modelled, with a symmetry condition in the middle. Yoked designs
-must by one-sided for now.
+modelled, with a symmetry condition in the middle.
+* axial_symmetry_type : (OPTIONAL) if set to "toroidal", then the
+axial boundary is modelled as Dirichlet / flux insulation type.
+
 
 Winding specification:
 * stator_winding : stator winding specification object. NOTE: only
@@ -48,5 +52,8 @@ Materials:
 ## Methods
 
 Class methods are listed below. Inherited methods are not included.
+
+### .YASAStator/**mean_distance_between_slots** is a function.
+l = mean_distance_between_slots(this)
 
 

@@ -51,6 +51,17 @@ replicating the elementary mesh.
 
 ### .**shift_elementary_nodes** Apply symmetry shift.
 
+### .**update_remanence_direction_to_new_sector** Update domain
+remanence direction.
+
+update_remanence_direction_to_new_sector(this, dnew, k)
+
+Update the remanence direction (if any) of the [Domain](Domain.html) dnew
+into the new symmetry sector k. The default behaviour is to
+rotate the direction by this.sector_angle AND to flip the
+orientation (N-S to S-N) for odd sectors. Please subclass if
+not appropriate.
+
 ### .AxialGeometry/**visualize_radial** is a function.
 visualize_radial(this, varargin)
 

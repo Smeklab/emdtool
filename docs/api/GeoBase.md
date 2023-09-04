@@ -275,8 +275,16 @@ replicate_elementary_mesh_3D(this)
 
 save_to_excel(this, fname, varargin)
 
-### .GeoBase/**scale_mesh_density** is a function.
-scale_mesh_density(this, scale, varargin)
+### .**scale_mesh_density** Uniformly scale mesh density.
+
+scale_mesh_density(this, scale) multiplies the characteristic length of
+most [Point](Point.html)s in `this`. The airgap-facing points are ignored by default,
+see below.
+
+scale_mesh_density(this, scale, 'curves_to_skip', curve_names) ignores
+all the [Points](Points.html) that lie on the [Curve](Curve.html)s on specified by their names in
+the `curve_names` array of strings. By default, curves named 'n_ag' are
+ignored. The characteristic length of the ignored points is not changed.
 
 ### .**shift_elementary_nodes** Replicate nodes to a new sector.
 
@@ -291,6 +299,24 @@ symmetry_period(this)
 
 Usually subclassed, but by default returns
 this.dimensions.symmetry_period.
+
+### .**to_plot_frame** Function for transforming coordinates.
+
+y = to_plot_frame(this, x, angle, varargin) transforms coordinates from
+the mesh frame (`this.mesh.p`) into a so-called plotting frame. This
+method is called by most EMDtool plotting functions, so overloading it
+can be useful at times, such as for visualizing sliced models. By
+default, `angle` is assumed to correspond to the `rotor_angle` concept
+used by e.g. [MagneticsProblem](MagneticsProblem.html). In normal single-shaft designs, just the
+mechanical rotor angle, that is.
+
+The default implementation does nothing, i.e. y = x.
+
+Additional syntax options include
+* to_plot_frame(this, x, component) : specifying the `GeoBase` object
+`component` that `x` lies on.
+* to_plot_frame(this, x, angle, varargin) : with arbitrary arguments,
+for subclass implementations.
 
 ### .**triplot** Triangle plot of this.
 

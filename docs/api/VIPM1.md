@@ -25,9 +25,17 @@ Magnet dimensions:
 Defaults to leff.
 
 Bridge dimensions:
-* w_bridge_interpole : Inter-pole (between two successive Vs) bridge width
+* w_bridge_interpole : Inter-pole (between two successive Vs)
+bridge width. A large-enough magnet size can cause the interpole
+bridge to become tapered. This will be notified on Matlab command
+prompt. In any case, the realized minimum bridge width will be
+saved in `this.data.realized_interpole_bridge_thickness`.
 * w_bridge_center : Center-bridge (tip of V) width
 * w_bridge_out : Outer bridge (near airgap surface) width
+
+Retaining sleeve dimensions (OPTIONAL all):
+* h_sleeve : sleeve thickness
+* sleeve_material : sleeve material
 
 Air-pocket dimensions:
 * w_pocket_in : Inner pocket width : distance from magnet inner corner to center bridge

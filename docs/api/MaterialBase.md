@@ -109,6 +109,11 @@ Not really used right now, see [Material](Material.html).
 Documentation for MaterialBase/MaterialBase
 doc MaterialBase
 
+### .MaterialBase/**clear_copy** is a function.
+obj = MaterialBase
+
+### .default copy for most properties
+
 ### .MaterialBase/**detach** is a function.
 obj = MaterialBase
 
@@ -121,6 +126,19 @@ at given temperature.
 sigma = electrical_conductivity_at_temperature(this, T)
 returns the electrical conductivity `sigma`  (S/m) at the
 given temperature `T`  (C)
+
+### .**elementwise_density** Elementwise density.
+
+Returns a scalar by default; can be subclassed to support
+varying properties.
+
+### .**elementwise_stiffness_tensor** Plane-strain stiffness tensor.
+
+Returns the elementwise stiffness tensor, for plane-strain
+formulation, using Voigt notation in column-major format.
+
+Returns a single tensor by default, implying constant
+property across all elements.
 
 ### .**get_B_data** Compute flux density waveforms and other data.
 

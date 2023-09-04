@@ -9,7 +9,10 @@ grand_parent : Documentation
 
 HystereticMaterial Material class for hysteretic materials.
 
-A valid HysteresisModel has to be set to this.hysteresis_model.
+This class enables modelling of hysteretic materials within typical
+EMDtool problems. However, the actual *model*  of the hysteresis is
+implemented by a [HysteresisModel](HysteresisModel.html) object, an instance of which must
+be set to `this.hysteresis_model`.
 
 WARNING: HystereticMaterial objects are stateful, associated with the
 latest [MagneticsSolution](MagneticsSolution.html). Thus, calling
@@ -32,13 +35,21 @@ will result in **incorrect**  results or a crash.
 
 ### .**Nsteps** - number of time-steps to be expected
 
-### .**dynamic_hysteresis_coefficient** - computed automatically
+### .**dynamic_hysteresis_coefficient** Dynamic hysteresis coefficient.
 
-### .HystereticMaterial/**hysteresis_model** is a property.
+Coefficient `c` for the simple dynamic hysteresis model
+`H_dyn = c dB/dt`
+Computed automatically from the sheet thickness and material
+conductivity, corresponding to the classical eddy-current losses.
+
+### .**hysteresis_model** Actual hysteresis model.
+
+An instance of the [HysteresisModel](HysteresisModel.html) class, taking care of the
+actual hysteresis modelling.
 
 ### .**ndim** - FIXME parse at init
 
-### .electrical_conductivity = 1/5.5E-7 %electrical conductivity of the material (S)
+### .**sheet_thickness** - lamination sheet thickness (m)
 
 ### .**step** - current time-step
 

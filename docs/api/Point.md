@@ -123,6 +123,12 @@ Modifies the coordinates of this point so that its distance
 from origin (norm(this)) is equal to new_r. The angular
 coordinate angle(this) remains unchanged.
 
+### .**normalize_along_vector** Translate in-place along given vector.
+
+normalize_along_vector(this, r, t) translates the `Point` in-place
+(without returning a copy) along the given vector `t` until
+`norm(this) = r`.
+
 ### .**plot** Plot point.
 
 plot(this, text, args)

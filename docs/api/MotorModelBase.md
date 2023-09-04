@@ -134,6 +134,9 @@ args:
 * 'plot_airgap' : plot airgap flux density (if this.airgap has a method
 *fluxplot* ). true/ false (Default: true).
 
+### .MotorModelBase/**plot_raw_airgap_flux** is a function.
+plot_raw_airgap_flux(this, Araw, rotor_angle, potentials, varargin)
+
 ### .**results_summary** Summary of analysis results.
 
 results = results_summary(this, solution) returns a structure.
@@ -172,6 +175,10 @@ set_outer_boundary(this, bnd_1, bnd_2, ...)
 
 Set the given [Boundary](Boundary.html) objects as outer (flux insulation)
 boundaries.
+
+### .**to_plot_frame** Transform coordinates to the plot frame.
+
+See `GeoBase.to_plot_frame` for the syntax.
 
 ### .VISUALIZE Visualize geometry.
 

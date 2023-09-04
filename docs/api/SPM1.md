@@ -32,6 +32,8 @@ hpm
 * h_sleeve : retaining sleeve thickness. OPTIONAL. Default 0.
 * number_of_magnet_segments : (OPTIONAL) Number of circumferential magnet
 segments. Default 1.
+* include_air : (OPTIONAL) Include air outside the rotor core, if
+relevant. Defaults to true.
 
 Materials:
 * rotor_core_material : rotor core material.

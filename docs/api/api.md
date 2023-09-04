@@ -70,7 +70,6 @@ has_toc : false
 * *class* : [PrismMeshBase3D](PrismMeshBase3D.html)  **PrismMeshBase3D** A base class for a 3D mesh with prismatic elements.
 * *class* : [/Mesh/Other meshes/Mesh](Mesh.html)  **Mesh** Class for mesh objects.
 * *class* : [/Mesh/Other meshes/SimpleMesh](SimpleMesh.html)  **SimpleMesh** Basic mesh class.
-* *class* : [Mesh](Mesh.html)  **Mesh** Class for mesh objects.
 * *class* : [RotatedMeshView](RotatedMeshView.html) **RotatedMeshView** is a class.
 ## Geometry
  Folder with the following files / classes / subfolders:
@@ -154,8 +153,10 @@ has_toc : false
 * *class* : [RFmodel](RFmodel.html)  **RFmodel** Simple class for radial-flux machines.
 * *class* : [LayoutCompatible](LayoutCompatible.html)  **LayoutCompatible** Base class for templates compatible with the
 * *class* : [/Rotors/BreadloafRotor](BreadloafRotor.html)  **BreadloafRotor** Template for rotors with breadloaf PMs.
+* *class* : [/Rotors/ClassicIPM](ClassicIPM.html)  **ClassicIPM** High-speed / industrial style IPM rotor.
 * *class* : [/Rotors/CoatedRotor](CoatedRotor.html)  **CoatedRotor** Rotor with a conductive coat/sleeve.
 * *class* : [/Rotors/FWRotor1](FWRotor1.html)  **FWRotor1** Template for a rotor with field-winding.
+* *class* : [/Rotors/HSIPM](HSIPM.html)  **HSIPM** High-speed IPM rotor
 * *class* : [/Rotors/HSIPM1](HSIPM1.html) **HSIPM1** methods:
 * *class* : [/Rotors/HSIPM2](HSIPM2.html) **HSIPM2** methods:
 * *class* : [/Rotors/LinearSPM](LinearSPM.html) **LinearSPM** methods:
@@ -181,6 +182,7 @@ has_toc : false
 * *class* : [/Slots/RotorSlot3](RotorSlot3.html)  **RotorSlot3** Rotor slot shape 3.
 * *class* : [/Slots/RotorSlot4](RotorSlot4.html)  **RotorSlot4** Completely rectangular rotor slot shape.
 * *class* : [/Slots/Slot1](Slot1.html)  **Slot1** Basic stator slot shape.
+* *class* : [/Slots/Slot1b](Slot1b.html)  **Slot1b** A successor of the Slot1 class, with multiple slot openings.
 * *class* : [/Slots/SlotShapeBase](SlotShapeBase.html)  **SlotShapeBase** Base class for slot shapes.
 * *class* : [/Slots/StatorSlotShape](StatorSlotShape.html)  SlotShapeBase Base class for slot shapes.
 * *class* : [/Slots/WoundSlot](WoundSlot.html)  **WoundSlot** Base class for slots supporting automatic winding generation.
@@ -226,6 +228,7 @@ has_toc : false
 * *class* : [SliceableCircuit](SliceableCircuit.html)  **SliceableCircuit** Base class for Circuits suitable for slicing.
 * *class* : [/FE Circuits/Sources/ShortCircuit](ShortCircuit.html)  **ShortCircuit** Source for modelling three-phase short-circuits.
 * *class* : [/FE Circuits/Sources/VoltageSource](VoltageSource.html)  **VoltageSource** Voltage source class for MagneticsProblem.
+* *class* : [/FE Circuits/Sources/VoltageSourceBase](VoltageSourceBase.html) **VoltageSourceBase** methods:
 * *class* : [CircuitSource](CircuitSource.html)  **CircuitSource** Base class for circuit sources.
 * *class* : [/Modulators/PhaseCutModulator](PhaseCutModulator.html)  **PhaseCutModulator** Phase-cut voltage modulator.
 * *class* : [/Modulators/SVPWM_Modulator](SVPWM_Modulator.html)  **SVPWM_Modulator** Basic Modulator.
@@ -233,7 +236,7 @@ has_toc : false
 * *class* : [/Modulators/SpaceVectorModulator](SpaceVectorModulator.html)  **SpaceVectorModulator** Prototype multiphase space vector modulator.
 * *class* : [Modulator](Modulator.html)  Base class for modulators.
 * *class* : [/Winding layouts/HairpinLayout](HairpinLayout.html) **HairpinLayout** methods:
-* *class* : [/Winding layouts/HollowConductorLayout](HollowConductorLayout.html) **HollowConductorLayout** methods:
+* *class* : [/Winding layouts/HollowConductorLayout](HollowConductorLayout.html)  **HollowConductorLayout**  Layout for hollow conductors.
 * *class* : [/Winding layouts/RectangularLayout](RectangularLayout.html)  **RectangularLayout** Layout for rectangular conductors.
 * *class* : [/Winding layouts/RoundWireLayout](RoundWireLayout.html)  **RoundWireLayout** Winding layout class for random-wound coils.
 * *class* : [/Winding layouts/UniformLayout](UniformLayout.html)  **UniformLayout** Layout specification for non-specified layouts:
@@ -282,7 +285,7 @@ has_toc : false
 * *class* : [/Geometry3D/Objects_3D/eVolume](eVolume.html) **eVolume** methods:
 * *class* : [/Mechanical analysis/MechMesh](MechMesh.html) **MechMesh** methods:
 * *class* : [/Mechanical analysis/MechUtil](MechUtil.html) **MechUtil** methods:
-* *class* : [/Mechanical analysis/ShellEdge](ShellEdge.html) **ShellEdge** methods:
+* *class* : [/Mechanical analysis/ShellEdge](ShellEdge.html)  **ShellEdge** Convenience class for handling shell edges.
 * *class* : [Nodal2D_Quad](Nodal2D_Quad.html) **Nodal2D_Quad** is a class.
 * *class* : [NodalBase](NodalBase.html) **NodalBase** is a class.
 * *class* : [Quad](Quad.html) **Quad** is a class.

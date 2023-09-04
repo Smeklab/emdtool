@@ -32,6 +32,9 @@ doc SimpleMesh
 ### .SimpleMesh/**elementCenters** is a function.
 x0 = elementCenters(this, inds)
 
+### .SimpleMesh/**element_area_sum** is a function.
+A = element_area_sum(this, elements)
+
 ### .msh_**getMappingMatrix** mapping matrix from reference to global element.
 
 Call syntax

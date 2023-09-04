@@ -86,6 +86,7 @@ Now, this is where the ways to improve get numerous. A non-exhaustive list inclu
 * Moving to more high-fidelity eddy-current loss models: for instance moving from no eddies in magnets to conductive magnets (2D only) to the 
  [EMDtool-exclusive hybrid 3D-2D method](../api/ExtrudedBlockCircuit.html) accounting for axial segmentation.
  * Using _better_ iron loss models.
-	* This is rather obviously an everlasting problem on the field. Users are invited to implement their own models by subclassing the `Material` or `MaterialBase` classes.
+	* This is rather obviously an everlasting problem on the field. Users are invited to implement their own models by subclassing the `Material` or `MaterialBase` classes. The current version (2023-09) version
+	of `EMDtool` ships with support for hysteretic materials, with the [HystereticMaterial](../api/ExtrudedBlockCircuit.html) base class. Currently, only a stop-hysteron model has been implemented so far.
 
 

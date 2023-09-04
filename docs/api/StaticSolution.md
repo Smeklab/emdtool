@@ -29,6 +29,9 @@ doc StaticSolution
 ### .StaticSolution/**angles** is a function.
 a = angles(this)
 
+### .StaticSolution/**rotor_angles** is a function.
+a = rotor_angles(this)
+
 ### .StaticSolution/**ts** is a function.
 t = ts(this)
 

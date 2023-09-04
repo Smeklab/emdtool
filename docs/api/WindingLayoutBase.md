@@ -130,6 +130,16 @@ more details.
 Returns nan by default; should be overridden in subclasses if
 needed.
 
+### .**create_and_add_insulator_material** Create insulator Material.
+
+m = create_and_add_insulator_material(this, parent_geometry)
+creates and adds the slot insulation material to the parent
+geometry, using the `parent_geometry.create_and_add_material`
+method. By default, generic resin material 26 is used.
+
+If the parent geometry has a dimension
+'slot_insulation_material', that is used instead.
+
 ### .WindingLayoutBase/**create_custom_geometry** is a function.
 create_custom_geometry(this, parent_geometry, winding_spec, surfaces)
 

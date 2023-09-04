@@ -21,6 +21,10 @@ SimulationParameters Parameters for MagneticsProblem solutions.
 
 ### .**maxIter** - maximum number of Newton iterations
 
+### .SimulationParameters/**maximum_damping_iterations** is a property.
+
+### .SimulationParameters/**maximum_regular_iterations** is a property.
+
 ### .**rel** - relaxation factor for iterations, default = 1 (no relaxation)
 
 ### .**rotorAngle** - rotor angle (bias for stepping analysis, set of angles for static)

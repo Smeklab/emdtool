@@ -164,6 +164,11 @@ winding generates flux on the rotor d-axis.
 
 ### .**bind_to_model** Bind to [CircuitBase](CircuitBase.html) object.
 
+### .**copy** Return a semi-shallow **copy** of this.
+
+spec = copy(this) returns a **copy** of this. All handle properties will
+still point to their original instances.
+
 ### .**create_slot_geometry** Create slot geometry.
 
 Access method to WindingLayoutBase.create_slot_geometry

@@ -35,6 +35,17 @@ e2t = 2xNedges incidence array: from edges to elements. Second is zero for bound
 
 Class methods are listed below. Inherited methods are not included.
 
+### .**edge_length** Calculate edge lengths
+
+edge_length(this, edge_inds)
+
 ### .**finalize** Set edge incidence, infer element type.
+
+### .**get_outer_edges** Get edges surrounding elements.
+
+edge_indices = get_outer_edges(this, elements)
+
+Given a list (1xN) of `elements`, the function returns the indices to
+edges `edge_indices` surrounding the elements (outer boundary only)
 
 
