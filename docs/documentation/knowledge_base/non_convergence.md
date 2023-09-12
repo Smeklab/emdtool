@@ -27,7 +27,7 @@ Sometimes, setting the `maxIter` property of `SimulationParameters` is enough.
 
 Increasing the `maximum_damping_iterations` property of `SimulationParameters` can also help.
 
-## Fit an analytical BH data
+## Fit an analytical BH curve
 
 The `SteelLibrary` class has a method for fitting an analytical BH curve to the given data. Analytical curves are often more well-behaving.
 
