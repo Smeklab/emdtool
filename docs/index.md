@@ -16,26 +16,58 @@ maintaining one.
 
 Please send an email to antti (at) smeklab.com to enquire about a [license](pricing.html). **Please check your spam folder** - each and every message will be replied.
 
+# Why EMDtool?
+
+## EMDtool is perfectly accurate
+
+In terms of accuracy, EMDtool is on par with any correctly-implemented commercial or open-source software. Granted, JMAG might have better iron
+loss models (for now ;)), and Motor-CAD might be hard to beat for drive-cycle thermal analysis. Yet, EMDtool punches well above its weight class.
+
+For a longer discussion, [please see this page](documentation/emdtool_accurate.html).
+
+## Affordable
+
+While price alone isn't a good aspect to base one's decision on, EMDtool _is_ priced on a level that is typically easy to fit in a small team's
+budget without a large approval hassle.
+
+## Flexible licensing
+
+EMDtool is licensed based on the number of long-term _active_ users. In other words, lending a license to an intern or a thesis worker for a few months
+is perfectly okay, and even encouraged.
+
+## Customizable
+
+Wholly unique in the world of commercial software, EMDtool is mostly source-available (and trusted clients can get access to even the protected parts,
+on request). This offers some rather unique possibilities for extensions, modifications, and debugging (no software is perfect).
+
+## Parallelizable
+
+No extra licenses are needed to utilize multi-core CPUs.
+
+## Magnet and winding losses
+
+For some reason, the software-giant world still doesn't seem to have figured out EMDtool's hybrid 2D-3D magnet loss model. 
+[This model](api/ExtrudedBlockCircuit.html) makes it possible to account for axial magnet segmentation, with great accuracy 
+(seriously, the worst case observed so far was about 15 % larger losses compared to full 3D, with the usual numbers being within a few percent) and
+a small fraction of the computational time (think 1-3x regular 2D analysis).
+
+Also, EMDtool allows for modelling the circulated currents in stranded windings without having to explicitly mesh each wire, ofter providing speed-ups
+up to 100x.
+
+## Support
+
+To paraphase another well-known product, EMDtool is also made by motor design person, for motor-design persons.
+
+
 # How does EMDtool work?
 
 Please check the [getting started guide](documentation/getting_started.html) and the [`EMDtool` overview](documentation/emdtool_briefly.html) to get a quick first impression.
-
-# How accurate is EMDtool compared to XX?
-
-Short answer: yes.
-
-For a longer answer, [please see this page](documentation/emdtool_accurate.html).
 
 
 # History
 
 EMDtool is loosely based on the open-source [SMEKlib library](https://github.com/AnttiLehikoinen/SMEKlib) developed at Aalto University, Finland, between 2013 and 2018 or so. This library was initially built out of
 necessity - the Research Group of Electromechanics was (and still is) working on advanced loss model development, and commercial softwares were definitely not flexible enough for that purpose.
-
-# Who is EMDtool for?
-
-Coming soon
-{: .label .label-yellow }
 
 # Requirements
 
@@ -74,11 +106,6 @@ Features under development; working but not pretty:
 * Rotor centrifugal stress analysis
 * Different modulators
 	* SVPWM and SHE at the moment
-
-# Use cases
-
-Coming soon
-{: .label .label-yellow }
 
 # Frequently-asked questions
 
