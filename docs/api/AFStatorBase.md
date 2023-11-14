@@ -33,7 +33,7 @@ doc AFStatorBase
 ### .**slot_orientation** Orientation of the slot.
 
 a = slot_orientation(this) returns the slot orientation, e.g.
-pi/2 (DEFAULT) for a vertical slot with the slot opening 'up'.
+pi/2 (DEFAULT) for a vertical slot with the slot opening 'down'.
 
 ### .**symmetry_period** Symmetry period of geometry.
 

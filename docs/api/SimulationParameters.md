@@ -17,13 +17,27 @@ SimulationParameters Parameters for MagneticsProblem solutions.
 
 ### .**alpha2** - time-stepping weight factor (2=implicit Euler, 1=trapezoidal, ]1,2[ = hybrid)
 
+### .**convergence_tolerance** Newton convergence tolerance.
+
+Newton iterations are performed until the relative residual, i.e. the norm
+of the Newton residual divided by max(norm(load_vector), 1) is strictly smaller
+than the convergence tolerance.
+
 ### .**f** - supply frequency
 
 ### .**maxIter** - maximum number of Newton iterations
 
-### .SimulationParameters/**maximum_damping_iterations** is a property.
+### .**maximum_damping_iterations** Maximum number of damping iterations.
 
-### .SimulationParameters/**maximum_regular_iterations** is a property.
+Number of damping iterations to perform for each Newton step (after the
+aforedescribed number of regular steps). On each damping step, the step size
+is halved, until the residual norm strictly decreases or the maximum number is
+reached.
+
+### .**maximum_regular_iterations** Number of maximum regular iterations.
+
+The maximum number of pure-Newton steps to perform, with the full step size.
+The count restarts for each time-step, obviously.
 
 ### .**rel** - relaxation factor for iterations, default = 1 (no relaxation)
 

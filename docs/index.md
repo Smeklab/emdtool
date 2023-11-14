@@ -14,7 +14,7 @@ Finally, the [industrial licenses](pricing.html) of EMDtool are largely [source-
 makes EMDtool the **ideal choice for medium-sized enterprises** that would greatly benefit from a custom-inhouse software toolkit, but don't have the resources to dedicate an entire team (or department) to building and 
 maintaining one.
 
-Please send an email to antti (at) smeklab.com to enquire about a [license](pricing.html).
+Please send an email to antti (at) smeklab.com to enquire about a [license](pricing.html). **Please check your spam folder** - each and every message will be replied.
 
 # How does EMDtool work?
 

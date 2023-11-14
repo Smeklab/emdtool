@@ -11,5 +11,5 @@ Key-value pairs:
 - angles : rotor angles or similar. Defaults to all-zero.
 - phases : number of phases. Default 3.
 Other functions named **xy**
-FieldWindingSpec/**xy**    PolyphaseWindingSpec/xy    SpaceVectors/xy
+DistributedWindingSpec/**xy**    FieldWindingSpec/xy    SpaceVectors/xy
 

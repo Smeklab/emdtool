@@ -24,6 +24,11 @@ Magnet dimensions
 * N_magnets : number of magnets per pole
 * w_magnet : (OPTIONAL) magnet width. If not given, magnet width is
 solved from the bridge and interpole bridge thickness
+* magnet_size_tolerance : (OPTIONAL) If given, an air shell is
+added around each magnet. The size of the shell is maintained at
+h_magnet x w_magnet, while the size of the actual PM material block
+is reduced to (h_magnet - magnet_size_tolerance) x (w_magnet x
+magnet_size_tolerance)
 
 Bridge thicknesses:
 * w_bridge : thickness of the iron bridge between successive

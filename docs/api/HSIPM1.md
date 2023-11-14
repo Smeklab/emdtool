@@ -7,9 +7,9 @@ grand_parent : Documentation
 
 ## Class summary
 
-HSIPM1 methods:
-HSIPM1 - is a class.
-create_geometry - import geometry.*
+HSIPM1 Deprecated class.
+
+Please use HSIPM instead.
 
 ## Properties
 
@@ -18,8 +18,9 @@ create_geometry - import geometry.*
 
 Class methods are listed below. Inherited methods are not included.
 
-### .**HSIPM1**/HSIPM1 is a constructor.
-this = HSIPM1(dim)
+### .**HSIPM1** Deprecated class.
+
+Please use HSIPM instead.
 Documentation for HSIPM1/HSIPM1
 doc HSIPM1
 

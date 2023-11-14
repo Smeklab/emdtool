@@ -93,6 +93,9 @@ has_toc : false
 ## Materials
  Folder with the following files / classes / subfolders:
 
+* *function* : [Materials/Analytical functions/H_langevin_single](H_langevin_single.html)  **H_langevin_single** Analytical H(B) function.
+* *function* : [Materials/Analytical functions/b_langevin_single](b_langevin_single.html)  **b_langevin_single** Analytical B(H) function.
+* *function* : [Materials/Analytical functions/m_langevin_single](m_langevin_single.html)  **m_langevin_single** Analytical M(H) function.
 * *function* : [Materials/Fitting functions/contents](contents.html)  Folder with the following files / classes / subfolders:
 * *function* : [Materials/Fitting functions/derivate_pp](derivate_pp.html)  **derivate_pp** derivates a piecewise-defined polynomial
 * *function* : [Materials/Fitting functions/err_double_langeving](err_double_langeving.html) **err_double_langeving** is a function.
@@ -116,7 +119,8 @@ has_toc : false
 * *function* : [Materials/Materials/get_materialData](get_materialData.html)  **get_materialData** Get material data struct.
 * *function* : [Materials/contents](contents.html)  Folder with the following files / classes / subfolders:
 * *function* : [Materials/skindepth](skindepth.html)  **skindepth** Skin depth of material.
-* *class* : [Materials/Material](Material.html)  **Material** Basic isotropic material class.
+* *class* : [Materials/InhomogeneousMaterial](InhomogeneousMaterial.html)  **InhomogeneousMaterial** Inhomogeneous material properties class.
+* *class* : [Material](Material.html)  **Material** Basic isotropic material class.
 * *class* : [MaterialBase](MaterialBase.html)  **MaterialBase** Base class for materials.
 * *class* : [/Hysteretic materials, WIP/HysteresisModel](HysteresisModel.html)  **HysteresisModel** Base class for hysteresis models.
 * *class* : [/Hysteretic materials, WIP/HystereticMaterial](HystereticMaterial.html)  **HystereticMaterial** Material class for hysteretic materials.
@@ -142,6 +146,8 @@ has_toc : false
 * *class* : [SimulationParameters](SimulationParameters.html)  **SimulationParameters** Parameters for MagneticsProblem solutions.
 * *class* : [StaticSolution](StaticSolution.html) **StaticSolution** is a class.
 * *class* : [SteppingSolution](SteppingSolution.html) **SteppingSolution** is a class.
+* *class* : [/Mechanics/CentrifugalStressProblem](CentrifugalStressProblem.html)  **CentrifugalStressProblem** Class for simple centrifugal stress problems.
+* *class* : [/Mechanics/CentrifugalStressSolution](CentrifugalStressSolution.html)  **CentrifugalStressSolution** Solution of a centrifugal stress problem.
 ## Templates
  Folder with the following files / classes / subfolders:
 
@@ -157,8 +163,8 @@ has_toc : false
 * *class* : [/Rotors/CoatedRotor](CoatedRotor.html)  **CoatedRotor** Rotor with a conductive coat/sleeve.
 * *class* : [/Rotors/FWRotor1](FWRotor1.html)  **FWRotor1** Template for a rotor with field-winding.
 * *class* : [/Rotors/HSIPM](HSIPM.html)  **HSIPM** High-speed IPM rotor
-* *class* : [/Rotors/HSIPM1](HSIPM1.html) **HSIPM1** methods:
-* *class* : [/Rotors/HSIPM2](HSIPM2.html) **HSIPM2** methods:
+* *class* : [/Rotors/HSIPM1](HSIPM1.html)  **HSIPM1** Deprecated class.
+* *class* : [/Rotors/HSIPM2](HSIPM2.html)  **HSIPM2** Deprecated
 * *class* : [/Rotors/LinearSPM](LinearSPM.html) **LinearSPM** methods:
 * *class* : [/Rotors/LinearSlottedRotor1](LinearSlottedRotor1.html)  **LinearSlottedRotor1** Super-simple slotted AF rotor.
 * *class* : [/Rotors/LinearSlottedRotorBase](LinearSlottedRotorBase.html) **LinearSlottedRotorBase** methods:

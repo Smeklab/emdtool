@@ -26,6 +26,10 @@ winding window extends towards the slot opening
 * lcar_slot : characteristic length for slot top
 * lcar_slot_bottom : ditto for slot bottom
 
+**** NOTE** This class overloads the `surface_to_parent_frame` method
+for `RadialGeometry` geometries and radial layer orientations, in an
+attempt to maintain solid conductor placement.
+
 ## Properties
 
 ### .Slot1/**N_layers** is a property.
@@ -63,5 +67,8 @@ create_geometry(this)
 
 ### .Slot1/**orientation_angle** is a function.
 a = orientation_angle(this)
+
+### .Slot1/**surface_to_parent_frame** is a function.
+surface_to_parent_frame(this, k_surface, s)
 
 

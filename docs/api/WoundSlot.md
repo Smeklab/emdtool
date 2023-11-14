@@ -64,6 +64,11 @@ then rotating the slot.
 * `slot_orientation` method of an `AxialGeometry´
 and then x-shifting (by mean x-coordinate of the winding window) and rotating the geometry.
 
+**** WARNING** Please note that the basic implementations are very
+simple indeed, and will probably fail in insidious (non-crashing)
+ways for more complex geometries. Overloading the corresponding
+methods in subclasses is recommended.
+
 ## Properties
 
 ### .**interlayer_curves** - curves between separate winding window surfaces

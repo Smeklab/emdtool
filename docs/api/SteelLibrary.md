@@ -52,6 +52,11 @@ the hysteresis losses.
 See also SteelLibrary.parse_data_from_Excel  and fit_losses.fit_losses
 for extra optional arguments.
 
+Optional arguments include:
+* 'fit_analytical_BH' : false (DEFAULT) / true. Replace material BH
+data by fitting an analytical BH curve to the data with
+`this.generate_BH_langevin`.
+
 ### .**fit_losses** Fit loss data.
 
 [coeffs, c_opt]  = fit_losses(this, B, fs, Ws, varargin) fits the
@@ -79,6 +84,15 @@ hysteresis loss coefficient), at the cost of decreased accuracy at high
 loss densities. Default false.
 * 'optimize_exponents' : optimize the hysteresis loss exponents [a,b].
 Defaults to false.
+
+### .**generate_BH_langevin** Fit analytical Langevin curve.
+
+[Bnew, Hnew] = generate_BH_langevin(this, B, H) returns a new BH curve,
+consisting of a single Langevin function fitted to the measured data. The
+fitted curve will go exactly through the (B(end), H(end).
+
+Note: The resulting curve may fail to well approximate the original curve
+at lower field strengths. User discretion is advised.
 
 ### .**get_grades** List available steel grades.
 

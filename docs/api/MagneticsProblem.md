@@ -20,11 +20,18 @@ Main methods:
 
 * solve_harmonic : solve harmonic problem.
 
+* solve_quasistatic: similar to harmonic, but without the harmonic-reluctivity model used in `solve_harmonic`
+
 * solve_stepping : solve time-stepping problem.
+
+Most solution methods utilize a relaxed Newton iteration approach. On any given time-step, the first
+`pars.maximum_regular_iterations` are undamped. If this number of iterations is exceeded, damping is performed at each step.
+This damping if performed by first computing the regular Newton step direction, and progressively halving the step length
+until the residual norm is strictly reduced. A maximum of `pars.maximum_damping_iterations` halving steps is performed.
 
 ## Properties
 
-### .**model** - The [MotorModelBase](MotorModelBase.html) (or compatible) model class associated with the problem
+### .**model** - The [MotorModelBase](MotorModelBase.html) (or compatible) model object associated with the problem
 
 
 ## Methods

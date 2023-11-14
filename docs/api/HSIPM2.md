@@ -7,10 +7,9 @@ grand_parent : Documentation
 
 ## Class summary
 
-HSIPM2 methods:
-HSIPM2 - is a class.
-create_geometry - import geometry.*
-list_dimensions - HSIPM2.list_dimensions is a function.
+HSIPM2 Deprecated
+
+Please use HSIPM instead.
 
 ## Properties
 
@@ -19,8 +18,9 @@ list_dimensions - HSIPM2.list_dimensions is a function.
 
 Class methods are listed below. Inherited methods are not included.
 
-### .**HSIPM2**/HSIPM2 is a constructor.
-this = HSIPM2(dim)
+### .**HSIPM2** Deprecated
+
+Please use HSIPM instead.
 Documentation for HSIPM2/HSIPM2
 doc HSIPM2
 
