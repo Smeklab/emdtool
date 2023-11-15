@@ -31,6 +31,12 @@ The one stator template to rule them all, the [`Stator`](../../api/Stator.html) 
 
 Simple linear-machine style yokeless stator template, suitable for 2D sliced models of axial flux machines.
 
+## SlotlessStator
+
+![SlotlessStator](SlotlessStator.png)
+
+[Simple template for slotless stators.](../../api/SlotlessStator.html).
+
 # Rotors
 
 ## SPM1
@@ -76,6 +82,12 @@ A basic [traction-style IPM rotor](../../api/VIPM1.html) template. Supports axia
 ![HSIPM](HSIPM.png)
 
 [Template for a high-speed style IPM rotor](../../api/HSIPM.html) with rectangular magnets embedded in a radial pattern.
+
+## MassivePM
+
+![MassivePM](MassivePM.png)
+
+[Template for a high-speed style massive-PM rotor](../../api/MassivePM.html).
 
 ## FWRotor1
 

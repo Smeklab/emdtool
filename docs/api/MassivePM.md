@@ -7,10 +7,19 @@ grand_parent : Documentation
 
 ## Class summary
 
-MassivePM methods:
-MassivePM - is a class.
-create_geometry - MassivePM/create_geometry is a function.
-save_to_excel - MassivePM/save_to_excel is a function.
+MassivePM Template for massive-PM rotors.
+
+This class forms a template for 'massive' PM rotors, i.e. rotors that
+consist of a massive cylindrical PM, a retaining sleeve, and an
+optional eddy-current shield.
+
+Dimensions:
+* Rout : outer radius
+* h_sleeve : sleeve thickness
+* magnet_material : magnet material
+* sleeve_material : sleeve material
+* h_shield : (OPTIONAL) shield thickness
+* shield_material : (OPTIONAL) shield material
 
 ## Properties
 
@@ -18,11 +27,6 @@ save_to_excel - MassivePM/save_to_excel is a function.
 ## Methods
 
 Class methods are listed below. Inherited methods are not included.
-
-### .**MassivePM**/MassivePM is a constructor.
-this = MassivePM(dim)
-Documentation for MassivePM/MassivePM
-doc MassivePM
 
 ### .**copy_domain** Copy domain and apply necessary rotations or
 translations.
