@@ -88,6 +88,8 @@ and data, a structure with fields:
 
 * Peddy
 
+* Pexcess
+
 * W : losses
 
 ### .**get_speed_and_torque_grid** Meshgrids for calculation.
@@ -130,5 +132,10 @@ right now.
 * 'sheet', sheet_name : Sheet to save into.
 
 * 'range', rng : Sheet range to save into. Default 'A1'.
+
+**NOTE**  The exported (Id, Iq) currents are defined for the 'coil frame'
+using peak-scaled space vectors. Thus, the terminal RMS current is
+`sqrt(Id^2 +Id^2) / sqrt(2) * number_of_parallel_paths` for star connection,
+and sqrt(3) times that for delta
 
 

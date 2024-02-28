@@ -41,6 +41,8 @@ FIXME: SMGridCalculator superclass, grid as class to harmonize naming
 
 ## Properties
 
+### .SMGridCalculator_DQ/**demag_computation_arguments** is a property.
+
 ### .SMGridCalculator_DQ/**grid** is a property.
 
 ### .SMGridCalculator_DQ/**problem** is a property.

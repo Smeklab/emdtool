@@ -33,6 +33,8 @@ is_valid = emdtool.check_license(force_check)
 
 ### .**get_gmsh_path** Return path to gmsh executable.
 
+### .**get_version** Read current version from file.
+
 ### .**license_information** Show license information.
 
 [userid, license_number, valid_until, signature] = emdtool.license_information()

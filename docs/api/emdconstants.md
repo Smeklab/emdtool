@@ -38,6 +38,9 @@ specified size + [-tolerance, tolerance]
 
 Class methods are listed below. Inherited methods are not included.
 
+### .emdconstants.**BHmax_to_Br** is a function.
+Br = emdconstants.BHmax_to_Br(BHmax, mur)
+
 ### .**emdconstants**/emdconstants is a constructor.
 obj = emdconstants
 Documentation for emdconstants/emdconstants

@@ -168,7 +168,7 @@ has_toc : false
 * *class* : [/Rotors/LinearSPM](LinearSPM.html) **LinearSPM** methods:
 * *class* : [/Rotors/LinearSlottedRotor1](LinearSlottedRotor1.html)  **LinearSlottedRotor1** Super-simple slotted AF rotor.
 * *class* : [/Rotors/LinearSlottedRotorBase](LinearSlottedRotorBase.html) **LinearSlottedRotorBase** methods:
-* *class* : [/Rotors/MassivePM](MassivePM.html) **MassivePM** methods:
+* *class* : [/Rotors/MassivePM](MassivePM.html)  **MassivePM** Template for massive-PM rotors.
 * *class* : [/Rotors/PoledIPM1](PoledIPM1.html) **PoledIPM1** methods:
 * *class* : [/Rotors/SPM1](SPM1.html)  **SPM1** Template for a surface-PM rotor.
 * *class* : [SPM1](SPM1.html)  **SPM1** Template for a surface-PM rotor.
@@ -200,7 +200,7 @@ has_toc : false
 * *class* : [/Stators/LinearStator](LinearStator.html) **LinearStator** methods:
 * *class* : [/Stators/OutrunnerFrame](OutrunnerFrame.html) **OutrunnerFrame** methods:
 * *class* : [/Stators/PCBStator](PCBStator.html) **PCBStator** methods:
-* *class* : [/Stators/SlotlessStator](SlotlessStator.html)  Stator General-purpose stator class for slotted stators.
+* *class* : [/Stators/SlotlessStator](SlotlessStator.html)  **SlotlessStator** Simple class for slotless stators.
 * *class* : [/Stators/Standard](Standard.html) **Standard** methods:
 * *class* : [/Stators/Stator](Stator.html)  **Stator** General-purpose stator class for symmetric slotted stators.
 * *class* : [/Stators/StatorBase](StatorBase.html)  **StatorBase** Base class for radial-flux stators.

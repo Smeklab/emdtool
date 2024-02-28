@@ -11,6 +11,7 @@ Arc methods:
 Arc - is a class.
 center_from_segment_points - Arc center from three segment points.
 from_points - Create an Arc from Points.
+from_points_and_angle - tangent vector
 from_segment_points - Create an Arc from three points on it.
 update_points - start and end points
 
@@ -59,6 +60,8 @@ connecting points pstart and pend, or throws an error if not found.
 
 [this, direction] = from_points(...) also returns the direction of the
 Arc: +1 if this.pstart equals the given pstart, -1 otherwise.
+
+### .tangent vector
 
 ### .**from_segment_points** Create an Arc from three points on it.
 

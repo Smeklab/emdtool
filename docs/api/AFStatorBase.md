@@ -24,6 +24,10 @@ Class methods are listed below. Inherited methods are not included.
 Documentation for AFStatorBase/AFStatorBase
 doc AFStatorBase
 
+### .**mean_slot_radius** Mean radius of, well, slots.
+
+Defaults to average core diameter.
+
 ### .**sector_angle** Angle of smallest symmetry sector.
 
 ### .**slot_angle** Angular coordinate of the first slot center line.

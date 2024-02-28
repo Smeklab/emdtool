@@ -68,6 +68,14 @@ Setting or getting this property directly sets / gets the
 
 ### .**connection** - connection
 
+### .**end_winding_inductance_multiplier** Multiplier for end-winding
+inductance
+
+### .**end_winding_length_factor** End-winding length factor.
+
+Placeholder variable for user-specified custom end-turn length
+factors. Must be handled in subclasses.
+
 ### .**end_winding_length_per_conductor**
 
 ### .**extra_phase_inductance** - extra per-phase inductance
@@ -199,8 +207,12 @@ two successive slots. Computed with `this.end_winding_loop_matrix`
 * `l_segment`  : inductance of one end-winding segment. Computed with
 `this.end_winding_segment_inductance` .
 
+The resulting matrix is then multiplied with
+`this.end_winding_inductance_multiplier`.
+
 If non-zero, `this.this.extra_phase_inductance`  is added to the diagonal
 of `Lew` , or block-diagonal in case `this.meshed_wires_in_hand`  > 1.
+
 
 Only works for radial flux machines.
 

@@ -22,3 +22,5 @@ automatically.
 
 * 'conductors' : vector of conductor indices to plot. Default all.
 
+* 'plot_geometry' : plot the rest of the geometry? Default true.
+

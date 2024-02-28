@@ -9,3 +9,5 @@ grand_parent : Documentation
 
 d = **skindepth**( material_object, frequency_in_Hz)
 
+d = **skindepth**( material_object, frequency_in_Hz, T)
+

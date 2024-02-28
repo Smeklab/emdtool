@@ -31,6 +31,8 @@ c = copy(this)
 ### .SplitConductor/**domains** is a function.
 ds = domains(this)
 
+### .identical assingment by default
+
 ### .SplitConductor/**electric_potential_at_nodes** is a function.
 U = electric_potential_at_nodes(this, u)
 

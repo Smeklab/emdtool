@@ -31,7 +31,7 @@ to also plot the resulting loss fit
 
 ## Properties
 
-### .SteelLibrary.**fname** is a property.
+### .SteelLibrary/**fname** is a property.
 
 ### .SteelLibrary.**grades** is a property.
 
@@ -56,6 +56,7 @@ Optional arguments include:
 * 'fit_analytical_BH' : false (DEFAULT) / true. Replace material BH
 data by fitting an analytical BH curve to the data with
 `this.generate_BH_langevin`.
+* 'file_to_use' : use a custom datasheet file (.xlsx) name/path.
 
 ### .**fit_losses** Fit loss data.
 

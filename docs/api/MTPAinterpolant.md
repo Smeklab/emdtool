@@ -40,6 +40,8 @@ Does not handle generators, really.
 
 ### .MTPAinterpolant/**eddy_loss_interpolant** is a property.
 
+### .MTPAinterpolant/**excess_loss_interpolant** is a property.
+
 ### .MTPAinterpolant/**hysteresis_loss_interpolant** is a property.
 
 ### .ready-made grids
@@ -78,7 +80,7 @@ init(this, Tn, nn, nrange, varargin)
 ### .torque interpolant
 
 ### .MTPAinterpolant/**losses** is a function.
-[P, p_dc, p_hyst, p_eddy] = losses(this, id, iq, n)
+[P, p_dc, p_hyst, p_eddy, p_excess] = losses(this, id, iq, n)
 
 ### .MTPAinterpolant/**rated_voltage_contour_at_speed** is a function.
 c = rated_voltage_contour_at_speed(this, n, chop)

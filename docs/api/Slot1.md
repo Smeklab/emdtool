@@ -26,6 +26,9 @@ winding window extends towards the slot opening
 * lcar_slot : characteristic length for slot top
 * lcar_slot_bottom : ditto for slot bottom
 
+Object properties to set:
+* slot_bottom_type : 'line' or 'arc'
+
 **** NOTE** This class overloads the `surface_to_parent_frame` method
 for `RadialGeometry` geometries and radial layer orientations, in an
 attempt to maintain solid conductor placement.

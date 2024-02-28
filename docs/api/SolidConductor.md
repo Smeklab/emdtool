@@ -26,6 +26,9 @@ doc SolidConductor
 ### .SolidConductor/**copy** is a function.
 c = copy(this)
 
+### .SolidConductor/**electric_potential_at_conductor_nodes** is a function.
+U = electric_potential_at_conductor_nodes(this, u)
+
 ### .SolidConductor/**electric_potential_at_nodes** is a function.
 U = electric_potential_at_nodes(this, u)
 

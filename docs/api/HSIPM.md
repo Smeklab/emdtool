@@ -29,6 +29,8 @@ added around each magnet. The size of the shell is maintained at
 h_magnet x w_magnet, while the size of the actual PM material block
 is reduced to (h_magnet - magnet_size_tolerance) x (w_magnet x
 magnet_size_tolerance)
+* tolerance_box_material : (OPTIONAL) Material to be used for
+magnet box. Defaults to generic glue.
 
 Bridge thicknesses:
 * w_bridge : thickness of the iron bridge between successive

@@ -46,6 +46,7 @@ Materials:
 *  24 = Ti6Al4V (Grade 5)
 *  25 = Stainless steel, linear
 *  26 = generic impregnation resin, magnetically linear
+*  27 = generic epoxy glue, magnetically linear.
 
 (c) 2017 Antti Lehikoinen / Aalto University
 

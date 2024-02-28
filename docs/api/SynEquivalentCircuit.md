@@ -82,6 +82,11 @@ eq. circuit parameters over. Default linspace(0, 2*pi/6, 30).
 
 * Any key-value pair of SynEquivalentCircuit
 
+**** NOTE** In case the equivalent circuit is used to compute supply
+parameters (id, iq) or (Ud, Uq) for a delta-connected machine, it seems
+that the `'transform_to_star', false` argument pair is needed. Verifying
+the correct behaviour manually is highly recommended.
+
 ### .**get_max_torque** Compute maximum attainable torque.
 
 [id, iq, Ed, Eq] = get_max_torque(this, n)
