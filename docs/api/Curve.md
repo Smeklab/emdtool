@@ -126,8 +126,12 @@ the `Curve` to `lcar`.
 ### .Curve/**split_with_point** is a function.
 new_curve = split_with_point(this, P)
 
-### .Curve/**tangent** is a function.
-t = tangent(this, p)
+### .**tangent** Return Curve tangent.
+
+t = tangent(this) returns the Curve **tangent** vector
+
+t = tangent(this, p) returns the Curve **tangent** at the desired
+point.
 
 ### .**unique_not_proxy** Return unique Curves, proxy the rest.
 
@@ -141,6 +145,6 @@ appropriate with Curve.flip()
 
 ### .start point
 
-### .Curve/**update_single_point** is an undocumented builtin Curve method.
+### .Curve/**update_single_point** is an undocumented builtin Line method.
 
 

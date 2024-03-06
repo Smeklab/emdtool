@@ -151,12 +151,16 @@ has_toc : false
 ## Templates
  Folder with the following files / classes / subfolders:
 
+* *function* : [Templates/Annotations/contents](contents.html)  Folder with the following files / classes / subfolders:
 * *function* : [Templates/Rotors/contents](contents.html)  Folder with the following files / classes / subfolders:
 * *function* : [Templates/Stators/contents](contents.html)  Folder with the following files / classes / subfolders:
 * *function* : [Templates/contents](contents.html)  Folder with the following files / classes / subfolders:
 * *class* : [Templates/AFmodel](AFmodel.html)  only types given?
 * *class* : [LinearGeoBase](LinearGeoBase.html) **LinearGeoBase** methods:
 * *class* : [RFmodel](RFmodel.html)  **RFmodel** Simple class for radial-flux machines.
+* *class* : [/Annotations/Annotable](Annotable.html)  **Annotable** Base class for annotable geometries.
+* *class* : [/Annotations/AnnotationBase](AnnotationBase.html)  **AnnotationBase** Base class for annotations.
+* *class* : [/Annotations/CurveAnnotation](CurveAnnotation.html)  **CurveAnnotation** Class for curve annotations.
 * *class* : [LayoutCompatible](LayoutCompatible.html)  **LayoutCompatible** Base class for templates compatible with the
 * *class* : [/Rotors/BreadloafRotor](BreadloafRotor.html)  **BreadloafRotor** Template for rotors with breadloaf PMs.
 * *class* : [/Rotors/ClassicIPM](ClassicIPM.html)  **ClassicIPM** High-speed / industrial style IPM rotor.

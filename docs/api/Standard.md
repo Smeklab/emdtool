@@ -11,6 +11,8 @@ Standard methods:
 Standard - is a class.
 create_geometry - Standard/create_geometry is a function.
 
+![Standard dimensions example.](Standard.png)
+
 ## Properties
 
 ### .Standard/**conductors** is a property.

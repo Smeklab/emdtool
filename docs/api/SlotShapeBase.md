@@ -3,7 +3,7 @@ title : SlotShapeBase
 parent: API
 grand_parent : Documentation
 ---
-# Summary for: **SlotShapeBase**  < handle
+# Summary for: **SlotShapeBase**  < handle & [Annotable](Annotable.html)
 
 ## Class summary
 

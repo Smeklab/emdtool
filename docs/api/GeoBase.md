@@ -3,7 +3,7 @@ title : GeoBase
 parent: API
 grand_parent : Documentation
 ---
-# Summary for: **GeoBase**  < [Indexable](Indexable.html)
+# Summary for: **GeoBase**  < [Indexable](Indexable.html) & [Annotable](Annotable.html)
 
 ## Class summary
 

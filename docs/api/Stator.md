@@ -9,18 +9,6 @@ grand_parent : Documentation
 
 Stator General-purpose stator class for symmetric slotted stators.
 
-Supports:
-
-* inrunner and outrunner geometries
-
-* 1- and 2-layer windings
-
-* Distributed- and concentric-style layer orientations (radial and
-circumferential)
-
-Run Stator.list_dimensions to show available dimensions on command
-prompt.
-
 DIMENSIONS:
 
 Main dimensions:
@@ -31,13 +19,14 @@ Main dimensions:
 * symmetry_sectors : number of symmetry sectors for model
 
 Slot dimensions:
-* Any dimensions used by Slot1 (default slot shape class)
-* (OPTIONAL): stator_slot : a SlotShapeBase object or a handle to the class. Default: Slot1
+* Any dimensions used by [Slot1](Slot1.html) (default slot shape class)
+* (OPTIONAL): stator_slot : a [SlotShapeBase](SlotShapeBase.html) object or a handle to the class. Default: Slot1
+* Any dimensions used by the custom slot shape class.
 
 Materials (names, indices, or Material objects):
 * stator_core_material
 * stator_wedge_material : slot-opening material
-* stator_stacking_factor : core stacking factor, between 0 and 1.
+* stator_stacking_factor : core stacking factor, normally between 0 and 1.
 
 Winding specifications:
 * stator_winding : a PolyphaseWindingSpec object
@@ -48,7 +37,9 @@ Winding specifications:
 * h_cooling_rib : thickness of rib between cooling hole and yoke boundary
 
 (OPTIONAL): Mesh density parameters:
-* lcar_core_s : Characteristic lenght for the core.
+* lcar_core_s : Characteristic length for the core.
+
+![Stator dimensions example.](Stator.png)
 
 ## Properties
 
