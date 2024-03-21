@@ -107,6 +107,35 @@ M = PolyphaseCircuit.line_current_matrix
 ### .PolyphaseCircuit.**line_to_line_voltage_matrix** is a function.
 M = PolyphaseCircuit.line_to_line_voltage_matrix
 
+### .**losses** Compute **losses** and loss data.
+
+[Pmean, data] = losses(this, solution) returns the mean total **losses** and
+a structure of loss data, including
+* conductor_loss_waveform : instantaneous total **losses** per [Conductor](Conductor.html)
+* P_AC_time : waveform of total AC losses
+* Ptot_time_conductor : waveform of per-conductor losses
+* mean_total_losses : as the title suggests
+** mean_AC_losses : ** *NOTE** Mean **** eddy-current** losses, i.e. losses
+due to uneven current density distribution inside the conductors.
+* mean_DC_losses : Mean **losses** neglecting all AC effects. This includes
+the eddy-current losses, the uneven distribution of total current
+within multiple wires in-hand, and the zero-sequence component of the
+phase-currents. **** NOTE** This will, for now, give incorrect results for
+non-standard winding configurations, where the zero-sequence component
+is not simply sum(Iphase, 1).
+* mean_conductor_losses : mean **losses** per conductor
+* mean_circulating_current_losses : total loss component due to
+circulating-current phenomana, including both strand-level and
+phase-level circulating currents. Computed as the difference between the ohmic losses
+computed from conductor currents, and the `mean_DC_losses` field.
+* mean_circulating_current_losses_on_phase_level : difference between
+`mean_DC_losses`, and the **losses** computed from strand DC resistances,
+assuming even distribution of current within the multiple parallel
+strands in each phase.
+* P_DC_conductor : total **losses** from conductor currents and conductor
+DC-resistances. Exluded eddy-current effects, includes all circulating
+currents.
+
 ### .PolyphaseCircuit/**mass** is a function.
 [m, data] = mass(this)
 
