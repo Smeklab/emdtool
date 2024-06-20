@@ -71,6 +71,9 @@ incorrect for synchronous machines (as f_rotor = 0). As a result, the rotor
 reluctivity gets overestimated. This may be fixed in a future release. In
 the meantime, see ´MagneticsProblen.solve_quasistatic´.
 
+### .MagneticsProblem/**solve_initial_conditions** is a function.
+[X0, res_prev] = solve_initial_conditions(this, pars, Sc, Mtot)
+
 ### .**solve_quasistatic** Quasi-static solution a MagneticsProblem.
 
 Almost like solve_harmonic with the 'isDC' parameter set to true; but

@@ -11,7 +11,7 @@ Arc methods:
 Arc - is a class.
 center_from_segment_points - Arc center from three segment points.
 from_points - Create an Arc from Points.
-from_points_and_angle - tangent vector
+from_points_and_angle - Create arc from two Points and angle.
 from_segment_points - Create an Arc from three points on it.
 update_points - start and end points
 
@@ -61,7 +61,11 @@ connecting points pstart and pend, or throws an error if not found.
 [this, direction] = from_points(...) also returns the direction of the
 Arc: +1 if this.pstart equals the given pstart, -1 otherwise.
 
-### .tangent vector
+### .**from_points_and_angle** Create arc from two Points and angle.
+
+this = from_points_and_angle(Pstart, Pend, arc_angle) creates a new Arc
+object from the two given [Points](Points.html) and the arc opening angle. A new
+center point is created.
 
 ### .**from_segment_points** Create an Arc from three points on it.
 

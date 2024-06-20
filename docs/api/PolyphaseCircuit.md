@@ -65,6 +65,12 @@ solution = a [MagneticsSolution](MagneticsSolution.html) object.
 
 I is a vector of currents, row per meshed conductor.
 
+### .**conductor_flux_linkage** Conductor flux linkage.
+
+Phi = conductor_flux_linkage(this, solution) returns the
+average flux linkage of each [Conductor](Conductor.html), without considering
+the number of symmetry sectors, parallel paths or anything.
+
 ### .PolyphaseCircuit/**derivate_phase_quantity** is a function.
 E = derivate_phase_quantity(this, QoI, solution, varargin)
 

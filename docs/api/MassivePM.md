@@ -20,6 +20,8 @@ Dimensions:
 * sleeve_material : sleeve material
 * h_shield : (OPTIONAL) shield thickness
 * shield_material : (OPTIONAL) shield material
+* Rin : (OPTIONAL) shaft radius. Defaults to no shaft.
+* shaft_material : (OPTIONAL) Shaft materia.
 
 ## Properties
 

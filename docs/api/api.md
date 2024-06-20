@@ -148,6 +148,28 @@ has_toc : false
 * *class* : [SteppingSolution](SteppingSolution.html) **SteppingSolution** is a class.
 * *class* : [/Mechanics/CentrifugalStressProblem](CentrifugalStressProblem.html)  **CentrifugalStressProblem** Class for simple centrifugal stress problems.
 * *class* : [/Mechanics/CentrifugalStressSolution](CentrifugalStressSolution.html)  **CentrifugalStressSolution** Solution of a centrifugal stress problem.
+* *class* : [/Thermals/Analysis/Connections/BoundaryConnection](BoundaryConnection.html)  **BoundaryConnection** Basic heat transfer boundary.
+* *class* : [/Thermals/Analysis/Connections/Node2NodeConnection](Node2NodeConnection.html)  **Node2NodeConnection** Textbook connection between two nodes.
+* *class* : [/Thermals/Analysis/Connections/ThermalNetworkConnection](ThermalNetworkConnection.html)  **ThermalNetworkConnection** Abstract base class for connections.
+* *class* : [/Thermals/Analysis/Connections/VolumeConnection](VolumeConnection.html)  **VolumeConnection** Connection between heat generation and external nodes.
+* *class* : [/Thermals/Analysis/Model and solutions/SteadyStateThermalSolution](SteadyStateThermalSolution.html)  **SteadyStateThermalSolution** Steady-state thermal solution.
+* *class* : [/Thermals/Analysis/Model and solutions/ThermalModel](ThermalModel.html)  **ThermalModel** Basic model-problem class for thermal problems.
+* *class* : [/Thermals/Analysis/Model and solutions/ThermalModelElement](ThermalModelElement.html)  **ThermalModelElement** Base class for thermal model components.
+* *class* : [/Thermals/Analysis/Model and solutions/ThermalSolution](ThermalSolution.html)  **ThermalSolution** Base class for thermal solutions.
+* *class* : [/Thermals/Analysis/Nodes/AmbientNode](AmbientNode.html)  **AmbientNode** Class for fixed-temperature nodes.
+* *class* : [/Thermals/Analysis/Nodes/AverageTempNode](AverageTempNode.html)  MaxTempNode Dummy-like node for picking the maximum temperature.
+* *class* : [/Thermals/Analysis/Nodes/MaxTempNode](MaxTempNode.html)  **MaxTempNode** Dummy-like node for picking the maximum temperature.
+* *class* : [/Thermals/Analysis/Nodes/PlusDiffNode](PlusDiffNode.html)  **PlusDiffNode** Linear combination node
+* *class* : [/Thermals/Analysis/Nodes/ThermalNode](ThermalNode.html)  **ThermalNode** General class for textbook thermal node.
+* *class* : [/Thermals/Analysis/Nodes/WeightedAverageNode](WeightedAverageNode.html)  **WeightedAverageNode** Weighted temperature average.
+* *class* : [ThermalConstants](ThermalConstants.html) **ThermalConstants** is a class.
+* *class* : [/Thermals/RF_specific_components/AirgapThermalModel](AirgapThermalModel.html)  **AirgapThermalModel** Simple model for airgap heat transfer.
+* *class* : [/Thermals/RF_specific_components/CoolingChannelModel](CoolingChannelModel.html)  **CoolingChannelModel** Convenience model for cooling channels.
+* *class* : [/Thermals/RF_specific_components/FlowHeatSinkConnection](FlowHeatSinkConnection.html)  **FlowHeatSinkConnection** Coolant flow acting as a heat sink.
+* *class* : [/Thermals/RF_specific_components/RFThermalModel](RFThermalModel.html)  **RFThermalModel** Simple thermal model for radial-flux machines.
+* *class* : [/Thermals/RF_specific_components/SimpleJacketThermalModel](SimpleJacketThermalModel.html)  **SimpleJacketThermalModel** Simple model for cooling jacket.
+* *class* : [/Thermals/RF_specific_components/StrandedWindingThermalModel](StrandedWindingThermalModel.html)  **StrandedWindingThermalModel** Class for stranded windings.
+* *class* : [/Thermals/RF_specific_components/WindingThermalModel](WindingThermalModel.html)  **WindingThermalModel** More-general winding thermal model.
 ## Templates
  Folder with the following files / classes / subfolders:
 
@@ -172,6 +194,7 @@ has_toc : false
 * *class* : [/Rotors/LinearSPM](LinearSPM.html) **LinearSPM** methods:
 * *class* : [/Rotors/LinearSlottedRotor1](LinearSlottedRotor1.html)  **LinearSlottedRotor1** Super-simple slotted AF rotor.
 * *class* : [/Rotors/LinearSlottedRotorBase](LinearSlottedRotorBase.html) **LinearSlottedRotorBase** methods:
+* *class* : [/Rotors/LinearSynRotorBase](LinearSynRotorBase.html) **LinearSynRotorBase** methods:
 * *class* : [/Rotors/MassivePM](MassivePM.html)  **MassivePM** Template for massive-PM rotors.
 * *class* : [/Rotors/PoledIPM1](PoledIPM1.html) **PoledIPM1** methods:
 * *class* : [/Rotors/SPM1](SPM1.html)  **SPM1** Template for a surface-PM rotor.
@@ -185,6 +208,12 @@ has_toc : false
 * *class* : [/Rotors/VIPM1](VIPM1.html)  **VIPM1** V-shape IPM rotor.
 * *class* : [SlottedRotorBase](SlottedRotorBase.html)  **SlottedRotorBase** Base class for slotted radial-flux rotors.
 * *class* : [SynRotorBase](SynRotorBase.html)  **SynRotorBase** Base class for synchronous machine rotors.
+* *class* : [/Slicing/Sliced Models/AFModelWithSkew](AFModelWithSkew.html)  RFModelWithSkew Skewed and sliced radial-flux model.
+* *class* : [/Slicing/Sliced Models/RFModelWithSkew](RFModelWithSkew.html)  **RFModelWithSkew** Skewed and sliced radial-flux model.
+* *class* : [/Slicing/Sliced Models/SlicedMotorModel](SlicedMotorModel.html)  **SlicedMotorModel** Base class for sliced motor models.
+* *class* : [/Slicing/Slices/AFSlice](AFSlice.html) **AFSlice** methods:
+* *class* : [/Slicing/Slices/ModelSlice](ModelSlice.html)  **ModelSlice** Base class for representing slices.
+* *class* : [/Slicing/Slices/RFSlice](RFSlice.html)  **RFSlice** Slice class for radial-flux machines.
 * *class* : [/Slots/CooledSlot1](CooledSlot1.html) **CooledSlot1** methods:
 * *class* : [/Slots/FloodedSlot1](FloodedSlot1.html) **FloodedSlot1** methods:
 * *class* : [/Slots/RotorSlot1](RotorSlot1.html)  **RotorSlot1** Rotor slot shape 1.

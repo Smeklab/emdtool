@@ -116,6 +116,9 @@ ns = global_node_indices(this, ns, component)
 ### .MotorModelBase/**initialize_airgap** is a function.
 initialize_airgap(this)
 
+### .MotorModelBase/**local_node_indices** is a function.
+ns = local_node_indices(this, ns, component)
+
 ### .MotorModelBase/**mass** is a function.
 [m, m_domain, m_mat] = mass(this)
 

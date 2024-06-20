@@ -19,7 +19,7 @@ write_named_volumes - gw3D/write_named_volumes is a function.
 write_periodic_surfaces - gw3D/write_periodic_surfaces is a function.
 write_points - gw3D/write_points is a function.
 write_surfaces - writing line loops
-write_volumes - writing surface loops
+write_volumes - gw3D/write_volumes is a function.
 
 ## Properties
 

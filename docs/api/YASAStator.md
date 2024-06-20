@@ -21,7 +21,7 @@ Main dimensions:
 * axial_symmetry_sectors : number of axial symmetry sectors
 
 Slot dimensions:
-* w_slot_s : slot widht
+* w_slot_s : slot width
 * w_slotOpening_s : slot opening width
 * l_tooth_s : total axial length of the stator core
 * htt_s : total height of the tooth tip region

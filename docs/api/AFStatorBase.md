@@ -24,6 +24,9 @@ Class methods are listed below. Inherited methods are not included.
 Documentation for AFStatorBase/AFStatorBase
 doc AFStatorBase
 
+### .**end_winding_bundle_radius** Used for end-winding inductance
+calculation.
+
 ### .**mean_slot_radius** Mean radius of, well, slots.
 
 Defaults to average core diameter.
