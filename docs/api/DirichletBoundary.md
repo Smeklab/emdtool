@@ -63,6 +63,16 @@ For example, PLOT(X,Y,'c+:') plots a cyan dotted line with a plus
 at each data point; PLOT(X,Y,'bd') plots blue diamond at each data
 point but does not draw any line.
 
+PLOT(TBL,XVAR,YVAR) plots the variables xvar and yvar from the table
+tbl. To **plot** one data set, specify one variable for xvar and one
+variable for yvar. To **plot** multiple data sets, specify multiple
+variables for xvar, yvar, or both. If both arguments specify multiple
+variables, they must specify the same number of variables
+
+PLOT(TBL,YVAR) plots the specified variable from the table against the
+row indices in the table. If the table is a timetable, the specified
+variable is plotted against the row times from the timetable.
+
 PLOT(X1,Y1,S1,X2,Y2,S2,X3,Y3,S3,...) combines the plots defined by
 the (X,Y,S) triples, where the X's and Y's are vectors or matrices
 and the S's are strings.
@@ -101,7 +111,7 @@ plot(x,y,'--rs','LineWidth',2,...
 'MarkerFaceColor','g',...
 'MarkerSize',10)
 
-See also PLOTTOOLS, SEMILOGX, SEMILOGY, LOGLOG, PLOTYY, PLOT3, GRID,
-TITLE, XLABEL, YLABEL, AXIS, AXES, HOLD, LEGEND, SUBPLOT, SCATTER.
+See also TITLE, XLABEL, YLABEL, XLIM, YLIM, LEGEND, HOLD, GCA, YYAXIS,
+PLOT3, SEMILOGX, SEMILOGY, LOGLOG, TILEDLAYOUT, HOLD, LEGEND, SCATTER
 
 

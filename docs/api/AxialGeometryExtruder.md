@@ -35,7 +35,8 @@ Vs = extrude(this, domain, level)
 ### .AxialGeometryExtruder/**extrude_flat** is a function.
 Vs = extrude_flat(this, domain, level, a)
 
-### .AxialGeometryExtruder/**extrude_point_along_symmetry_boundary** is an undocumented builtin AxialGeometryExtruder method.
+### .--- help for AxialGeometryExtruder/**extrude_point_along_symmetry_boundary** ---
+AxialGeometryExtruder/extrude_point_along_symmetry_boundary is an undocumented builtin AxialGeometryExtruder method.
 
 ### .AxialGeometryExtruder/**extrude_surface_along_symmetry_boundary** is a function.
 extrude_surface_along_symmetry_boundary(this, surface, r)

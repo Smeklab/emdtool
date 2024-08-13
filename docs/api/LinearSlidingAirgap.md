@@ -28,7 +28,8 @@ AFmodel2
 Documentation for LinearSlidingAirgap/LinearSlidingAirgap
 doc LinearSlidingAirgap
 
-### .return
+### .LinearSlidingAirgap/**fluxplot** is a function.
+fluxplot(this, A, rotorAngle, potentials)
 
 ### .LinearSlidingAirgap/**get_AGmatrix** is a function.
 Sag = get_AGmatrix(this, rotorAngle, varargin)

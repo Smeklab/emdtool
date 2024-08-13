@@ -17,8 +17,6 @@ A structure of arguments to use while plotting.
 
 ### .**text** Text to show when plotting.
 
-
-
 ### .**text_arguments** Text arguments.
 
 A structure of arguments to use while visualing `this.text`.

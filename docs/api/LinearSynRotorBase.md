@@ -22,7 +22,8 @@ this = LinearSynRotorBase(dim)
 Documentation for LinearSynRotorBase/LinearSynRotorBase
 doc LinearSynRotorBase
 
-### .LinearSynRotorBase/**create_geometry** is an undocumented builtin LinearSynRotorBase method.
+### .--- help for LinearSynRotorBase/**create_geometry** ---
+LinearSynRotorBase/create_geometry is an undocumented builtin LinearSynRotorBase method.
 
 ### .LinearSynRotorBase/**d_axis_angle** is a function.
 a = d_axis_angle(this)

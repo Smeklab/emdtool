@@ -63,20 +63,8 @@ property values.
 
 See also PATCH, TEXT, PLOT, PLOT3.
 
-### .PRISM  Prism color map
-PRISM(M) returns an M-by-3 matrix containing repeated use
-of six colors: red, orange, yellow, green, blue, violet.
-PRISM, by itself, is the same length as the current figure's
-colormap. If no figure exists, MATLAB creates one.
-
-PRISM, with no input or output arguments, changes the colors
-of any line objects in the current axes to the **prism** colors.
-
-The colors in the PRISM map are also present, in the same order,
-in the HSV map.  However, PRISM uses repeated copies of its six
-colors, whereas HSV varies its colors smoothly.
-
-See also HSV, FLAG, HOT, COOL, COLORMAP, RGBPLOT, CONTOUR.
+### .Elements.**prism** is a function.
+e = Elements.prism
 
 ### .QUAD   Numerically evaluate integral, adaptive Simpson **quad**rature.
 Q = QUAD(FUN,A,B) tries to approximate the integral of scalar-valued

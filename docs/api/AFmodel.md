@@ -35,7 +35,8 @@ doc AFmodel
 ### .AFmodel/**compute_torque** is a function.
 [T, T1, T2] = compute_torque(this, solution)
 
-### .AFmodel/**evaluate_reluctivity** is an undocumented builtin AFmodel method.
+### .--- help for AFmodel/**evaluate_reluctivity** ---
+AFmodel/evaluate_reluctivity is an undocumented builtin AFmodel method.
 
 ### .AFmodel/**get_AGmatrix** is a function.
 S = get_AGmatrix(this, rotorAngle, varargin)

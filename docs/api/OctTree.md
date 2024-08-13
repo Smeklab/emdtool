@@ -73,52 +73,8 @@ from_parent - OctTree.from_parent is a function.
 
 Class methods are listed below. Inherited methods are not included.
 
-### .COUNT Returns the number of occurrences of a pattern in text.
-C = COUNT(STR,PAT) returns the number of occurrences of PAT in
-STR.
-
-STR must be text, which means it can be a string array, a character
-vector, or a cell array of character vectors. PAT can be text or a
-pattern array. PAT and STR need not have the same size. COUNT returns
-the number of occurrences of all elements of PAT in STR. If STR is a
-string array or cell array, then C is a double array that is the same
-size.
-
-C = COUNT(STR,PAT,'IgnoreCase',IGNORE) ignores case when searching
-for PAT in STR if IGNORE is true. The default value of IGNORE is false.
-
-Examples:
-STR = "data.tar.gz";
-PAT = "tar";
-COUNT(STR,PAT)
-
-% returns  1
-
-STR = ["abstracts.docx","data.tar.gz"];
-PAT = 'tar';
-COUNT(STR,PAT)
-
-% returns  [0 1]
-
-STR = "music.mp3";
-PAT = lettersPattern(1);
-COUNT(STR,PAT)
-
-% returns  7
-
-STR = "data.tar.gz";
-PAT = {'docx','tar'};
-COUNT(STR,PAT)
-
-% returns  1
-
-STR = {'DATA.TAR.GZ','SUMMARY.PPT'};
-PAT = "tar";
-COUNT(STR,PAT,'IgnoreCase',true)
-
-% returns  [1 0]
-
-See also endsWith, startsWith, contains, pattern, lettersPattern.
+### .OctTree/**count** is a function.
+n = count(this, varargin)
 
 ### .**find** Find OctTreeNode containing given point.
 
@@ -167,6 +123,16 @@ For example, PLOT(X,Y,'c+:') plots a cyan dotted line with a plus
 at each data point; PLOT(X,Y,'bd') plots blue diamond at each data
 point but does not draw any line.
 
+PLOT(TBL,XVAR,YVAR) plots the variables xvar and yvar from the table
+tbl. To **plot** one data set, specify one variable for xvar and one
+variable for yvar. To **plot** multiple data sets, specify multiple
+variables for xvar, yvar, or both. If both arguments specify multiple
+variables, they must specify the same number of variables
+
+PLOT(TBL,YVAR) plots the specified variable from the table against the
+row indices in the table. If the table is a timetable, the specified
+variable is plotted against the row times from the timetable.
+
 PLOT(X1,Y1,S1,X2,Y2,S2,X3,Y3,S3,...) combines the plots defined by
 the (X,Y,S) triples, where the X's and Y's are vectors or matrices
 and the S's are strings.
@@ -205,8 +171,8 @@ plot(x,y,'--rs','LineWidth',2,...
 'MarkerFaceColor','g',...
 'MarkerSize',10)
 
-See also PLOTTOOLS, SEMILOGX, SEMILOGY, LOGLOG, PLOTYY, PLOT3, GRID,
-TITLE, XLABEL, YLABEL, AXIS, AXES, HOLD, LEGEND, SUBPLOT, SCATTER.
+See also TITLE, XLABEL, YLABEL, XLIM, YLIM, LEGEND, HOLD, GCA, YYAXIS,
+PLOT3, SEMILOGX, SEMILOGY, LOGLOG, TILEDLAYOUT, HOLD, LEGEND, SCATTER
 
 ### .center points
 

@@ -103,6 +103,9 @@ this.matrices.m3data([index](index.html)).m3d.elements_in_layer(plot_layer); by
 default the value can an integer or "mid" or "top" to plot the mid or
 top layer respectively.
 
+* steps : list of time-steps to plot. Must be >= 2. Defaults to all
+steps plotted.
+
 * axlims : axis limits to use for plotting.
 
 * Jlim : current density limits for the color axis (caxis)

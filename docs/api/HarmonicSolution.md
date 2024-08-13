@@ -33,6 +33,9 @@ time-stamps `ts`.
 
 **** EXPERIMENTAL**
 
+### .HarmonicSolution/**rotor_angles** is a function.
+a = rotor_angles(this)
+
 ### .HarmonicSolution/**ts** is a function.
 t = ts(this)
 

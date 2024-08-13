@@ -66,7 +66,7 @@ create_geometry(this)
 
 ### .Slot1/**create_geometry_old** is a function.
 
-### .Slot1.**list_dimensions** is an undocumented builtin static method or package function.
+### .Slot1.**list_dimensions** is an undocumented builtin static method or namespace function.
 
 ### .Slot1/**orientation_angle** is a function.
 a = orientation_angle(this)

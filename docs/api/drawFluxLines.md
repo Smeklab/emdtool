@@ -14,6 +14,6 @@ If the mesh struct msh has a field "rotel", the call syntax can be
 **drawFluxLines**(msh, A, Nl, rotorAngle, args)
 
 Copyright (c) 2016 Antti Lehikoinen / Aalto University
-Other functions named **drawFluxLines**
+Other uses of **drawFluxLines**
 SlidingAirgap/**drawFluxLines**    SlidingAirgapBase/drawFluxLines
 

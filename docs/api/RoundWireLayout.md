@@ -21,9 +21,23 @@ The slot insulation material can be given in
 
 ### .**breakdown_voltage** - minimum breakdown voltage
 
-### .**bundling_algorithm** - how conductors are bundled together
+### .**bundling_algorithm** Algorithm for wire bundling.
 
-### .RoundWireLayout/**bundling_arguments** is a property.
+The bundling algorithm handles how the wires belonging to the
+same turn are assigned positions in the actual wire packing. The
+algorithm function returns the same conductor centers (2xN array
+`Xc`, but with the columns reordered.
+
+The default is the successive nearest algorithm of `this`; the other
+option is to supply a function handle (getting as arguments
+`this` and the original coordinates `Xc`).
+
+### .**bundling_arguments** A structure of arguments for bundling.
+
+### .**conductor_centers** Conductor center coordinates.
+
+Bundled conductor center coordinates in the slot reference frame.
+Cell array, one cell for each layer.
 
 ### .**diameter** - nominal diameter (m)
 
@@ -48,8 +62,28 @@ conductors to form the specified kind of bundles.
 Actual bundling is dispached to another function specified in `this.bundling_algorithm`
 either as a string or a function handle.
 
-### .RoundWireLayout/**bundle_successive_nearest** is a function.
-Xc = bundle_successive_nearest(this, Xc)
+### .**bundle_successive_nearest** Successive bundling algorithm.
+
+Xc = bundle_successive_nearest(this, Xc) reorders the conductor center
+array `Xc` in the following fashion.
+1. Begin with all positions in Xc as *unselected*
+2. Select the first unselected position as the bundle center.
+3. Compute the distance of each conductor position (in Xc) from the
+bundle center. Assign the closest wires_in_hand conductors to the same
+bundle. Mark those positions as selected.
+4. Repeat for each bundle.
+
+While the algorithm is not guaranteed to result in good bundles in all
+cases, it runs very quickly in a non-iterative fashion, and in practice
+tends to work quite well.
+
+Optional arguments:
+* Setting a structure to `this.bundling_arguments`, with a field
+'y_weight' assigns the given weight to the y-coordinates aka slot short
+axis. A larger-than-unity value tends to result in bundles higher in
+the x-direction (slot long axis).
+
+See this.visualize_bundling for a visualization.
 
 ### .tries to move the slot boundaries in by the amount reff
 algorithm used:
@@ -66,6 +100,10 @@ Xcenter = RoundWireLayout.pack_conductors_hexagonal(points, r, N)
 
 ### .RoundWireLayout/**postprocess_point_losses** is a function.
 [p_el, data] = postprocess_point_losses(this, winding_spec, dBx, dBy, conductivity)
+
+### .**visualize_bundling** Visualize bundling.
+
+Visualize conductor bundling. So far only plots the first slot.
 
 ### .RoundWireLayout/**visualize_losses** is a function.
 visualize_losses(this, model, data)

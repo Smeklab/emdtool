@@ -8,6 +8,6 @@ grand_parent : Documentation
 **compute** Compute operating-point behaviour
 
 [Ptot, idq, E] = **compute**(this, T, n)
-Other functions named **compute**
+Other uses of **compute**
 MTPAinterpolant/**compute**
 

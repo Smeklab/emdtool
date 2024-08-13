@@ -69,7 +69,8 @@ This method performs the following steps
 Similar to the `MotorModelBase` method, only angle-biasing is performed
 to account for skewing.
 
-### .AFModelWithSkew/**get_plot_mesh** is an undocumented builtin AFModelWithSkew method.
+### .--- help for AFModelWithSkew/**get_plot_mesh** ---
+AFModelWithSkew/get_plot_mesh is an undocumented builtin AFModelWithSkew method.
 
 ### .AFModelWithSkew/**get_rotated_nodes** is a function.
 get_rotated_nodes(this, varargin)

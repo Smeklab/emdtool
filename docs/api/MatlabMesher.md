@@ -50,7 +50,7 @@ MESH(X,Y,Z,C) plots the colored parametric **mesh** defined by
 four matrix arguments.  The view point is specified by VIEW.
 The axis labels are determined by the range of X, Y and Z,
 or by the current setting of AXIS.  The color scaling is determined
-by the range of C, or by the current setting of CAXIS.  The scaled
+by the range of C, or by the current setting of CLIM.  The scaled
 color values are used as indices into the current COLORMAP.
 
 MESH(X,Y,Z) uses C = Z, so color is proportional to **mesh** height.
@@ -74,7 +74,7 @@ MESH(AX,...) plots into AX instead of GCA.
 
 MESH returns a handle to a surface plot object.
 
-AXIS, CAXIS, COLORMAP, HOLD, SHADING, HIDDEN and VIEW set figure,
+AXIS, CLIM, COLORMAP, HOLD, SHADING, HIDDEN and VIEW set figure,
 axes, and surface properties which affect the display of the mesh.
 
 See also SURF, MESHC, MESHZ, WATERFALL.

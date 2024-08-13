@@ -8,6 +8,6 @@ grand_parent : Documentation
 tries to move the slot boundaries in by the amount reff
 algorithm used:
 http://stackoverflow.com/questions/563198/how-do-you-detect-where-two-line-segments-intersect
-Other functions named **contract_polygon**
+Other uses of **contract_polygon**
 RoundWireLayout/**contract_polygon**
 

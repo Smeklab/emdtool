@@ -7,4 +7,6 @@ grand_parent : Documentation
 
 **rms** is a function.
 y**rms** = rms(x, y)
+Other uses of **rms**
+tall/**rms**
 

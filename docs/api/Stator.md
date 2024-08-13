@@ -50,6 +50,7 @@ Winding specifications:
 
 Class methods are listed below. Inherited methods are not included.
 
-### .Stator/**create_geometry_backup** is an undocumented builtin Stator method.
+### .--- help for Stator/**create_geometry_backup** ---
+Stator/create_geometry_backup is an undocumented builtin Stator method.
 
 

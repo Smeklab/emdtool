@@ -137,7 +137,25 @@ multiplied by the number of winding layers.
 
 ### .**span** - coil span
 
-### .PolyphaseWindingSpec/**strand_transposition_type** is a property.
+### .**strand_transposition_type** Type of strand transpositions.
+
+Controls the type of strand transpositions, in cases where the
+number of meshed wires in hand is > 1. The options include:
+* 'none' : no transpositions
+* 'ideal' : strand order in negative coil sides is reversed
+* a structure with the fields 'type' and optional extra fields,
+see options below.
+
+Structure options:
+* type = 'ideal'. Same as the 'ideal' case above.
+* type = 'none'. Same as 'none' above.
+* type = 'block', number_of_blocks = integer. Reverse strand
+order in blocks or braids. The order of blocks/braids is
+reversed for odd-numbered slots; the order *within*  blocks is
+left unchanged.
+* type = 'block2024', number_of_blocks = integer. Same as
+above, but reverse the block order for return paths instead of
+odd-numbered slots.
 
 ### .**winding_model_type** Winding model type.
 

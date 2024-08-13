@@ -55,7 +55,13 @@ this.set_parent(parent_geometry, varargin)
 
 ### .SlotShapeBase/**dimensions** is a property.
 
-### .SlotShapeBase/**has_opening** is a property.
+### .**has_opening** - Does the slot have a slot opening
+
+this.has_opening is `true` if the slot shape as a slot opening
+(either real or all-steel virtual surface), and thus
+`this.airgap_surface_curves` is non-empty. If `this.has_opening`
+is `false`, then the slot does not touch the airgap at all, and
+all its surfaces appear as `holes` in the parent surface.
 
 ### .SlotShapeBase/**parent_geometry** is a property.
 
@@ -118,7 +124,10 @@ dimensions.
 ### .SlotShapeBase/**last_airgap_point** is a function.
 P = last_airgap_point(this)
 
-### .SlotShapeBase/**set_parent** is a function.
+### .**set_parent** - Set parent geometry.
+
 set_parent(this, parent)
+* set this.dimensions to parent.dimensions
+* call this.initialize()
 
 

@@ -64,7 +64,8 @@ grid = get_results(this, key, val)
 
 * see help NTGridDQ for key, value pairs.
 
-### .SMGridCalculator_DQ/**maximum_torque_at_speed** is an undocumented builtin SMGridCalculator_DQ method.
+### .--- help for SMGridCalculator_DQ/**maximum_torque_at_speed** ---
+SMGridCalculator_DQ/maximum_torque_at_speed is an undocumented builtin SMGridCalculator_DQ method.
 
 ### .SMGridCalculator_DQ/**parse_problem_circuits** is a function.
 parse_problem_circuits(this, N)

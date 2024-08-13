@@ -21,23 +21,7 @@ this = MagneticsJacobian(problem, symmetric, test_fun, shape_fun)
 
 ### .MagneticsJacobian/**Ires** is a property.
 
-### .~= (NE)   Not equal relation for handles.
-Handles are equal if they are handles for the same object and are
-unequal otherwise.
-
-H1 ~= H2 performs element-wise comparisons between handle arrays H1
-and H2.  H1 and H2 must be of the same dimensions unless one is a
-scalar.  The result is a logical array of the same dimensions, where
-each element is an element-wise equality result.
-
-If one of H1 or H2 is scalar, scalar expansion is performed and the
-result will match the dimensions of the array that is not scalar.
-
-TF = NE(H1, H2) stores the result in a logical array of the same
-dimensions.
-
-See also MAGNETICSJACOBIAN, MAGNETICSJACOBIAN/EQ, MAGNETICSJACOBIAN/GE, MAGNETICSJACOBIAN/GT, MAGNETICSJACOBIAN/LE, MAGNETICSJACOBIAN/LT
-Help for MagneticsJacobian/Ne is inherited from superclass handle
+### .MagneticsJacobian/**Ne** is a property.
 
 ### .MagneticsJacobian/**dof_shape** is a property.
 

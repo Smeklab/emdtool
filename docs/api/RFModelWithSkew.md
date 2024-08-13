@@ -69,7 +69,8 @@ This method performs the following steps
 Similar to the `MotorModelBase` method, only angle-biasing is performed
 to account for skewing.
 
-### .RFModelWithSkew/**get_plot_mesh** is an undocumented builtin RFModelWithSkew method.
+### .--- help for RFModelWithSkew/**get_plot_mesh** ---
+RFModelWithSkew/get_plot_mesh is an undocumented builtin RFModelWithSkew method.
 
 ### .**plot_raw_airgap_flux** Plot airgap fluxes.
 
