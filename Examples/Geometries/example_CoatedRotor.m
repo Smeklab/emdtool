@@ -3,6 +3,8 @@
 %getting basic + stator dimensions
 example_Stator_4P;
 
+dim.temperature_stator = 120; dim.temperature_rotor = 180;
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % rotor dimensions

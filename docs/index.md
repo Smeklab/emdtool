@@ -16,6 +16,8 @@ maintaining one.
 
 Please send an email to antti (at) smeklab.com to enquire about a [license](pricing.html). **Please check your spam folder** - each and every message will be replied.
 
+Please see the [release_notest](release_notes.html) for the latest features and updates.
+
 # Why EMDtool?
 
 ## EMDtool is perfectly accurate
