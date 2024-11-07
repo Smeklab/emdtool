@@ -37,7 +37,14 @@ Important methods:
 
 * grid = this.get_results(args) : get NTGridDQ
 
-FIXME: SMGridCalculator superclass, grid as class to harmonize naming
+Note: The [NTGridDQ](NTGridDQ.html) class uses the [MTPAinterpolant](MTPAinterpolant.html) class to obtain
+the (id,iq) currents corresponding to the desired (T,rpm) pair. The
+interpolant class only searches the **computed**  (id,iq) range. In
+particular, numerical noise can often cause e.g. T(id~=0, iq=0) to be
+slightly above zero, which can occasionally lead to very large id<<0
+immediately once the field weakening region is entered. A simple,
+often sufficient, fix is to simulate an iq range starting from a
+small negative pu value, e.g. 1e-2.
 
 ## Properties
 

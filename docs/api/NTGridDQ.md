@@ -39,6 +39,11 @@ then U_DC = terminal voltage at base point.
 
 ### .NTGridDQ/**speed_range** is a property.
 
+### .**stack_length_ratio** Stack length ratio.
+
+A multiplier to apply on the stack length of the original design.
+The effects are computed with `.set_stack_length_ratio`.
+
 ### .**turns_ratio** - Multiplier for motor turns. Changing this recomputes this.interpolant.
 
 
@@ -137,5 +142,17 @@ right now.
 using peak-scaled space vectors. Thus, the terminal RMS current is
 `sqrt(Id^2 +Id^2) / sqrt(2) * number_of_parallel_paths` for star connection,
 and sqrt(3) times that for delta
+
+### .**set_stack_length_ratio** Set stack length ratio.
+
+set_stack_length_ratio(this, v) sets the stack length ratio and adjusts
+the results in `this.grid` accordingly, by multiplying the (unchanged)
+results from `this.original_grid`.
+
+**** NOTE AND WARNING** : AC loss components are scaled linearly with the
+stack length. This is not perfectly accurate for [ExtrudedBlockCircuit](ExtrudedBlockCircuit.html)
+and similar losses.
+
+Results are then recomputed with `this.recompute`.
 
 

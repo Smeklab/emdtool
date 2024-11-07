@@ -26,7 +26,7 @@ Responsibilities:
 
 * calculates total (half-)turn length and winding overhang
 
-* handles end-winding indcutance calculation
+* handles end-winding indcutance biacalculation
 
 The winding specification offers a way to control the winding model
 used (solid or stranded conductors) and the slot layout (e.g. round
@@ -57,7 +57,7 @@ instead. These values are typically the same, apart from axial
 flux machines with mirrored slots.
 
 Setting or getting this property directly sets / gets the
-`number_of_turns_per_coil` property, modified by
+`number_of_turns_per_coil` property, modified (multiplied) by
 `this.get_dimension('axial_symmetry_sectors')` if set.
 
 ### .**a** - number of parallel paths
@@ -120,10 +120,21 @@ the [LayoutCompatible](LayoutCompatible.html) class.
 
 ### .**number_of_meshed_conductors_per_layer** As the name suggests.
 
-### .number of turns per coil Number of turns per coil.
+### .**number_of_turns_per_coil** Number of turns per coil.
 
 The number of coils is assumed to be equal to the number of slots
 multiplied by the number of winding layers.
+
+**** NOTE** In machines with the `axial_symmetry_sectors` dimension
+defined (in the `.dimensions` struct),
+
+`number_of_turns_per_coil = axial_symmetry_sectors * N_series`
+
+While this may make sense for a YASA-style machine with 2 axial
+symmetry sectors and only half of the stator modelled, it may be
+nonsensical for other topologies. For now, things are what they
+are though - in doubt, it's better to use the `N_series` property
+to set the number of turns per modelled coil.
 
 ### .**p** - number of pole-pairs
 
@@ -187,6 +198,17 @@ a = bias_angle(this)
 Returns a rotation angle for the direct-quadrature
 transformation so that injecting d-axis current into the
 winding generates flux on the rotor d-axis.
+
+By default, this means that feeding the machine with the
+current
+`Is = SpaceVectors.xy([1; zeros(this.phases-1, 1)], 0, this.bias_angle)`
+results in a flux density pattern oriented on the rotor
+d-axis, as defined by the the `rotor(1).d_axis_angle` method,
+where the d-axis angle is returned in mechanical radians.
+
+Please note that this behaviour may be overwritten by custom
+subclass implementations of the `this.xy` and `this.dq`
+methods.
 
 ### .**bind_to_model** Bind to [CircuitBase](CircuitBase.html) object.
 
@@ -342,6 +364,12 @@ rotor bias angle) so that injecting d-axis current into the stator winding
 generates a cosinusoidal airgap flux
 density waveform (first peak of fundamental at y = 0, assuming
 non-salient rotor).
+
+In other words, the angle is defined so that feeding the winding with the
+current
+`Is = SpaceVectors.xy([1; zeros(this.phases-1, 1)], 0, this.winding_angle)`
+results in the aforementioned airgap flux density (with a non-salient
+rotor)
 
 ### .**xy** Transform to phase quantities
 

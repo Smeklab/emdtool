@@ -36,3 +36,8 @@ nav_order: 4
 * **3.0.44dev** :  Added solid core loss model support to SPM1.
 * **3.0.44dev** :  Added stack length scaling option to NTGridDC.
 * **3.0.44dev** :  Added option to plot rms current density with compute_SolidConductorLosses, used by most Circuits with solid conductors.
+* **3.0.45dev** :  Fixed PointSource AC losses being off by a factor of 1/symmetry_sectors
+* **3.0.45dev** :  Added support for 2nd-order triangular elements.
+* **3.0.45dev** :  Large refactor of mesh-element functionality, intended for better maintainability. Ongoing.
+* **3.0.45dev** :  Added flexibility to SlidingAirgap airgap mesh generation.
+* **3.0.45dev** :  Added the option to set the interpolation method and order for SlidingAirgapBase.

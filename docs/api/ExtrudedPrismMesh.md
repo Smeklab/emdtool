@@ -73,10 +73,17 @@ els = extrude_nodes(msh3, nodes)
 
 els = extrude_nodes(msh3, nodes, layers)
 
-### .ExtrudedPrismMesh/**getMappingMatrix** is a function.
-[F, varargout] = getMappingMatrix(this, elements, varargin)
+### .**getMappingMatrix** Get mapping matrix.
 
-### .revert to old reference implementation by default
+See ElementBase.get_mapping_matrix
+
+### .**get_assembly_parameters** Get parameters for mesh assemble.
+
+[x_quad, w_quad, Nrows, Ncols, N_test, N_shape] = ...
+get_assembly_parameters(this, fun_test, fun_shape)
+
+[x_quad, w_quad, Nrows, Ncols, N_test, N_shape] = ...
+get_assembly_parameters(this, fun_test, fun_shape, nonlinearity_order)
 
 ### .ExtrudedPrismMesh/**grad_quiver** is a function.
 [Bvec, h] = grad_quiver(msh3, A, els, varargin)

@@ -41,6 +41,21 @@ Class methods are listed below. Inherited methods are not included.
 ### .MagneticsProblem/**get_component_property** is a function.
 prob = get_component_property(this, component, property, pars)
 
+### .**new** New MagneticsProblem.
+
+problem = MagneticsProblem.new(model)
+
+A convenience method for quickly creating a **new** MagneticsProblem object.
+The method stores the previous instance of the problem created, and
+whenever the `.model` property of the old problem is equal to the
+argument `model`, the old problem is returned instead.
+
+**** PLEASE NOTE** that this will fail to account for most changes in the
+model object, such as changes in the temperatures, or anything
+influencing those problem matrices not re-assembled during the simulation
+itself. For this reason, this method should only be called when the model
+object has not been changed in any fashion.
+
 ### .MagneticsProblem/**set_boundary_matrix** is a function.
 this = set_boundary_matrix(this, varargin)
 

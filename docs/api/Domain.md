@@ -132,6 +132,12 @@ direction using quiver, with varargin.
 
 ### .remanence_direction Remanence direction vector.
 
+Bdir = remanence_direction_at(this) returns the remanence direction at
+the element centers of `this.elements`.
+
+Bdir = remanence_direction_at(this, coordinate_or_element_index) returns
+the remanence direction vector at the given coordinates or elements.
+
 ### .Domain/**visualize** is a function.
 visualize(this, varargin)
 

@@ -15,7 +15,8 @@ for modelling thin gaps with no material contact (mechanical, magnetic,
 or thermal), with or contact modelled by special means.
 
 this = ShellEdge(msh, nodes) initializes a shell edge, from the given
-set of nodes (must be ordered correctly).
+set of edge end-nodes (must be ordered correctly). For higher-order
+meshes, the set of nodes is augmented by the mid-point nodes.
 
 ## Properties
 
@@ -30,6 +31,8 @@ The edges, in order, making up this edge.
 ### .**elements_to_shellify** Elements to shellify.
 
 See `this.shellify`.
+
+### .ShellEdge/**end_nodes** is a property.
 
 ### .**msh** Mesh.
 
@@ -53,6 +56,11 @@ Class methods are listed below. Inherited methods are not included.
 [left_els, right_els] = get_left_and_right_elements(this)
 
 Note: the concept of 'left' and 'right' is somewhat arbitrary for now.
+
+### .**handle_higher_order** Handle higher-order meshes.
+
+handle_higher_order(this) updates this.nodes to also include edge
+mid-nodes, when needed.
 
 ### .**plot** Plot nodes belonging to this.
 

@@ -41,6 +41,12 @@ multiplied by the given multiplier.
 sigma_el = get_elementwise_von_Mises_stress(this) returns an array of
 elementwise von Mises stresses.
 
+### .CentrifugalStressSolution/**get_nodal_stress_component** is a function.
+sigma_el = get_nodal_stress_component(this, ind)
+
+### .CentrifugalStressSolution/**get_nodal_von_Mises_stress** is a function.
+sigma_el = get_nodal_von_Mises_stress(this)
+
 ### .**plot_displacements** Plots the displaced mesh.
 
 plot_displacements(this, multiplier) plots the geometry under centrifugal
@@ -54,5 +60,9 @@ using the non-displaced geometry.
 plot_von_Mises_stress(this, 'displacement_multiplier', multiplier) also
 distorts the geometry according to the computed displacements, multiplied
 by the given factor.
+
+Additional key-value arguments:
+* plot_style : 'average' plot von Mises stress at element center /
+'nodal' prettier plotting.
 
 

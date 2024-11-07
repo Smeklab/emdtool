@@ -43,6 +43,8 @@ boundary.
 
 ### .**node** Associated 'ThermalNode'
 
+### .BoundaryConnection/**skip_edge_sanitation** is a property.
+
 
 ## Methods
 

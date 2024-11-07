@@ -22,13 +22,29 @@ The problem can then be solved using the `.solve` method.
 
 ## Properties
 
+### .CentrifugalStressProblem/**consider_dirichlet_nodes** is a property.
+
+### .CentrifugalStressProblem/**formulation** is a property.
+
 ### .CentrifugalStressProblem/**geometry** is a property.
+
+### .**ignored_domains** Domains to ignore.
+
+Domains to ignore from mechanical analysis. Ignored domains are
+implicitly modelled as free space.
 
 ### .CentrifugalStressProblem/**matrices** is a property.
 
 ### .CentrifugalStressProblem/**mesh** is a property.
 
-### .CentrifugalStressProblem/**shell_domains** is a property.
+### .**shell_domains** Shell-edge related domains.
+
+Setting an array of [Domains](Domains.html) here specifies which domains to
+'lift', when parsing shell edges, i.e. where to update element
+definitions.
+
+If not set, the default ShellEdge.get_left_and_right_elements
+method is used to get the 'left' domains.
 
 
 ## Methods
@@ -59,6 +75,17 @@ assembles the stiffness matrices. The results are saved to this.matrices.
 initialize(this, geometry) initializes the problem. If `geometry` is a
 subclass of `MotorModelBase`, `geometry.rotor(1)` is set as
 `this.geometry`. Otherwise, the given geometry is set.
+
+initialize(this, geometry, 'formulation', formulation) to specify the
+formulation used. Options include
+* 'plane-strain' : default
+* 'plane-stress'
+
+initialize(this, geometry, 'consider_dirichlet_nodes', bool) specifies
+whether the Dirichlet nodes of the geometry object are included as
+zero-displacement nodes in the mechanics problem. The default is false,
+as this often introduces artificial stiffness into the problem. The
+Origin, if meshed, is always included as a zero-displacement node.
 
 Next, `this.mesh` is set to `MechMesh(this.geometry)`.
 

@@ -7,8 +7,11 @@ grand_parent : Documentation
 
 ## Class summary
 
-Nodal3D_extruded is a class.
-this = Nodal3D_extruded(varargin)
+Nodal3D_extruded Nodal shape function for extruded elements.
+
+Intended for modelling the 2D vector potential as a 3D vector, with
+non-negative values only along the z-axis. Correspondingly, the
+gradient and curls of this shape function lie on the xy-plane only.
 
 ## Properties
 
@@ -16,11 +19,6 @@ this = Nodal3D_extruded(varargin)
 ## Methods
 
 Class methods are listed below. Inherited methods are not included.
-
-### .**Nodal3D_extruded**/Nodal3D_extruded is a constructor.
-this = Nodal3D_extruded(varargin)
-Documentation for Nodal3D_extruded/Nodal3D_extruded
-doc Nodal3D_extruded
 
 ### .**eval** evaluates the global shape function
 call syntax

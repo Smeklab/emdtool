@@ -132,6 +132,14 @@ given temperature `T`  (C)
 Returns a scalar by default; can be subclassed to support
 varying properties.
 
+### .**elementwise_plane_stress_stiffness_tensor** Plane-stress stiffness tensor.
+
+Returns the elementwise stiffness tensor, for plane-stress
+formulation, using Voigt notation in column-major format.
+
+Returns a single tensor by default, implying constant
+property across all elements.
+
 ### .**elementwise_stiffness_tensor** Plane-strain stiffness tensor.
 
 Returns the elementwise stiffness tensor, for plane-strain
@@ -158,6 +166,8 @@ point)
 * Bx : waveform of x-component of flux density at quad point
 
 * By : waveform of y-component of flux density at quad point
+
+### .parsing
 
 ### .MaterialBase/**init_for_problem** is a function.
 obj = MaterialBase

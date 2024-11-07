@@ -72,6 +72,7 @@ Initialize with any of the following key-value pairs:
 Default [0;0].
 
 * 'mode' : either modes supported by `compute_inductances_static_averaging`
+(defaults to 'differential')
 OR 'simplified'
 
 * 'angle', angle : Vector of electrical angles (rad) to average

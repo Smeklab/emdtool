@@ -20,7 +20,10 @@ extruded mesh. Only one axial segment is modelled, and the computed
 losses are then multiplied by this.volume_multiplier.
 
 * 9 layers are used by default. Specify dimensions.number_of_extruded_layers
-to adjust.
+to adjust. In case of second-order meshes, the number is
+adjusted to conform to the requirements. Importantly, each
+element layer will have a mid-layer of nodes, so the number of
+mesh element layers will be roughly halved.
 
 The resulting eddy-current density is (close to) z-directional in the
 first layer of the extruded mesh, and close to xy-directional in the

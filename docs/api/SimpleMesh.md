@@ -11,12 +11,6 @@ SimpleMesh Basic mesh class.
 
 ## Properties
 
-### .SimpleMesh/**element_type** is a property.
-
-### .Sim**p**leMesh/p is a property.
-
-### .SimpleMesh/**t** is a property.
-
 
 ## Methods
 
@@ -32,10 +26,15 @@ doc SimpleMesh
 ### .SimpleMesh/**elementCenters** is a function.
 x0 = elementCenters(this, inds)
 
-### .SimpleMesh/**element_area_sum** is a function.
-A = element_area_sum(this, elements)
+### .**infer_element_type** Automatically parse element type.
 
-### .msh_**getMappingMatrix** mapping matrix from reference to global element.
+Automatically guess and set `this.Element` from the size of the element
+definitions array.
+
+### .SimpleMesh/**legacy_element_area_sum** is a function.
+A = legacy_element_area_sum(this, elements)
+
+### .msh_getMappingMatrix mapping matrix from reference to global element.
 
 Call syntax
 [F, F0] = msh_getMappingMatrix(msh, elements) for an affine mapping

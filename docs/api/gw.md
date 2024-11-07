@@ -12,6 +12,7 @@ gw - is a class.
 initialize - adding surfaces
 loadmesh - opening file
 write_file - gw/write_file is a function.
+write_mesh_options - gw/write_mesh_options is a function.
 
 ## Properties
 
@@ -22,6 +23,8 @@ write_file - gw/write_file is a function.
 ### .gw/**lineloops** is a property.
 
 ### .gw/**lines** is a property.
+
+### .gw/**mesh_options** is a property.
 
 ### .gw/**points** is a property.
 
@@ -86,5 +89,8 @@ See also SURF, MESHC, MESHZ, WATERFALL.
 
 ### .gw/**write_file** is a function.
 this = write_file(this, varargin)
+
+### .gw/**write_mesh_options** is a function.
+write_mesh_options(this)
 
 

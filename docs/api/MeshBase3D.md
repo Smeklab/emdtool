@@ -11,11 +11,10 @@ MeshBase3D a base class for some 3D meshes
 
 ## Properties
 
-### .**edges** - edge definitions
+### .nodes %nodal coordinates, 3xNp
+elements %element definitions
 
 ### .MeshBase3D/**elementType** is a property.
-
-### .**elements** - element definitions
 
 ### .MeshBase3D/**elements2edges** is a property.
 
@@ -32,8 +31,6 @@ MeshBase3D a base class for some 3D meshes
 ### .MeshBase3D/**namedFaces** is a property.
 
 ### .MeshBase3D/**namedNodes** is a property.
-
-### .**nodes** - nodal coordinates, 3xNp
 
 
 ## Methods

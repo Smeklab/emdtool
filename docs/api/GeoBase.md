@@ -57,18 +57,6 @@ See [RadialGeometry](RadialGeometry.html), [StatorBase](StatorBase.html), [Slott
 
 ### .**mesh** - mesh object, WPI
 
-### .**n_ag** - Airgap boundary nodes
-
-### .**n_ccw** - Counter-clockwise periodic boundary nodes
-
-### .**n_cw** - Clock-wise periodic boundary nodes
-
-### .**n_dir** - Dirichlet (flux insulation) boundary nodes
-
-### .**p** - Coordinates of nodes, 2xN array
-
-### .**t** - Element indices to this.nodes, nxN array
-
 
 ## Methods
 
@@ -285,6 +273,11 @@ scale_mesh_density(this, scale, 'curves_to_skip', curve_names) ignores
 all the [Points](Points.html) that lie on the [Curve](Curve.html)s on specified by their names in
 the `curve_names` array of strings. By default, curves named 'n_ag' are
 ignored. The characteristic length of the ignored points is not changed.
+
+Other key-value arguments:
+* lcar_max : maximum characteristic length after scaling. Defaults to inf.
+* lcar_min : minimum characteristic length after scaling. Defaults to
+0.
 
 ### .**shift_elementary_nodes** Replicate nodes to a new sector.
 

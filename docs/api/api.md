@@ -38,7 +38,48 @@ has_toc : false
 ## FE Functionality
  Folder with the following files / classes / subfolders:
 
-* *class* : [Elements](Elements.html)  {
+* *function* : [FE Functionality/Elements and Shape Functions/Nodal Elements/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [FE Functionality/Elements and Shape Functions/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [FE Functionality/Elements and Shape Functions/mappingTerms](mappingTerms.html)  **mappingTerms**.
+* *function* : [FE Functionality/Matrix Assembly/FEdotProduct](FEdotProduct.html)  dotProduct vectorized dot product for FE matrix assembly.
+* *function* : [FE Functionality/Matrix Assembly/assemble_TotalMasterSlaveMatrix](assemble_TotalMasterSlaveMatrix.html)  **assemble_TotalMasterSlaveMatrix** elimination matrix for master-slave
+* *function* : [FE Functionality/Matrix Assembly/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [FE Functionality/Matrix Assembly/crossProduct](crossProduct.html)  **crossProduct** Cross product in 2D or 3D.
+* *function* : [FE Functionality/Matrix Assembly/dotProduct](dotProduct.html)  **dotProduct** vectorized dot product.
+* *function* : [FE Functionality/Matrix Assembly/get_1DQuadPoints](get_1DQuadPoints.html)  internal_getQuadPoints returns 1D Gaussian quadrature points;
+* *function* : [FE Functionality/Matrix Assembly/get_1DQuadPoints_10](get_1DQuadPoints_10.html)  **get_1DQuadPoints_10** Quadrature points for [0,1]
+* *function* : [FE Functionality/Matrix Assembly/get_2DtriangleIntegrationPoints](get_2DtriangleIntegrationPoints.html)  **get_2DtriangleIntegrationPoints** Gaussian quadrature points and weights.
+* *function* : [FE Functionality/Matrix Assembly/get_AssemblyParameters](get_AssemblyParameters.html) **get_AssemblyParameters** is a function.
+* *function* : [FE Functionality/Matrix Assembly/matrixDeterminant](matrixDeterminant.html)  **matrixDeterminant**3D Matrix determinant (3x3).
+* *function* : [FE Functionality/Matrix Assembly/matrixTimesVector](matrixTimesVector.html) **matrixTimesVector** is a function.
+* *function* : [FE Functionality/Matrix Assembly/sparseAdd](sparseAdd.html)  **sparseAdd** add entries to the sparse matrix struct.
+* *function* : [FE Functionality/Matrix Assembly/sparseFinalize](sparseFinalize.html)  **sparseFinalize** assemble sparse matrix from sparse struct.
+* *function* : [FE Functionality/Matrix Assembly/sparsediag](sparsediag.html)  **sparsediag** sparse diagonal matrix.
+* *function* : [FE Functionality/Mesh/Airgap mesh/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [FE Functionality/Mesh/Airgap mesh/singleLayerAGtriangulation_2](singleLayerAGtriangulation_2.html)  singleLayerAGtriangulation Single-layer air-gap triangulation.
+* *function* : [FE Functionality/Mesh/Airgap mesh/singleLayerAGtriangulation_2nd](singleLayerAGtriangulation_2nd.html)  singleLayerAGtriangulation Single-layer air-gap triangulation.
+* *function* : [FE Functionality/Mesh/Mesh utilities/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [FE Functionality/Mesh/Mesh utilities/edge_defitions_to_edges](edge_defitions_to_edges.html)  **edge_defitions_to_edges** returns edge indices corresponding to edge definitions
+* *function* : [FE Functionality/Mesh/Mesh utilities/parse_trimesh_incidence](parse_trimesh_incidence.html) **parse_trimesh_incidence** is a function.
+* *function* : [FE Functionality/Mesh/Mesh utilities/points_to_elements_and_coordinates](points_to_elements_and_coordinates.html)  pointSources2Elements_faster generates point-wise data for mesh.
+* *function* : [FE Functionality/Mesh/Mesh utilities/sortRadialEdges](sortRadialEdges.html)  sortSegmentEdges sorts nodes of circumferentially.
+* *function* : [FE Functionality/Mesh/Mesh utilities/sortSegmentEdges](sortSegmentEdges.html)  **sortSegmentEdges** sorts nodes of circumferentially.
+* *function* : [FE Functionality/Mesh/Mesh utilities/sortXEdges](sortXEdges.html)  sortSegmentEdges sorts nodes according to y coordinate.
+* *function* : [FE Functionality/Mesh/Mesh utilities/sortYEdges](sortYEdges.html)  sortSegmentEdges sorts nodes according to y coordinate.
+* *function* : [FE Functionality/Mesh/Meshes_3D/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [FE Functionality/Mesh/Meshes_3D/get_PrismIntegrationPoints](get_PrismIntegrationPoints.html)  **get_PrismIntegrationPoints** Quadrature points for a unit prism.
+* *function* : [FE Functionality/Mesh/Other meshes/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [FE Functionality/Mesh/Other meshes/getEdges](getEdges.html)  **getEdges** returns the edge definition.
+* *function* : [FE Functionality/Mesh/Other meshes/order_t2e](order_t2e.html)  **order_t2e** orders the triangles-to-edges matrix.
+* *function* : [FE Functionality/Mesh/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [FE Functionality/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *class* : [FE Functionality/Elements and Shape Functions/Elements/ElementBase](ElementBase.html)  Elements **ElementBase** class for finite element implementation
+* *class* : [Prism1](Prism1.html)  **Prism1** Simple z-extruded prism.
+* *class* : [Prism2](Prism2.html) **Prism2** is a class.
+* *class* : [Quad1](Quad1.html) **Quad1** is a class.
+* *class* : [Triangle1](Triangle1.html) **Triangle1** is a class.
+* *class* : [Triangle2I](Triangle2I.html) **Triangle2I** is a class.
+* *class* : [Elements](Elements.html)  **Elements** Enumeration of element types
 * *class* : [IDfun](IDfun.html) **IDfun** is a class.
 * *class* : [Nedelec2D](Nedelec2D.html)  **Nedelec2D** class for 2D Nedelec shape functions.
 * *class* : [Nedelec3DPrism](Nedelec3DPrism.html)  Nedelec3D class for 3D Nedelec shape functions.
@@ -51,6 +92,7 @@ has_toc : false
 * *class* : [MatrixConstructor_nonConforming](MatrixConstructor_nonConforming.html) **MatrixConstructor_nonConforming** is a class.
 * *class* : [/Mesh/Boundary](Boundary.html)  **Boundary** Base class for boundaries.
 * *class* : [/Mesh/DirichletBoundary](DirichletBoundary.html) **DirichletBoundary** methods:
+* *class* : [/Mesh/MeshBase](MeshBase.html) **MeshBase** methods:
 * *class* : [/Mesh/PeriodicBoundary](PeriodicBoundary.html) **PeriodicBoundary** methods:
 * *class* : [/Mesh/Airgap mesh/LinearSlidingAirgap](LinearSlidingAirgap.html)  **LinearSlidingAirgap** Airgap class for sliced AFM models.
 * *class* : [/Mesh/Airgap mesh/SlidingAirgap](SlidingAirgap.html)  **SlidingAirgap** Sliding airgap model for radial-flux machines.
@@ -59,17 +101,18 @@ has_toc : false
 * *class* : [/Mesh/Mesh Generation/MatlabMesher](MatlabMesher.html) **MatlabMesher** methods:
 * *class* : [/Mesh/Mesh Generation/MesherBase](MesherBase.html) **MesherBase** methods:
 * *class* : [/Mesh/Mesh Generation/gw](gw.html) **gw** methods:
-* *class* : [MeshBase](MeshBase.html) **MeshBase** is a class.
 * *class* : [MeshView](MeshView.html) **MeshView** is a class.
 * *class* : [/Mesh/Meshes_3D/ExtrudedPrismMesh](ExtrudedPrismMesh.html)  **ExtrudedPrismMesh** Class for extruded prism meshes.
+* *class* : [/Mesh/Meshes_3D/Nodal3D](Nodal3D.html) **Nodal3D** methods:
+* *class* : [/Mesh/Meshes_3D/SimpleExtrudedMesh](SimpleExtrudedMesh.html)  **SimpleExtrudedMesh** Simple extruded mesh.
 * *class* : [/Mesh/Meshes_3D/TetMesh](TetMesh.html)  **TetMesh** minimal mesh of 3D tetrahedrons.
 * *class* : [MeshBase3D](MeshBase3D.html)  **MeshBase3D** a base class for some 3D meshes
-* *class* : [Nodal3D](Nodal3D.html) **Nodal3D** is a class.
 * *class* : [Nodal3D_UpExtruded](Nodal3D_UpExtruded.html) **Nodal3D_UpExtruded** is a class.
-* *class* : [Nodal3D_extruded](Nodal3D_extruded.html) **Nodal3D_extruded** is a class.
+* *class* : [Nodal3D_extruded](Nodal3D_extruded.html)  **Nodal3D_extruded** Nodal shape function for extruded elements.
 * *class* : [PrismMeshBase3D](PrismMeshBase3D.html)  **PrismMeshBase3D** A base class for a 3D mesh with prismatic elements.
 * *class* : [/Mesh/Other meshes/Mesh](Mesh.html)  **Mesh** Class for mesh objects.
 * *class* : [/Mesh/Other meshes/SimpleMesh](SimpleMesh.html)  **SimpleMesh** Basic mesh class.
+* *class* : [Mesh](Mesh.html)  **Mesh** Class for mesh objects.
 * *class* : [RotatedMeshView](RotatedMeshView.html) **RotatedMeshView** is a class.
 ## Geometry
  Folder with the following files / classes / subfolders:
@@ -132,6 +175,7 @@ has_toc : false
 * *class* : [Arnon7](Arnon7.html)  **Arnon7** **Arnon7** Material object.
 * *class* : [PMlibrary](PMlibrary.html)  **PMlibrary** Static class for creating permanent-magnet Material objects.
 * *class* : [deprecated_Vacodur49](deprecated_Vacodur49.html)  Vacodur49 Vacodur49 Material object.
+* *class* : [/Permanent magnet material models/DemagMaterial1](DemagMaterial1.html)  **DemagMaterial1** Simple demagnetizable magnet material model.
 ## Problems
  Folder with the following files / classes / subfolders:
 
@@ -271,6 +315,7 @@ has_toc : false
 * *class* : [CircuitSource](CircuitSource.html)  **CircuitSource** Base class for circuit sources.
 * *class* : [/Modulators/PhaseCutModulator](PhaseCutModulator.html)  **PhaseCutModulator** Phase-cut voltage modulator.
 * *class* : [/Modulators/SVPWM_Modulator](SVPWM_Modulator.html)  **SVPWM_Modulator** Basic Modulator.
+* *class* : [/Modulators/SineTriangleModulator](SineTriangleModulator.html) **SineTriangleModulator** methods:
 * *class* : [/Modulators/SinusoidalModulator](SinusoidalModulator.html)  **SinusoidalModulator** Sinusoidal voltage modulator.
 * *class* : [/Modulators/SpaceVectorModulator](SpaceVectorModulator.html)  **SpaceVectorModulator** Prototype multiphase space vector modulator.
 * *class* : [Modulator](Modulator.html)  Base class for modulators.

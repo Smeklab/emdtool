@@ -7,19 +7,10 @@ grand_parent : Documentation
 
 **init** is a script.
 Other uses of **init**
-Circuit/**init**
-CircuitBase/**init**
-ExtrudedBlockCircuit/**init**
-GeometryExtruder/**init**
-gw3D/**init**
-LaminatedCircuit/**init**
-LinearSlidingAirgap/**init**
-matlab.internal.tabular.private.metaDim/**init**
-matlab.internal.tabular.private.varNamesDim/**init**
-MTPAinterpolant/**init**
-PolyphaseCircuit/**init**
-SlidingAirgap/**init**
-TetMesh/**init**
-timeseries/**init**
-tscollection/**init**
+Circuit/**init**                 MTPAinterpolant/init
+ExtrudedBlockCircuit/**init**    PolyphaseCircuit/init
+GeometryExtruder/**init**        SlidingAirgap/init
+gw3D/**init**                    TetMesh/init
+LaminatedCircuit/**init**        timeseries/init
+LinearSlidingAirgap/**init**     tscollection/init
 

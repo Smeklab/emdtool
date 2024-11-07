@@ -9,7 +9,7 @@ grand_parent : Documentation
 
 PointConductor methods:
 PointConductor - is a class.
-set_element - PointConductor/set_element is a function.
+set_element - vectorized call --> going one by one
 set_matrices - finding position
 
 ## Properties
@@ -74,8 +74,7 @@ c2 = copy(this)
 ### .PointConductor/**elements** is a function.
 el = elements(this)
 
-### .PointConductor/**set_element** is a function.
-set_element(this)
+### .vectorized call --> going one by one
 
 ### .finding position
 

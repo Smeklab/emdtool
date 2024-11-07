@@ -7,8 +7,9 @@ grand_parent : Documentation
 
 ## Class summary
 
-Nodal3D is a class.
-this = Nodal3D(varargin)
+Nodal3D methods:
+Nodal3D - is a class.
+eval_prism - Nodal3D/eval_prism is a function.
 
 ## Properties
 
@@ -28,6 +29,9 @@ doc Nodal3D
 call syntax
 eval(k, X, msh, F, detF) or
 eval(k, X, msh, elements)
+
+### .Nodal3D/**eval_prism** is a function.
+Nref = eval_prism(this, k, X, msh)
 
 ### .evaluates the reference shape function (either identity or
 gradient)

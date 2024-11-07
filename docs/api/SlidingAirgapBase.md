@@ -11,8 +11,9 @@ SlidingAirgapBase methods:
 SlidingAirgapBase - is a class.
 compute_torque - Torque computation method.
 drawFluxLines - SlidingAirgapBase.drawFluxLines is a function.
+evaluate_interpolant - SlidingAirgapBase/evaluate_interpolant is a function.
 fluxplot - SlidingAirgapBase/fluxplot is a function.
-get_interpolatedMatrix - SlidingAirgapBase/get_interpolatedMatrix is a function.
+get_interpolatedMatrix - Get interpolated matrix.
 triplot - SlidingAirgapBase/triplot is a function.
 
 ## Properties
@@ -24,6 +25,20 @@ triplot - SlidingAirgapBase/triplot is a function.
 ### .SlidingAirgapBase/**Sint** is a property.
 
 ### .SlidingAirgapBase/**angle_multiplier** is a property.
+
+### .**interpolation_method** Interpolation method to use.
+Options include 'lagrange', 'spline', and 'trigonometric'.
+
+Setting 'legacy' reverts to legacy 3rd-order Lagrange
+interpolation, with some differences in the implementation.
+
+### .**interpolation_order** Interpolation order-like.
+
+The order of interpolation order, or like, to be used when
+computing the continuity conditions for the sliding interface.
+
+The potential of each node on the moving side will depend on the
+potential of `interpolation_order + 1` nodes on the static side.
 
 ### .SlidingAirgapBase/**is_constant** is a property.
 
@@ -80,14 +95,22 @@ drawFluxLines(msh, A, Nl, rotorAngle, args)
 
 Copyright (c) 2016 Antti Lehikoinen / Aalto University
 
+### .SlidingAirgapBase/**evaluate_interpolant** is a function.
+[I, J, E] = evaluate_interpolant(this, rotorAngle)
+
 ### .SlidingAirgapBase/**fluxplot** is a function.
 fluxplot(this, A, rotorAngle, potentials)
 
 ### .SlidingAirgapBase/**get_airgap_meshes** is a function.
 [msh_static, msh_moving] = get_airgap_meshes(this)
 
-### .SlidingAirgapBase/**get_interpolatedMatrix** is a function.
-[Sint, P] = get_interpolatedMatrix(this, rotorAngle)
+### .**get_interpolatedMatrix** Get interpolated matrix.
+
+[Sag, P] = get_interpolatedMatrix(this, rotorAngle) returns the non-constant
+part of the airgap matrix for the given rotor angular position, along
+with the interpolation matrix P.
+
+The interpolation matrix is computed with `this.evaluate_interpolant`
 
 ### .**transform_force_to_stationary_frame** Force transformation.
 

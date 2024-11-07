@@ -84,6 +84,17 @@ account for skewing. If `this.dimensions.skew_angle` is an array (of
 correct size), it is directly used for setting the skew angles. If it is
 a scalar,  uniform distribution between `[-0.5, 0.5]*skew_angle` is used.
 
+**** NOTE:** The aforementioned distribution of skew angles is appropriate
+for modelling step-wise skewing, such as that often found in PM rotors.
+For induction-motor-style continuous skewing, a better approach is to use
+
+`skew_angle ** linspace(0.5** (-1+1/Nslices), 0.5*(1-1/Nslices), Nslices)`
+
+i.e. set the skew angle of each slice to correspond to the *average*  skew
+angle over that slice. This can be achieved by setting
+
+`dim.skew_type = 'continuous`.
+
 ### .**set_component_shifts** Set xy-shifts for the geometry components.
 
 set_component_shifts(this) tries to parse suitable shifts for the
