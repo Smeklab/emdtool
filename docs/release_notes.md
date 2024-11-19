@@ -41,3 +41,4 @@ nav_order: 4
 * **3.0.45dev** :  Large refactor of mesh-element functionality, intended for better maintainability. Ongoing.
 * **3.0.45dev** :  Added flexibility to SlidingAirgap airgap mesh generation.
 * **3.0.45dev** :  Added the option to set the interpolation method and order for SlidingAirgapBase.
+* **3.0.45dev** :  BreadLoafRotor fixed non-symmetric mesh density bug.

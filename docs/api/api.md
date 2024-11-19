@@ -112,7 +112,7 @@ has_toc : false
 * *class* : [PrismMeshBase3D](PrismMeshBase3D.html)  **PrismMeshBase3D** A base class for a 3D mesh with prismatic elements.
 * *class* : [/Mesh/Other meshes/Mesh](Mesh.html)  **Mesh** Class for mesh objects.
 * *class* : [/Mesh/Other meshes/SimpleMesh](SimpleMesh.html)  **SimpleMesh** Basic mesh class.
-* *class* : [Mesh](Mesh.html)  **Mesh** Class for mesh objects.
+* *class* : [unusedMesh](unusedMesh.html)  Mesh Class for mesh objects.
 * *class* : [RotatedMeshView](RotatedMeshView.html) **RotatedMeshView** is a class.
 ## Geometry
  Folder with the following files / classes / subfolders:
@@ -241,6 +241,7 @@ has_toc : false
 * *class* : [/Rotors/LinearSynRotorBase](LinearSynRotorBase.html) **LinearSynRotorBase** methods:
 * *class* : [/Rotors/MassivePM](MassivePM.html)  **MassivePM** Template for massive-PM rotors.
 * *class* : [/Rotors/PoledIPM1](PoledIPM1.html) **PoledIPM1** methods:
+* *class* : [/Rotors/PoledIPM2](PoledIPM2.html)  **PoledIPM2** Simple IPM model with a salient pole.
 * *class* : [/Rotors/SPM1](SPM1.html)  **SPM1** Template for a surface-PM rotor.
 * *class* : [SPM1](SPM1.html)  **SPM1** Template for a surface-PM rotor.
 * *class* : [/Rotors/SPM2](SPM2.html)  **SPM2** Template for a surface-PM rotor.

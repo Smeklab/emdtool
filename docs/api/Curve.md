@@ -145,7 +145,7 @@ appropriate with Curve.flip()
 
 ### .start point
 
-### .--- help for Curve/**update_single_point** ---
-Curve/update_single_point is an undocumented builtin Curve method.
+### .--- help for Arc/**update_single_point** ---
+Curve/update_single_point is an undocumented builtin Arc method.
 
 

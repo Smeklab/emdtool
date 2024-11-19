@@ -31,6 +31,23 @@ e2t = 2xNedges incidence array: from edges to elements. Second is zero for bound
 
 Class methods are listed below. Inherited methods are not included.
 
+### .**edge_length** Edge lengths.
+
+l = edge_length(this, edges) returns the lengths of the edges.
+
+The array 'edges' can either be a 1xN arrays, containing indices to
+`this.edges`, or a 2xN array containing edge definitions.
+
+**** WARNING** A straight 1-segment start-to-end approximation of the edges
+is used in case of higher-order curved elements
+
 ### .**finalize** Set edge incidence, infer element type.
+
+### .**get_outer_edges** Get edges surrounding elements.
+
+edge_indices = get_outer_edges(this, elements)
+
+Given a list (1xN) of `elements`, the function returns the indices to
+edges `edge_indices` surrounding the elements (outer boundary only)
 
 
