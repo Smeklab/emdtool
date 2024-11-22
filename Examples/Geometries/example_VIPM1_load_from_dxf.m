@@ -23,6 +23,15 @@
 %   * Setting characteristic lengths either automatically, manually, or a
 %   combination of both like in this example.
 
+%setting basic required dimensions
+%example_Stator_6P_100kWish;
+dim.magnet_material = PMlibrary.create('N42SH');
+dim.rotor_core_material = dim.stator_core_material;
+dim.shaft_material = 1;
+
+%this could be automated!
+dim.angle_mag = pi/180 * 20;
+
 rotor = SynRotorBase();
 rotor.dimensions = dim;
 
