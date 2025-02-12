@@ -20,8 +20,9 @@ Main dimensions:
 
 Slot dimensions:
 * Any dimensions used by [Slot1](Slot1.html) (default slot shape class)
-* (OPTIONAL): stator_slot : a [SlotShapeBase](SlotShapeBase.html) object or a handle to the class. Default: Slot1
+* stator_slot : (OPTIONAL) A [SlotShapeBase](SlotShapeBase.html) object or a handle to the class. Default: Slot1
 * Any dimensions used by the custom slot shape class.
+
 
 Materials (names, indices, or Material objects):
 * stator_core_material
@@ -39,6 +40,12 @@ Winding specifications:
 (OPTIONAL): Mesh density parameters:
 * lcar_core_s : Characteristic length for the core.
 
+(OPTIONAL) Topology:
+* split_into_yoke_and_teeth : Split stator core into tooth and yoke
+domains, consisting of the same material. Defaults to false. If
+true, the given/used stator slot object must define the slot bottom
+curves.
+
 ![Stator dimensions example.](Stator.png)
 
 ## Properties
@@ -50,7 +57,7 @@ Winding specifications:
 
 Class methods are listed below. Inherited methods are not included.
 
-### .--- help for Stator/**create_geometry_backup** ---
-Stator/create_geometry_backup is an undocumented builtin Stator method.
+### .--- help for Standard/**create_geometry_backup** ---
+Stator/create_geometry_backup is an undocumented builtin Standard method.
 
 

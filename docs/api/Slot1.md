@@ -64,8 +64,6 @@ Class methods are listed below. Inherited methods are not included.
 ### .Slot1/**create_geometry** is a function.
 create_geometry(this)
 
-### .Slot1/**create_geometry_old** is a function.
-
 ### .Slot1.**list_dimensions** is an undocumented builtin static method or namespace function.
 
 ### .Slot1/**orientation_angle** is a function.

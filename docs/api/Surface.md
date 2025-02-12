@@ -42,6 +42,10 @@ doc Surface/lines
 Documentation for Surface/name
 doc Surface/name
 
+### .**parent** Parent domain, if any.
+Documentation for Surface/parent
+doc Surface/parent
+
 
 ## Methods
 

@@ -42,3 +42,11 @@ nav_order: 4
 * **3.0.45dev** :  Added flexibility to SlidingAirgap airgap mesh generation.
 * **3.0.45dev** :  Added the option to set the interpolation method and order for SlidingAirgapBase.
 * **3.0.45dev** :  BreadLoafRotor fixed non-symmetric mesh density bug.
+* **3.0.45dev** :  Stator class now supports splitting the core into tooth and yoke domains.
+* **3.0.45dev** :  PolyphaseCircuit.losses now also returns the end-winding losses.
+* **3.0.45dev** :  rms under utilities renamed to emdtool_rms.
+* **3.0.45dev** :  Multiple code-styling errors (like non-reachable lines or redundant if-clauses fixed.
+* **3.0.45dev** :  Fixed incorrect inductance computation (compute_inductances_static_averaging) for sliced models.
+* **3.0.45dev** :  Fixed msh_fill for second-order elements. Added unroll_order to the plotted quantity.
+* **3.0.45dev** :  WindingLayoutBase now supports multi-surface slots with stranded geometries.
+* **3.0.45dev** :  Added .elements_in_layer method to SimpleExtrudedMesh.

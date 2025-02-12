@@ -21,6 +21,7 @@ length
 * rotor_position : (OPTIONAL) rotor position, either "end" or
 "center". Rotor yoke-side is modelled as either flux insulation or
 symmetry boundary, depending on the case.
+* airgap_alignment : (OPTIONAL) either 'up' (default) or 'down'
 
 Slot dimensions:
 * hyr : yoke thickness

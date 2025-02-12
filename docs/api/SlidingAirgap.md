@@ -42,14 +42,6 @@ ripple in this case. A non-conforming mesh can help.
 
 Class methods are listed below. Inherited methods are not included.
 
-### .compute_torque Torque computation method.
-
-[Torque, Force] = compute_torque(this, solution)
-
-### .SlidingAirgap/**deprecated_init** is a function.
-
-### .SlidingAirgap/**deprecated_triplot** is a function.
-
 ### .SlidingAirgap/**fluxplot** is a function.
 fluxplot(this, A, rotorAngle, potentials)
 

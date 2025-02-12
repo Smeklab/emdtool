@@ -59,8 +59,7 @@ Does not handle generators, really.
 
 Class methods are listed below. Inherited methods are not included.
 
-### .**compute** Compute operating-point behaviour
-
+### .MTPAinterpolant/**compute** is a function.
 [Ptot, idq, E] = compute(this, T, n)
 
 ### .MTPAinterpolant/**findI** is a function.

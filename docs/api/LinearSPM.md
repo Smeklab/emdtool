@@ -10,7 +10,6 @@ grand_parent : Documentation
 LinearSPM methods:
 LinearSPM - is a class.
 create_geometry - LinearSPM/create_geometry is a function.
-create_geometry_temp - LinearSPM/create_geometry_temp is a function.
 
 ## Properties
 
@@ -25,8 +24,6 @@ Class methods are listed below. Inherited methods are not included.
 this = LinearSPM(dim)
 Documentation for LinearSPM/LinearSPM
 doc LinearSPM
-
-### .LinearSPM/**create_geometry_temp** is a function.
 
 ### .LinearSPM/**d_axis_angle** is a function.
 a = d_axis_angle(this)

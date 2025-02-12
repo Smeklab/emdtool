@@ -53,7 +53,15 @@ this.set_parent(parent_geometry, varargin)
 
 ### .SlotShapeBase/**all_surfaces** is a property.
 
+### .**bottom_curves** - Slot bottom curves.
+
+Curves defining the slot bottom, if any.
+
 ### .SlotShapeBase/**dimensions** is a property.
+
+### .**has_bottom** - Does the slot have a defined bottom.
+
+Equivalent to `~isempty(this.bottom_curves)`
 
 ### .**has_opening** - Does the slot have a slot opening
 
@@ -118,11 +126,17 @@ obj = SlotShapeBase
 ### .SlotShapeBase/**first_airgap_point** is a function.
 P = first_airgap_point(this)
 
+### .SlotShapeBase/**first_bottom_point** is a function.
+P = first_bottom_point(this)
+
 ### .**initialize** Parse characteristic lengths and initialize
 dimensions.
 
 ### .SlotShapeBase/**last_airgap_point** is a function.
 P = last_airgap_point(this)
+
+### .SlotShapeBase/**last_bottom_point** is a function.
+P = last_bottom_point(this)
 
 ### .**set_parent** - Set parent geometry.
 

@@ -11,8 +11,6 @@ has_toc : false
 ## Analysis utilities
  Folder with the following files / classes / subfolders:
 
-* *function* : [Analysis utilities/Grids/old_MTPAinterpolant/compute](compute.html)  **compute** Compute operating-point behaviour
-* *function* : [Analysis utilities/Grids/old_MTPAinterpolant/init](init.html) **init** is a script.
 * *function* : [Analysis utilities/Pre-processing/calculate_EW_length](calculate_EW_length.html)  **calculate_EW_length** Calculate approximate axial length of end-winding.
 * *function* : [Analysis utilities/Pre-processing/calculate_turn_length](calculate_turn_length.html)  **calculate_turn_length** Set turn length for standard distributed winding.
 * *function* : [Analysis utilities/Pre-processing/calculate_turn_length_axial](calculate_turn_length_axial.html)  **calculate_turn_length_axial** Calculate turn length of an axial-flux
@@ -33,7 +31,6 @@ has_toc : false
 * *class* : [/Grids/SMGridCalculator_DQ](SMGridCalculator_DQ.html)  **SMGridCalculator_DQ** DQ-grid calculator for synchronous machines.
 * *class* : [/Grids/SMGridCalculator_NT](SMGridCalculator_NT.html)  **SMGridCalculator_NT** (rpm, T) operating point grid calculator.
 * *class* : [/Grids/SMGridCalculator_NTfromDQ](SMGridCalculator_NTfromDQ.html) **SMGridCalculator_NTfromDQ** methods:
-* *class* : [MTPAinterpolant](MTPAinterpolant.html)  **MTPAinterpolant** Interpolant for post-processing field-weakening
 * *class* : [OPiterator](OPiterator.html)  **OPiterator** Backward compatibility proxy class.
 ## FE Functionality
  Folder with the following files / classes / subfolders:
@@ -64,7 +61,7 @@ has_toc : false
 * *function* : [FE Functionality/Mesh/Mesh utilities/points_to_elements_and_coordinates](points_to_elements_and_coordinates.html)  pointSources2Elements_faster generates point-wise data for mesh.
 * *function* : [FE Functionality/Mesh/Mesh utilities/sortRadialEdges](sortRadialEdges.html)  sortSegmentEdges sorts nodes of circumferentially.
 * *function* : [FE Functionality/Mesh/Mesh utilities/sortSegmentEdges](sortSegmentEdges.html)  **sortSegmentEdges** sorts nodes of circumferentially.
-* *function* : [FE Functionality/Mesh/Mesh utilities/sortXEdges](sortXEdges.html)  sortSegmentEdges sorts nodes according to y coordinate.
+* *function* : [FE Functionality/Mesh/Mesh utilities/sortXEdges](sortXEdges.html)  sortSegmentEdges sorts nodes according to x coordinate.
 * *function* : [FE Functionality/Mesh/Mesh utilities/sortYEdges](sortYEdges.html)  sortSegmentEdges sorts nodes according to y coordinate.
 * *function* : [FE Functionality/Mesh/Meshes_3D/contents](contents.html)  Folder with the following files / classes / subfolders:
 * *function* : [FE Functionality/Mesh/Meshes_3D/get_PrismIntegrationPoints](get_PrismIntegrationPoints.html)  **get_PrismIntegrationPoints** Quadrature points for a unit prism.
@@ -112,7 +109,6 @@ has_toc : false
 * *class* : [PrismMeshBase3D](PrismMeshBase3D.html)  **PrismMeshBase3D** A base class for a 3D mesh with prismatic elements.
 * *class* : [/Mesh/Other meshes/Mesh](Mesh.html)  **Mesh** Class for mesh objects.
 * *class* : [/Mesh/Other meshes/SimpleMesh](SimpleMesh.html)  **SimpleMesh** Basic mesh class.
-* *class* : [unusedMesh](unusedMesh.html)  Mesh Class for mesh objects.
 * *class* : [RotatedMeshView](RotatedMeshView.html) **RotatedMeshView** is a class.
 ## Geometry
  Folder with the following files / classes / subfolders:
@@ -174,7 +170,6 @@ has_toc : false
 * *class* : [//SteelLibrary](SteelLibrary.html)  **SteelLibrary** Static class for creating electrical steel Material
 * *class* : [Arnon7](Arnon7.html)  **Arnon7** **Arnon7** Material object.
 * *class* : [PMlibrary](PMlibrary.html)  **PMlibrary** Static class for creating permanent-magnet Material objects.
-* *class* : [deprecated_Vacodur49](deprecated_Vacodur49.html)  Vacodur49 Vacodur49 Material object.
 * *class* : [/Permanent magnet material models/DemagMaterial1](DemagMaterial1.html)  **DemagMaterial1** Simple demagnetizable magnet material model.
 ## Problems
  Folder with the following files / classes / subfolders:
@@ -243,7 +238,6 @@ has_toc : false
 * *class* : [/Rotors/PoledIPM1](PoledIPM1.html) **PoledIPM1** methods:
 * *class* : [/Rotors/PoledIPM2](PoledIPM2.html)  **PoledIPM2** Simple IPM model with a salient pole.
 * *class* : [/Rotors/SPM1](SPM1.html)  **SPM1** Template for a surface-PM rotor.
-* *class* : [SPM1](SPM1.html)  **SPM1** Template for a surface-PM rotor.
 * *class* : [/Rotors/SPM2](SPM2.html)  **SPM2** Template for a surface-PM rotor.
 * *class* : [/Rotors/SRMRotor1](SRMRotor1.html)  **SRMRotor1** Switched-reluctance / FSM type salient rotor
 * *class* : [/Rotors/ShieldedSPM](ShieldedSPM.html) **ShieldedSPM** methods:
@@ -273,6 +267,7 @@ has_toc : false
 * *class* : [RotorSlotShape](RotorSlotShape.html)  **RotorSlotShape** Base class for rotor slots.
 * *class* : [SlotShapeBase](SlotShapeBase.html)  **SlotShapeBase** Base class for slot shapes.
 * *class* : [SlotShapeWrapper](SlotShapeWrapper.html)  **SlotShapeWrapper** A wrapper class for one-off slot geometries.
+* *class* : [/Stators/AFStator](AFStator.html)  **AFStator** Axial stator template
 * *class* : [/Stators/AFStatorBase](AFStatorBase.html)  **AFStatorBase** Base class for axial-flux stators
 * *class* : [/Stators/FormWound1](FormWound1.html) **FormWound1** methods:
 * *class* : [/Stators/LinearStator](LinearStator.html) **LinearStator** methods:

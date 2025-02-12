@@ -44,6 +44,9 @@ Br = BHmax_to_Br(BHmax_MGOE) uses a default relative permeability of 1.05
 
 Br = BHmax_to_Br(BHmax_MGOE, mur)
 
+### .emdconstants.**Oe_to_A_per_m** is a function.
+H = emdconstants.Oe_to_A_per_m(O)
+
 ### .**emdconstants**/emdconstants is a constructor.
 obj = emdconstants
 Documentation for emdconstants/emdconstants

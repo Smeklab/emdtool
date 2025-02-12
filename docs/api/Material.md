@@ -75,12 +75,6 @@ mat = Material.create()
 
 Create an empty Material object.
 
-### .initialize_material_data Calculate reluctivities etc.
-
-Compute reluctivities and extrapolate BH data.
-
-Reluctivity data as a function of B^2 is saved to `this.data` .
-
 ### .**detach** Clear elements, domains, etc.
 
 ### .**differential_reluctivity** Return reluctivity and its derivative.

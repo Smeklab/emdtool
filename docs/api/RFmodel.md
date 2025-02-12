@@ -24,19 +24,6 @@ See [MotorModelBase](MotorModelBase.html).
 Documentation for RFmodel/RFmodel
 doc RFmodel
 
-### .VISUALIZE Visualize geometry.
-
-Key-value arguments:
-
-* 'linestyle' : style for plotting element edges. Default 'none'.
-
-* 'plot_ag' : plot airgap mesh? Default false.
-
-* 'plot_nodes' : plot periodic, Dirichlet and airgap-boundary nodes?
-Default: false.
-
-* 'plot_axial' : plot axial view of motor? Default false.
-
 ### .RFmodel/**mass** is a function.
 [m, m_domain, m_mat] = mass(this)
 

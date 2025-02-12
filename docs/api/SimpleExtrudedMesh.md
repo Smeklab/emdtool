@@ -34,6 +34,14 @@ z-coordinates corresponding to 'zs'.
 Documentation for SimpleExtrudedMesh/SimpleExtrudedMesh
 doc SimpleExtrudedMesh
 
+### .**elements_in_layer** Indices to all elements in a given layer.
+
+els = elements_in_layer(this, layer), where
+
+* layer : the number of layer OR "mid" or "top" to plot the
+ceil(number_of_layers/2)th or number_of_layers:th layer,
+respectively.
+
 ### .**extrude_nodes**
 
 els = extrude_nodes(msh3, nodes)

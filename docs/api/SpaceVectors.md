@@ -44,7 +44,7 @@ v = ParkClarke.dq(x, angles)
 Transfrom the array x, of size m x numel(angles), into the generalized dq0 frame.
 Here:
 
-* m : the number of phases
+* m : the number of phases = size(x,1)
 
 * angles : a 1D array of the electrical radians considered.
 

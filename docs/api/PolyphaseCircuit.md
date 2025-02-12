@@ -129,6 +129,8 @@ within multiple wires in-hand, and the zero-sequence component of the
 phase-currents. **** NOTE** This will, for now, give incorrect results for
 non-standard winding configurations, where the zero-sequence component
 is not simply sum(Iphase, 1).
+* mean_EW_losses : mean **losses** in the end-winding, or more generally
+outside the active length of the FEA domain.
 * mean_conductor_losses : mean **losses** per conductor
 * mean_circulating_current_losses : total loss component due to
 circulating-current phenomana, including both strand-level and

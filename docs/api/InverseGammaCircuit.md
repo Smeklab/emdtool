@@ -10,6 +10,7 @@ grand_parent : Documentation
 InverseGammaCircuit methods:
 InverseGammaCircuit - is a class.
 from_harmonic_solution - Initialize eq. circuit from solution.
+from_summary - InverseGammaCircuit.from_summary is a function.
 
 ## Properties
 
@@ -56,7 +57,13 @@ magnetizing branch voltage. This value should of course be real; the
 numerical error factor imag(Rr)/real(Rr) is displayed in the command
 prompt to spot failed computations.
 
+### .InverseGammaCircuit.**from_summary** is a function.
+this = InverseGammaCircuit.from_summary(solution, summary)
+
 ### .InverseGammaCircuit/**torque_from_current** is a function.
 T = torque_from_current(this, I, slip)
+
+### .InverseGammaCircuit/**voltage_from_current** is a function.
+U = voltage_from_current(this, I, slip)
 
 

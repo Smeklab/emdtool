@@ -76,8 +76,6 @@ to obtain the desired effect.
 
 Class methods are listed below. Inherited methods are not included.
 
-### .RectangularLayout/**OLD_create_solid_geometry** is a function.
-
 ### .parsing some easy stuff
 
 ### .**parse_conductor_corners** Parse conductor placement.
