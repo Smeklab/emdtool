@@ -21,4 +21,4 @@ To make things work, the recommended approach right now is to _mesh_ the models 
 * Adding a corresponding bias angle inside `motor.get_AGmatrix`
 * Suitable translate and/or rotate the model coordinates before plotting (`motor.to_plot_frame` apart from some legacy implementations).
 
-For a comprehensive example, see the [`RFModelWithSkew`](../../api/[`MaterialBase.losses`](../../api/MaterialBase.html.html) class.
+For a comprehensive example, see the [`RFModelWithSkew`](../../api/RFModelWithSkew.html) class.
