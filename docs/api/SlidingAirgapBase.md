@@ -7,14 +7,23 @@ grand_parent : Documentation
 
 ## Class summary
 
-SlidingAirgapBase methods:
-SlidingAirgapBase - is a class.
-compute_torque - Torque computation method.
-drawFluxLines - SlidingAirgapBase.drawFluxLines is a function.
-evaluate_interpolant - SlidingAirgapBase/evaluate_interpolant is a function.
-fluxplot - SlidingAirgapBase/fluxplot is a function.
-get_interpolatedMatrix - Get interpolated matrix.
-triplot - SlidingAirgapBase/triplot is a function.
+SlidingAirgapBase Base class for airgaps.
+
+Base class for handling motion via a sliding interface. An airgap
+class is responsible for generating a layered airgap mesh, and
+computing airgap matrices without introducing extra degrees of
+freedom (Lagrange multipliers) to the problem.
+
+**** IMPORTANT**: Most base classes assume that the base meshes of the
+geometries are suitably aligned, i.e. origin-centric and the
+clock-wise boundary at y=0 for radial flux machines, and extending
+from x=0 towards the negative direction for linear/axial flux
+machines. Geometry features such as skewing, biasing, multiple slices
+of geometry not aligned as described above must be handled by
+different means; the recommended approach is manipulating the airgap
+matrix, torque computation, airgap plotting, and geometry plotting
+interfaces in the [MotorModelBase](MotorModelBase.html) subclass, see the
+[RFModelWithSkew](RFModelWithSkew.html) class for a comprehensive example.
 
 ## Properties
 
@@ -72,11 +81,6 @@ potential of `interpolation_order + 1` nodes on the static side.
 ## Methods
 
 Class methods are listed below. Inherited methods are not included.
-
-### .**SlidingAirgapBase**/SlidingAirgapBase is a constructor.
-obj = SlidingAirgapBase
-Documentation for SlidingAirgapBase/SlidingAirgapBase
-doc SlidingAirgapBase
 
 ### .SlidingAirgapBase/**compute_stiffness_matrices** is a function.
 compute_stiffness_matrices(this)

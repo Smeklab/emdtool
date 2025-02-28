@@ -23,7 +23,7 @@ Magnet dimensions:
 * angle_mag : V-opening angle, radians. Larger-->sharper V
 * magnet_height : (OPTIONAL) length of axial magnet segment.
 Defaults to leff.
-* magnet_size_tolerance : (OPTIONAL) size of extra air box to be
+* magnet_size_tolerance : (OPTIONAL) size of extra air box (generic epoxy) to be
 added around the magnet, to account for manufacturing tolerances.
 NOTE: the size of the box will be w_mag x h_mag, while the magnet
 dimensions will be **** reduced** by the tolerance.

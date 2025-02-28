@@ -57,10 +57,4 @@ t_moving = t_moving(this)
 ### .LinearSlidingAirgap/**tag_solution** is a function.
 A_tag = tag_solution(this, A, rotorAngle, use_fixed)
 
-### .**transform_force_to_stationary_frame** Force transformation.
-
-Fxy = transform_force_to_stationary_frame(this, F, rotor_angle)
-transforms the force F from rotor coordinates (rotor at angle
-rotor_angle (mech. rad)) to stator coordinates.
-
 

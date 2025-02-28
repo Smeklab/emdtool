@@ -35,6 +35,17 @@ motor.set_outer_boundary(bnd);
 
 motor.finalize();
 
+
+An important note on meshes and indexing: When adding a component (a
+GeoBase) object to the model, the nodes and elements of the component
+mesh are appended to the models mesh. Correspondingly, the
+`.elements` properties of the component's [Domains](Domains.html) and [Materials](Materials.html)
+are updated to refer to the new indexing, i.e. into the model's mesh.
+Importantly, to keep things as messy and legacy-y as possible, the
+indexing in `component.boundaries` is **** not** updated, and thus are
+not e.g. `component.n_ag`. By contrast, `component.edges` **** IS**
+updated.
+
 ## Properties
 
 ### .MotorModelBase/**Ne_component** is a property.

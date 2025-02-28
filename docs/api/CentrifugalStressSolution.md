@@ -30,6 +30,9 @@ See e.g. `plot_displacements` and `plot_von_Mises_stress`.
 Documentation for CentrifugalStressSolution/CentrifugalStressSolution
 doc CentrifugalStressSolution
 
+### .CentrifugalStressSolution/**get_averaged_nodal_von_Mises_stress** is a function.
+Save = get_averaged_nodal_von_Mises_stress(this)
+
 ### .**get_displaced_mesh** Return displaced mesh.
 
 msh = get_displaced_mesh(this, multiplier) returns a new mesh, based on

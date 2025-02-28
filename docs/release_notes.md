@@ -50,3 +50,7 @@ nav_order: 4
 * **3.0.45dev** :  Fixed msh_fill for second-order elements. Added unroll_order to the plotted quantity.
 * **3.0.45dev** :  WindingLayoutBase now supports multi-surface slots with stranded geometries.
 * **3.0.45dev** :  Added .elements_in_layer method to SimpleExtrudedMesh.
+* **3.0.45dev** :  Rotor slot objects now have to declare the has_slot_opening property.
+* **3.0.45dev** :  SlottedRotor1 now supports slots without any opening at all (even virtual).
+* **3.0.45dev** :  Added RotorSlot5 for deep double-cage-like rotors.
+* **3.0.45dev** :  Zero normal stress boundary condition added to the CentrifugalStressProblem class.

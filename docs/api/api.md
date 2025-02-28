@@ -93,7 +93,7 @@ has_toc : false
 * *class* : [/Mesh/PeriodicBoundary](PeriodicBoundary.html) **PeriodicBoundary** methods:
 * *class* : [/Mesh/Airgap mesh/LinearSlidingAirgap](LinearSlidingAirgap.html)  **LinearSlidingAirgap** Airgap class for sliced AFM models.
 * *class* : [/Mesh/Airgap mesh/SlidingAirgap](SlidingAirgap.html)  **SlidingAirgap** Sliding airgap model for radial-flux machines.
-* *class* : [/Mesh/Airgap mesh/SlidingAirgapBase](SlidingAirgapBase.html) **SlidingAirgapBase** methods:
+* *class* : [/Mesh/Airgap mesh/SlidingAirgapBase](SlidingAirgapBase.html)  **SlidingAirgapBase** Base class for airgaps.
 * *class* : [Airgap](Airgap.html)  **Airgap** Base class for airgap geometries.
 * *class* : [/Mesh/Mesh Generation/MatlabMesher](MatlabMesher.html) **MatlabMesher** methods:
 * *class* : [/Mesh/Mesh Generation/MesherBase](MesherBase.html) **MesherBase** methods:
@@ -259,6 +259,7 @@ has_toc : false
 * *class* : [/Slots/RotorSlot2](RotorSlot2.html)  **RotorSlot2** Rotor slot shape 2.
 * *class* : [/Slots/RotorSlot3](RotorSlot3.html)  **RotorSlot3** Rotor slot shape 3.
 * *class* : [/Slots/RotorSlot4](RotorSlot4.html)  **RotorSlot4** Completely rectangular rotor slot shape.
+* *class* : [/Slots/RotorSlot5](RotorSlot5.html)  **RotorSlot5** Simple double-ish cage slot type.
 * *class* : [/Slots/Slot1](Slot1.html)  **Slot1** Basic stator slot shape.
 * *class* : [/Slots/Slot1b](Slot1b.html)  **Slot1b** A successor of the Slot1 class, with multiple slot openings.
 * *class* : [/Slots/SlotShapeBase](SlotShapeBase.html)  **SlotShapeBase** Base class for slot shapes.

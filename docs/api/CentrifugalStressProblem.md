@@ -22,6 +22,15 @@ The problem can then be solved using the `.solve` method.
 
 ## Properties
 
+### .**boundary_type** Periodic boundary type
+
+The default value "symmetric" applies periodicity conditions on
+the displacement along the boundary.
+
+The value "zero normal" leaves the boundaries independent from
+each other, but forces the displacement to be tangential to the
+boundary, i.e. with zero normal component
+
 ### .CentrifugalStressProblem/**consider_dirichlet_nodes** is a property.
 
 ### .CentrifugalStressProblem/**formulation** is a property.

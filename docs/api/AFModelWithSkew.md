@@ -49,7 +49,7 @@ geometry object as a component.
 Skewing, if any, is parsed by `this.set_component_angles`.
 
 Underneath, this method creates a set of `RFSlice` objects by calling
-`RFSlice.Default(dim_slice, stator, rotor)`.
+AFSlice.Default(dim_slice, stator, rotor)`.
 The slice dimensions are otherwise a copy of `dim`, only the slice
 effective length is shorted by
 `dim_slice.leff = dim.leff / dim.number_of_slices;`.
