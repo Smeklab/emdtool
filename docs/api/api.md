@@ -74,6 +74,7 @@ has_toc : false
 * *class* : [Prism1](Prism1.html)  **Prism1** Simple z-extruded prism.
 * *class* : [Prism2](Prism2.html) **Prism2** is a class.
 * *class* : [Quad1](Quad1.html) **Quad1** is a class.
+* *class* : [Tet1](Tet1.html) **Tet1** is a class.
 * *class* : [Triangle1](Triangle1.html) **Triangle1** is a class.
 * *class* : [Triangle2I](Triangle2I.html) **Triangle2I** is a class.
 * *class* : [Elements](Elements.html)  **Elements** Enumeration of element types
@@ -371,6 +372,9 @@ has_toc : false
 * *class* : [NodalBase](NodalBase.html) **NodalBase** is a class.
 * *class* : [Quad](Quad.html) **Quad** is a class.
 * *class* : [SimpleMesh2](SimpleMesh2.html) **SimpleMesh2** is a class.
+* *class* : [/ThreeDAnalysis/MagneticsProblem3D](MagneticsProblem3D.html) **MagneticsProblem3D** methods:
+* *class* : [/ThreeDAnalysis/MotorModel3D](MotorModel3D.html) **MotorModel3D** methods:
+* *class* : [Geometry3D](Geometry3D.html) Contents of **Geometry3D**:
 ## utilities
  Miscellaneous utilities classes and functions.
 

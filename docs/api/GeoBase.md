@@ -134,6 +134,9 @@ Initializes the geometry.
 
 Must be subclassed.
 
+### .GeoBase/**create_geometry_3D** is a function.
+create_geometry_3D(this)
+
 ### .GeoBase/**dim** is a function.
 d = dim(this)
 

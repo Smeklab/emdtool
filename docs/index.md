@@ -104,10 +104,6 @@ Features under development; working but not pretty:
 * 3D analysis, static and transient
     * Linear and nonlinear
 	* Rotation/motion almost working
-* Thermal analysis
-* Rotor centrifugal stress analysis
-* Different modulators
-	* SVPWM and SHE at the moment
 
 # Frequently-asked questions
 

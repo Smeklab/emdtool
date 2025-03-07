@@ -45,6 +45,8 @@ Class methods are listed below. Inherited methods are not included.
 ### .SlidingAirgap/**fluxplot** is a function.
 fluxplot(this, A, rotorAngle, potentials)
 
+### .[x, y] = this.**gap_coordinates_to_cartesian**(r,plot_coordinates);
+
 ### .SlidingAirgap/**get_AGmatrix** is a function.
 Sag = get_AGmatrix(this, rotorAngle, N, t, varargin)
 

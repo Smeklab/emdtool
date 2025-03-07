@@ -3,7 +3,7 @@ title : Stator
 parent: API
 grand_parent : Documentation
 ---
-# Summary for: **Stator**  < [StatorBase](StatorBase.html) & [LayoutCompatible](LayoutCompatible.html)
+# Summary for: **Stator**  < [StatorBase](StatorBase.html) & [LayoutCompatible](LayoutCompatible.html) & [Geometry3D](Geometry3D.html)
 
 ## Class summary
 
@@ -57,7 +57,13 @@ curves.
 
 Class methods are listed below. Inherited methods are not included.
 
-### .--- help for Standard/**create_geometry_backup** ---
-Stator/create_geometry_backup is an undocumented builtin Standard method.
+### .--- help for Stator/**create_geometry_backup** ---
+Stator/create_geometry_backup is an undocumented builtin Stator method.
+
+### .Stator/**directional_airgap_length** is a function.
+delta = directional_airgap_length(this)
+
+### .Stator/**get_special_extrusion_domains** is a function.
+ds = get_special_extrusion_domains(this)
 
 

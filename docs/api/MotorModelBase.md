@@ -133,6 +133,18 @@ ns = local_node_indices(this, ns, component)
 ### .MotorModelBase/**mass** is a function.
 [m, m_domain, m_mat] = mass(this)
 
+### .**plot_airgap_flux_density** Plot airgap flux density.
+
+Plots the normal and tangential components of the airgap flux density in
+the current window.
+
+plot_airgap_flux_density(this, solution, step, varargin)
+
+Any extra input arguments are passed on to
+`gap.compute_airgap_flux_density_data`, which is also used to compute the
+flux density components. For now, ´gap´ equals to
+`this.airgap.airgaps(1)`.
+
 ### .**plot_flux** Plot flux density.
 
 plot_flux(this, solution)

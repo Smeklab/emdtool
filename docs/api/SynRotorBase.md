@@ -3,7 +3,7 @@ title : SynRotorBase
 parent: API
 grand_parent : Documentation
 ---
-# Summary for: **SynRotorBase**  < [RadialGeometry](RadialGeometry.html)
+# Summary for: **SynRotorBase**  < [RadialGeometry](RadialGeometry.html) & [Geometry3D](Geometry3D.html)
 
 ## Class summary
 
@@ -29,5 +29,8 @@ this = SynRotor(dim)
 
 ### .SynRotorBase/**d_axis_angle** is a function.
 y = d_axis_angle(this)
+
+### .SynRotorBase/**directional_airgap_length** is a function.
+delta = directional_airgap_length(this)
 
 

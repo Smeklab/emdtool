@@ -9,7 +9,8 @@ grand_parent : Documentation
 
 RadialGeometryExtruder methods:
 RadialGeometryExtruder - is a class.
-extrude - RadialGeometryExtruder/extrude is a function.
+extrude_domain - RadialGeometryExtruder/extrude_domain is a function.
+extrude_geometry - FIXME handle top/bottom layers
 initialize_3D_points - RadialGeometryExtruder/initialize_3D_points is a function.
 
 ## Properties
@@ -24,8 +25,10 @@ this = RadialGeometryExtruder(geometry)
 Documentation for RadialGeometryExtruder/RadialGeometryExtruder
 doc RadialGeometryExtruder
 
-### .RadialGeometryExtruder/**extrude** is a function.
-Vs = extrude(this, domain, level)
+### .RadialGeometryExtruder/**extrude_domain** is a function.
+Vs = extrude_domain(this, domain, level)
+
+### .FIXME handle top/bottom layers
 
 ### .RadialGeometryExtruder/**initialize_3D_points** is a function.
 initialize_3D_points(this)

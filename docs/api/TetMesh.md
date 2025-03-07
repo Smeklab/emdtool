@@ -19,21 +19,11 @@ TetMesh minimal mesh of 3D tetrahedrons.
 
 ### .TetMesh/**edges** is a property.
 
-### .TetMesh/**elementType** is a property.
-
-### .TetMesh/**elements** is a property.
-
 ### .TetMesh/**elements2edges** is a property.
 
 ### .TetMesh/**entities** is a property.
 
-### .TetMesh/**nodes** is a property.
-
-### .TetMesh/**p** is a property.
-
 ### .TetMesh/**periodic_boundaries** is a property.
-
-### .Te**t**Mesh/t is a property.
 
 
 ## Methods

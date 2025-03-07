@@ -54,3 +54,6 @@ nav_order: 4
 * **3.0.45dev** :  SlottedRotor1 now supports slots without any opening at all (even virtual).
 * **3.0.45dev** :  Added RotorSlot5 for deep double-cage-like rotors.
 * **3.0.45dev** :  Zero normal stress boundary condition added to the CentrifugalStressProblem class.
+* **3.0.45dev** :  AirgapThermalModel.calculate_heat_transfer_coefficient fixed saved Nusselt number (was kinematic viscosity). No influence on the heat transfer coeff.
+* **3.0.45dev** :  Fixed BoundaryConnection flux post-processing bug.
+* **3.0.45dev** :  Added methods for airgap flux density plotting to MotorModelBase and SlidingAirgapBase+subclasses.

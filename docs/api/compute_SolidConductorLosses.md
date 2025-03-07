@@ -24,3 +24,5 @@ automatically.
 
 * 'plot_geometry' : plot the rest of the geometry? Default true.
 
+* 'plot_rms' : Plot rms current density instead.
+
