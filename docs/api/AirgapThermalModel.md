@@ -29,7 +29,17 @@ corresponding side (stator/rotor) is increased to compensate.
 
 ### .AirgapThermalModel/**connection_static** is a property.
 
-### .AirgapThermalModel/**coolant_thermal_conductivity** is a property.
+### .**coolant_material** Coolant material object.
+
+A [CoolantMaterialBase](CoolantMaterialBase.html) object. For now, properties are evaluated
+at 20.
+
+If string or char, the material is set to
+`SimpleCoolantMaterial.create(this.coolant_material)` in
+`this.initialize`.
+
+### .**correction_coefficient** Correction coefficient for heat tranfer
+coeff.
 
 ### .Air**gap**ThermalModel/gap is a property.
 
@@ -44,6 +54,8 @@ corresponding side (stator/rotor) is increased to compensate.
 ### .AirgapThermalModel/**n_static** is a property.
 
 ### .AirgapThermalModel/**node** is a property.
+
+### .AirgapThermalModel/**surface_roughness** is a property.
 
 ### .AirgapThermalModel/**thermal_model** is a property.
 
@@ -69,8 +81,25 @@ and summary.rpm.
 h = calculate_heat_transfer_coefficient(this, h), where h is numeric, is
 a convenience syntax returning the given value.
 
+### .**estimate_windage_losses** Estimate windage losses in the airgap.
+
+P = estimate_windage_losses(this, summary)
+
+Estimate windage losses according to Saari (1995).
+
+The results are directly proportional to `this.roughness`, so setting the
+value to 0 will return zero losses.
+
 ### .AirgapThermalModel/**initialize** is a function.
 initialize(this)
+
+### .**recompute** Compute heat transfer coeff and windage.
+
+Computes and sets the heat transfer coefficient with
+this.calculate_and_set_heat_transfer_coefficient, and
+computes the windage losses with this.estimate_windage_losses
+and adds them to `this.node.heat_source`, diided by the
+number of symmetry sectors.
 
 ### .AirgapThermalModel/**recompute_radiative_heat_transfer_coefficient** is a function.
 recompute_radiative_heat_transfer_coefficient(this, thermal_solution, varargin)

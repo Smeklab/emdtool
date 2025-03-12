@@ -17,6 +17,8 @@ transfer coefficient.
 
 ## Properties
 
+### .**correction_coefficient** Correction for heat transfer coefficient.
+
 ### .**edges** Edges defining the boundary.
 
 Can be either indices to the `.edges` property of the mesh of the

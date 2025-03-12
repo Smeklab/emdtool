@@ -34,6 +34,8 @@ example:
 
 ### .**actual_node** The actual that is connected to the FE-problem.
 
+### .**correction_coefficient** Not currently used.
+
 ### .**elements** Indices to the finite elements in this connection.
 
 ### .**has_node2FEA** Does this define a node-to-FEA connection.

@@ -15,6 +15,8 @@ ThermalNode General class for textbook thermal node.
 
 An array of `ThermalNetworkConnection` objects.
 
+### .**correction_coefficient** Loss power correction coefficient
+
 ### .**heat_capacity** Heat capacity of node.
 
 ### .**heat_source** Heat source or sink.

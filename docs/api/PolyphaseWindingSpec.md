@@ -212,6 +212,22 @@ methods.
 
 ### .**bind_to_model** Bind to [CircuitBase](CircuitBase.html) object.
 
+### .**calculate_winding_factors** Calculate winding factors.
+
+[Wfs, data] = calculate_winding_factors(this, ns) calculates the m-phase
+winding factors, returned as the 2 x numel(ps) array `Wfs`. The term
+*winding factor*  is here defined as the ability the winding layout to
+excite an n-polepair flux density wave travelling in the forward (first
+row of `Wfs`) or in the backward (second row of `Wfs`) direction.
+
+The effect of the rotation direction is numerically evaluated by
+effectively computing the induced flux linkages at 0 and 90 electrical
+degrees, performing the dq-transformation with `this.dq` and then taking
+the average.
+
+The results are scaled with `this.p`, so that winding factor for the
+working harmonic is in the 0.85...1 region for typical windings.
+
 ### .**copy** Return a semi-shallow **copy** of this.
 
 spec = copy(this) returns a **copy** of this. All handle properties will
@@ -313,6 +329,23 @@ this.number_of_meshed_conductors_per_layer x this.number_of_slots
 * n : number of stranded turns per meshed conductor. 1 for
 solid-conductor models, typically equal to this.N_series for stranded
 models.
+
+### .**plot_winding_factors** Plot winding factors in the current window.
+
+plot_winding_factors(this) plots the winding factors for the first `50p`
+harmonics in the current window.
+
+plot_winding_factors(this, ns) specifies the harmonics in the array `ns`.
+Note that the orders are absolute, i.e. the order of the working harmonic
+is normally `p` and not 1.
+
+The forward-rotating harmonics are plotted as blue bars >1, and
+backward-rotating ones as red bars <1.
+
+**** Note**: The 'winding factors' are defined as m-phase mmf amplitudes
+excited by winding when fed with balanced sinusoidal m-phase waveforms;
+thus the amplitudes decay with the harmonic order as
+`1/n`.
 
 ### .**property_modified** Adds the modified property to the list of modified
 properties.

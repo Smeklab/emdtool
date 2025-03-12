@@ -18,7 +18,7 @@ Class methods are listed below. Inherited methods are not included.
 
 ### .**StopModel** Hysteresis model based on Stop hysteron.
 Documentation for StopModel/StopModel
-doc StopModel
+helpwin StopModel
 
 ### .**from_least_squares_fit** Initialize model from measured data.
 

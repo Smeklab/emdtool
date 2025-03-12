@@ -39,7 +39,16 @@ this.heat_transfer_coefficient_total is sufficient.
 
 ### .SimpleJacketThermalModel/**connection** is a property.
 
-### .**coolant_thermal_conductivity** Defaults to water.
+### .**coolant_material** Coolant material object.
+
+A [CoolantMaterialBase](CoolantMaterialBase.html) object. For now, properties are evaluated
+at 20.
+
+If string or char, the material is set to
+`SimpleCoolantMaterial.create(this.coolant_material)` in
+`this.initialize`.
+
+### .**correction_coefficient** Not currently used.
 
 ### .**h_channel** Height of single cooling channel
 

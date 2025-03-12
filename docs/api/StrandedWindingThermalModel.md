@@ -30,6 +30,8 @@ Before solving the model, set the correct losses with
 
 ### .**connection_to_ambient** Connection to ambient, if any.
 
+### .**correction_coefficient** Not currently used.
+
 ### .**end_winding_node** End-winding node.
 
 Node for average end-winding temperature.

@@ -49,6 +49,12 @@ The count restarts for each time-step, obviously.
 
 ### .**ts** - time-step time-stamps
 
+### .**use_cached_Jacobian** Use saved Jacobian constructor.
+
+If true, repeated calls to the solve methods of
+[MagneticsProblem](MagneticsProblem.html) will use the same [MagneticsJacobian](MagneticsJacobian.html) object.
+Defaults to true.
+
 
 ## Methods
 

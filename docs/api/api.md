@@ -202,6 +202,8 @@ has_toc : false
 * *class* : [/Thermals/Analysis/Nodes/PlusDiffNode](PlusDiffNode.html)  **PlusDiffNode** Linear combination node
 * *class* : [/Thermals/Analysis/Nodes/ThermalNode](ThermalNode.html)  **ThermalNode** General class for textbook thermal node.
 * *class* : [/Thermals/Analysis/Nodes/WeightedAverageNode](WeightedAverageNode.html)  **WeightedAverageNode** Weighted temperature average.
+* *class* : [/Thermals/Materials/SimpleCoolantMaterial](SimpleCoolantMaterial.html) **SimpleCoolantMaterial** methods:
+* *class* : [CoolantMaterialBase](CoolantMaterialBase.html) **CoolantMaterialBase** is a class.
 * *class* : [ThermalConstants](ThermalConstants.html) **ThermalConstants** is a class.
 * *class* : [/Thermals/RF_specific_components/AirgapThermalModel](AirgapThermalModel.html)  **AirgapThermalModel** Simple model for airgap heat transfer.
 * *class* : [/Thermals/RF_specific_components/CoolingChannelModel](CoolingChannelModel.html)  **CoolingChannelModel** Convenience model for cooling channels.

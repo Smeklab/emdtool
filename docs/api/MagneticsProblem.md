@@ -31,12 +31,24 @@ until the residual norm is strictly reduced. A maximum of `pars.maximum_damping_
 
 ## Properties
 
+### .**jacobian** Jacobian constructor.
+
+Saved [MagneticsJacobian](MagneticsJacobian.html). Used if `pars.use_cached_Jacobian` is
+`true`
+
 ### .**model** - The [MotorModelBase](MotorModelBase.html) (or compatible) model object associated with the problem
+
+### .**nonsymmetric_jacobian** Non-symmetric Jacobian.
+
+Saved Jacobian constructor, for non.symmetric case.
 
 
 ## Methods
 
 Class methods are listed below. Inherited methods are not included.
+
+### .MagneticsProblem/**get_Jacobian** is a function.
+J = get_Jacobian(this, pars, is_symmetric)
 
 ### .MagneticsProblem/**get_component_property** is a function.
 prob = get_component_property(this, component, property, pars)

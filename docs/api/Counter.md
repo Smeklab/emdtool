@@ -22,7 +22,7 @@ Class methods are listed below. Inherited methods are not included.
 
 ### .**Counter** **Counter** object for getting unique IDs etc.
 Documentation for Counter/Counter
-doc Counter
+helpwin Counter
 
 ### .Counter/**next** is a function.
 c = next(this)
