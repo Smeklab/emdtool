@@ -78,6 +78,28 @@ optionally summing the contributions from `this.nodes`, obtained by calling
 
 ### .**assemble_source_vector** Assemble heat source vector, pure-FEA part.
 
+### .**compute_sensitivity** Simple sensitivity analysis.
+
+compute_sensitivity(this, solution) computes simple sensitivity analysis
+for the given solution. The analysis is computed by going through all
+nodes ([ThermalNode](ThermalNode.html)) and associated connections ([ThermalNetworkConnection](ThermalNetworkConnection.html))
+in the model one by one, increasing the `correction_coefficient` property by 10
+percent, and re-solving the model for each case. The correction
+coefficient is returned to its original value after solving.
+
+The results are then printed in the command line by picking the 20
+largest changes in the node temperatures, and printing associated node
+and connection names plus the increase in temperature. The print format
+is:
+(Node/Connection) <name of the element> (the sensitivity of which is
+being adjusted) : <change in temperature> for <name of the node, the
+temperature of which changed>
+
+[dT, names, elements] = compute_sensitivity(model, solution, verbose)
+returns the array dT, of size number_of_network_nodes x number of nodes +
+connections, a string array names of the node and connection names, and
+an array of the nodes and connections corresponding to the names.
+
 ### .ThermalModel/**parse_boundary_matrix** is a function.
 parse_boundary_matrix(this)
 

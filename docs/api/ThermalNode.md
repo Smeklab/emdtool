@@ -25,8 +25,6 @@ An array of `ThermalNetworkConnection` objects.
 
 Set automatically by the model.
 
-### .**name** Node name.
-
 ### .**parent_model** Parent `ThermalModel`
 
 

@@ -20,6 +20,8 @@ The correction coefficient must have an effect immediate effect,
 i.e. must work and influence the results (if it does influence
 the results) without having to call the `recompute` method.
 
+### .ThermalModelElement/**name** is a property.
+
 
 ## Methods
 

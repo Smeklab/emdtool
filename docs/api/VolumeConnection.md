@@ -34,7 +34,7 @@ example:
 
 ### .**actual_node** The actual that is connected to the FE-problem.
 
-### .**correction_coefficient** Not currently used.
+### .**correction_coefficient** Correction for out of vol conductivity.
 
 ### .**elements** Indices to the finite elements in this connection.
 

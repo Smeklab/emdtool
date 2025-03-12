@@ -60,3 +60,4 @@ nav_order: 4
 * **3.0.45dev** :  Added CoolantMaterialBase classes for thermal analysis.
 * **3.0.45dev** :  Added correction coefficients and recompute methods to ThermalModelElement subclasses.
 * **3.0.45dev** :  AirgapThermalModel now estimates windage losses.
+* **3.0.45dev** :  Added sensitivity analysis to ThermalModel.

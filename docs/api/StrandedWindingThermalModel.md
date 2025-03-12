@@ -28,6 +28,8 @@ Before solving the model, set the correct losses with
 
 ### .**conductor_thermal_conductivity** Conductor material thermal conductivity
 
+### .StrandedWindingThermalModel/**connection** is a property.
+
 ### .**connection_to_ambient** Connection to ambient, if any.
 
 ### .**correction_coefficient** Not currently used.
