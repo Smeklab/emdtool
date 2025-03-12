@@ -16,7 +16,7 @@ network connection between two nodes.
 
 ### .**R** Thermal resistance.
 
-### .**correction_coefficient** Not currentl used.
+### .**correction_coefficient** Node-to-node resistance correction.
 
 ### .**has_node2FEA** Does this define a node-to-FEA connection.
 Help for Node2NodeConnection/has_node2FEA is inherited from superclass ThermalNetworkConnection
