@@ -145,6 +145,11 @@ Any extra input arguments are passed on to
 flux density components. For now, ´gap´ equals to
 `this.airgap.airgaps(1)`.
 
+plot_airgap_flux_density(this, solution, step, 'plot_spectrum', true/false) to specify
+whether or not to plot the flux density spectrum (normal component only)
+instead. Other key-value arguments include:
+* number_of_harmonics : number of harmonics to plot. Defaults to 50.
+
 ### .**plot_flux** Plot flux density.
 
 plot_flux(this, solution)
