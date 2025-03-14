@@ -17,7 +17,18 @@ between `this.node1` and `this.node2`.
 
 Please note that this model is very simple, and e.g. differing
 coolant temperatures in different parts of the coolant circuit are
-not modelled.
+not modelled, unless multiple FlowHeatSinkConnections are used.
+
+Also note that the model behaves in a fashion that may be counter-intuitive
+to some. Let us use an axial flow in the airgap as an example, with the
+average fluid temperature in the airgap modelled by a single [ThermalNode](ThermalNode.html).
+In this case, a FlowHeatSinkConnection would be set up between the airgap
+node and a node representing the *inflow*  temperature of the coolant.
+Furthermore, the temperature of the airgap node would then also equal
+the coolant temperature on the outflow side. Finally, the direction
+of the heat flow in the FlowHeatSinkConnection would obviusly be
+from the airgap node to the inflow node - i.e. opposite to the fluid
+velocity and actual direction of energy transfer.
 
 ## Properties
 
