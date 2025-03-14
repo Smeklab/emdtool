@@ -18,7 +18,7 @@ Please send an email to antti (at) smeklab.com to enquire about a [license](pric
 
 To see the latest updates, please check
 
-* [Release_notes](release_notes.html) for a brief list of all updates.
+* [Release notes](release_notes.html) for a brief list of all updates.
 
 * [The EMDtool forum](https://forum.emdtool.com/viewforum.php?f=12) for longer examples of select updates.
 
