@@ -29,6 +29,13 @@ mat = SteelLibrary.create(grade_name, 'plot_fit', true)
 
 to also plot the resulting loss fit
 
+To use a custom data file, use the syntax
+
+mat = SteelLibrary.create(grade_name, 'file_to_use', file_name)
+
+For other key-value arguments, see the documentation to
+`SteelLibrary.create` and the methods called there.
+
 ## Properties
 
 ### .SteelLibrary/**fname** is a property.
