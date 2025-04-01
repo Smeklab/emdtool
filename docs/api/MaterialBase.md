@@ -63,7 +63,30 @@ However, subclasses may have a different `loss_density`  method.
 
 ### .**is_symmetric** - Is the differential reluctivity symmetric?
 
-### .MaterialBase/**material_properties** is a property.
+### .**material_properties** Struct of material properties
+
+Important fields include:
+
+* rho : material density, kg/m^3
+
+* coeffs : [hysteresis, eddy, excess] loss coefficients,
+defined as W/kg at 50 Hz and 1 T, with B-f dependencies as
+~[fB^2, (fB)^2, (fB)^.1] respectively. Used mainly in the
+[Material](Material.html) class.
+
+* sigma : electrical conductivity, S/m.
+
+** alpha_sigma : temperature coefficient of ** *resistivity**
+
+* specific_heat_capacity : Specific heat capacity (J/kgK). NOTE: notation may vary
+
+* thermal_conductivity : thermal conductivity (W/mK)
+
+* Br : remanence flux density (PM materials)
+
+* alpha_Br : remanence temperature coefficient (p.u. per K)
+
+* mur : relative recoil permeability (PM materials)
 
 ### .**plot_args** - plotting instructions for this
 
