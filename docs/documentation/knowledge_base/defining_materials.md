@@ -64,7 +64,7 @@ core_material = SteelLibrary.create('own_grade_name', ...
 
 Here, the grade name `own_grade_name` must correspond the name of the Sheet in the given Excel file. The data format is visualized below:
 
-![Data table format](material_format.png)
+![Data table format](material_format.PNG)
 
 Here:
 * B : Flux density corresponding to the loss table (T)
