@@ -76,7 +76,7 @@ defined as W/kg at 50 Hz and 1 T, with B-f dependencies as
 
 * sigma : electrical conductivity, S/m.
 
-** alpha_sigma : temperature coefficient of ** *resistivity**
+* alpha_sigma : temperature coefficient of *resistivity*
 
 * specific_heat_capacity : Specific heat capacity (J/kgK). NOTE: notation may vary
 
