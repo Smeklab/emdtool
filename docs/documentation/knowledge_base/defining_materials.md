@@ -30,7 +30,7 @@ magnet_material.material_properties.alpha_Br = -0.16e-2;
 dim.magnet_material = magnet_material;
 ```
 
-See the [documentation of the MaterialBase class for default naming of the material properties](../../api/api/MaterialBase.html) ).
+See the [documentation of the MaterialBase class for default naming of the material properties](../../api/api/MaterialBase#material_properties-struct-of-material-properties.html) ).
 
 ## How do I change the BH curve
 
