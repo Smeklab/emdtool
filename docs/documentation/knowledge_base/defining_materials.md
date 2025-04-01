@@ -10,11 +10,11 @@ math: mathjax2
 
 `EMDtool` features quite a few built-in materials. In particular, please see the
 
-* [Old number-coded default materials](../../api/api/get_defaultMaterials.html)
+* [Old number-coded default materials](../../api/get_defaultMaterials.html)
 
-* [The SteelLibrary](../../api/api/SteelLibrary.html) factory class for a set of electrical steels
+* [The SteelLibrary](../../api/SteelLibrary.html) factory class for a set of electrical steels
 
-* [The SteelLibrary](../../api/api/SteelLibrary.html) factory class for a set of permanent magnet materials
+* [The PMlibrary](../../api/PMlibrary.html) factory class for a set of permanent magnet materials
 
 But, what if you want to define a material with some different properties? There are multiple options for that - please read on!
 
