@@ -13,8 +13,8 @@ EMDtool is generally regarded as _fast_ compared to e.g. [FEMM](https://www.femm
 Finally, the [industrial licenses](pricing.html) of EMDtool are largely [source-available](https://en.wikipedia.org/wiki/Source-available_software), making it easy for you to extend and modify it to your organization's needs. This 
 makes EMDtool the **ideal choice for medium-sized enterprises** that would greatly benefit from a custom-inhouse software toolkit, but don't have the resources to dedicate an entire team (or department) to building and 
 maintaining one.
-
 Please send an email to antti (at) smeklab.com to [get your free trial](pricing.html). **Please check your spam folder** - each and every message will be replied.
+
 
 To see the latest updates, please check
 
@@ -35,6 +35,15 @@ For a longer discussion, [please see this page](documentation/emdtool_accurate.h
 
 While price alone isn't a good aspect to base one's decision on, EMDtool _is_ priced on a level that is typically easy to fit in a small team's
 budget without a large approval hassle.
+
+## Unique features
+
+EMDtool has some unique features, not available in any other software to the author's knowledge:
+* A fast and accurate approach for modelling axial segmentation of permanent magnets and other solids. The model is fully physics-based - no more analytical models exploding to infinity or
+yielding negative losses.
+* An approach for estimating circulating currents in random / wire windings, without meshing each individual wire. Correspondingly, the model runs really fast, and is strongly coupled to boot - 
+the losses won't unphysically explode.
+* Source available: EMDtool is largely source-available by default, and almost entirely source-available on request (still have to protect that IP somehow).
 
 ## Flexible licensing
 
