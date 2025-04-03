@@ -21,7 +21,10 @@ user.
 relationship with the slope `this.mu`, going through the point
 (Bmin, Hmin), where `Bmin` is the lowest flux density encountered
 by the element so far, and `Hmin` is the corresponding field
-strength.
+strength on the given demagnetization curve.
+
+Alternatively, a simple parametric demagnetization model can be used
+by setting `this.use_simple_model = true`.
 
 For the last bullet, the `get_equivalent_Br` method is used,
 returning the `H=0` intersect of the current BH curve followed, for
@@ -68,6 +71,10 @@ Used during the newest time-step.
 
 Used by the demag model to clamp extrapolated values.
 
+### .**H0** Decay constant for the simple model.
+
+See `this.initialize_simple_model`.
+
 ### .**ignore_demag** Ignore demagnetization model.
 
 When true, the default linear approximation is used.
@@ -81,10 +88,17 @@ Used as the slope of the recoil curve.
 ### .**retain_state** Retain state between successive simulations?
 
 Default `false`, in which case the state (`this.Bmin`) is reset
-to `this.Bmin` whenever the `.set_step` method is called with a
+to `this.Br_now` whenever the `.set_step` method is called with a
 step index smaller than `this.step`.
 
 ### .**step** Index of the current/latest time-step.
+
+### .**use_simple_model** Use simple demagnetization model.
+
+Use a simple single parameter exponential demagnetization model,
+with no BH curve data needed. Defaults to false.
+
+See `this.initialize_simple_model`.
 
 
 ## Methods
@@ -140,6 +154,24 @@ input
 
 If `this.ignore_demag` is true, `this.Br_now` is returned instead.
 
+### .**initialize_simple_model** Initialize simple demagnetization model.
+
+initialize_simple_model(this, temperature) to specify a temperature.
+
+initialize_simple_model(this, problem) to parse the temperature from the
+[MagneticsProblem](MagneticsProblem.html) object.
+
+The simple model uses the remanence flux density and intrinsic coercivity
+for the given temperature, with the methods inherited from [Material](Material.html).
+The magnetization curve `J(H)` is then assumed to decay exponentially to
+zero at `J(-HcJ)`, with the decay constant `-1/this.H0`.
+
+The corresponding flux density is then obtained with
+`B(H) = mu0*H + J(H)`.
+
+These results are then used to initialize the BH interpolation table with
+`this.set_symmetric_BH_table_from_BH_data`.
+
 ### .DemagMaterial1/**parse_element_remanence_directions** is a function.
 parse_element_remanence_directions(this)
 
@@ -151,6 +183,9 @@ account for the non-demagnetizable magnet behaviour.
 
 Br = remanence_flux_density_at_temperature(this, T, true) returns the H=0
 intercept of the current-set BH curve (this.BH_table_now)
+
+Br = remanence_flux_density_at_temperature(this, T, true, true) used
+the behaviour inherited from [Material](Material.html).
 
 ### .**set_step** Set new time-step.
 
@@ -171,6 +206,11 @@ the intrinsic coercivity, and then computes the corresponding B values.
 [Bs_test, Hs_test] = visualize_BH(this, Bampls) draws (H, B) traces
 (numel(Bampls) in total) (magnetization axis only) as B is changed
 linearly from Br to Bampls(k) and back.
+
+### .**visualize_demag_curve** Visualizes the given demag curve.
+
+h = visualize_demag_curve(this, varargin) visualizes the currently-used
+BH curve and the corresponding magnetization curve.
 
 ### .**visualize_lost_remanence** Visualize lost remanance.
 
