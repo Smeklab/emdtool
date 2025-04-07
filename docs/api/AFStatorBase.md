@@ -44,7 +44,4 @@ pi/2 (DEFAULT) for a vertical slot with the slot opening 'down'.
 
 ### .**symmetry_period** Symmetry period of geometry.
 
-### .AFStatorBase/**visualize_radial** is a function.
-visualize_radial(this, varargin)
-
 

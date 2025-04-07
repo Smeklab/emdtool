@@ -22,6 +22,7 @@ length
 "center". Rotor yoke-side is modelled as either flux insulation or
 symmetry boundary, depending on the case.
 * airgap_alignment : (OPTIONAL) either 'up' (default) or 'down'
+* mirror_geometry
 
 Slot dimensions:
 * hyr : yoke thickness
@@ -39,6 +40,12 @@ End-ring dimensions, (used by CageCircuit)
 * W_ring : end-ring width (r-dimension)
 * H_ring : end-ring length (z-dimension)
 * D_ring : average end-ring diameter
+**IMPORTANT**  For now, the template does not 'know' exactly the kind of
+symmetry being monitored. Specifically, if the modelled geometry
+represents such a half of a real geometry, that the two halves in
+reality share a single end-ring, then either the W_ring or H_ring
+dimension has to be divided by 2 in order to obtain the correct
+end-ring current density in the model.
 
 ## Properties
 

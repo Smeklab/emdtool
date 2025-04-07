@@ -57,8 +57,8 @@ curves.
 
 Class methods are listed below. Inherited methods are not included.
 
-### .--- help for Stator/**create_geometry_backup** ---
-Stator/create_geometry_backup is an undocumented builtin Stator method.
+### .--- help for Standard/**create_geometry_backup** ---
+Stator/create_geometry_backup is an undocumented builtin Standard method.
 
 ### .Stator/**directional_airgap_length** is a function.
 delta = directional_airgap_length(this)

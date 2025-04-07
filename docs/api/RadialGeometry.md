@@ -81,7 +81,4 @@ rotate the direction by this.sector_angle AND to flip the
 orientation (N-S to S-N) for odd sectors. Please subclass if
 not appropriate.
 
-### .RadialGeometry/**visualize_radial** is a function.
-visualize_radial(this, varargin)
-
 

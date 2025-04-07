@@ -41,9 +41,6 @@ Mainly used for end-winding volume calculation.
 
 ### .**symmetry_period** Symmetry period of geometry.
 
-### .StatorBase/**visualize_radial** is a function.
-visualize_radial(this, varargin)
-
 ### .**winding_angle** Return winding angle.
 
 

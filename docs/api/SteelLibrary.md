@@ -16,7 +16,7 @@ point, see https://www.tatasteeleurope.com/ts/engineering/products/electrical-st
 The underlying data is stored in an Excel file, under the 'Materials'
 folder. Modifying this data file is not recommended, as changes will
 be lost with any EMDtool update, unless special care is taken not to
-overwrite the modified fiel.
+overwrite the modified file.
 
 Usage:
 

@@ -26,7 +26,7 @@ Responsibilities:
 
 * calculates total (half-)turn length and winding overhang
 
-* handles end-winding indcutance biacalculation
+* handles end-winding indcutance bias calculation
 
 The winding specification offers a way to control the winding model
 used (solid or stranded conductors) and the slot layout (e.g. round
@@ -61,8 +61,6 @@ Setting or getting this property directly sets / gets the
 `this.get_dimension('axial_symmetry_sectors')` if set.
 
 ### .**a** - number of parallel paths
-
-### .**circuit** - the [CircuitBase](CircuitBase.html) object associated with this
 
 ### .PolyphaseWindingSpec/**conductor_material** is a property.
 
@@ -118,8 +116,6 @@ the [LayoutCompatible](LayoutCompatible.html) class.
 
 ### .PolyphaseWindingSpec/**number_of_dq_components** is a property.
 
-### .**number_of_meshed_conductors_per_layer** As the name suggests.
-
 ### .**number_of_turns_per_coil** Number of turns per coil.
 
 The number of coils is assumed to be equal to the number of slots
@@ -146,7 +142,10 @@ to set the number of turns per modelled coil.
 
 ### .**slot_filling_factor** Conductor area to winding area.
 
-### .**span** - coil span
+### .**span** Coil span
+
+Should not be set manually. Computed once when the `bind_to_model`
+method is called.
 
 ### .**strand_transposition_type** Type of strand transpositions.
 
@@ -181,6 +180,34 @@ The parent geometry must be of the [LayoutCompatible](LayoutCompatible.html) cla
 ## Methods
 
 Class methods are listed below. Inherited methods are not included.
+
+### .**add_clone** Add clone.
+
+add_clone(this, clone_spec) adds another [PolyphaseWindingSpec](PolyphaseWindingSpec.html) object as
+a clone (see below).
+
+add_clone(this, clone_spec, 'direction', -1) additionally models the
+clone spec with reversed polarity for each coil.
+
+The concept of a 'clone' is an experimental feature. It is intended for
+modelling topologies where the 'same' winding spans multiple [GeoBase](GeoBase.html)
+object - typically double-stator machines. It is assumed that the winding
+pattern repeats itself over the clones, with the optional change in
+polarity. Some important notes below:
+* This method should only be called after the [MotorModelBase](MotorModelBase.html).finalize
+method has been called.
+* When creating the stator objects containing the to-be-clone circuits,
+a copy of the original winding spec object has to be given, normally by
+calling the spec.copy method.
+* When this method is called:
+* the is_clone property of the clone spec is set to true.
+* The [Conductor](Conductor.html)s of the parent [CircuitBase](CircuitBase.html) of the clone spec is
+added to the circuit of `this`.
+* The parent circuit of the clone spec is removed from the
+model `this.root`
+* If the underlying model is sliced, the conductors are re-ordered
+so that the conductors belonging to the same circuit are
+consecutively numbered.
 
 ### .**average_phase_quantity_matrix** Matrix for computing average
 phase quantities.
@@ -330,6 +357,9 @@ this.number_of_meshed_conductors_per_layer x this.number_of_slots
 solid-conductor models, typically equal to this.N_series for stranded
 models.
 
+### .PolyphaseWindingSpec/**loop_matrix_for_model** is a function.
+L = loop_matrix_for_model(this, consider_slices)
+
 ### .**plot_winding_factors** Plot winding factors in the current window.
 
 plot_winding_factors(this) plots the winding factors for the first `50p`
@@ -349,6 +379,9 @@ thus the amplitudes decay with the harmonic order as
 
 ### .**property_modified** Adds the modified property to the list of modified
 properties.
+
+### .PolyphaseWindingSpec/**remove_clone_circuits_from_model** is a function.
+remove_clone_circuits_from_model(this)
 
 ### .**save_to_excel** Export winding specs.
 

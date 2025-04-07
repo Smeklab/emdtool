@@ -9,25 +9,40 @@ grand_parent : Documentation
 
 SpaceVectorModulator Prototype multiphase space vector modulator.
 
+Based on the paper 'Multilevel Multiphase Space Vector PWM Algorithm'
+
+this = SpaceVectorModulator(UDC, fs)
+
+Supports an arbitrary phase count and number of levels >=2
+
 ## Properties
 
-### .SpaceVectorModulator/**Mave** is a property.
+### .**Mave** Averaging matrix for 3rd harmonic injection.
 
-### .SpaceVectorModulator/**UDC** is a property.
+Third harmonic injection is realized with the formula
+`Delta = (max( this.Mave.*Uphase_ref,[],1 )' + min(this.Mave.*Uphase_ref,[], 1)') / 2;`
+`Uphase_with_injection = Uphase_ref - this.Mave*Delta;`
 
-### .SpaceVectorModulator/**Uref** is a property.
+By default,
+`this.Mave = ones(this.phases, 1);`
+but setting a different matrix can be used to account for e.g.
+two independent star points in a 6-phase system.
 
-### .SpaceVectorModulator/**f** is a property.
+### .**UDC** DC-link voltage
 
-### .SpaceVectorModulator/**fs** is a property.
+### .**Uref** Target voltage in dq-frame.
 
-### .SpaceVectorModulator/**phases** is a property.
+### .**f** Fundamental frequency.
 
-### .SpaceVectorModulator/**running_index** is a property.
+### .**fs** Switching frequency.
 
-### .SpaceVectorModulator/**switch_positions** is a property.
+### .**levels** Number of voltage levels.
 
-### .SpaceVectorModulator/**switching_times** is a property.
+Defaults to 2.
+
+### .**phases** Number of phases.
+
+Defaults to 3.
 
 
 ## Methods
@@ -35,10 +50,17 @@ SpaceVectorModulator Prototype multiphase space vector modulator.
 Class methods are listed below. Inherited methods are not included.
 
 ### .**SpaceVectorModulator** Prototype multiphase space vector modulator.
+
+Based on the paper 'Multilevel Multiphase Space Vector PWM Algorithm'
+
+this = SpaceVectorModulator(UDC, fs)
+
+Supports an arbitrary phase count and number of levels >=2
 Documentation for SpaceVectorModulator/SpaceVectorModulator
 doc SpaceVectorModulator
 
-### .SpaceVectorModulator/**recompute** is a function.
+### .**recompute** Recompute switching times for the next switching period.
+
 recompute(this, t)
 
 

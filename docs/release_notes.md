@@ -61,3 +61,8 @@ nav_order: 4
 * **3.0.45dev** :  Added correction coefficients and recompute methods to ThermalModelElement subclasses.
 * **3.0.45dev** :  AirgapThermalModel now estimates windage losses.
 * **3.0.45dev** :  Added sensitivity analysis to ThermalModel.
+* **3.0.45dev(2025/03/14)** :  Started including the date to release notes.
+* **3.0.45dev(2025/03/14)** :  Repeated calls to MagneticsProblem.solve methods now reuse the same Jacobian constructor if available. Togglable by SimulationParameters.
+* **3.0.45dev(2025/03/19)** :  The SpaceVectorModulator class now supports arbitrary phase counts (>1) and number of levels (>=2)
+* **3.0.45dev(2025/04/03)** :  Simple analytical model added to DemagMaterial1.
+* **3.0.45dev(2025/04/07)** :  Added important info on end-ring dimensions and symmetry to LinearSlottedRotor1 doc.

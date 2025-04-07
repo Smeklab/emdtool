@@ -337,4 +337,11 @@ visualize(this, args)
 
 Visualize, passing args to patch.
 
+### .**visualize_radial** Must be subclassed.
+
+### .**visualize_topmost** Top-most visualization.
+
+Placeholder method for top-most visualization, to be called
+last.
+
 

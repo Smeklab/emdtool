@@ -16,7 +16,7 @@ get_op_FW - initial guess
 get_op_MTPA - initial guess
 initialize_simplified - SynEquivalentCircuit.initialize_simplified is a function.
 save_to_excel - Save eq. circuit parameters to Excel.
-simulate_SVPWM -
+simulate_SVPWM - Simulate waveform.
 
 ## Properties
 
@@ -37,6 +37,8 @@ simulate_SVPWM -
 ### .SynEquivalentCircuit/**id0** is a property.
 
 ### .SynEquivalentCircuit/**iq0** is a property.
+
+### .**modulator** Modulator to use for waveform simulation
 
 ### .**p** - number of pole-pairs
 
@@ -135,7 +137,7 @@ save_to_excel(filename, key, val), where
 * 'sheetname', sheet_name : save to specified excel sheet. Default:
 'Equivalent circuit parameters'
 
-### .**simulate_SVPWM**
+### .**simulate_SVPWM** Simulate waveform.
 
 [idq, iripple, ts, Us] = simulate_SVPWM(this, rpm, id, iq)
 

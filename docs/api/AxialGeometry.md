@@ -62,9 +62,6 @@ rotate the direction by this.sector_angle AND to flip the
 orientation (N-S to S-N) for odd sectors. Please subclass if
 not appropriate.
 
-### .AxialGeometry/**visualize_radial** is a function.
-visualize_radial(this, varargin)
-
 ### .y_shift_points Shift all [Point](Point.html) objects of this in
 y-direction.
 

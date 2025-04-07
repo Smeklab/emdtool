@@ -13,11 +13,11 @@ circuits.
 this = PolyphaseCircuit(name, winding_spec)
 
 Returns a new PolyphaseCircuit object with the given name
-and associated with the [PolyphaseWindingSpec](PolyphaseWindingSpec.html) winding
-specification.
+and associated with the [PolyphaseWindingSpec](PolyphaseWindingSpec.html)
+windingeffective_length
 
-A PolyphaseCircuit is largely characterized by its `winding_spec`
-property = a [PolyphaseWindingSpec](PolyphaseWindingSpec.html) object. This winding
+A PolyphaseCircuit is largely characterized bfiy its `winding_spec`
+property = a [PolyphaseWindingSpec](PolyphaseWindingSpec.html) oebject. This winding
 specification object contains information such as number of turns and
 parallel paths, winding layout matrix, loop matrix, etc.
 

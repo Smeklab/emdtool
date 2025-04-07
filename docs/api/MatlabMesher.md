@@ -26,6 +26,8 @@ mesh_surface - MatlabMesher/mesh_surface is a function.
 
 ### .MatlabMesher/**geometry** is a property.
 
+### .MatlabMesher/**verbose** is a property.
+
 
 ## Methods
 

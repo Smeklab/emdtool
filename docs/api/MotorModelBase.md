@@ -97,8 +97,19 @@ DEFAULT: 1
 
 Class methods are listed below. Inherited methods are not included.
 
-### .MotorModelBase/**add_component** is a function.
-add_component(this, name, component, varargin)
+### .**add_component** Add a component to model.
+
+add_component(this, name, component) adds a [GeoBase](GeoBase.html) object `component`
+to the model, by the given `name`.
+
+add_component(this, name, component, 'rotating', true/false) also
+specifies whether the component is rotating or not.
+
+When a component is added, the following happens:
+* component mesh nodes and elements are added to this.mesh
+* component material and domain element indices are updated to global
+indexing
+* component.boundaries node indices are updated to global indexing
 
 ### .**add_gap** Add airgap.
 

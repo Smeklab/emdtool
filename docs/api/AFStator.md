@@ -37,6 +37,12 @@ modelled, with a symmetry condition in the middle.
 model.
 * axial_symmetry_type : (OPTIONAL) if set to "toroidal", then the
 axial boundary is modelled as Dirichlet / flux insulation type.
+* is_toroidal : (OPTIONAL) Defaults to false. Set to true for
+modelling both sides of a design with a toroidal winding. Forces
+the number of winding 'layers' to be 2, with the two 'layers' wound
+around the stator yoke.
+* mirror_geometry : (OPTIONAL) Turn geometry upside down. Defaults
+to false. Only works if model_both_sides is false.
 
 Winding specification:
 * stator_winding : stator winding specification object.

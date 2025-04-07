@@ -17,17 +17,29 @@ stator and rotor surfaces. In case the 'active' area facing the
 airgap is smaller than that of a cylinder (example: stator slot
 openings modelled as non-conductive, resulting in heat transfer from
 the tooth-tip area only), the heat transfer coefficient on the
-corresponding side (stator/rotor) is increased to compensate.
+corresponding side (stator/rotor) is increased to compensate by
+`this.length_factor_static` and/or `this.length_factor_moving`.
+
+Windage losses are estimated with `this.estimate_windage_losses` and
+lumped to `this.node`.
 
 ## Properties
 
-### .AirgapThermalModel/**boundary_length_moving** is a property.
+### .**boundary_length_moving** Computed length of moving boundary.
 
-### .AirgapThermalModel/**boundary_length_static** is a property.
+### .**boundary_length_static** Computed length of static boundary.
 
-### .AirgapThermalModel/**connection_moving** is a property.
+### .**connection_moving** Node-FEA connection.
 
-### .AirgapThermalModel/**connection_static** is a property.
+A [BoundaryConnection](BoundaryConnection.html) object linking the airgap node to
+the airgap-facing edges of the FEA model, moving component
+of `this.gap`.
+
+### .**connection_static** Node-FEA connection.
+
+A [BoundaryConnection](BoundaryConnection.html) object linking the airgap node to
+the airgap-facing edges of the FEA model, static component
+of `this.gap`.
 
 ### .**coolant_material** Coolant material object.
 
@@ -41,23 +53,25 @@ If string or char, the material is set to
 ### .**correction_coefficient** Correction coefficient for heat tranfer
 coeff.
 
-### .Air**gap**ThermalModel/gap is a property.
+### .**gap** Parent [SlidingAirgapBase](SlidingAirgapBase.html) object.
 
 ### .AirgapThermalModel/**length_factor_moving** is a property.
 
 ### .AirgapThermalModel/**length_factor_static** is a property.
 
-### .AirgapThermalModel/**magnetic_model** is a property.
+### .**magnetic_model** Parent [MotorModelBase](MotorModelBase.html) object.
 
-### .AirgapThermalModel/**n_moving** is a property.
+### .**n_moving** Moving-side FEA nodes.
 
-### .AirgapThermalModel/**n_static** is a property.
+### .**n_static** Static-side FEA nodes.
 
-### .AirgapThermalModel/**node** is a property.
+### .**node** Node corresponding to airgap temperature.
 
-### .AirgapThermalModel/**surface_roughness** is a property.
+### .**surface_roughness** Surface roughness.
 
-### .AirgapThermalModel/**thermal_model** is a property.
+Used in windage loss ccomputation.
+
+### .**thermal_model** Parent thermal model.
 
 
 ## Methods

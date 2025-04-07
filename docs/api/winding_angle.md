@@ -8,6 +8,6 @@ grand_parent : Documentation
 **winding_angle** Return winding angle.
 Other uses of **winding_angle**
 DistributedWindingSpec/**winding_angle**    PCBStator/winding_angle
-FieldWindingSpec/**winding_angle**          Stator/winding_angle
+FieldWindingSpec/**winding_angle**          StatorBase/winding_angle
 LinearStator/**winding_angle**
 

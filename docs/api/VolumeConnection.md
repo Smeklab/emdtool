@@ -29,6 +29,8 @@ example:
 ´conn.volume_height = 1;´
 ´conn.elements = array_of_indices;´
 ´conn.initialize;´
+which models axial heat flux into an ambient temperature of default
+value of the [AmbientNode](AmbientNode.html) class.
 
 ## Properties
 
