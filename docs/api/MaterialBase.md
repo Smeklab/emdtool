@@ -50,7 +50,7 @@ At 20C by default.
 ### .**intrinsic_coercivity_temperature_coefficient** Temperature
 coefficient for intrinsic coercivity.
 
-Fetched from this.material_properties.intrinsic_coercivity_temperature_coefficient
+Fetched from this.material_properties.alpha_HcJ
 
 ### .**iron_loss_computation_method** Iron loss computation method.
 
@@ -110,7 +110,13 @@ Fetched from this.material_properties.alpha_Br
 
 Fetched from this.material_properties.specific_heat_capacity
 
-### .**stacking_factors** - list of stacking factors per each element
+### .**stacking_factors** Vector of stacking factors per each element
+
+Initially empty. If empty, parsed automatically when the
+property is first accessed. The parsing happens by looping
+through `this.domains`; for any [Domain](Domain.html) defining the `stacking_factor`
+property, the corresponding value is set to the corresponding
+entries in `this.elements`.
 
 ### .**temperature_coefficient_of_resistivity** Resistivity temp. coeff. in
 SI units.

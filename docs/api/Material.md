@@ -15,6 +15,16 @@ Materials are normally instantiated with the static methods
 
 * `Material.from_specs`
 
+Important note: the default and recommended approach is for any
+template to create new independent copies of any input material
+objects, by using the `Material.create` method, in turn calling the
+object `.clear_copy` method. This is to ensure proper handling of
+element indices etc. As a consequence, any material object given as
+an input dimension is typically uncoupled from the material object
+actually used by the model. Thus, modifying the properties of the
+original object, after creating the model, has no effect on the
+model.
+
 ## Properties
 
 ### .Material/**BH_extrapolation_method** is a property.
@@ -164,9 +174,8 @@ mat = Material.from_specs('name', name, 'B', B_curve_vector,
 
 ### .**init_for_problem** Initialize object for problem.
 
-Normally, this method does very little apart from determining the
-stacking factors. It could be used to initialize hysteresis models or
-similar in subclasses on Material, though.
+Normally does nothing. Can be subclassed to initialize/reset hysteresis
+models, or similar.
 
 ### .**initialize_material_data** Initialize reluctivity curves etc.
 

@@ -37,7 +37,20 @@ Surfaces can be added with `this.add_surface`
 
 ### .**orientation** - orientation (for e.g. anisotropic materials
 
-### .**remanence_direction** - remanence flux density direction, if any
+### .**remanence_direction** Remanence flux density direction.
+
+Remanence flux density direction. The following options are
+routinely supported:
+* 'radial' or 'circumferential' : Each element is magnetizes to
+either radial or circumferential direction. Can also be
+'-radial' or '-circumferential'.
+
+When replicating the elementary geometry after meshing, the
+remanence direction is normally updated by the `copy_domain`
+method of the [RadialGeometry](RadialGeometry.html) or the [AxialGeometry](AxialGeometry.html) base
+classes, each in turn calling the `update_remanence_direction_to_new_sector`
+method. While sufficient for most cases, special geometries can
+require updating this method.
 
 ### .**surfaces** - 2D surfaces in this
 
@@ -124,6 +137,9 @@ n = number_of_copies(this)
 ### .**plot** Plot all surfaces in 2D.
 
 ### .**plot3** Plot all surfaces in 3D.
+
+### .Domain/**plot_elementwise_remanence_direction** is a function.
+h = plot_elementwise_remanence_direction(this, varargin)
 
 ### .**plot_remanence_direction** Plot remanence.
 

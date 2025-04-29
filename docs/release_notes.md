@@ -66,3 +66,7 @@ nav_order: 4
 * **3.0.45dev(2025/03/19)** :  The SpaceVectorModulator class now supports arbitrary phase counts (>1) and number of levels (>=2)
 * **3.0.45dev(2025/04/03)** :  Simple analytical model added to DemagMaterial1.
 * **3.0.45dev(2025/04/07)** :  Added important info on end-ring dimensions and symmetry to LinearSlottedRotor1 doc.
+* **3.0.45dev(2025/04/08)** :  End-winding inductance calculation fixed for axial-flux machines with more than 1 axial symmetry sector. Expect changes.
+* **3.0.45dev(2025/04/15)** :  Removed stacking factor parsing from Material.init_for_problem; now using the inherited functionality from MaterialBase.stacking_factor getter method.
+* **3.0.45dev(2025/04/28)** :  Fixed bug caused by loading older SMGridCalculator_DQ data, without excess iron losses computed.
+* **3.0.45dev(2025/04/29)** :  Fixed SpaceVectorModulator bug. Now more-closely matches SVPWM_Modulator.

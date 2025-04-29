@@ -357,8 +357,14 @@ this.number_of_meshed_conductors_per_layer x this.number_of_slots
 solid-conductor models, typically equal to this.N_series for stranded
 models.
 
-### .PolyphaseWindingSpec/**loop_matrix_for_model** is a function.
-L = loop_matrix_for_model(this, consider_slices)
+### .**loop_matrix_for_model** Loop matrix for the FE model.
+
+L = loop_matrix_for_model(this) returns the loop matrix for the symmetry
+sector modelled, with size(L,1) = numel(this.circuit.conductors).
+
+L = loop_matrix_for_model(this, false) to ignore additional slices in the
+model and only return the matrix for the first slice. Mainly intended for
+low-level functionality.
 
 ### .**plot_winding_factors** Plot winding factors in the current window.
 

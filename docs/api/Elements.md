@@ -18,7 +18,7 @@ Class methods are listed below. Inherited methods are not included.
 
 ### .**Elements** Enumeration of element types
 Documentation for Elements/Elements
-helpwin Elements
+doc Elements
 
 ### .Cellstr conversion for enumeration classes
 

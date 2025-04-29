@@ -44,6 +44,9 @@ Materials:
 * polegap_material : (OPTIONAL) Material of polegaps. Defaults to
 air.
 * sleeve_material : retaining sleeve material
+* polegap_material : (OPTIONAL) Polegap material. If equal to core
+or magnet material, the core/magnet domains are extended
+accordingly.
 
 ## Properties
 

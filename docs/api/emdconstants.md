@@ -52,4 +52,8 @@ obj = emdconstants
 Documentation for emdconstants/emdconstants
 doc emdconstants
 
+### .**uOhmcm_to_ohmm** Resistivity conversion.
+
+Converts micro-Ohm cm to Ohm m.
+
 
