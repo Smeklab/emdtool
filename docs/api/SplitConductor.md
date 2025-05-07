@@ -7,9 +7,36 @@ grand_parent : Documentation
 
 ## Class summary
 
-SplitConductor methods:
-SplitConductor - is a class.
-set_matrices - SplitConductor/set_matrices is a function.
+SplitConductor Boundary-crossing conductor class.
+
+The SplitConductor class is intended for modelling cases where a
+conductor crosses a periodic boundary.
+
+The initialization syntax is
+
+`this = SplitConductor(type, domain, domain_over_split)`, where
+* type : defs.solid or defs.stranded (experimental)
+* domain : a [Domain](Domain.html) actually belonging to the symmetry sector
+being modelled, see below.
+* domain_over_split : a [Domain](Domain.html) seen over the periodic boundary.
+
+A typical use case would be modelling either conductive polegaps
+between the magnets of an SPM, or a Halbach-array SPM design. In this
+case,
+* domain : the magnet or polegap segment nearest the
+**** counter-clockwise** periodic boundary.
+* domain_over_split : the magnet or polegap segment neares the
+**** clockwise periodic* boundary.
+
+In any case, the recommended approach for double checking the results
+is as follows:
+1. Mesh a larger-than-minimal symmetry sector
+1. Run a suitable transient simulation
+1. Visualize the eddy-current density in the circuit containing
+SplitConductor objects. The resulting eddy-current density should
+appear smooth and continuous; an incorrect setup of SplitConductors
+will result in a jump in the current density in conductors that
+should be continuous in reality.
 
 ## Properties
 
@@ -19,11 +46,6 @@ set_matrices - SplitConductor/set_matrices is a function.
 ## Methods
 
 Class methods are listed below. Inherited methods are not included.
-
-### .**SplitConductor**/SplitConductor is a constructor.
-this = SplitConductor(type, domain, domain_over_split)
-Documentation for SplitConductor/SplitConductor
-doc SplitConductor
 
 ### .SplitConductor/**copy** is a function.
 c = copy(this)
