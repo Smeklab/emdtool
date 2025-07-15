@@ -32,6 +32,8 @@ dim.magnet_material = magnet_material;
 
 See the [documentation of the MaterialBase class for default naming of the material properties](../../api/MaterialBase#material_properties-struct-of-material-properties).
 
+**UPDATE** For the latest versions of EMDtool, you can also directly assing the properties via eq.e `magnet_material.remanence_flux_density = 1.6; %one can always wish`.
+
 ## How do I change the BH curve
 
 Changing the BH curve does not exactly follow the process above, due to legacy reasons, and due to the the fact that `EMDtool` generates interpolation and extrapolation
