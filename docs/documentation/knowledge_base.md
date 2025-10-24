@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Knowledge Base
-nav_order: 3
+nav_order: 4
 parent: Documentation
 has_children: true
 ---
