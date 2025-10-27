@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Example 6 Short Circuit Analysis of Synchronous Machine
+title: Example 06 Short Circuit Analysis of Synchronous Machine
 parent: Examples
 grand_parent : Documentation
 ---

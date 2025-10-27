@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Example 2 No load Flux Density
+title: Example 02 No load Flux Density
 parent: Examples
 grand_parent : Documentation
 ---
@@ -12,7 +12,7 @@ Making sure that a model has already been initialized.
 
 ```matlab
 if ~exist('motor', 'var')
-    Example_1_Setting_up_a_Model;
+    Example_01_Setting_up_a_Model;
     close all;
 end
 ```
@@ -70,7 +70,7 @@ motor.plot_flux(static_solution);
 title('No-load flux density');
 ```
 
-![figure_0.png](Example_2_No_load_Flux_Density_media/figure_0.png)
+![figure_0.png](Example_02_No_load_Flux_Density_media/figure_0.png)
 
 ```matlab
 
@@ -79,7 +79,7 @@ figure(6); clf; hold on; box on; grid on;
 motor.plot_airgap_flux_density(static_solution);
 ```
 
-![figure_1.png](Example_2_No_load_Flux_Density_media/figure_1.png)
+![figure_1.png](Example_02_No_load_Flux_Density_media/figure_1.png)
 
 ```matlab
 
@@ -88,4 +88,4 @@ figure(7); clf; hold on; box on; grid on;
 motor.plot_airgap_flux_density(static_solution, 1, 'plot_spectrum', true);
 ```
 
-![figure_2.png](Example_2_No_load_Flux_Density_media/figure_2.png)
+![figure_2.png](Example_02_No_load_Flux_Density_media/figure_2.png)

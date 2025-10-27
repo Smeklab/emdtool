@@ -1,9 +1,17 @@
-%% Example 1
-% This script demonstrates setting up a basic EMDtool motor model using geometry 
-% templates.
-%% Setting some dimensions
-% General dimensions
+---
+layout: default
+title: Example 01 Setting up a Model
+parent: Examples
+grand_parent : Documentation
+---
 
+# Example 1
+
+This script demonstrates setting up a basic EMDtool motor model using geometry templates.
+
+# Setting some dimensions
+## General dimensions
+```matlab
 dim = struct();
 
 dim.p = 3;
@@ -13,8 +21,9 @@ dim.leff = 150e-3;
 
 dim.temperature_stator = 120;
 dim.temperature_rotor = 120;
-% Stator dimensions
-
+```
+## Stator dimensions
+```matlab
 PHASES = 3;
 SLOTS_PER_POLE_AND_PHASE = 2;
 AIRGAP_FLUX_DENSITY_FOR_SIZING = 1;
@@ -58,12 +67,13 @@ dim.h_cooling_hole = 2e-3;
 dim.h_cooling_rib = 4e-3;
 
 %materials
-dim.stator_core_material = SteelLibrary.create('M270-35A')
+dim.stator_core_material = SteelLibrary.create('M270-35A');
 dim.stator_stacking_factor = 1;
 dim.stator_wedge_material = 0;
 
-% Rotor dimensions
-
+```
+## Rotor dimensions
+```matlab
 dim.Rout = dim.Sin - dim.delta;
 dim.Rin = 30e-3;
 
@@ -78,13 +88,13 @@ dim.w_bridge_out = 1e-3;
 dim.w_pocket_in = 2e-3;
 dim.w_pocket_out = 1e-3;
 
-
 dim.magnet_material = PMlibrary.create('N42SH');
 dim.rotor_core_material = dim.stator_core_material;
 dim.shaft_material = 1;
-%% Creating geometries and a model
-% Geometries and visualization
-
+```
+# Creating geometries and a model
+## Geometries and visualization
+```matlab
 stator = Stator(dim);
 rotor = VIPM1(dim);
 
@@ -92,9 +102,22 @@ rotor = VIPM1(dim);
 figure(1); clf; hold on; box on; axis equal;
 stator.plot_geometry();
 rotor.plot_geometry();
-% Model and visualization
+```
 
+![figure_0.png](Example_01_Setting_up_a_Model_media/figure_0.png)
+## Model and visualization
+```matlab
 motor = RFmodel(dim, stator, rotor);
+```
+
+```matlabTextOutput
+gmsh path E:\Software\Work\gmsh-4.11.1\ loaded from preference group 'emdtool' 
+```
+
+```matlab
 
 figure(2); clf; hold on; box on; axis equal;
 motor.visualize('plot_axial', false, 'plot_ag', true, 'plot_nodes', true);
+```
+
+![figure_1.png](Example_01_Setting_up_a_Model_media/figure_1.png)

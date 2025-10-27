@@ -3,7 +3,7 @@
 % Making sure that a model has already been initialized.
 
 if ~exist('motor', 'var')
-    Example_1_Setting_up_a_Model;
+    Example_01_Setting_up_a_Model;
     close all;
 end
 

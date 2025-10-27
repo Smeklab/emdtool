@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Example 7 Demagnetization Analysis of Synchronous Machine
+title: Example 07 Demagnetization Analysis of Synchronous Machine
 parent: Examples
 grand_parent : Documentation
 ---

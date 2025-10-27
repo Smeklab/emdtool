@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Example 5 Transient Analysis of Synchronous Machine
+title: Example 05 Transient Analysis of Synchronous Machine
 parent: Examples
 grand_parent : Documentation
 ---

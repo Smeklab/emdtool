@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Example 4 Stepping Analysis of Synchronous Machine
+title: Example 04 Stepping Analysis of Synchronous Machine
 parent: Examples
 grand_parent : Documentation
 ---

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Example 3 Torque Curve of Synchronous Machine
+title: Example 03 Torque Curve of Synchronous Machine
 parent: Examples
 grand_parent : Documentation
 ---
