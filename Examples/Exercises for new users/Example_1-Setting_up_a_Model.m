@@ -1,17 +1,9 @@
----
-layout: default
-title: Example 1
-parent: Examples
-grand_parent : Documentation
----
+%% Example 1
+% This script demonstrates setting up a basic EMDtool motor model using geometry 
+% templates.
+%% Setting some dimensions
+% General dimensions
 
-# Example 1
-
-This script demonstrates setting up a basic EMDtool motor model using geometry templates.
-
-# Setting some dimensions
-## General dimensions
-```matlab
 dim = struct();
 
 dim.p = 3;
@@ -21,9 +13,8 @@ dim.leff = 150e-3;
 
 dim.temperature_stator = 120;
 dim.temperature_rotor = 120;
-```
-## Stator dimensions
-```matlab
+% Stator dimensions
+
 PHASES = 3;
 SLOTS_PER_POLE_AND_PHASE = 2;
 AIRGAP_FLUX_DENSITY_FOR_SIZING = 1;
@@ -68,40 +59,11 @@ dim.h_cooling_rib = 4e-3;
 
 %materials
 dim.stator_core_material = SteelLibrary.create('M270-35A')
-```
-
-```matlabTextOutput
-dim = struct with fields:
-                       p: 3
-        symmetry_sectors: 6
-                   delta: 0.0015
-                    leff: 0.1500
-      temperature_stator: 120
-       temperature_rotor: 120
-                      Qs: 36
-          stator_winding: [1x1 DistributedWindingSpec]
-                     Sin: 0.0785
-                    Sout: 0.1172
-             htt_taper_s: 1.0000e-03
-                   htt_s: 0.0015
-                   wso_s: 0.0020
-          r_slotbottom_s: 0.0012
-                 hslot_s: 0.0212
-                wtooth_s: 0.0084
-      alpha_cooling_hole: 0.3000
-          h_cooling_hole: 0.0020
-           h_cooling_rib: 0.0040
-    stator_core_material: [1x1 Material]
-
-```
-
-```matlab
 dim.stator_stacking_factor = 1;
 dim.stator_wedge_material = 0;
 
-```
-## Rotor dimensions
-```matlab
+% Rotor dimensions
+
 dim.Rout = dim.Sin - dim.delta;
 dim.Rin = 30e-3;
 
@@ -116,13 +78,13 @@ dim.w_bridge_out = 1e-3;
 dim.w_pocket_in = 2e-3;
 dim.w_pocket_out = 1e-3;
 
+
 dim.magnet_material = PMlibrary.create('N42SH');
 dim.rotor_core_material = dim.stator_core_material;
 dim.shaft_material = 1;
-```
-# Creating geometries and a model
-## Geometries and visualization
-```matlab
+%% Creating geometries and a model
+% Geometries and visualization
+
 stator = Stator(dim);
 rotor = VIPM1(dim);
 
@@ -130,15 +92,9 @@ rotor = VIPM1(dim);
 figure(1); clf; hold on; box on; axis equal;
 stator.plot_geometry();
 rotor.plot_geometry();
-```
+% Model and visualization
 
-![figure_0.png](Example_1_media/figure_0.png)
-## Model and visualization
-```matlab
 motor = RFmodel(dim, stator, rotor);
 
 figure(2); clf; hold on; box on; axis equal;
 motor.visualize('plot_axial', false, 'plot_ag', true, 'plot_nodes', true);
-```
-
-![figure_1.png](Example_1_media/figure_1.png)

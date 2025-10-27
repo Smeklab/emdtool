@@ -19,6 +19,7 @@ parent: Documentation
   
 1. Activate your license
   - `emdtool.load_license('license_file_name.lic')`
+  - This, and the next step, can also be done with the `example_init_and_readme.m` in the `EMDtool/Examples` folder
 
 1. **(OPTIONAL:)(But preferred)** Download and unzip the free `gmsh` mesh generator for your operating system
     * [Downloads page](https://gmsh.info/#Download)
@@ -32,6 +33,7 @@ parent: Documentation
 
 1. Add EMDtool to your Matlab path (see 3. above)
 1. Do check out the `EMDtool` [familiarization exercises](knowledge_base/exercises.html).
+1. Also check out the [example scripts](examples.html) provided.
 1. Analyze away!
 	- see `Examples/readme.m` + example scripts for more detailed examples
 	

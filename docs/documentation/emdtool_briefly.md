@@ -9,6 +9,8 @@ parent: Documentation
 
 So, are you wondering how EMDtool works in practice? After reading this page you'll have an idea.
 
+Also, don't forget to check out the [example scripts provided](examples.html)!
+
 ## Analysis workflow
 
 A typical analysis workflow is described below.
