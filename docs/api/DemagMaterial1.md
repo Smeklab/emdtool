@@ -217,4 +217,8 @@ BH curve and the corresponding magnetization curve.
 Visualizes the amount of remanence flux density lost, elementwise,
 compared to the non-demagnetized case.
 
+### .visualize_lost_remanence Visualize retained remanance.
+
+Visualizes the amount of equivalent remanence, per element.
+
 

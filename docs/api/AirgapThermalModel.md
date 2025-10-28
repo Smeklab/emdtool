@@ -23,6 +23,9 @@ corresponding side (stator/rotor) is increased to compensate by
 Windage losses are estimated with `this.estimate_windage_losses` and
 lumped to `this.node`.
 
+The associated [BoundaryConnection](BoundaryConnection.html) objects deal with absolute
+heat fluxes per symmetry sector.
+
 ## Properties
 
 ### .**boundary_length_moving** Computed length of moving boundary.

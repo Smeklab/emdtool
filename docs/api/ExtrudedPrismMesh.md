@@ -73,18 +73,6 @@ els = extrude_nodes(msh3, nodes)
 
 els = extrude_nodes(msh3, nodes, layers)
 
-### .**getMappingMatrix** Get mapping matrix.
-
-See ElementBase.get_mapping_matrix
-
-### .**get_assembly_parameters** Get parameters for mesh assemble.
-
-[x_quad, w_quad, Nrows, Ncols, N_test, N_shape] = ...
-get_assembly_parameters(this, fun_test, fun_shape)
-
-[x_quad, w_quad, Nrows, Ncols, N_test, N_shape] = ...
-get_assembly_parameters(this, fun_test, fun_shape, nonlinearity_order)
-
 ### .ExtrudedPrismMesh/**grad_quiver** is a function.
 [Bvec, h] = grad_quiver(msh3, A, els, varargin)
 
@@ -94,8 +82,7 @@ P = layer_interpolation_matrix(this, coordinates, element_layer)
 ### .ExtrudedPrismMesh/**plot_nodes** is a function.
 plot_nodes(this, n, varargin)
 
-### .Ex**t**rudedPrismMesh/t is a function.
-y = t(msh3)
+### .**t** Element definitions
 
 ### .TRIPLOT Plots a 2D triangulation
 TRIPLOT(TRI,X,Y) displays the triangles defined in the

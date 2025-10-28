@@ -17,6 +17,8 @@ create - SimpleCoolantMaterial.create is a function.
 
 ### .SimpleCoolantMaterial/**dynamic_viscosity** is a property.
 
+### .SimpleCoolantMaterial/**specific_heat** is a property.
+
 ### .SimpleCoolantMaterial/**thermal_conductivity** is a property.
 
 

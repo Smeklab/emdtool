@@ -32,6 +32,11 @@ motor.stator(1).winding object only.
 
 ### .RFThermalModel/**magnetic_model** is a property.
 
+### .**verbose** Verbosity control
+
+Solve in a verbose fashion, displaying solution info in the
+command window while solving. Default true.
+
 ### .RFThermalModel/**winding_model** is a property.
 
 

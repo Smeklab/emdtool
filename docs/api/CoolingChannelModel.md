@@ -26,6 +26,10 @@ implementation.
 Alternatively, the net coefficient can be set manually by setting
 `this.heat_transfer_coefficient_total`.
 
+The [BoundaryConnection](BoundaryConnection.html) objects linking into the FEA model are set
+to deal with absolute fluxes per symmetry sector, i.e. not fluxes per
+unit length.
+
 ## Properties
 
 ### .CoolingChannelModel/**Nusselt_number** is a property.

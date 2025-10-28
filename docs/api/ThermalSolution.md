@@ -26,4 +26,10 @@ Class methods are listed below. Inherited methods are not included.
 Documentation for ThermalSolution/ThermalSolution
 doc ThermalSolution
 
+### .ThermalSolution/**save_fluxes_to_Excel** is a function.
+save_fluxes_to_Excel(this, fname, sheetname, varargin)
+
+### .ThermalSolution/**save_temperatures_to_Excel** is a function.
+save_temperatures_to_Excel(this, fname, sheetname, varargin)
+
 

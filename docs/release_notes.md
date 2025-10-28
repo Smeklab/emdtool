@@ -70,3 +70,20 @@ nav_order: 4
 * **3.0.45dev(2025/04/15)** :  Removed stacking factor parsing from Material.init_for_problem; now using the inherited functionality from MaterialBase.stacking_factor getter method.
 * **3.0.45dev(2025/04/28)** :  Fixed bug caused by loading older SMGridCalculator_DQ data, without excess iron losses computed.
 * **3.0.45dev(2025/04/29)** :  Fixed SpaceVectorModulator bug. Now more-closely matches SVPWM_Modulator.
+* **3.0.45dev(2025/05/08)** :  BreadLoafRotor class now allows specifying the polegap material.
+* **3.0.45dev(2025/05/09)** :  HSSPM template added for modelling non-Halbach SPM rotors with sleeves and shields.
+* **3.0.45dev(2025/05/20)** :  Added shield circuit options to HSSPM.
+* **3.0.45dev(2025/06/11)** :  Fixed error in CoolantMaterialBase.dynamic_viscosity_at_temperature.
+* **3.0.45dev(2025/06/28)** :  Added option to have BoundaryConnection (thermal) to use absolute fluxes rather than per-unit-length.
+* **3.0.45dev(2025/06/28)** :  Fixed error in thermal modelling of friction/windage losses (were incorrectly scaled per length.
+* **3.0.45dev(2025/06/29)** :  FlowHeatSinkConnection modified to deal with absolute heat fluxes per symmetry sector, not per-length ones.
+* **3.0.45dev(2025/06/30)** :  FlowHeatSinkConnection now uses average temperature of coolant by default.
+* **3.0.45dev(2025/07/20)** :  Added GIT hash, SimulationParameters.f, phase winding supply type to MotorModelBase.results_summary
+* **3.0.45dev(2025/07/23)** :  Added torque envelope computation to NTGridDQ.
+* **3.0.45dev(2025/08/04)** :  RFThermalModel now has the .verbose property
+* **3.0.45dev(2025/08/21)** :  HSSPM now modelling the sleeve as a SheetCircuit if conductive material used.
+* **3.0.45dev(2025/08/26)** :  Added thermal conductivity to built-in Inconel material.
+* **3.0.45dev(2025/09/02)** :  Fixed error in Slot1, 2-layer distributed-style case, one layer Surface included twice in slot.all_surfaces
+* **3.0.45dev(2025/10/06)** :  Added Nodal1D and EdgeMesh. Added MeshBaseInterface as lowest-level mesh base class.
+* **3.0.45dev(2025/10/06)** :  Sped up Thermal - BoundaryConnection matrix assembly.
+* **3.0.46(2025/10/28)** :  MAJOR LICENSE UPDATE. Future licenses tied to a system username and Matlab license number unless otherwise agreed.

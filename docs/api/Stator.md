@@ -63,7 +63,7 @@ Stator/create_geometry_backup is an undocumented builtin Stator method.
 ### .Stator/**directional_airgap_length** is a function.
 delta = directional_airgap_length(this)
 
-### .Stator/**get_special_extrusion_domains** is a function.
-ds = get_special_extrusion_domains(this)
+### .Stator/**set_domain_extrusion_data** is a function.
+dall = set_domain_extrusion_data(this)
 
 

@@ -35,17 +35,22 @@ is_valid = emdtool.check_license(force_check)
 
 ### .**get_version** Read current version from file.
 
+### .emdtool.**license_id** is a function.
+lid = emdtool.license_id
+
 ### .**license_information** Show license information.
 
-[userid, license_number, valid_until, signature] = emdtool.license_information()
+[organization, matlab_license_id, valid_until, systemUser, signature] = emdtool.license_information()
 
 Returns:
 
-* userid : user ID associated with the license
+* organization : organization
 
-* license_number : Matlab license number
+* matlab_license_id : Matlab license number associated with the license
 
 * valid_until : expiration date (YYYY-MM-DD) of the license
+
+* systemUser : system user associated with the license
 
 * signature : license signature hash.
 
@@ -81,7 +86,7 @@ between sessions.
 
 Call syntax:
 
-set_license(userid, valid_until, signature)
+set_license(userid, valid_until, signature, systemUser, matlab_license_id)
 
 See emdtool.license_information() for help.
 

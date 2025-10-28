@@ -3,7 +3,7 @@ title : MeshBase
 parent: API
 grand_parent : Documentation
 ---
-# Summary for: **MeshBase**  < handle
+# Summary for: **MeshBase**  < [MeshBaseInterface](MeshBaseInterface.html)
 
 ## Class summary
 
@@ -16,15 +16,21 @@ get_edge_incidence - Return edges and edge incidence array.s
 
 ### .MeshBase/**Element** is a property.
 
-### .MeshBase/**element_type** is a property.
+### .element_type Is the element isoparametric or not.
+Help for MeshBase/element_is_isoparametric is inherited from superclass MeshBaseInterface
+
+### .**element_type** Element type
+Help for MeshBase/element_type is inherited from superclass MeshBaseInterface
 
 ### .MeshBase/**elements** is a property.
 
 ### .MeshBase/**nodes** is a property.
 
-### .MeshBase/**p** is a property.
+### .**p** Nodal coordinates
+Help for MeshBase/p is inherited from superclass MeshBaseInterface
 
-### .MeshBase/**t** is a property.
+### .**t** Element definitions
+Help for MeshBase/t is inherited from superclass MeshBaseInterface
 
 
 ## Methods
@@ -47,18 +53,6 @@ definition, i.e. indeed means the surface area for 2D meshes. Please
 multiply by the effective length if necessary.
 
 Use `elements = []` to integrate over all the elements.
-
-### .**getMappingMatrix** Get mapping matrix.
-
-See ElementBase.get_mapping_matrix
-
-### .**get_assembly_parameters** Get parameters for mesh assemble.
-
-[x_quad, w_quad, Nrows, Ncols, N_test, N_shape] = ...
-get_assembly_parameters(this, fun_test, fun_shape)
-
-[x_quad, w_quad, Nrows, Ncols, N_test, N_shape] = ...
-get_assembly_parameters(this, fun_test, fun_shape, nonlinearity_order)
 
 ### .**get_edge_incidence** Return edges and edge incidence array.s
 

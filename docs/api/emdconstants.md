@@ -38,11 +38,9 @@ specified size + [-tolerance, tolerance]
 
 Class methods are listed below. Inherited methods are not included.
 
-### .**BHmax_to_Br** Magnet energy product to remanence flux density.
+### .**BHmax_to_Br** MGOE to T.
 
-Br = BHmax_to_Br(BHmax_MGOE) uses a default relative permeability of 1.05
-
-Br = BHmax_to_Br(BHmax_MGOE, mur)
+### .**BHmax_to_Br_SI** kJ/m^3 to T.
 
 ### .emdconstants.**Oe_to_A_per_m** is a function.
 H = emdconstants.Oe_to_A_per_m(O)

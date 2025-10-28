@@ -66,6 +66,9 @@ together, and adding them to the pure FEA part.
 T = get_temperature(this, solution) where
 * solution : a `ThermalSolution` object.
 
+### .ThermalNode/**remove_connection** is a function.
+remove_connection(this, conn)
+
 ### .**set_global_heat_source** Set global heat source.
 
 set_global_heat_source(this, P) sets the *global*  heat source

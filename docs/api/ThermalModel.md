@@ -13,9 +13,15 @@ Supports coupled FEA-(lumped) network models.
 
 **IMPORTANT**  As the FEA-part of the model is 2-dimensional, it works
 with loss densities and heat flux densities per unit length, rather than
-losses and fluxes. Importantly, any lumped-network components in the
-model must be scaled for 1m axial length, and the number of symmetry
-sectors used.
+losses and fluxes. Correspondingly, special care must be taken if the
+lumped thermal network components connected to the FEA model are
+desired to correspond to actual values (heat fluxes and losses/sinks)
+per symmetry sector, rather than values scaled for unit length.
+
+Some [ThermalNetworkConnection](ThermalNetworkConnection.html) classes do already consider this,
+either by default or optionally. Specifically:
+* The [VolumeConnection](VolumeConnection.html) class automatically does this.
+* The [BoundaryConnection](BoundaryConnection.html) class can be enabled to do this.
 
 ## Properties
 

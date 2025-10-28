@@ -16,7 +16,7 @@ Returns a new PolyphaseCircuit object with the given name
 and associated with the [PolyphaseWindingSpec](PolyphaseWindingSpec.html)
 windingeffective_length
 
-A PolyphaseCircuit is largely characterized bfiy its `winding_spec`
+A PolyphaseCircuit is largely characterized by its `winding_spec`
 property = a [PolyphaseWindingSpec](PolyphaseWindingSpec.html) oebject. This winding
 specification object contains information such as number of turns and
 parallel paths, winding layout matrix, loop matrix, etc.
@@ -323,5 +323,10 @@ between successive terminals (1-2, 2-3, ..., n-1).
 U = terminal_voltage(this, solution, varargin), where
 
 solution = a [MagneticsSolution](MagneticsSolution.html) object.
+
+### .**wire_flux_linkage** Total modelled series flux linkage.
+
+Total flux linkage per modelled current path, including
+modelled parallel paths and meshed wires in hand.
 
 

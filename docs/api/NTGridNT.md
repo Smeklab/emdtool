@@ -41,7 +41,8 @@ doc NTGridNT
 ### .NTGridNT/**get_efficiency_grid** is a function.
 [etagrid, electrical_power] = get_efficiency_grid(this, varargin)
 
-### .selecting desired interpolant
+### .NTGridNT/**get_grid** is a function.
+m = get_grid(this, map_name, varargin)
 
 ### .efficiency Evaluate efficiency at given points.
 

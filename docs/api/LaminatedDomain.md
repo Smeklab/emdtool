@@ -25,10 +25,7 @@ Class methods are listed below. Inherited methods are not included.
 
 ### .**LaminatedDomain** Laminated domain.
 
-this = LaminatedDomain(name, stacking_factor, material)
-
-this = LaminatedDomain(name, stacking_factor, material, surface1,
-...)
+% this = LaminatedDomain(name, stacking_factor, material)
 Documentation for LaminatedDomain/LaminatedDomain
 doc LaminatedDomain
 

@@ -7,8 +7,9 @@ grand_parent : Documentation
 
 ## Class summary
 
-BoundaryMatrixConstructor is a class.
-this = BoundaryMatrixConstructor(varargin)
+BoundaryMatrixConstructor methods:
+BoundaryMatrixConstructor - is a class.
+assemble_fast - BoundaryMatrixConstructor/assemble_fast is a function.
 
 ## Properties
 
@@ -21,6 +22,9 @@ Class methods are listed below. Inherited methods are not included.
 this = BoundaryMatrixConstructor(varargin)
 Documentation for BoundaryMatrixConstructor/BoundaryMatrixConstructor
 doc BoundaryMatrixConstructor
+
+### .BoundaryMatrixConstructor/**assemble_fast** is a function.
+this = assemble_fast(this, fun_test, fun_shape, v, edges, msh, varargin)
 
 ### .BoundaryMatrixConstructor/**assemble_flux_matrix** is a function.
 this = assemble_flux_matrix(this, varargin)

@@ -103,6 +103,16 @@ and data, a structure with fields:
 
 ### .**maximum_torque_at_speed** Get maximum torque at given speed.
 
+### .**maximum_torque_envelope** Maximum torque vs speed curve.
+
+[Tmax, n] = maximum_torque_envelope(this, I) returns the maximum torque
+vs speed curve `(n, Tmax)`, within the given maximum current `I` (can be
+inf to obtain the absolute maximum torque).
+
+The following key-value pairs are supported:
+* speed_range : a 1x2 array of minimum and maximum speeds
+* torque_range : a 1x2 array of minimum and maximum torques
+
 ### .NTGridDQ/**plot_map** is a function.
 Qint = plot_map(this, contour_name, varargin)
 

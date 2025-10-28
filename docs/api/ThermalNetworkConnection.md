@@ -38,6 +38,13 @@ data = get_flux(this, solution) returns free-format data of
 the thermal flux through the connection, and the given
 `ThermalSolution`.
 
+The output data struct should contain
+* Total flux per entire model, including the effects of the
+number of symmetry sectors and effective length
+* Name / information of the entire from which the flux is
+flowing (negative flux indicating opposite direction)
+* The same for where to the flux is flowing to
+
 ### .**get_node2FEA_matrices** Return the thermal matrices.
 
 [S_FEA, S_FEA2node, S_node2FEA, S_node] =
@@ -62,5 +69,9 @@ the `ThermalNode` `node` given as input.
 ### .**get_nodes** Return indices to the nodes associated with this.
 
 inds = get_nodes(this, node)
+
+### .**get_saveable_struct** Get saveable data struct.
+
+Defaults to this.get_flux
 
 

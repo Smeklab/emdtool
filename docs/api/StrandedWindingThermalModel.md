@@ -34,6 +34,8 @@ Before solving the model, set the correct losses with
 
 ### .**correction_coefficient** Not currently used.
 
+### .StrandedWindingThermalModel/**end_winding_model** is a property.
+
 ### .**end_winding_node** End-winding node.
 
 Node for average end-winding temperature.
@@ -61,6 +63,8 @@ Middle of stack, average over the 2D domain.
 
 Node for the average winding temperature at the edge of the
 stack.
+
+### .**winding_maximum_node** Maximum temperature, active part only.
 
 ### .**winding_overall_average_node** Overall average.
 

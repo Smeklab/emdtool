@@ -82,6 +82,9 @@ shell.
 
 ### .**add_volume** Add one or more volumes to this.
 
+### .Domain/**all_copies** is a function.
+ds = all_copies(this)
+
 ### .AREA  Filled ****area**** 2-D plot.
 AREA(Y) plots the vector Y or plots each column in matrix Y as a
 separate curve and stacks the curves. The x-axis automatically

@@ -81,16 +81,18 @@ has_toc : false
 * *class* : [IDfun](IDfun.html) **IDfun** is a class.
 * *class* : [Nedelec2D](Nedelec2D.html)  **Nedelec2D** class for 2D Nedelec shape functions.
 * *class* : [Nedelec3DPrism](Nedelec3DPrism.html)  Nedelec3D class for 3D Nedelec shape functions.
+* *class* : [/Elements and Shape Functions/Nodal Elements/Nodal1D](Nodal1D.html)  **Nodal1D** 1D nodal element.
 * *class* : [/Elements and Shape Functions/Nodal Elements/Nodal2D](Nodal2D.html)   **Nodal2D** Lagrange (nodal) shape function in 2D.
 * *class* : [Operators](Operators.html)  {
+* *class* : [/Matrix Assembly/BoundaryMatrixConstructor](BoundaryMatrixConstructor.html) **BoundaryMatrixConstructor** methods:
 * *class* : [/Matrix Assembly/MagneticsJacobian](MagneticsJacobian.html)  **MagneticsJacobian** Jacobian constructor for magnetic problems.
 * *class* : [/Matrix Assembly/MatrixConstructor](MatrixConstructor.html)  **MatrixConstructor** Constructor for FE matrices.
-* *class* : [BoundaryMatrixConstructor](BoundaryMatrixConstructor.html) **BoundaryMatrixConstructor** is a class.
 * *class* : [MatrixConstructorBase](MatrixConstructorBase.html) **MatrixConstructorBase** is a class.
 * *class* : [MatrixConstructor_nonConforming](MatrixConstructor_nonConforming.html) **MatrixConstructor_nonConforming** is a class.
 * *class* : [/Mesh/Boundary](Boundary.html)  **Boundary** Base class for boundaries.
 * *class* : [/Mesh/DirichletBoundary](DirichletBoundary.html) **DirichletBoundary** methods:
 * *class* : [/Mesh/MeshBase](MeshBase.html) **MeshBase** methods:
+* *class* : [/Mesh/MeshBaseInterface](MeshBaseInterface.html)  **MeshBaseInterface** High-level interface definitions for a mesh class.
 * *class* : [/Mesh/PeriodicBoundary](PeriodicBoundary.html) **PeriodicBoundary** methods:
 * *class* : [/Mesh/Airgap mesh/LinearSlidingAirgap](LinearSlidingAirgap.html)  **LinearSlidingAirgap** Airgap class for sliced AFM models.
 * *class* : [/Mesh/Airgap mesh/SlidingAirgap](SlidingAirgap.html)  **SlidingAirgap** Sliding airgap model for radial-flux machines.
@@ -108,6 +110,7 @@ has_toc : false
 * *class* : [Nodal3D_UpExtruded](Nodal3D_UpExtruded.html) **Nodal3D_UpExtruded** is a class.
 * *class* : [Nodal3D_extruded](Nodal3D_extruded.html)  **Nodal3D_extruded** Nodal shape function for extruded elements.
 * *class* : [PrismMeshBase3D](PrismMeshBase3D.html)  **PrismMeshBase3D** A base class for a 3D mesh with prismatic elements.
+* *class* : [/Mesh/Other meshes/EdgeMesh](EdgeMesh.html)  **EdgeMesh** Mesh class for representing edges.
 * *class* : [/Mesh/Other meshes/Mesh](Mesh.html)  **Mesh** Class for mesh objects.
 * *class* : [/Mesh/Other meshes/SimpleMesh](SimpleMesh.html)  **SimpleMesh** Basic mesh class.
 * *class* : [RotatedMeshView](RotatedMeshView.html) **RotatedMeshView** is a class.
@@ -198,6 +201,7 @@ has_toc : false
 * *class* : [/Thermals/Analysis/Model and solutions/ThermalSolution](ThermalSolution.html)  **ThermalSolution** Base class for thermal solutions.
 * *class* : [/Thermals/Analysis/Nodes/AmbientNode](AmbientNode.html)  **AmbientNode** Class for fixed-temperature nodes.
 * *class* : [/Thermals/Analysis/Nodes/AverageTempNode](AverageTempNode.html)  MaxTempNode Dummy-like node for picking the maximum temperature.
+* *class* : [/Thermals/Analysis/Nodes/InterpolatingThermalNode](InterpolatingThermalNode.html)  **InterpolatingThermalNode** Linearly-dependent node.
 * *class* : [/Thermals/Analysis/Nodes/MaxTempNode](MaxTempNode.html)  **MaxTempNode** Dummy-like node for picking the maximum temperature.
 * *class* : [/Thermals/Analysis/Nodes/PlusDiffNode](PlusDiffNode.html)  **PlusDiffNode** Linear combination node
 * *class* : [/Thermals/Analysis/Nodes/ThermalNode](ThermalNode.html)  **ThermalNode** General class for textbook thermal node.
@@ -233,6 +237,7 @@ has_toc : false
 * *class* : [/Rotors/HSIPM](HSIPM.html)  **HSIPM** High-speed IPM rotor
 * *class* : [/Rotors/HSIPM1](HSIPM1.html)  **HSIPM1** Deprecated class.
 * *class* : [/Rotors/HSIPM2](HSIPM2.html)  **HSIPM2** Deprecated
+* *class* : [/Rotors/HSSPM](HSSPM.html)  **HSSPM** Flexible high-speed SPM rotor.
 * *class* : [/Rotors/LinearSPM](LinearSPM.html) **LinearSPM** methods:
 * *class* : [/Rotors/LinearSlottedRotor1](LinearSlottedRotor1.html)  **LinearSlottedRotor1** Super-simple slotted AF rotor.
 * *class* : [/Rotors/LinearSlottedRotorBase](LinearSlottedRotorBase.html) **LinearSlottedRotorBase** methods:
@@ -304,7 +309,7 @@ has_toc : false
 * *class* : [Circuits](Circuits.html) **Circuits** is a class.
 * *class* : [/FE Circuits/Conductors/PointConductor](PointConductor.html) **PointConductor** methods:
 * *class* : [/FE Circuits/Conductors/SolidConductor](SolidConductor.html) **SolidConductor** methods:
-* *class* : [/FE Circuits/Conductors/SplitConductor](SplitConductor.html) **SplitConductor** methods:
+* *class* : [/FE Circuits/Conductors/SplitConductor](SplitConductor.html)  **SplitConductor** Boundary-crossing conductor class.
 * *class* : [/FE Circuits/Conductors/StrandedConductor](StrandedConductor.html) **StrandedConductor** methods:
 * *class* : [Conductor](Conductor.html)  **Conductor** Base class for conductors.
 * *class* : [SheetCircuit](SheetCircuit.html) **SheetCircuit** is a class.
@@ -374,9 +379,9 @@ has_toc : false
 * *class* : [NodalBase](NodalBase.html) **NodalBase** is a class.
 * *class* : [Quad](Quad.html) **Quad** is a class.
 * *class* : [SimpleMesh2](SimpleMesh2.html) **SimpleMesh2** is a class.
+* *class* : [/ThreeDAnalysis/Geometry3D](Geometry3D.html) Contents of **Geometry3D**:
 * *class* : [/ThreeDAnalysis/MagneticsProblem3D](MagneticsProblem3D.html) **MagneticsProblem3D** methods:
 * *class* : [/ThreeDAnalysis/MotorModel3D](MotorModel3D.html) **MotorModel3D** methods:
-* *class* : [Geometry3D](Geometry3D.html) Contents of **Geometry3D**:
 ## utilities
  Miscellaneous utilities classes and functions.
 

@@ -45,6 +45,13 @@ boundary.
 
 ### .**node** Associated 'ThermalNode'
 
+### .**normalize_length** Normalize length to model
+
+If true (Default), the (solved) heat flux of the connection is
+per unit model length, as is any heat source of the associated
+[ThermalNode](ThermalNode.html). If false, the fluxes and heat sources are absolute
+values per symmetry sector.
+
 ### .BoundaryConnection/**skip_edge_sanitation** is a property.
 
 

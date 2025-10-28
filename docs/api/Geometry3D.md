@@ -33,10 +33,16 @@ obj = Geometry3D
 Documentation for Geometry3D/Geometry3D
 doc Geometry3D
 
-### .Geometry3D/**directional_airgap_length** is a function.
-obj = Geometry3D
+### .Geometry3D/**create_geometry3D** is a function.
+create_geometry3D(this)
 
-### .Geometry3D/**get_special_extrusion_domains** is a function.
-ds = get_special_extrusion_domains(this)
+### .Geometry3D/**directional_airgap_length** is a function.
+delta = directional_airgap_length(this)
+
+### .Geometry3D/**plot_geometry3D** is a function.
+plot_geometry3D(this, varargin)
+
+### .Geometry3D/**set_domain_extrusion_data** is a function.
+ds = set_domain_extrusion_data(this)
 
 

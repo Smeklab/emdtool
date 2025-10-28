@@ -12,6 +12,8 @@ obj = CoolantMaterialBase
 
 ## Properties
 
+### .CoolantMaterialBase/**name** is a property.
+
 
 ## Methods
 

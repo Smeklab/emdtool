@@ -26,7 +26,7 @@ In this case, a FlowHeatSinkConnection would be set up between the airgap
 node and a node representing the *inflow*  temperature of the coolant.
 Furthermore, the temperature of the airgap node would then also equal
 the coolant temperature on the outflow side. Finally, the direction
-of the heat flow in the FlowHeatSinkConnection would obviusly be
+of the heat flow in the FlowHeatSinkConnection would obviously be
 from the airgap node to the inflow node - i.e. opposite to the fluid
 velocity and actual direction of energy transfer.
 
@@ -35,6 +35,11 @@ velocity and actual direction of energy transfer.
 ### .FlowHeatSinkConnection/**coolant_mass_flow** is a property.
 
 ### .FlowHeatSinkConnection/**coolant_specific_heat** is a property.
+
+### .**model_average_temprise** Use average-temprise model.
+
+Use average temperature difference between the inlet and outlet
+sides
 
 
 ## Methods

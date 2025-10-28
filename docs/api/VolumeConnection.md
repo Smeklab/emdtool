@@ -15,6 +15,12 @@ intended for modelling out-of-plane heat flux of 2D problems. See the
 `initialize` method documentation for some discussion on the
 mathematics.
 
+The connection automatically scales the heat fluxes per model length,
+i.e. an external node with 1000 W of losses connected to a thermal
+model of 0.5 m effective length results in an apparent 2000 W/m
+volumetric heat source in the FEA model (in the absence of other heat
+sources/sinks).
+
 A VolumeConnection must be constructed manually, by first creating
 the object, creating the associated thermal nodes and adding them to
 the thermal model, and setting all the required properties, for
