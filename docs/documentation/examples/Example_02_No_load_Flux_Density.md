@@ -19,6 +19,9 @@ end
 
 ```matlabTextOutput
 gmsh path E:\Software\Work\gmsh-4.11.1\ loaded from preference group 'emdtool' 
+  Name       Size            Bytes  Class      Attributes
+
+  motor      1x1                 8  RFmodel              
 ```
 
 

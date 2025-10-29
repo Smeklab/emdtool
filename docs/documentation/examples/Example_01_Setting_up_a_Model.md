@@ -7,7 +7,13 @@ grand_parent : Documentation
 
 # Example 1
 
-This script demonstrates setting up a basic up your very first EMDtool model. The general philosophy of EMDtool is based on templates \- parametric geometry classes for stators and rotors (and sometimes frames, flux modulators, and other more exotic components) that can be mixed and matched as you like under a single model.
+**`Goal:`** `Build and visualize a minimal radial-flux model using the Stator + VIPM1 templates.` 
+
+
+**`Result:`** `A valid geometry plot and a meshed RFmodel object ready for flux-density or torque analysis.` 
+
+
+This script demonstrates setting up your very first EMDtool model. The general philosophy of EMDtool is based on templates \- parametric geometry classes for stators and rotors (and sometimes frames, flux modulators, and other more exotic components) that can be mixed and matched as you like under a single model.
 
 
 *Granted, there are exceptions, like importing a DXF file, or manually creating an on\-off geometry with no reusability in mind. But, those are indeed exceptions \- the assumed workflow is based on maximal reusability.*
@@ -21,7 +27,7 @@ Let's begin.
 # Setting some dimensions
 ## General dimensions
 
-We begin by creating an empty struct. 
+We begin by creating an empty struct *dim* to hold all the dimensions.
 
 
 Next, we define some general dimensions that will be used during various stages of the simulation process.
@@ -115,6 +121,7 @@ dim.alpha_cooling_hole = 0.3;
 dim.h_cooling_hole = 2e-3;
 dim.h_cooling_rib = 4e-3;
 ```
+### A Note on Materials
 
 Finally, we define some materials. Specifically, we use the [SteelLibrary](https://www.emdtool.com/api/SteelLibrary.html) class to access the built\-in Materials library of EMDtool.
 
@@ -234,3 +241,15 @@ Before concluding this example, below are some notes for those interested in the
 -  It is possible to mesh the geometry objects before initializing the model object, either by calling *stator.mesh\_geometry()* or  *stator.mesh\_elementary\_geometry()* and then *stator.replicate\_elementary\_mesh()* 
 -  The associated mesh is then saved to *stator.mesh*. Boundary and edge data is also saved in similar fashion. 
 -  When adding a geometry object to the model, the object is meshed if it already hasn't. Importantly, some indices are updated \- please see the [MotorModelBase](https://www.emdtool.com/api/MotorModelBase.html) documentation. 
+
+Finally, let's verify that the example ran correctly:
+
+```matlab
+whos motor
+```
+
+```matlabTextOutput
+  Name       Size            Bytes  Class      Attributes
+
+  motor      1x1                 8  RFmodel              
+```
