@@ -74,10 +74,10 @@ Since we want our machine to have a distributed winding scheme, we use the [Dist
 
 ```matlab
 winding = DistributedWindingSpec(dim);
-winding.N_layers = 1;
-winding.N_series = 12;
-winding.phases = PHASES;
-winding.a = dim.p*2;
+winding.N_layers = 1; %winding layers
+winding.N_series = 12; %turns per single coil
+winding.phases = PHASES; %phases
+winding.a = dim.p*2; %parallel paths
 dim.stator_winding = winding;
 ```
 

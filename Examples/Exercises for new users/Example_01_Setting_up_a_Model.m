@@ -74,10 +74,10 @@ dim.Qs = PHASES * 2*dim.p * SLOTS_PER_POLE_AND_PHASE;
 % subclass. Finally, we assign the object to _dim.stator_winding_.
 
 winding = DistributedWindingSpec(dim);
-winding.N_layers = 1;
-winding.N_series = 12;
-winding.phases = PHASES;
-winding.a = dim.p*2;
+winding.N_layers = 1; %winding layers
+winding.N_series = 12; %turns per single coil
+winding.phases = PHASES; %phases
+winding.a = dim.p*2; %parallel paths
 dim.stator_winding = winding;
 %% 
 % Next, we define the inner and outer radius of the stator. Again, we have included 
