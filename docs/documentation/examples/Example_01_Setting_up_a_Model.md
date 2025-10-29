@@ -120,14 +120,13 @@ Finally, we define some materials. Specifically, we use the [SteelLibrary](https
 
 -  The SteelLibrary will return an object of the basic [Material](https://www.emdtool.com/api/Material.html) class. While this class is rather powerful and general purpose, special classes such as the [HystereticMaterial](https://www.emdtool.com/api/HystereticMaterial.html) and [DemagMaterial1](https://www.emdtool.com/api/DemagMaterial1.html) do exist. 
 -  Important: Most geometry templates create local copies of the materials given as inputs. In other words, none of the materials in  *stator.materials* will be the same object as the one set into *dim.stator\_core\_material*. Importantly, changing the material properties of the here\-created object  **after** the stator object has been created will have **no effect** on the simulation results. 
--  For common questions on defining new materials, please [see the documentation page](https://www.emdtool.com/documentation/knowledge_base/defining_materials.html).
- 
+-  For common questions on defining new materials, please [see the documentation page](https://www.emdtool.com/documentation/knowledge_base/defining_materials.html). 
+
 ```matlab
 %materials
 dim.stator_core_material = SteelLibrary.create('M270-35A');
 dim.stator_stacking_factor = 1;
 dim.stator_wedge_material = 0;
-
 ```
 ## Rotor dimensions
 

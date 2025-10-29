@@ -23,11 +23,13 @@ gmsh path E:\Software\Work\gmsh-4.11.1\ loaded from preference group 'emdtool'
 
 
 # Setting up a problem
+
 ```matlab
 problem = MagneticsProblem.new(motor);
 
 ```
 # Setting inputs and parameters
+
 ```matlab
 %setting zero current density as source
 phase_circuit = stator.winding;
@@ -38,6 +40,7 @@ pars = SimulationParameters('rotorAngle', 0);
 %pars = SimulationParameters('rotorAngle', pi/8);
 ```
 # Solving
+
 ```matlab
 %solving
 static_solution = problem.solve_static(pars);
@@ -63,6 +66,7 @@ Computing step/case 1 out of 1...
     Newton step 15, relative residual 4.039e-08.
 ```
 # Post\-processing and visualizing
+
 ```matlab
 %plotting flux density distribution
 figure(5); clf; hold on; box on;

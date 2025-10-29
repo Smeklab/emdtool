@@ -139,7 +139,6 @@ dim.h_cooling_rib = 4e-3;
 dim.stator_core_material = SteelLibrary.create('M270-35A');
 dim.stator_stacking_factor = 1;
 dim.stator_wedge_material = 0;
-
 % Rotor dimensions
 % Next, we move onto the rotor dimensions. In some cases, there can be a naming 
 % overlap between two dimensions, in which case we could define a different dimensions 
