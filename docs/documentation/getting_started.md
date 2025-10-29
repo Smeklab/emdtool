@@ -20,6 +20,10 @@ parent: Documentation
 1. Activate your license
   - `emdtool.load_license('license_file_name.lic')`
   - This, and the next step, can also be done with the `example_init_and_readme.m` in the `EMDtool/Examples` folder
+  - **For those with single-user licenses / November 2025 onwards:** You will have received an organization-wide interim license valid for two weeks. To activate your full personal license,
+  run the command `emdtool.license_id()` in the Matlab command prompt, and email the output to Smeklab Ltd. You will receive your full license in a few days.
+    - Yes, this is cumbersome and home-brewy; however it is the view of Smeklab that our clients are best served by focusing on direct client-facing work and developing EMDtool itself, not dedicating personnel-hours
+	to setting up an automatic licensing system.
 
 1. **(OPTIONAL:)(But preferred)** Download and unzip the free `gmsh` mesh generator for your operating system
     * [Downloads page](https://gmsh.info/#Download)
