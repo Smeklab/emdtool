@@ -253,3 +253,6 @@ whos motor
 
   motor      1x1                 8  RFmodel              
 ```
+
+
+[**NEXT UP**: Example 02 No load Flux Density](Example_02_No_load_Flux_Density.html)

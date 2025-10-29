@@ -96,3 +96,6 @@ motor.plot_airgap_flux_density(static_solution, 1, 'plot_spectrum', true);
 ```
 
 ![figure_2.png](Example_02_No_load_Flux_Density_media/figure_2.png)
+
+
+[**NEXT UP**: Example 03 Torque Curve of Synchronous Machine](Example_03_Torque_Curve_of_Synchronous_Machine.html)

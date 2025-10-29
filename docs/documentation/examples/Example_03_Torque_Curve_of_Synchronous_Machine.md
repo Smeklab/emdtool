@@ -9,3 +9,6 @@ grand_parent : Documentation
 
 This example shows how to compute the torque curve of a synchronous machine, with a given current density. The curve is computed versus the pole angle, i.e. 90 degrees corresponding to id=0.
 
+
+
+[**NEXT UP**: Example 04 Stepping Analysis of Synchronous Machine](Example_04_Stepping_Analysis_of_Synchronous_Machine.html)
