@@ -93,6 +93,7 @@ end
 Next, we begin defining some slot dimensions. Specifically, these are not seen by the Stator class itself. Instead, we *could* have specified a  *stator\_slot* dimension, to use a specific [StatorSlotShape](https://www.emdtool.com/api/StatorSlotShape.html) object. Since we have not specified any, the general\-purpose [Slot1](https://www.emdtool.com/api/Slot1.html) is used instead.
 
 -  The recommended approach of working with EMDtool is to use the [Slot\-Layout workflow](https://www.emdtool.com/documentation/templates/slots_and_layouts.html#slots-and-layouts). This allows dropping in different slot shapes to an existing parent geometry, and/or different conductor layouts into an existing slot geometry. While it can make things more complex to implement and understand, and even hinder analysing some edge cases, it tends to make 98 % of all analysis cases significantly easier. 
+
 ```matlab
 %slot opening and bottom specs
 dim.htt_taper_s = 1e-3; %slot opening, straight part before taper
@@ -119,7 +120,8 @@ Finally, we define some materials. Specifically, we use the [SteelLibrary](https
 
 -  The SteelLibrary will return an object of the basic [Material](https://www.emdtool.com/api/Material.html) class. While this class is rather powerful and general purpose, special classes such as the [HystereticMaterial](https://www.emdtool.com/api/HystereticMaterial.html) and [DemagMaterial1](https://www.emdtool.com/api/DemagMaterial1.html) do exist. 
 -  Important: Most geometry templates create local copies of the materials given as inputs. In other words, none of the materials in  *stator.materials* will be the same object as the one set into *dim.stator\_core\_material*. Importantly, changing the material properties of the here\-created object  **after** the stator object has been created will have **no effect** on the simulation results. 
--  For common questions on defining new materials, please [see the documentation page](https://www.emdtool.com/documentation/knowledge_base/defining_materials.html). 
+-  For common questions on defining new materials, please [see the documentation page](https://www.emdtool.com/documentation/knowledge_base/defining_materials.html).
+ 
 ```matlab
 %materials
 dim.stator_core_material = SteelLibrary.create('M270-35A');
