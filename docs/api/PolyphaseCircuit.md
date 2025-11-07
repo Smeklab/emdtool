@@ -92,7 +92,7 @@ problem.
 ### .**get_loop_matrix** Loop matrix associated with the circuit.
 
 ### .PolyphaseCircuit/**get_lt_matrix** is a function.
-Scc = get_lt_matrix(this, problem, type, t, kstep, Xprev)
+[Scc, Mcc] = get_lt_matrix(this, problem, type, t, kstep, Xprev)
 
 ### .PolyphaseCircuit/**get_nl_matrix** is a function.
 [Scc, rescc] = get_nl_matrix(this, problem, type, t, kstep, Xprev, Xiter)
@@ -143,6 +143,15 @@ strands in each phase.
 * P_DC_conductor : total **losses** from conductor currents and conductor
 DC-resistances. Exluded eddy-current effects, includes all circulating
 currents.
+
+The average loss values are averaged over the indices returned by the
+`indices_to_average_losses_over(solution)` method of the [CircuitBase](CircuitBase.html)
+class.
+
+[Pmean, data] = losses(this, solution, 'plotting_on', true, varargin)
+also visualizes the losses, using either [compute_solidConductorLosses](compute_solidConductorLosses.html)
+in case of solid conductors, or the `stranded_conductor_losses` method of
+`this`. All extra arguments are passed on to these methods.
 
 ### .PolyphaseCircuit/**mass** is a function.
 [m, data] = mass(this)

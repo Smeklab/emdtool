@@ -41,6 +41,9 @@ Z = get_EW_impedance_matrix(this)
 ### .CageCircuit/**get_EW_inductance_matrix** is a function.
 X = get_EW_inductance_matrix(this)
 
+### .CageCircuit/**get_cc_blocks** is a function.
+[Scc, Mcc] = get_cc_blocks(this, problem, type)
+
 ### .**list_possible_bar_numbers** List possible bar numbers.
 
 Qr = list_possible_bar_numbers(p, Qs) returns a list of possible bar

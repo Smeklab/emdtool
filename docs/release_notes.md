@@ -87,3 +87,7 @@ nav_order: 4
 * **3.0.45dev(2025/10/06)** :  Added Nodal1D and EdgeMesh. Added MeshBaseInterface as lowest-level mesh base class.
 * **3.0.45dev(2025/10/06)** :  Sped up Thermal - BoundaryConnection matrix assembly.
 * **3.0.46(2025/10/28)** :  MAJOR LICENSE UPDATE. Future licenses tied to a system username and Matlab license number unless otherwise agreed.
+* **3.0.46(2025/10/29)** :  Added Surface.get_polyshape method.
+* **3.0.46(2025/10/29)** :  Swapped GeoBase.check_surface_intersect to use the Surface.get_polyshape method.
+* **3.0.46(2025/10/30)** :  Fixed MotorModelBase.plot_airgap_flux_density x-axis limits for axial flux machines.
+* **3.0.46(2025/10/31)** :  MAJOR UPDATE CircuitSource.get_matrix method implementations now expect both the stiffness and mass matrix as output.

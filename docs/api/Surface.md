@@ -156,6 +156,12 @@ this = Surface.from_line(l, direction)
 Documentation for Surface.from_line
 doc Surface.from_line
 
+### .**get_polyshape** Get associated polyshape.
+
+p = get_polyshape(this) returns an associated Matlab polyshape.
+Documentation for Surface/get_polyshape
+doc Surface/get_polyshape
+
 ### .**in_surface** Point in surface?
 
 bl = in_surface(this, X)

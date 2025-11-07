@@ -154,14 +154,21 @@ init_for_simulation(this, problem, type, pars)
 * loss_data : loss breakdowns and other data, depending on
 CircuitBase subclass type. Structure.
 
+Default syntax for visualization:
+
+[W_mean, loss_data] = losses(this, solution, true, varargin)
+
+where the variable arguments are passed to
+[compute_SolidConductorLosses](compute_SolidConductorLosses.html).
+
 By default, all loss information is computed for the entire
 geometry, not just symmetry-section. This also applies to
 per-conductor losses, so e.g. the **losses** in the "first damper
 bar" actually mean "the sum of the **losses** in the first damper bar
 of all poles".
 
-For **losses** in typical 2D solid conductors (e.g. BlockCircuit,
-SheetCircuit, CageCircuit), see compute_SolidConductorLosses.
+For **losses** in typical 2D solid conductors (e.g. [BlockCircuit](BlockCircuit.html),
+[SheetCircuit](SheetCircuit.html), [CageCircuit](CageCircuit.html)), see [compute_SolidConductorLosses](compute_SolidConductorLosses.html).
 
 ### .**set_dof_bias** Set index of first circuit variable in global
 solution.

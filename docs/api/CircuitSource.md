@@ -66,10 +66,14 @@ The input arguments include:
 
 ### .**get_matrix** Return the linear governing matrix.
 
-S = get_matrix(this, problem, type, t, kstep, inds, Xprev)
-returns the linear (but generally time-variant) matrix of the
+[S, M] = get_matrix(this, problem, type, t, kstep, inds, Xprev)
+returns the linear (but generally time-variant) matrices of the
 CircuitSource matrix. This method is called once every time-step,
-but not inside the Newton iteration.
+but not inside the Newton iteration. Both the stiffness matrix
+and mass matrix are returned. For stiff-enough circuits, that
+should always be handled with the implicit Euler method, the
+mass matrix can be empty and the time-dependency can be baked
+into the stiffness matrix.
 
 The input arguments include:
 * problem : governing [MagneticsProblem](MagneticsProblem.html)

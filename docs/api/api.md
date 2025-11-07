@@ -220,6 +220,7 @@ has_toc : false
  Folder with the following files / classes / subfolders:
 
 * *function* : [Templates/Annotations/contents](contents.html)  Folder with the following files / classes / subfolders:
+* *function* : [Templates/Rotors/+FluidBarrier/geospace](geospace.html) **geospace** is a function.
 * *function* : [Templates/Rotors/contents](contents.html)  Folder with the following files / classes / subfolders:
 * *function* : [Templates/Stators/contents](contents.html)  Folder with the following files / classes / subfolders:
 * *function* : [Templates/contents](contents.html)  Folder with the following files / classes / subfolders:
@@ -234,6 +235,7 @@ has_toc : false
 * *class* : [/Rotors/ClassicIPM](ClassicIPM.html)  **ClassicIPM** High-speed / industrial style IPM rotor.
 * *class* : [/Rotors/CoatedRotor](CoatedRotor.html)  **CoatedRotor** Rotor with a conductive coat/sleeve.
 * *class* : [/Rotors/FWRotor1](FWRotor1.html)  **FWRotor1** Template for a rotor with field-winding.
+* *class* : [/Rotors/FluidBarrierRotor](FluidBarrierRotor.html)  **FluidBarrierRotor** Fluid barrier rotor.
 * *class* : [/Rotors/HSIPM](HSIPM.html)  **HSIPM** High-speed IPM rotor
 * *class* : [/Rotors/HSIPM1](HSIPM1.html)  **HSIPM1** Deprecated class.
 * *class* : [/Rotors/HSIPM2](HSIPM2.html)  **HSIPM2** Deprecated
