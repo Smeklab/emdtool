@@ -87,12 +87,6 @@ solution = solve_harmonic(this, pars), where
 
 * solution : a HarmonicSolution object.
 
-Note: setting pars.isDC = true is recommended for synchronous machines;
-in this case the rotor is rotated by 90 electrical degrees for the
-imaginary/sinusoid component of the solution, compared to the
-real/cosinusoid part. This provides an approximation of the effect of
-rotor saliency.
-
 NOTE: The real and imaginary fields **are**  coupled in the rotor, which is
 incorrect for synchronous machines (as f_rotor = 0). As a result, the rotor
 reluctivity gets overestimated. This may be fixed in a future release. In
@@ -118,6 +112,9 @@ solution = solve_static(this, pars), where
 
 * solution : a StaticSolution object.
 
+The number of steps simulated is equal to `numel(pars.rotorAngle)`. At
+each step, the corresponding angle is given to `this.model.get_AGmatrix`.
+
 ### .**solve_stepping** Time-stepping solution of a MagneticsProblem.
 
 Solves a time-stepping problem with damping (eddy- and voltage-like
@@ -133,6 +130,12 @@ Note: Initial conditions have to be computed first, usually by running
 this.solve_harmonic or this.solve_quasistatic. Alternatively, one can set
 a `MagneticsSolution` object to `this.results.initial_solution`, or a
 solution vector to `this.results.Xh`.
+
+A constant mechanical angular frequency of `2*pi*pars.f/p*(1-pars.slip)`
+is assumed (`p` being `this.model.dimensions.p`) and used to compute the
+mechanical angle at each time-step, and then fed into
+`this.model.get_AGmatrix`. The bias angle `pars.rotorAngle` is added to
+this angle, too.
 
 ### .MagneticsProblem/**sweep_harmonic** is a function.
 solutions = sweep_harmonic(this, pars)

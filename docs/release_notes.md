@@ -91,3 +91,4 @@ nav_order: 4
 * **3.0.46(2025/10/29)** :  Swapped GeoBase.check_surface_intersect to use the Surface.get_polyshape method.
 * **3.0.46(2025/10/30)** :  Fixed MotorModelBase.plot_airgap_flux_density x-axis limits for axial flux machines.
 * **3.0.46(2025/10/31)** :  MAJOR UPDATE CircuitSource.get_matrix method implementations now expect both the stiffness and mass matrix as output.
+* **3.0.46(2025/11/13)** :  MAJOR UPDATE. A hybrid time-stepping scheme developed and now used by default. See SimulationParameters.use_hybrid_stepping.
