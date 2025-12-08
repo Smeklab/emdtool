@@ -215,6 +215,7 @@ has_toc : false
 * *class* : [/Thermals/RF_specific_components/RFThermalModel](RFThermalModel.html)  **RFThermalModel** Simple thermal model for radial-flux machines.
 * *class* : [/Thermals/RF_specific_components/SimpleJacketThermalModel](SimpleJacketThermalModel.html)  **SimpleJacketThermalModel** Simple model for cooling jacket.
 * *class* : [/Thermals/RF_specific_components/StrandedWindingThermalModel](StrandedWindingThermalModel.html)  **StrandedWindingThermalModel** Class for stranded windings.
+* *class* : [/Thermals/RF_specific_components/WindingThermalModel](WindingThermalModel.html)  **WindingThermalModel** More-general winding thermal model.
 ## Templates
  Folder with the following files / classes / subfolders:
 

@@ -92,3 +92,5 @@ nav_order: 4
 * **3.0.46(2025/10/30)** :  Fixed MotorModelBase.plot_airgap_flux_density x-axis limits for axial flux machines.
 * **3.0.46(2025/10/31)** :  MAJOR UPDATE CircuitSource.get_matrix method implementations now expect both the stiffness and mass matrix as output.
 * **3.0.46(2025/11/13)** :  MAJOR UPDATE. A hybrid time-stepping scheme developed and now used by default. See SimulationParameters.use_hybrid_stepping.
+* **3.0.46(2025/12/05)** :  The maximum_demag_field function now supports plotting the results. Minor updates.
+* **3.0.46(2025/12/05)** :  MotorModelBase.visualize with the 'plot_nodes' keyword argument now adds legends to the boundary nodes.

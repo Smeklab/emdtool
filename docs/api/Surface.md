@@ -207,6 +207,11 @@ Plot surface with (args).
 Documentation for Surface/plot
 doc Surface/plot
 
+### .--- help for Surface/**plot3D** ---
+Surface/plot3D is an undocumented builtin Surface method.
+Documentation for Surface/plot3D
+doc Surface/plot3D
+
 ### .**points** Surface boundary as an array of doubles.
 
 X = points(this)
