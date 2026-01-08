@@ -1,4 +1,9 @@
 %% Example 2 - No-load flux density
+% |*Goal:* Solve the open-circuit flux density distribution of our earlier IPM 
+% motor.|
+% 
+% |*Result:* Plots of the flux density distribution across the cross-section 
+% of the motor, and the airgap flux density components.|
 %% Prequisites
 % Making sure that a model has already been initialized.
 

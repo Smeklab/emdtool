@@ -98,7 +98,7 @@ end
 
 Next, we begin defining some slot dimensions. Specifically, these are not seen by the Stator class itself. Instead, we *could* have specified a  *stator\_slot* dimension, to use a specific [StatorSlotShape](https://www.emdtool.com/api/StatorSlotShape.html) object. Since we have not specified any, the general\-purpose [Slot1](https://www.emdtool.com/api/Slot1.html) is used instead.
 
--  The recommended approach of working with EMDtool is to use the [Slot\-Layout workflow](<https://www.emdtool.com/documentation/templates/slots_and_layouts.html#slots-and-layouts>). This allows dropping in different slot shapes to an existing parent geometry, and/or different conductor layouts into an existing slot geometry. While it can make things more complex to implement and understand, and even hinder analysing some edge cases, it tends to make 98 % of all analysis cases significantly easier. 
+-  The recommended approach of working with EMDtool is to use the [Slot\-Layout workflow](https://www.emdtool.com/documentation/templates/slots_and_layouts.html#slots-and-layouts). This allows dropping in different slot shapes to an existing parent geometry, and/or different conductor layouts into an existing slot geometry. While it can make things more complex to implement and understand, and even hinder analysing some edge cases, it tends to make 98 % of all analysis cases significantly easier. 
 
 ```matlab
 %slot opening and bottom specs
@@ -224,7 +224,6 @@ motor = RFmodel(dim, stator, rotor);
 gmsh path E:\Software\Work\gmsh-4.11.1\ loaded from preference group 'emdtool' 
 ```
 
-
 For now, we suffice ourselves with the visualization capabilities:
 
 ```matlab
@@ -254,7 +253,6 @@ whos motor
 
   motor      1x1                 8  RFmodel              
 ```
-
 
 
 [**NEXT UP**: Example 02 No load Flux Density](Example_02_No_load_Flux_Density.html)

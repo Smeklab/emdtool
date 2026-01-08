@@ -6,6 +6,12 @@ grand_parent : Documentation
 ---
 
 # Example 2 \- No\-load flux density
+
+**`Goal:`** `Solve the open-circuit flux density distribution of our earlier IPM motor.` 
+
+
+**`Result:`** `Plots of the flux density distribution across the cross-section of the motor, and the airgap flux density components.` 
+
 # Prequisites
 
 Making sure that a model has already been initialized.
@@ -68,7 +74,6 @@ Computing step/case 1 out of 1...
     Newton step 14, relative residual 2.5454e-06.
     Newton step 15, relative residual 4.039e-08.
 ```
-
 # Post\-processing and visualizing
 
 ```matlab
