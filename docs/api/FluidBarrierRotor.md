@@ -30,6 +30,9 @@ the flux barrier and the rotor OD. Either a scalar value or an
 array of size numel(w_guide).
 * barrier_fillet_radius : Maximum allowed value for the radius of
 the fillet between the barrier and the outer bridge.
+* w_guide_outermost : (OPTIONAL) Width of the outermost guide. If
+given, an extra groove-like barrier-like thing is cut into the
+rotor OD.
 
 Materials:
 * rotor_core_material : Core material

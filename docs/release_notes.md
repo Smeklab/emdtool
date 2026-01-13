@@ -94,3 +94,7 @@ nav_order: 4
 * **3.0.46(2025/11/13)** :  MAJOR UPDATE. A hybrid time-stepping scheme developed and now used by default. See SimulationParameters.use_hybrid_stepping.
 * **3.0.46(2025/12/05)** :  The maximum_demag_field function now supports plotting the results. Minor updates.
 * **3.0.46(2025/12/05)** :  MotorModelBase.visualize with the 'plot_nodes' keyword argument now adds legends to the boundary nodes.
+* **3.0.46(2025/12/10)** :  Fixed airgap mesh density plotting error for 2nd-order elements.
+* **3.0.46(2025/12/10)** :  SpaceVectorModulator now reverts to ideal sinusoidal supply with fs=inf.
+* **3.0.46(2025/12/17)** :  FluidBarrierRotor now supports an extra barrier-like modification, changing the rotor outer envelope away from cylindrical.
+* **3.0.46(2025/12/18)** :  Fixed MotorModelBase.to_plot_frame error for multiple rotating rotors.

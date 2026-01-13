@@ -29,7 +29,7 @@ gmsh path E:\Software\Work\gmsh-4.11.1\ loaded from preference group 'emdtool'
 
   motor      1x1                 8  RFmodel              
 ```
-# `Getting started`
+# `Background`
 
 This example shows how to compute the torque curve of a synchronous machine, with a given current density. The curve is computed versus the *pole angle*, i.e. 90 degrees corresponding to id=0.
 
@@ -84,7 +84,7 @@ Unable to resolve the name 'phase_circuit.conductor_area_per_turn_and_coil'.
 Is = spec.xy(Ipeak*[cos(angles); sin(angles)], 0);
 ```
 
-and setting the currents as our excitation for the stator winding.
+and setting the currents as our excitation for the stator winding. We do this with the [`.set_source method of the PolyphaseCircuit class`](https://www.emdtool.com/api/PolyphaseCircuit.html#set_source-set-circuit-source), in this case specifying the  `'uniform coil current'` option. As the title suggests, this enforces the coil current, or the current in each parallel path, assuming ideal uniform current distribution with no eddy effects modelled.
 
 ```matlab
 %setting source

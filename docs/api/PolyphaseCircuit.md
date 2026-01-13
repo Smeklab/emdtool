@@ -42,6 +42,10 @@ of the winding, as well as the different supply modes. See
 
 Class methods are listed below. Inherited methods are not included.
 
+### .**circuit_source_variables** Variables associated with a CircuitSource.
+
+X = circuit_source_variables(this, solution)
+
 ### .**coil_current** Coil current from solution.
 
 I = coil_current(this, solution), where

@@ -36,6 +36,8 @@ two independent star points in a 6-phase system.
 
 ### .**fs** Switching frequency.
 
+If `inf`, reverts to ideal sinusoidal supply.
+
 ### .**levels** Number of voltage levels.
 
 Defaults to 2.

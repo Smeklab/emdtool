@@ -10,7 +10,7 @@ if ~exist('motor', 'var')
     Example_01_Setting_up_a_Model;
     close all;
 end
-%% |Getting started|
+%% |Background|
 % This example shows how to compute the torque curve of a synchronous machine, 
 % with a given current density. The curve is computed versus the _pole angle_, 
 % i.e. 90 degrees corresponding to id=0.
@@ -58,7 +58,12 @@ spec = stator.winding_spec;
 Ipeak = sqrt(2)*Jrms * phase_circuit.conductor_area_per_turn_and_coil();
 Is = spec.xy(Ipeak*[cos(angles); sin(angles)], 0);
 %% 
-% and setting the currents as our excitation for the stator winding.
+% and setting the currents as our excitation for the stator winding. We do this 
+% with the <https://www.emdtool.com/api/PolyphaseCircuit.html#set_source-set-circuit-source 
+% |.set_source method of the PolyphaseCircuit class|>, in this case specifying 
+% the |'uniform coil current'| option. As the title suggests, this enforces the 
+% coil current, or the current in each parallel path, assuming ideal uniform current 
+% distribution with no eddy effects modelled.
 
 %setting source
 phase_circuit = stator.winding;

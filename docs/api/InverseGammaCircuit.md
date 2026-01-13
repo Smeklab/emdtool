@@ -36,6 +36,9 @@ obj = InverseGammaCircuit
 Documentation for InverseGammaCircuit/InverseGammaCircuit
 doc InverseGammaCircuit
 
+### .InverseGammaCircuit/**current_from_voltage** is a function.
+I = current_from_voltage(this, U, slip)
+
 ### .**from_harmonic_solution** Initialize eq. circuit from solution.
 
 this = from_harmonic_solution(solution)

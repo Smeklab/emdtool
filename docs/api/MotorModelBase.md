@@ -208,6 +208,28 @@ Interesting output quantities include:
 * input_power_from_terminal_waveforms : Does not contain post-processed
 loss quantities (typically iron losses, some non-enabled circuits).
 
+Additionally, a number of substructures are also returned:
+
+* phase_circuit_data : summary of phase winding data, returned by the
+`this.stator(1).results_summary` method.
+
+* iron_loss_data : summary of iron losses, returned by the
+`MaterialBase.losses` method. **** NOTE** the iron loss data substruct
+does **** not** consider the effect of
+`this.build_factor_for_iron_losses`, while the field
+`results.total_iron_losses` does.
+
+Finally, for [CircuitBase](CircuitBase.html) object in the model, the following results are
+included:
+* circuit_name_loss_data : A structure of loss data returned by the
+`circuit_object.losses` method
+
+* total_circuit_name_losses : Total losses in the aforementioned
+circuit. Note that the for the phase winding (i.e.
+`this.stator(1).winding`), the total losses include the effect of
+`this.build_factor_for_winding_losses` - **** none** of the other results
+do.
+
 ### .MotorModelBase/**rotel** is a function.
 els = rotel(this)
 
