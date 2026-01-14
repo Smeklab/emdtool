@@ -15,10 +15,10 @@ Smeklab Ltd reserves all rights to adjust the pricing as needed, due to inflatio
 Restrictions | For non-commercial use | - | -
 Source code available | No | Yes | Yes
 Support | Perhaps | 10 h / year (*) | As agreed
-Pricing | **Free** | **2000 EUR / year / user** | Starting from 20 000 EUR / year.
+Pricing | **Free** | **4000 EUR / year / user** | Starting from 25 000 EUR / year.
 
 (*) This is normally enough to get a new user with reasonable coding skills up and running. Further support hours can be purchased as required, at chunks of 500 EUR + VAT / 10 h.
 
-(**) Limited license-sharing within the client organization is permitted and encouraged - getting a new license for a trainee or a thesis worker is not required.
+(**) Limited license-sharing within the client organization is permitted and encouraged - purchasing a new license for a trainee or a thesis worker is not required.
 
 
