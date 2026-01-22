@@ -11,4 +11,4 @@ TBD
 
 
 
-[**NEXT UP**: Example 08 Setting up an Induction Machine Model](Example_08_Setting_up_an_Induction_Machine_Model.html)
+[**NEXT UP**: Example 07b Advanced Demagnetization Analysis](Example_07b_Advanced_Demagnetization_Analysis.html)

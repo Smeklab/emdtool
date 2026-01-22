@@ -242,7 +242,7 @@ summary = motor.results_summary(stepping_solution, 'verbose', true);
 Warning: The extruded block height 150 mm is less than the skin depth (17.608 mm) at 10x fundamental frequency.  The results may be inaccurate. Consider running a transient simulation /  setting the circuit as active.
  
 Summary of results: 
- git_commit_ID : 74a40da651141fec568138a48fad9bc51d027962
+ git_commit_ID : 8cced832b0ccd486ccf7bbeb18d29643f015c25c
  rpm : 3000
  f : 150
  torque_waveform : (array)
