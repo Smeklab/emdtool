@@ -24,7 +24,8 @@ by the element so far, and `Hmin` is the corresponding field
 strength on the given demagnetization curve.
 
 Alternatively, a simple parametric demagnetization model can be used
-by setting `this.use_simple_model = true`.
+by setting `this.use_simple_model = true`. Please see documentation
+for `this.initialize_simple_model`.
 
 For the last bullet, the `get_equivalent_Br` method is used,
 returning the `H=0` intersect of the current BH curve followed, for
@@ -171,6 +172,12 @@ The corresponding flux density is then obtained with
 
 These results are then used to initialize the BH interpolation table with
 `this.set_symmetric_BH_table_from_BH_data`.
+
+To visualize the magnetization curve used, please call
+`this.visualize_demag_curve`. Please note that the model has to be
+initialized first, by calling this initialization method with the desired
+temperature. Please also note that when initializing a `MagneticsProblem`
+object, the simple model is (re-)initialized for the problem temperature.
 
 ### .DemagMaterial1/**parse_element_remanence_directions** is a function.
 parse_element_remanence_directions(this)
