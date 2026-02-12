@@ -17,7 +17,7 @@ Source code available | No | Yes | Yes
 Support | Perhaps | 10 h / year (*) | As agreed
 Pricing | **Free** | **4000 EUR / year / user** | Starting from 25 000 EUR / year.
 
-(*) This is normally enough to get a new user with reasonable coding skills up and running. Further support hours can be purchased as required, at chunks of 500 EUR + VAT / 10 h.
+(*) This is normally enough to get a new user with reasonable coding skills up and running. Further support hours can be purchased as required, at chunks of 1000 EUR + VAT / 20 h.
 
 (**) Limited license-sharing within the client organization is permitted and encouraged - purchasing a new license for a trainee or a thesis worker is not required.
 
