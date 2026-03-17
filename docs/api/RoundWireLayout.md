@@ -45,6 +45,11 @@ Cell array, one cell for each layer.
 
 ### .**maximum_outer_diameter** - maximum outer diameter
 
+### .**packing** Conductor packing style
+
+Conductor packing, either "hexagonal" or "rectangular", referring
+to circle packings of the same terminology.
+
 ### .RoundWireLayout.**wire_data** is a property.
 
 
@@ -97,6 +102,9 @@ create_solid_or_point_geometry(this, parent_geometry, winding_spec, slot)
 
 ### .RoundWireLayout.**pack_conductors_hexagonal** is a function.
 Xcenter = RoundWireLayout.pack_conductors_hexagonal(points, r, N)
+
+### .RoundWireLayout.**pack_conductors_rectangular** is a function.
+Xcenter = RoundWireLayout.pack_conductors_rectangular(points, r, N)
 
 ### .RoundWireLayout/**postprocess_point_losses** is a function.
 [p_el, data] = postprocess_point_losses(this, winding_spec, dBx, dBy, conductivity)

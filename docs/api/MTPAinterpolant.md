@@ -62,6 +62,9 @@ Class methods are listed below. Inherited methods are not included.
 ### .MTPAinterpolant/**compute** is a function.
 [Ptot, idq, E] = compute(this, T, n)
 
+### .MTPAinterpolant/**compute_pointwise** is a function.
+[Ptot, idq, E] = compute_pointwise(this, T, n)
+
 ### .MTPAinterpolant/**findI** is a function.
 i = findI(~, Ttarget, Icontour, Tcontour)
 
@@ -83,6 +86,9 @@ init(this, Tn, nn, nrange, varargin)
 
 ### .MTPAinterpolant/**rated_voltage_contour_at_speed** is a function.
 c = rated_voltage_contour_at_speed(this, n, chop)
+
+### .MTPAinterpolant/**torque_contour** is a function.
+c = torque_contour(this, T, chop)
 
 ### .MTPAinterpolant/**voltage** is a function.
 E = voltage(this, id, iq, n)

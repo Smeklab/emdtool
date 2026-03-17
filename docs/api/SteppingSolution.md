@@ -14,6 +14,16 @@ obj = SteppingSolution
 
 ### .SteppingSolution/**dt** is a property.
 
+### .**solved_angular_velocity** Mechanical velocity, if solved.
+
+Mechanical angular velocity (rad/s), if the equation of motion is solved jointly with
+the electromagnetic behaviour. Empty otherwise.
+
+### .**solved_rotor_angles** Rotor angles, if solved.
+
+Rotor angles, if the equation of motion is solved jointly with
+the electromagnetic behaviour. Empty otherwise.
+
 ### .SteppingSolution.**type** is a property.
 
 

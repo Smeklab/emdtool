@@ -98,3 +98,6 @@ nav_order: 4
 * **3.0.46(2025/12/10)** :  SpaceVectorModulator now reverts to ideal sinusoidal supply with fs=inf.
 * **3.0.46(2025/12/17)** :  FluidBarrierRotor now supports an extra barrier-like modification, changing the rotor outer envelope away from cylindrical.
 * **3.0.46(2025/12/18)** :  Fixed MotorModelBase.to_plot_frame error for multiple rotating rotors.
+* **3.0.46(2026/01/13)** :  RoundWireLayout winding layout class now supports rectangular packing.
+* **3.0.46(2026/01/30)** :  Added airgap force density calculation method to SlidingAirgap.
+* **3.0.47(2026/03/17)** :  Equation of motion now possible to include to MagneticsProblem.solve_stepping

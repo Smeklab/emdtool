@@ -113,6 +113,8 @@ The following key-value pairs are supported:
 * speed_range : a 1x2 array of minimum and maximum speeds
 * torque_range : a 1x2 array of minimum and maximum torques
 
+### .setting up grids
+
 ### .NTGridDQ/**plot_map** is a function.
 Qint = plot_map(this, contour_name, varargin)
 

@@ -52,6 +52,12 @@ Supply electrical frequency. For non-typical problems with no
 clearly defined supply frequency, the frequency can be understood
 purely via the time-step length, through `this.N_stepsPerPeriod`
 
+### .**load_torque** Load torque.
+
+Only has an effect if the equation of motion is solved. A
+constant number, defaults to 0. Net torque, acting on the same scale
+`motor.compute_torque`.
+
 ### .**maxIter** - maximum number of Newton iterations
 
 ### .**maximum_damping_iterations** Maximum number of damping iterations.
@@ -80,6 +86,15 @@ must be given, corresponding to constant bias in the rotor angle.
 
 Used in harmonic and time-stepping analysis.
 
+### .**solve_equation_of_motion** Solve equation of motion.
+
+If true, the equation of motion is solved together with the
+electromagnetics, by the `solve_stepping` method of
+[MagneticsProblem](MagneticsProblem.html). See documentation of said method for more
+info.
+
+Defaults to false.
+
 ### .**ts** - time-step time-stamps
 
 ### .**use_cached_Jacobian** Use saved Jacobian constructor.
@@ -102,6 +117,12 @@ sometimes (rarely) occurring with hybrid trapezoidal-IE stepping
 schemes (with pars.alpha2 strictly less than 2).
 
 Defaults to true.
+
+### .**viscous_damping_coefficient** Viscous damping coefficient.
+
+Only has an effect if the equation of motion is solved. A
+constant number from computing the viscous damping torque from
+`coefficient x mechanical angular velocity`. Defaults to 0.
 
 
 ## Methods

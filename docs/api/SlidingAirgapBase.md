@@ -35,6 +35,8 @@ interfaces in the [MotorModelBase](MotorModelBase.html) subclass, see the
 
 ### .SlidingAirgapBase/**angle_multiplier** is a property.
 
+### .SlidingAirgapBase/**data** is a property.
+
 ### .**interpolation_method** Interpolation method to use.
 Options include 'lagrange', 'spline', and 'trigonometric'.
 

@@ -42,6 +42,9 @@ ripple in this case. A non-conforming mesh can help.
 
 Class methods are listed below. Inherited methods are not included.
 
+### .SlidingAirgap/**compute_airgap_forces** is a function.
+data = compute_airgap_forces(this, solution, varargin)
+
 ### .SlidingAirgap/**fluxplot** is a function.
 fluxplot(this, A, rotorAngle, potentials)
 

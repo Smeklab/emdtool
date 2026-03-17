@@ -42,6 +42,8 @@ Coefficient `c` for the simple dynamic hysteresis model
 Computed automatically from the sheet thickness and material
 conductivity, corresponding to the classical eddy-current losses.
 
+### .HystereticMaterial/**has_anhysteretic_curve** is a property.
+
 ### .**hysteresis_model** Actual hysteresis model.
 
 An instance of the [HysteresisModel](HysteresisModel.html) class, taking care of the
@@ -98,6 +100,9 @@ Return values:
 
 H = evaluate_dynamic_H(this, timestamps) computes the value of H at all
 time-steps, from this.Bvalues.
+
+### .HystereticMaterial/**from_material** is a function.
+this = from_material(this, mat)
 
 ### .**loss_density** Elementwise loss density.
 

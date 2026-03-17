@@ -131,11 +131,23 @@ this.solve_harmonic or this.solve_quasistatic. Alternatively, one can set
 a `MagneticsSolution` object to `this.results.initial_solution`, or a
 solution vector to `this.results.Xh`.
 
-A constant mechanical angular frequency of `2*pi*pars.f/p*(1-pars.slip)`
+By default, a constant mechanical angular frequency of `2*pi*pars.f/p*(1-pars.slip)`
 is assumed (`p` being `this.model.dimensions.p`) and used to compute the
 mechanical angle at each time-step, and then fed into
 `this.model.get_AGmatrix`. The bias angle `pars.rotorAngle` is added to
 this angle, too.
+
+**** EXPERIMENTAL** Setting `pars.solve_equation_of_motion` to `true` solves
+the equation of motion (rotor angle only) concurrently with the
+electromagnetics. Importantly, only a single rotation dof is assumed; if
+there are multiple airgaps, their torque contributions are summed
+together. Note that `this.model.dimensions` has to include the field
+`moment_of_inertia` for the rotor moment of inertia.
+* Please note that the results returned by the `results_summary` method
+of [MotorModelBase](MotorModelBase.html) assume a constant velocity with no viscuous drag
+torque, for now, aka they do not reflect the efficiency and power loss,
+but instead assume the entire electromagnetic torque is spent on output
+work.
 
 ### .MagneticsProblem/**sweep_harmonic** is a function.
 solutions = sweep_harmonic(this, pars)
