@@ -88,7 +88,7 @@ mair = this.create_and_add_material(0);
 
 Core = LaminatedDomain('Rotor_core', dim.rotor_stacking_factor, mcore);
 Magnet = Domain('Magnet', mmag);
-Magnet.remanence_direction = apole/2;
+Magnet.remanence_direction = pi/dim.p/2;
 
 Air = Domain('Rotor_air_pocket', mair);
 

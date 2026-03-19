@@ -94,14 +94,7 @@ We create [Domains](https://www.emdtool.com/api/Domain.html) for representing al
 ```matlab
 Core = LaminatedDomain('Rotor_core', dim.rotor_stacking_factor, mcore);
 Magnet = Domain('Magnet', mmag);
-Magnet.remanence_direction = apole/2;
-```
-
-```matlabTextOutput
-Unrecognized function or variable 'apole'.
-```
-
-```matlab
+Magnet.remanence_direction = pi/dim.p/2;
 
 Air = Domain('Rotor_air_pocket', mair);
 
@@ -205,6 +198,8 @@ P_mag_out_ccw.plot('P mag out ccw', 'bo');
 P_mag_in_cw.plot('P mag in cw', 'md');
 ```
 
+![figure_0.png](Example_01a_Creating_a_Template_media/figure_0.png)
+
 Next, we rotate the magnet to the correct orientation and check.
 
 ```matlab
@@ -293,6 +288,11 @@ spocket_ccw.add_curve(geo.line, P_mag_in_ccw, P_mag_out_ccw);
 spocket_ccw.add_curve(geo.arc, P_mag_out_ccw, O, P_pocket_ccw);
 spocket_ccw.add_curve(geo.line, P_pocket_ccw, P_mag_in_ccw);
 spocket_ccw.plot('g');
+```
+
+![figure_1.png](Example_01a_Creating_a_Template_media/figure_1.png)
+
+```matlab
 
 %add pockets as holes
 score.add_hole(spocket_cw, spocket_ccw);
@@ -338,16 +338,30 @@ Finally, we manually mesh the geometry and visualize both the mesh and the geome
 ```matlab
 %meshing
 rotor.mesh_geometry();
+```
+
+```matlabTextOutput
+gmsh path E:\Software\Work\gmsh-4.11.1\ loaded from preference group 'emdtool' 
+```
+
+```matlab
 
 %visualizing mesh, check that we don't have overlapping elements or
 %anything
 figure(4); clf; hold on; box on; axis equal;
 rotor.mesh.triplot([]); %all elements = []
+```
+
+![figure_2.png](Example_01a_Creating_a_Template_media/figure_2.png)
+
+```matlab
 
 %visualizing rotor in general
 figure(5); clf; hold on; box on; axis equal;
 rotor.visualize();
 ```
+
+![figure_3.png](Example_01a_Creating_a_Template_media/figure_3.png)
 
 
 [**NEXT UP**: Example 02 No load Flux Density](Example_02_No_load_Flux_Density.html)
